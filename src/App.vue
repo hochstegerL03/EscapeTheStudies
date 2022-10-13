@@ -29,10 +29,10 @@
       ></et-s-header>
       <!--Infos Ende-->
       <!--OnePage Menu-->
-      <q-tabs align="justify">
-        <q-route-tab to="/page1" label="Page One" />
-        <q-route-tab to="/page2" label="Page Two" />
-        <q-route-tab to="/page3" label="Page Three" />
+      <q-tabs align="justify" class="subheader text-weight-bolder">
+        <q-route-tab to="/" label="Home" />
+        <q-route-tab to="/courses" label="Courses" />
+        <q-route-tab to="/aboutus" label="About us" />
       </q-tabs>
       <!--OnePage Menu End-->
       <router-view />
@@ -70,9 +70,14 @@ function toggleRightDrawer() {
 </style>
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 .subheader {
   font-family: 'Source Sans Pro', sans-serif;
 }
+.header {
+  font-family: 'Roboto', sans-serif;
+}
+
 a {
   color: $secondary;
   text-decoration: none;
