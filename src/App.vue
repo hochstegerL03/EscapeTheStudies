@@ -14,7 +14,7 @@
     </q-drawer>
     <!--Right Sidebar End-->
 
-    <q-page-container>
+    <q-page-container class="scroll">
       <!--Default Banner. Can be modified -->
       <et-s-banner
         class="q-mb-md bannerlong"
@@ -38,7 +38,7 @@
       <router-view />
     </q-page-container>
 
-    <q-footer elevated class="bg-grey-8 text-white">
+    <q-footer class="bg-grey-8 text-white">
       <q-toolbar>
         <q-toolbar-title>
           <q-avatar>
