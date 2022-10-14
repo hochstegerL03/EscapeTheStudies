@@ -38,14 +38,15 @@
       <router-view />
     </q-page-container>
 
-    <q-footer class="bg-grey-8 text-white">
+    <q-footer class="bg-white text-black">
       <q-toolbar>
         <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
-          </q-avatar>
-          <div>Title</div>
-        </q-toolbar-title>
+          <div class="flex q-mt-md">
+            <div class="footer text-weight-light subheader">
+              Support us over on Patreon @wwEscapetheStudies
+            </div>
+          </div></q-toolbar-title
+        >
       </q-toolbar>
     </q-footer>
   </q-layout>
@@ -71,13 +72,23 @@ function toggleRightDrawer() {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 .subheader {
   font-family: 'Source Sans Pro', sans-serif;
+}
+.footer {
+  font-size: 0.86rem;
 }
 .header {
   font-family: 'Roboto', sans-serif;
 }
 
+.text {
+  font-family: 'Roboto', sans-serif;
+}
+.text-mono {
+  font-family: 'Roboto Mono', monospace;
+}
 a {
   color: $secondary;
   text-decoration: none;
