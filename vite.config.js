@@ -4,6 +4,7 @@ import { quasar, transformAssetUrls } from '@quasar/vite-plugin';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/EscapeTheStudies/',
   plugins: [
     vue({
       template: { transformAssetUrls },

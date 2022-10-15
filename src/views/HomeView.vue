@@ -4,7 +4,7 @@
     <!--Default Banner. Can be modified -->
     <et-s-banner
       class="q-mb-md bannerlong"
-      img="url('./src/assets/images/home_gears_banner.jpg')"
+      img="url('/images/home_gears_banner.jpg')"
     ></et-s-banner>
     <!--Banner End-->
     <!--Infos-->
@@ -177,7 +177,7 @@
           <!--Chapter 1-->
           <!--Image-->
           <figure class="w-100 q-ma-none q-mt-lg row text">
-            <q-img src="/src/assets/images/mathe_meme.png" />
+            <q-img src="/images/mathe_meme.png" />
             <figcaption class="text-weight-light text-italic w-90 q-mt-xs">
               - HTL Wien West Deluxe Memes
             </figcaption>
@@ -339,7 +339,7 @@
       <!--How will we continue End-->
       <!--Cookie-->
       <div class="row justify-center q-mb-lg">
-        <q-img src="/src/assets/images/cookie_coffee.png" />
+        <q-img src="/images/cookie_coffee.png" />
       </div>
       <!--Cookie End-->
     </div>

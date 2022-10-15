@@ -2,7 +2,7 @@
   <!--Header-->
   <div>
     <!--Default Banner. Can be modified -->
-    <q-img class="q-mb-md bannercap" src="/src/assets/images/about_success_banner.jpg"></q-img>
+    <q-img class="q-mb-md bannercap" src="/images/about_success_banner.jpg"></q-img>
     <!--Banner End-->
     <!--OnePage Menu-->
     <q-tabs align="justify" class="subheader text-weight-bolder">
