@@ -3,7 +3,7 @@
     <div class="row items-center q-my-md">
       <div class="col-3">
         <q-avatar>
-          <img src="/svgs/logo.svg" />
+          <img src="svgs/logo.svg" />
         </q-avatar>
       </div>
       <div class="col-6 text-center">
