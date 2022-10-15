@@ -9,70 +9,98 @@
     </q-header>
 
     <!--Right Sidebar-->
-    <q-drawer v-model="rightDrawerOpen" side="right" overlay bordered>
-      <!-- drawer content -->
+    <q-drawer class="bg-accent" v-model="rightDrawerOpen" side="right" overlay bordered>
+      <!--Close Btn-->
+      <div>
+        <q-btn
+          class="float-right q-my-md q-mr-lg"
+          dense
+          flat
+          round
+          icon="close"
+          @click="toggleRightDrawer"
+        />
+      </div>
+      <!--Close Btn End-->
+      <!--Drawer Menu-->
+      <div class="row justify-center w-100">
+        <div class="w-80">
+          <div class="text-center q-mb-xl text-h3 titelold">Escape the Studies</div>
+          <div>
+            <router-link to="/">
+              <et-s-chat-nav colortype="white" class="q-pa-sm q-my-lg titelold"
+                ><span>Home</span></et-s-chat-nav
+              >
+            </router-link>
+          </div>
+          <div>
+            <router-link to="/courses" class="disabled">
+              <et-s-chat-nav colortype="dark" direction="right" class="q-pa-sm q-my-lg titelold"
+                ><span>Courses</span></et-s-chat-nav
+              >
+            </router-link>
+          </div>
+          <div>
+            <router-link to="/about">
+              <et-s-chat-nav colortype="white" class="q-pa-sm q-my-lg titelold"
+                ><span>About Us</span></et-s-chat-nav
+              >
+            </router-link>
+          </div>
+          <div>
+            <router-link to="/sign" class="disabled">
+              <et-s-chat-nav colortype="dark" direction="right" class="q-pa-sm q-my-lg titelold"
+                ><span>Login in</span></et-s-chat-nav
+              >
+            </router-link>
+          </div>
+          <div>
+            <router-link to="/sign" class="disabled">
+              <et-s-chat-nav colortype="white" class="q-pa-sm q-my-lg titelold"
+                ><span>Sign Up</span></et-s-chat-nav
+              >
+            </router-link>
+          </div>
+        </div>
+      </div>
+      <!--Drawer Menu-->
     </q-drawer>
     <!--Right Sidebar End-->
 
     <q-page-container class="scroll">
-      <!--Default Banner. Can be modified -->
-      <et-s-banner
-        class="q-mb-md bannerlong"
-        img="url('./src/assets/images/home_gears_banner.jpg')"
-      ></et-s-banner>
-      <!--Banner End-->
-      <!--Infos-->
-      <et-s-header
-        titel="Escape the Studies"
-        content="Brace yourself and enter a brand new Universe of Tech and Games"
-        link="Learn more..."
-      ></et-s-header>
-      <!--Infos Ende-->
-      <!--OnePage Menu-->
-      <q-tabs align="justify" class="subheader text-weight-bolder">
-        <q-route-tab to="/" label="Home" />
-        <q-route-tab to="/courses" label="Courses" />
-        <q-route-tab to="/aboutus" label="About us" />
-      </q-tabs>
-      <!--OnePage Menu End-->
       <router-view />
     </q-page-container>
-
-    <q-footer class="bg-white text-black">
-      <q-toolbar>
-        <q-toolbar-title>
-          <div class="flex q-mt-md">
-            <div class="footer text-weight-light subheader">
-              Support us over on Patreon @wwEscapetheStudies
-            </div>
-          </div></q-toolbar-title
-        >
-      </q-toolbar>
-    </q-footer>
   </q-layout>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 import EtSNavbar from './components/EtSNavbar.vue';
 import EtSBanner from './components/EtSBanner.vue';
 import EtSHeader from './components/EtSHeader.vue';
+import EtSChatNav from './components/EtSChatNav.vue';
 
 const rightDrawerOpen = ref(false);
 function toggleRightDrawer() {
   rightDrawerOpen.value = !rightDrawerOpen.value;
 }
 </script>
-<style scoped>
-.bannerlong {
-  width: 100%;
-  height: 15vh;
-}
-</style>
+<style lang="scss" scoped></style>
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+.titelold {
+  font-family: 'Lobster', cursive;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .subheader {
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -107,5 +135,17 @@ a:hover {
 
 a:active {
   color: $primary;
+}
+
+.w-100 {
+  width: 100%;
+}
+.w-90 {
+  width: 90%;
+  max-width: 1024px;
+}
+
+.w-80 {
+  width: 80%;
 }
 </style>

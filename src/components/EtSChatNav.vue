@@ -1,5 +1,8 @@
 <template>
-  <div :class="[direction, colortype]" class="flex justify-center items-center chat subheader text-weight-bolder text-center text-h5">
+  <div
+    :class="[direction, colortype]"
+    class="flex justify-center items-center chat text-weight-bolder text-center text-h5"
+  >
     <slot />
   </div>
 </template>
@@ -18,6 +21,12 @@
   background-color: $accent;
   color: black;
 }
+
+.white {
+  background-color: white;
+  color: black;
+}
+
 .dark {
   background-color: $primary;
   color: white;
@@ -28,7 +37,4 @@ defineProps({
   colortype: { type: String, default: 'light' },
   direction: { type: String, default: 'left' },
 });
-
-
-
 </script>

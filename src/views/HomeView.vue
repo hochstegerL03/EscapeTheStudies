@@ -1,4 +1,29 @@
 <template>
+  <!--Header-->
+  <div>
+    <!--Default Banner. Can be modified -->
+    <et-s-banner
+      class="q-mb-md bannerlong"
+      img="url('./src/assets/images/home_gears_banner.jpg')"
+    ></et-s-banner>
+    <!--Banner End-->
+    <!--Infos-->
+    <et-s-header
+      titel="Escape the Studies"
+      content="Brace yourself and enter a brand new Universe of Tech and Games"
+      link="Learn more..."
+    ></et-s-header>
+    <!--Infos Ende-->
+    <!--OnePage Menu-->
+    <q-tabs align="justify" class="subheader text-weight-bolder">
+      <q-route-tab to="/" label="Home" />
+      <q-route-tab disable to="/courses" label="Courses" />
+      <q-route-tab to="/about" label="About us" />
+    </q-tabs>
+    <!--OnePage Menu End-->
+  </div>
+  <!--Header End-->
+  <!--Content-->
   <div class="flex justify-center w-100 q-mt-lg">
     <div class="w-90">
       <!--News-->
@@ -99,25 +124,25 @@
             colortype="dark"
             direction="right"
             class="q-pa-md q-mb-lg"
-            ><span>What is EtS?</span></et-s-chat-nav
+            ><span class="subheader">What is EtS?</span></et-s-chat-nav
           >
           <et-s-chat-nav @click="scrolltovertically('yourlittlejourney')" class="q-pa-md q-my-lg"
-            ><span>Your little journey begins here.</span></et-s-chat-nav
+            ><span class="subheader">Your little journey begins here.</span></et-s-chat-nav
           >
           <et-s-chat-nav @click="scrolltovertically('continue')" class="q-pa-md q-mt-lg"
-            ><span>How will we continue?</span></et-s-chat-nav
+            ><span class="subheader">How will we continue?</span></et-s-chat-nav
           >
         </div>
       </div>
       <!--Home Navbar Ende-->
       <hr />
-      <!--What is EtS Section-->
+      <!--What is EtS-->
       <div class="q-my-lg">
         <!--Bubble Caption-->
         <div class="row justify-center items-center q-mt-lg">
           <div id="whatisets" class="chat-bubble">
             <et-s-chat-nav colortype="dark" direction="right" class="q-pa-md q-mb-lg"
-              ><span>What is EtS?</span></et-s-chat-nav
+              ><span class="subheader">What is EtS?</span></et-s-chat-nav
             >
           </div>
         </div>
@@ -125,7 +150,8 @@
         <!--Caption-->
         <figure class="w-100 q-ma-none row text">
           <div class="text-weight-bold text-h5">
-            Escape the Studies is an <a>Open-Source</a> Platform for learning in style.
+            Escape the Studies is an <a href="https://opensource.org/osd">Open-Source</a> Platform
+            for learning in style.
           </div>
           <figcaption class="text-weight-light text-italic w-90 q-mt-xs">
             - sponsored by HTL Wien West
@@ -170,7 +196,7 @@
               enjoy it.
             </div>
             <div class="text-h6 text-weight-regular text-italic q-my-md">
-              <a>So join us on our little journey! </a>
+              <a class="disabled">So join us on our little journey! </a>
             </div>
           </div>
           <!--Chapter 2-->
@@ -185,7 +211,7 @@
         <div class="row justify-center items-center q-mt-lg">
           <div id="yourlittlejourney" class="chat-bubble">
             <et-s-chat-nav colortype="dark" direction="right" class="q-pa-md q-mb-lg"
-              ><span>Your little journey begins here.</span></et-s-chat-nav
+              ><span class="subheader">Your little journey begins here.</span></et-s-chat-nav
             >
           </div>
         </div>
@@ -193,7 +219,11 @@
         <!--Caption-->
         <div class="row text">
           <div class="text-weight-bold text-h5">
-            Escape the Studies is a <a>Free-to-Use</a> Webpage, only waiting for you.
+            Escape the Studies is a
+            <a href="https://www.linguee.de/englisch-deutsch/uebersetzung/free+to+use.html"
+              >Free-to-Use</a
+            >
+            Webpage, only waiting for you.
           </div>
         </div>
         <!--Caption End-->
@@ -206,7 +236,7 @@
               <div class="text-h6 text-italic q-my-md">Already have an Account?</div>
               <div class="text-h6 text-weight-regular q-my-md">
                 Go straight to our hand-picked Selection of Courses and enjoy the fantastic world of
-                read-learn and <a>Play!</a>
+                read-learn and <a class="disabled">Play!</a>
               </div>
             </div>
             <!--Q1 End-->
@@ -215,7 +245,7 @@
               <div class="text-h6 text-italic q-my-md">New as a Study-Adventurer?</div>
               <div class="text-h6 text-weight-regular q-my-md">
                 Don't worry. Everyone begins without an Account one day. So choose your Class
-                (Google Account) wisely and <a>get started!</a>
+                (Google Account) wisely and <a class="disabled">get started!</a>
               </div>
             </div>
             <!--Q2 End-->
@@ -236,12 +266,12 @@
               </div>
               <div div class="text-h6 text-weight-regular q-my-md">
                 Hello!?!? You still here!? Oh you are? Fantastic! I see great potential in you. So
-                better <a>sign up</a> now and give me my well owned Bonus!
+                better <a class="disabled">sign up</a> now and give me my well owned Bonus!
               </div>
               <div div class="text-h6 text-weight-regular q-my-md">
                 Happy now? See that happens if you leave me without a script and five minutes to
                 spare. I maybe have highlighted it three times already, but if you still haven't
-                done it: <a>Sign up here!</a>
+                done it: <a class="disabled">Sign up here!</a>
               </div>
               <!--Figcaption Author-sama-->
               <figure class="w-100 q-ma-none row text">
@@ -265,7 +295,7 @@
         <div class="row justify-center items-center q-mt-lg">
           <div id="continue" class="chat-bubble">
             <et-s-chat-nav colortype="dark" direction="right" class="q-pa-md q-mb-lg"
-              ><span>How will we continue?</span></et-s-chat-nav
+              ><span class="subheader">How will we continue?</span></et-s-chat-nav
             >
           </div>
         </div>
@@ -282,14 +312,15 @@
           <div>
             <div class="text-h6 text-weight-regular q-my-md">
               We are still just a diploma Project after all. So maybe we will continue on and maybe
-              we won't. But don't worry. Our great <a>Documentations</a>, <a>Source-Code</a> and
-              <a>Course</a> will continue on!
+              we won't. But don't worry. Our great <a class="disabled">Documentations</a>,
+              <a href="https://github.com/hochstegerL03/EscapeTheStudies">Source-Code</a> and
+              <a class="disabled">Course</a> will continue on!
             </div>
             <div class="text-h6 text-weight-regular q-my-md">
               We even got a small <a>Checklist</a> with things to do for our future selfs or
               replacements:
             </div>
-            <div class="text-center text-h6 text-mono text-weight-light q-my-md">
+            <div class="text-center text-h6 text-mono text-weight-light q-my-lg">
               Imagine an inserted Checklist
             </div>
             <figure class="w-100 q-ma-none">
@@ -313,19 +344,18 @@
       <!--Cookie End-->
     </div>
   </div>
+  <!--Content End-->
 </template>
 
 <style lang="scss" scoped>
-.w-100 {
-  width: 100%;
-}
-.w-90 {
-  width: 90%;
-  max-width: 1024px;
-}
 .bannernewscontainer {
   width: 100%;
   height: 35vh;
+}
+
+.bannerlong {
+  width: 100%;
+  height: 15vh;
 }
 
 .chat-bubble {
@@ -403,6 +433,7 @@
 <script setup>
 import EtSBanner from '../components/EtSBanner.vue';
 import EtSChatNav from '../components/EtSChatNav.vue';
+import EtSHeader from '../components/EtSHeader.vue';
 import { scroll } from 'quasar';
 const { getScrollTarget, setVerticalScrollPosition } = scroll;
 
