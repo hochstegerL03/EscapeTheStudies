@@ -12,7 +12,7 @@
 }
 </style>
 <script setup>
-const props = defineProps({
+defineProps({
   titel: String,
   content: String,
   link: String,

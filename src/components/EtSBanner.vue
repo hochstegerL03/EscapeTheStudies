@@ -13,7 +13,7 @@
 }
 </style>
 <script setup>
-const props = defineProps({
+defineProps({
   img: { type: String, Default: 'none' },
 });
 </script>

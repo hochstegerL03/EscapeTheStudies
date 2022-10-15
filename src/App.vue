@@ -77,8 +77,6 @@
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 import EtSNavbar from './components/EtSNavbar.vue';
-import EtSBanner from './components/EtSBanner.vue';
-import EtSHeader from './components/EtSHeader.vue';
 import EtSChatNav from './components/EtSChatNav.vue';
 
 const rightDrawerOpen = ref(false);
