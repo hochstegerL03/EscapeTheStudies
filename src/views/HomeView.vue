@@ -330,7 +330,7 @@
       <!--How will we continue End-->
       <!--Cookie-->
       <div class="row justify-center q-mb-lg">
-        <q-img src="/images/cookie_coffee.png" />
+        <q-img src="images/cookie_coffee.png" />
       </div>
       <!--Cookie End-->
     </div>
