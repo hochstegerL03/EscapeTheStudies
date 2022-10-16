@@ -36,7 +36,7 @@
               </header>
             </div>
             <main></main>
-            <footer class="absolute-bottom barabsolute">
+            <footer class="absolute-bottom">
               <div class="row">
                 <div class="col-8">
                   <div class="bar-wrapper">
@@ -378,7 +378,8 @@
 .lightbar {
   background-color: $secondary;
   width: 80%;
-  height: 4vh;
+  height: 100%;
+  max-height: 6vh;
   border-radius: 0vw 15px 15px 15px;
   z-index: 1;
   position: relative;
@@ -394,7 +395,8 @@
 .darkbar {
   background-color: $primary;
   width: 100%;
-  height: 4vh;
+  height: 100%;
+  max-height: 6vh;
   border-radius: 0vw 15px 15px 15px;
   z-index: 0;
   bottom: 0;
@@ -419,6 +421,7 @@
 
 .bar-wrapper {
   position: relative;
+  height: 100%;
 }
 </style>
 <script setup>
