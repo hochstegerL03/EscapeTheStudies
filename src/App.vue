@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpR ffr">
+  <q-layout view="hHr lpR ffr">
     <q-header reveal class="bg-white text-black" height-hint="98">
       <q-toolbar>
         <!--Navbar used for the Main Navigation -->
@@ -13,7 +13,7 @@
       <!--Close Btn-->
       <div>
         <q-btn
-          class="float-right q-my-md q-mr-lg"
+          class="float-right q-my-md q-mr-lg "
           dense
           flat
           round

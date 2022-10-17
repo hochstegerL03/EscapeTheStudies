@@ -38,7 +38,7 @@
             <main></main>
             <footer class="absolute-bottom">
               <div class="row">
-                <div class="col-8">
+                <div class="col-9">
                   <div class="bar-wrapper">
                     <div class="lightbar">
                       <div class="flex items-center justify-center h-100">
@@ -61,7 +61,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                   <span
                     class="text-primary float-right fitbanner text-center subheader text-weight-bolder text-h5"
                     >New!</span
@@ -308,8 +308,8 @@
               <a class="disabled">Course</a> will continue on!
             </div>
             <div class="text-h6 text-weight-regular q-my-md">
-              We even got a small <a>Checklist</a> with things to do for our future selfs or
-              replacements:
+              We even got a small <a class="disabled">Checklist</a> with things to do for our future
+              selfs or replacements:
             </div>
             <div class="text-center text-h6 text-mono text-weight-light q-my-lg">
               Imagine an inserted Checklist
@@ -433,7 +433,7 @@ const { getScrollTarget, setVerticalScrollPosition } = scroll;
 function scrolltovertically(obj) {
   const el = document.getElementById(obj);
   const target = getScrollTarget();
-  const offset = el.offsetTop;
+  const offset = el.offsetTop - 50;
   const duration = 1000;
   setVerticalScrollPosition(target, offset, duration);
 }
