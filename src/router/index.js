@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue';
 import AboutView from '../views/AboutView.vue';
 import CoursesView from '../views/CoursesView.vue';
 import CourseOverviewView from '../views/CourseOverviewView.vue';
+import LogInView from '../views/LogInView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/cooverview',
       name: 'course',
       component: CourseOverviewView,
+    },
+    {
+      path: '/sign',
+      name: 'login',
+      component: LogInView,
     },
   ],
 });

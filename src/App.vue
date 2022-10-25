@@ -13,7 +13,7 @@
       <!--Close Btn-->
       <div>
         <q-btn
-          class="float-right q-my-md q-mr-lg "
+          class="float-right q-my-md q-mr-lg"
           dense
           flat
           round
@@ -34,7 +34,7 @@
             </router-link>
           </div>
           <div>
-            <router-link to="/courses" class="disabled">
+            <router-link to="/courses" class="">
               <et-s-chat-nav colortype="dark" direction="right" class="q-pa-sm q-my-lg titelold"
                 ><span>Courses</span></et-s-chat-nav
               >
@@ -48,14 +48,14 @@
             </router-link>
           </div>
           <div>
-            <router-link to="/sign" class="disabled">
+            <router-link to="/sign" class="">
               <et-s-chat-nav colortype="dark" direction="right" class="q-pa-sm q-my-lg titelold"
                 ><span>Login in</span></et-s-chat-nav
               >
             </router-link>
           </div>
           <div>
-            <router-link to="/sign" class="disabled">
+            <router-link to="/sign" class="">
               <et-s-chat-nav colortype="white" class="q-pa-sm q-my-lg titelold"
                 ><span>Sign Up</span></et-s-chat-nav
               >
@@ -98,7 +98,6 @@ function toggleRightDrawer() {
   opacity: 0.5;
   pointer-events: none;
 }
-
 
 .subheader {
   font-family: 'Source Sans Pro', sans-serif;
@@ -144,12 +143,46 @@ a:active {
   max-width: 1024px;
 }
 
-.h-100{
+.capped-sm {
+  max-width: 800px;
+}
+
+.h-100 {
   height: 100%;
 }
 
 .w-80 {
   width: 80%;
 }
+.cardbg-light {
+  background-color: $accent;
+}
 
+.cardbg-medium {
+  background-color: $secondary;
+}
+
+.cardlection {
+  border-radius: 15px;
+}
+
+.cardlection-start {
+  border-radius: 15px 0px 0px 15px;
+}
+
+.cardlection-end {
+  border-radius: 0px 15px 15px 0px;
+  height: 100% !important;
+}
+
+.checkmark {
+  height: 100% !important;
+  font-size: 7vw;
+  color: white;
+}
+
+.cappeddesc {
+  white-space: nowrap;
+  overflow: auto;
+}
 </style>

@@ -151,37 +151,7 @@
 </template>
 
 <style lang="scss" scoped>
-.cardbg-light {
-  background-color: $accent;
-}
 
-.cardbg-medium {
-  background-color: $secondary;
-}
-
-.cardlection {
-  border-radius: 15px;
-}
-
-.cardlection-start {
-  border-radius: 15px 0px 0px 15px;
-}
-
-.cardlection-end {
-  border-radius: 0px 15px 15px 0px;
-  height: 100% !important;
-}
-
-.checkmark {
-  height: 100% !important;
-  font-size: 7vw;
-  color: white;
-}
-
-.cappeddesc {
-  white-space: nowrap;
-  overflow: auto;
-}
 
 .footerspace {
   height: 10vh !important;
