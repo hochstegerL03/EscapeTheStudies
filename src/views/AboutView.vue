@@ -7,7 +7,7 @@
     <!--OnePage Menu-->
     <q-tabs align="justify" class="subheader text-weight-bolder">
       <q-route-tab to="/" label="Home" />
-      <q-route-tab disable to="/courses" label="Courses" />
+      <q-route-tab to="/courses" label="Courses" />
       <q-route-tab to="/about" label="About us" />
     </q-tabs>
     <!--OnePage Menu End-->

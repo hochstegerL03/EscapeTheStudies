@@ -99,6 +99,7 @@ function toggleRightDrawer() {
   pointer-events: none;
 }
 
+
 .subheader {
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -143,7 +144,12 @@ a:active {
   max-width: 1024px;
 }
 
+.h-100{
+  height: 100%;
+}
+
 .w-80 {
   width: 80%;
 }
+
 </style>

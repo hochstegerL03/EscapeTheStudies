@@ -2,7 +2,7 @@
   <div class="text-center q-ma-lg">
     <h4 class="titelold q-my-sm text-weight-bolder">{{ titel }}</h4>
     <p class="subheader h4b5 text-h6 q-mb-xs">{{ content }}</p>
-    <a class="text-italic text-body1 text-weight-light" :href="url">{{ link }}</a>
+    <a class="subheader text-italic text-body1 text-weight-light" :href="url">{{ link }}</a>
   </div>
 </template>
 <style scoped>

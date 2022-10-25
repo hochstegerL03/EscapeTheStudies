@@ -14,7 +14,7 @@
     <!--OnePage Menu-->
     <q-tabs align="justify" class="subheader text-weight-bolder">
       <q-route-tab to="/" label="Home" />
-      <q-route-tab disable to="/courses" label="Courses" />
+      <q-route-tab to="/courses" label="Courses" />
       <q-route-tab to="/about" label="About us" />
     </q-tabs>
     <!--OnePage Menu End-->
@@ -30,9 +30,7 @@
           <div class="bannernewsoverlay bannernews placeholder">
             <div class="flex items-start justify-center">
               <header class="fitbanner">
-                <p class="q-pa-md header text-italic text-h5">
-                  Just an Act: Learn the Magic of Web-Development!
-                </p>
+                <p class="q-pa-md text text-h5">Just an Act: Learn the Magic of Web-Development!</p>
               </header>
             </div>
             <main></main>
@@ -43,7 +41,7 @@
                     <div class="lightbar">
                       <div class="flex items-center justify-center h-100">
                         <div
-                          class="text-white text-center q-pb-xs subheader text-weight-bold text-italic text-h6"
+                          class="text-white text-center q-pb-xs subheader text-weight-bold text-h6"
                         >
                           HTML, JavaScript
                         </div>
@@ -76,21 +74,19 @@
         <!--Placeholder Lection Info Banner-->
         <div id="newsdetails" class="bannernewscontainer-flex q-py-md">
           <div
-            class="bannernewsoverlay bannernewsdetails { border-radius: 0vw 0vw 5vw 5vw; } placeholder"
+            class="bannernewsoverlay bannernewsdetails placeholder"
           >
             <header>
               <div class="header-30">
                 <div class="row items-start justify-center h-100">
                   <div class="infobar col-3">
-                    <div
-                      class="text-white text-center q-pb-xs subheader text-weight-bold text-italic text-h6"
-                    >
-                      Info
+                    <div class="row items-center justify-center h-100">
+                      <div class="text-white q-pb-xs subheader text-weight-bold text-h6">Info</div>
                     </div>
                   </div>
 
                   <div class="col-6 self-end">
-                    <div class="header text-center self-end text-italic text-h5">Just an Act:</div>
+                    <div class="text text-center self-end text-h5">Just an Act:</div>
                   </div>
                   <div class="col-3"></div>
                 </div>
@@ -388,7 +384,7 @@
 .infobar {
   background-color: $secondary;
   width: 100%;
-  height: 4vh;
+  height: 75% !important;
   border-radius: 0vw 15px 15px 0vw;
 }
 
