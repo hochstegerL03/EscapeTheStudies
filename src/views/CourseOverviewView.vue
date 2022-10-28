@@ -43,9 +43,7 @@
     <div class="w-90 q-mt-md">
       <div class="row justify-center items-center q-mb-md">
         <!--Header-->
-        <div class="col-12 text-center subheader text-h5 text-weight-bolder">
-          Just an Act:
-        </div>
+        <div class="col-12 text-center subheader text-h5 text-weight-bolder">Just an Act:</div>
         <!--Header End-->
         <!--Description-->
         <div class="w-90">
@@ -68,11 +66,11 @@
                 Chapter 1: Spectator
               </div>
             </div>
-            <div class="col-4 cardbg-medium cardlection-end">
+            <router-link to="/chapter" class="col-4 cardbg-medium cardlection-end">
               <div class="flex justify-center items-center checkmark">
                 <i class="fa-regular fa-square-check"></i>
               </div>
-            </div>
+            </router-link>
           </div>
         </div>
         <div class="w-100 q-pt-md">

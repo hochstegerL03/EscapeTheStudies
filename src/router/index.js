@@ -4,6 +4,7 @@ import AboutView from '../views/AboutView.vue';
 import CoursesView from '../views/CoursesView.vue';
 import CourseOverviewView from '../views/CourseOverviewView.vue';
 import LogInView from '../views/LogInView.vue';
+import LectionView from '../views/LectionView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/sign',
       name: 'login',
       component: LogInView,
+    },
+    {
+      path: '/chapter',
+      name: 'chapter',
+      component: LectionView,
     },
   ],
 });
