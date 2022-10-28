@@ -43,20 +43,17 @@
     <div class="w-90 q-mt-md">
       <div class="row justify-center items-center q-mb-md">
         <!--Header-->
-        <div class="col-12 text-center subheader text-h5 text-weight-bolder q-mb-md">
+        <div class="col-12 text-center subheader text-h5 text-weight-bolder">
           Just an Act:
         </div>
         <!--Header End-->
         <!--Description-->
-        <div class="col-12 text text-h6 q-my-sm text-weight-regular">
-          Welcome to a World full of Magic, Drama and Webtechnology.
-        </div>
-        <div class="col-12 text text-h6 q-my-sm text-weight-regular">
-          In this little Beginner friendly Course we will teach you how to use basic Bootstrap,
-          HTML, JavaScript and Vue.
-        </div>
-        <div class="col-12 text text-h6 q-my-sm text-weight-regular">
-          So be our Guest and <a class="disabled">join</a> this weird acting fanatic world.
+        <div class="w-90">
+          <div class="col-12 text text-h6 q-my-md text-weight-regular">
+            Welcome to a World full of Magic, Drama and Webtechnology. In this little Beginner
+            friendly Course we will teach you how to use basic Bootstrap, HTML, JavaScript and Vue.
+            So be our Guest and <a class="disabled">join</a> this weird acting fanatic world.
+          </div>
         </div>
         <!--Description End-->
       </div>
@@ -134,7 +131,7 @@
     </div>
     <!--Body End-->
     <!--Buttons-->
-    <div class="funnybtn w-100 row justify-center items-center">
+    <div class="funnybtn w-100 row justify-center items-center q-mt-xl">
       <router-link to="/courses" class="col-6 text-white">
         <div class="text-center subheader text-h6 text-weight-bold">Give Up</div>
         <div class="text-center subheader text-body2 text-italic">or go Home</div>
@@ -177,7 +174,9 @@
 .tagbox {
   background-color: $secondary;
   width: 40vw;
-  height: 10vw;
+  min-height: 20px;
+  height: 5vh;
+  max-height: 50px;
   border-radius: 20px;
   color: white;
 }
@@ -189,4 +188,54 @@
   border-radius: 20px 20px 0px 0px;
 }
 </style>
-<script setup></script>
+<script setup>
+import { ref, onMounted } from 'vue';
+//Scroll Tags:
+
+//.scrollbar Object
+const scrollbarTags = ref();
+
+//isMouseDown
+const mouseDownTrigger = ref(false);
+
+//X-Position of scrollbarTags
+const referenceX = ref();
+
+//scroll-Distance
+const relativeScroll = ref();
+
+onMounted(() => {
+  //get .scrollbar Object
+  scrollbarTags.value = document.querySelector('.scrollbar');
+
+  //onMouseMove
+  scrollbarTags.value.addEventListener('mousemove', (e) => {
+    //Prevent Default Event (for example: Selecting Text)
+    e.preventDefault();
+    //only fire if above scrollbar and left mouse button clicked
+    if (!mouseDownTrigger.value) {
+      return;
+    }
+    //where the mouse pointer is at the moment (e.pageX) relative to the object (parent's container) offset (left) in pixel
+    const x = e.pageX - scrollbarTags.value.offsetLeft;
+    //x current mouse position; referenceX = mouse position at start of drag
+    const scroll = x - referenceX.value;
+    //Scroll Command
+    scrollbarTags.value.scrollLeft = relativeScroll.value - scroll;
+  });
+
+  //Event Listeners
+  scrollbarTags.value.addEventListener('mousedown', startScrollbarHorizontal);
+  scrollbarTags.value.addEventListener('mouseup', stopScrollbarHorizontal);
+  scrollbarTags.value.addEventListener('mouseleave', stopScrollbarHorizontal);
+});
+
+function startScrollbarHorizontal(e) {
+  mouseDownTrigger.value = true;
+  referenceX.value = e.pageX - scrollbarTags.value.offsetLeft;
+  relativeScroll.value = scrollbarTags.value.scrollLeft;
+}
+function stopScrollbarHorizontal(e) {
+  mouseDownTrigger.value = false;
+}
+</script>

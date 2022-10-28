@@ -9,24 +9,25 @@
       <!--Infos Ende-->
       <!--Image Logo-->
       <div class="flex justify-center items-center q-mt-xl">
-        <q-img class="w-50 q-mt-xl" src="svgs/logo.svg"></q-img>
+        <q-img class="w-50 q-mt-lg q-mb-md" src="svgs/logo.svg"></q-img>
+        <!--Chat Nav-->
         <div class="w-90">
-          <!--Chat Nav-->
           <et-s-chat-nav class="q-pa-md q-my-lg"
             ><span class="titelold">Login with Google</span></et-s-chat-nav
           >
           <et-s-chat-nav colortype="dark" direction="right" class="q-pa-md q-mt-lg"
             ><span class="titelold">Sign Up</span></et-s-chat-nav
           >
-          <!--Chat Nav-->
+
           <!--Guest-->
-          <div class="flex justify-center q-my-md">
+          <div class="flex justify-center q-my-lg">
             <router-link to="/" class="text-black text text-body1 text-weight-light text-center"
               >Login as a Guest</router-link
             >
           </div>
           <!--Guest-->
         </div>
+        <!--Chat Nav-->
         <!--Chat Input-->
         <div class="row justify-start items-center q-ma-md q-gutter-sm w-100">
           <div class="col-9 chatinput">
@@ -49,11 +50,12 @@
 
 .chatinput {
   background-color: $accent;
-  border-radius: 25px;
-  height: 7vh !important;
+  border-radius: 35px;
+  height: 4rem !important;
 }
 .round {
   border-radius: 50%;
+  width: 4rem !important;
 }
 </style>
 <script setup>

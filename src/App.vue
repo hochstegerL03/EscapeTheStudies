@@ -177,7 +177,7 @@ a:active {
 
 .checkmark {
   height: 100% !important;
-  font-size: 7vw;
+  font-size: 2rem;
   color: white;
 }
 
