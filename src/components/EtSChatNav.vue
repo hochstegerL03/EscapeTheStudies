@@ -10,6 +10,7 @@
 .chat {
   width: 100%;
   height: 100%;
+  min-height: 4rem;
 }
 .left {
   border-radius: 0vw 15px 15px 15px;

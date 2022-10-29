@@ -1,4 +1,23 @@
 <template>
+  <!--Menu-->
+  <div class="fixed-bottom-right absolutetop">
+    <div v-if="showmenu" class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center">
+      <div class="flex items-center justify-center h-100 w-100">t</div>
+    </div>
+    <div v-if="showmenu" class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center">
+      <div class="flex items-center justify-center h-100 w-100">l</div>
+    </div>
+    <div v-if="showmenu" class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center">
+      <div class="flex items-start justify-center h-100 w-100">q</div>
+    </div>
+    <div
+      @click="showmenu = !showmenu"
+      class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
+    >
+      <div class="flex items-center justify-center h-100 w-100">i</div>
+    </div>
+  </div>
+  <!--Menu End-->
   <!--Part 1: Story-->
   <div class="flex justify-center">
     <!--Body/Text-->
@@ -147,16 +166,20 @@
     <!--Body/Text-->
     <div class="w-90">
       <!--Header-->
-      <div class="text text-h4 text-weight-regular q-my-lg">Variables</div>
+      <div class="flex justify-center">
+        <div class="w-90 text text-h4 text-weight-regular q-my-lg">Variables</div>
+      </div>
       <!--Header End-->
       <!--Questions-->
       <div>
         <q-form>
           <!--Question 1-->
           <div>
-            <div class="text text-h6 text-weight-regular q-my-md">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-              invidunt ut labore et dolore magna aliquyam erat,
+            <div class="flex justify-center">
+              <div class="w-90 text text-h6 text-weight-regular q-mb-lg">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat,
+              </div>
             </div>
             <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
               ><span class="text text-weight-medium text-h6 text-left"
@@ -167,9 +190,22 @@
               ><span class="text text-h3">...</span></et-s-chat-nav
             >
             <div class="q-mr-md q-mb-md">
-              <div class="text-right text-h5 text-weight-regular text-grey q-my-sm">Answer 1</div>
-              <div class="text-right text-h5 text-weight-regular text-grey q-my-sm">Answer 2</div>
-              <div class="text-right text-h5 text-weight-regular text-grey q-my-sm">Answer 3</div>
+              <!--Radio Group (Invisible). Labels act as button/radio-->
+              <div class="checkbutton">
+                <label>
+                  <input type="radio" name="radioa2" value="a1" />
+                  <div class="text text-h5 q-my-sm">Answer 1</div>
+                </label>
+                <label>
+                  <input type="radio" name="radioa2" value="a2" />
+                  <div class="text text-h5 q-my-sm">Answer 2</div>
+                </label>
+                <label>
+                  <input type="radio" name="radioa2" value="a3" />
+                  <div class="text text-h5 q-my-sm">Answer 3</div>
+                </label>
+              </div>
+              <!--Radio Group End-->
             </div>
           </div>
           <!--Question 1 End-->
@@ -183,10 +219,24 @@
             <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
               ><span class="text text-h3">...</span></et-s-chat-nav
             >
-            <div class="q-mr-md q-mb-md">
-              <div class="text-right text-h5 text-weight-regular text-grey q-my-sm">Answer 1</div>
-              <div class="text-right text-h5 text-weight-regular text-grey q-my-sm">Answer 2</div>
-              <div class="text-right text-h5 text-weight-regular text-grey q-my-sm">Answer 3</div>
+            <div class="q-mr-sm q-mb-md">
+              <!--Radio Group (Invisible). Labels act as button/radio-->
+              <div class="checkbutton q-mb-lg">
+                <label>
+                  <input type="radio" name="radioa3" value="a1" />
+                  <div class="text text-h5 q-my-sm">Answer 1</div>
+                </label>
+                <label>
+                  <input type="radio" name="radioa3" value="a2" />
+                  <div class="text text-h5 q-my-sm">Answer 2</div>
+                </label>
+                <label>
+                  <input type="radio" name="radioa3" value="a3" />
+                  <div class="text text-h5 q-my-sm">Answer 3</div>
+                </label>
+              </div>
+              <!--Radio Group End-->
+              <a class="q-ml-sm subheader text-h5 text-weight-bold text-italic">Hint?</a>
             </div>
           </div>
           <!--Question 2 End-->
@@ -198,33 +248,143 @@
               ></et-s-chat-nav
             >
             <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg">
-              <textarea
-                placeholder="Type here ..."
-                class="text-white text-mono inputbubble"
-              ></textarea>
+              <div class="flex items-center justify-center h-100 w-100">
+                <textarea
+                  placeholder="Type here ..."
+                  class="text-white text-mono inputbubble"
+                ></textarea>
+              </div>
             </et-s-chat-nav>
-
-            <div class="q-mr-md q-mb-md">
-              <div class="text-right text-h5 text-weight-regular text-grey q-my-sm">Answer 1</div>
-              <div class="text-right text-h5 text-weight-regular text-grey q-my-sm">Answer 2</div>
-              <div class="text-right text-h5 text-weight-regular text-grey q-my-sm">Answer 3</div>
-            </div>
           </div>
           <!--Question 3 End-->
+          <!--Question 4-->
+          <div>
+            <div class="flex justify-center">
+              <div class="w-90 text text-h6 text-weight-regular q-mb-lg">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat,
+              </div>
+            </div>
+            <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
+              ><span class="text text-weight-medium text-h6 text-left"
+                >Question 4: Lorem ipsum dolor sit amet, consetetur?</span
+              ></et-s-chat-nav
+            >
+            <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
+              ><span v-if="question4.length > 0" class="text text-h5">{{ question4 }}</span
+              ><span v-else class="text text-h3">...</span></et-s-chat-nav
+            >
+            <div class="q-mr-md q-mb-md">
+              <!--Radio Group (Invisible). Labels act as button/radio-->
+              <div class="flex items-center justify-center q-gutter-md checkbuttonmulti">
+                <label>
+                  <input type="checkbox" value="a1" v-model="question4" />
+                  <div class="text text-h6">This is incorrect.</div>
+                </label>
+                <label>
+                  <input type="checkbox" value="a2" v-model="question4" />
+                  <div class="text text-h6">This is correct.</div>
+                </label>
+                <label>
+                  <input type="checkbox" value="a3" v-model="question4" />
+                  <div class="text text-h6">Answer 2233</div>
+                </label>
+                <label>
+                  <input type="checkbox" value="a4" v-model="question4" />
+                  <div class="text text-h6">Very Long Answer.</div>
+                </label>
+                <label>
+                  <input type="checkbox" value="a5" v-model="question4" />
+                  <div class="text text-h6">Very Long Answer.</div>
+                </label>
+                <label>
+                  <input type="checkbox" value="a6" v-model="question4" />
+                  <div class="text text-h6">A + 4</div>
+                </label>
+                <label>
+                  <input type="checkbox" value="a7" v-model="question4" />
+                  <div class="text text-h6">Yes</div>
+                </label>
+              </div>
+              <!--Radio Group End-->
+            </div>
+          </div>
+          <!--Question 4 End-->
         </q-form>
       </div>
       <!--Questions End-->
+      <!--Checkbar-->
+      <div class="w-100 row justify-center items-center q-my-xl">
+        <div class="col-6">
+          <div class="text-center text-secondary subheader text-h5 text-weight-bold">Check</div>
+          <div class="text-center subheader text-grey text-caption text-italic text-weight-light">
+            2 Errors found. <span class="jumperlink">click here!</span>
+          </div>
+        </div>
+        <div class="col-6 text-center subheader text-h6 text-weight-bold">
+          <div class="text-center text-secondary subheader text-h5 text-weight-bold">Go Next!</div>
+          <div class="text-center subheader text-grey text-caption text-italic text-weight-light">
+            Check your Answers to get a Star
+          </div>
+        </div>
+      </div>
+      <!--Checkbar End-->
     </div>
     <!--Body/Text End-->
   </div>
   <!--Part 1: Story End-->
 </template>
 <style lang="scss" scoped>
+.absolutetop {
+  z-index: 999;
+}
+.menustatic {
+  background-color: $secondary;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.jumperlink {
+  text-decoration: underline;
+}
+
+.checkbutton {
+  text-align: right;
+  font-weight: normal;
+  color: grey;
+}
+.checkbutton label input {
+  position: absolute;
+  display: none;
+  color: #fff !important;
+}
+
+.checkbutton input:checked + div {
+  color: black !important;
+}
+
+.checkbuttonmulti {
+  text-align: right;
+  font-weight: normal;
+  color: grey;
+}
+.checkbuttonmulti label input {
+  position: absolute;
+  display: none;
+  color: #fff !important;
+}
+
+.checkbuttonmulti input:checked + div {
+  text-decoration: line-through;
+}
+
 .inputbubble {
   background-color: transparent;
   border: none;
   width: 100%;
   height: 100%;
+  min-height: 7rem;
 }
 .inputbubble:focus {
   border: none;
@@ -254,4 +414,7 @@ textarea::placeholder {
 </style>
 <script setup>
 import EtSChatNav from '../components/EtSChatNav.vue';
+import { ref } from 'vue';
+const question4 = ref([]);
+const showmenu = ref(false);
 </script>
