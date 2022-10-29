@@ -390,6 +390,12 @@
   border: none;
   outline: none;
 }
+
+textarea {
+  resize: vertical;
+  overflow: hidden;
+}
+
 textarea::-webkit-input-placeholder {
   color: white;
 }
