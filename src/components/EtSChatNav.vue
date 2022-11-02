@@ -1,7 +1,7 @@
 <template>
   <div
     :class="[direction, colortype]"
-    class="flex justify-center items-center chat text-weight-bolder text-center text-h5"
+    class="flex justify-center items-center chat text-weight-bolder text-h5"
   >
     <slot />
   </div>

@@ -1,13 +1,25 @@
 <template>
   <!--Menu-->
   <div class="fixed-bottom-right absolutetop">
-    <div v-if="showmenu" class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center">
+    <div
+      @click="scrolltovertically('text')"
+      v-if="showmenu"
+      class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
+    >
       <div class="flex items-center justify-center h-100 w-100">t</div>
     </div>
-    <div v-if="showmenu" class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center">
+    <div
+      @click="scrolltovertically('lection')"
+      v-if="showmenu"
+      class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
+    >
       <div class="flex items-center justify-center h-100 w-100">l</div>
     </div>
-    <div v-if="showmenu" class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center">
+    <div
+      @click="scrolltovertically('questions')"
+      v-if="showmenu"
+      class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
+    >
       <div class="flex items-start justify-center h-100 w-100">q</div>
     </div>
     <div
@@ -19,7 +31,7 @@
   </div>
   <!--Menu End-->
   <!--Part 1: Story-->
-  <div class="flex justify-center">
+  <div id="text" class="flex justify-center">
     <!--Body/Text-->
     <div class="w-90">
       <!--Header-->
@@ -104,7 +116,7 @@
   </div>
   <!--Part 1: Story End-->
   <!--Part 2: Notes-->
-  <div class="flex justify-center">
+  <div id="lection" class="flex justify-center">
     <!--Body/Text-->
     <div class="w-90">
       <!--Header-->
@@ -162,7 +174,7 @@
   </div>
   <!--Part 2: Notes End-->
   <!--Part 3: Questions-->
-  <div class="flex justify-center">
+  <div id="questions" class="flex justify-center">
     <!--Body/Text-->
     <div class="w-90">
       <!--Header-->
@@ -236,7 +248,19 @@
                 </label>
               </div>
               <!--Radio Group End-->
-              <a class="q-ml-sm subheader text-h5 text-weight-bold text-italic">Hint?</a>
+              <div
+                @click="hint1 = !hint1"
+                class="q-ml-sm subheader text-secondary text-h5 text-weight-bold text-italic"
+              >
+                Hint?
+              </div>
+              <div v-if="hint1" class="flex justify-center">
+                <et-s-chat-nav class="q-mt-lg q-mb-md">
+                  <div class="q-ml-md w-100 text text-weight-medium text-h6 text-left">
+                    Here is a hint mister
+                  </div>
+                </et-s-chat-nav>
+              </div>
             </div>
           </div>
           <!--Question 2 End-->
@@ -420,7 +444,19 @@ textarea::placeholder {
 </style>
 <script setup>
 import EtSChatNav from '../components/EtSChatNav.vue';
+import { scroll } from 'quasar';
 import { ref } from 'vue';
 const question4 = ref([]);
 const showmenu = ref(false);
+const hint1 = ref(false);
+
+const { getScrollTarget, setVerticalScrollPosition } = scroll;
+
+function scrolltovertically(obj) {
+  const el = document.getElementById(obj);
+  const target = getScrollTarget();
+  const offset = el.offsetTop - 50;
+  const duration = 1000;
+  setVerticalScrollPosition(target, offset, duration);
+}
 </script>
