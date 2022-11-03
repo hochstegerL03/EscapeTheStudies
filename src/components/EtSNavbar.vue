@@ -7,7 +7,7 @@
         </q-avatar>
       </div>
       <div class="col-6 text-center">
-        <span class="subheader">Escape the Studies</span>
+        <span class="subheader"><b>E</b>scape <b>t</b>he <b>S</b>tudies</span>
       </div>
       <div class="col-3">
         <q-btn
