@@ -1,362 +1,545 @@
 <template>
-  <!--Menu-->
-  <div class="fixed-bottom-right absolutetop">
-    <div
-      @click="scrolltovertically('text')"
-      v-if="showmenu"
-      class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
-    >
-      <div class="flex items-center justify-center h-100 w-100">t</div>
-    </div>
-    <div
-      @click="scrolltovertically('lection')"
-      v-if="showmenu"
-      class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
-    >
-      <div class="flex items-center justify-center h-100 w-100">l</div>
-    </div>
-    <div
-      @click="scrolltovertically('questions')"
-      v-if="showmenu"
-      class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
-    >
-      <div class="flex items-start justify-center h-100 w-100">q</div>
-    </div>
-    <div
-      @click="showmenu = !showmenu"
-      class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
-    >
-      <div class="flex items-center justify-center h-100 w-100">i</div>
-    </div>
-  </div>
-  <!--Menu End-->
-  <!--Part 1: Story-->
-  <div id="text" class="flex justify-center">
-    <!--Body/Text-->
-    <div class="w-90">
-      <!--Header-->
-      <div class="text text-h4 text-weight-regular q-my-lg">Chapter 1: Julia III</div>
-      <!--Header End-->
-      <!--Section 1-->
-      <div>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat.
-        </div>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          Sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-          kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor
-          sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-          et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-          amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-          accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-          sanctus est Lorem ipsum dolor sit amet.
-        </div>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
-          vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-          dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
-          facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-          euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-        </div>
-        <hr class="q-my-lg" />
+  <div>
+    <!--Menu-->
+    <div class="fixed-bottom-right absolutetop">
+      <div
+        @click="scrolltovertically('text')"
+        v-if="showmenu"
+        class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
+      >
+        <div class="flex items-center justify-center h-100 w-100">t</div>
       </div>
-      <!--Section 1 End-->
-      <!--Section 2-->
-      <div>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-          nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
-          vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-          vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
-          augue duis dolore te feugait nulla facilisi.
-        </div>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod
-          mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing
-          elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-          lobortis nisl ut aliquip ex ea commodo consequat.
-        </div>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
-          vel illum dolore eu feugiat nulla facilisis.
-        </div>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-          aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-          Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-          ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore
-          dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita
-          ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
-        </div>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-          magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-          accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-          sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-          elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-          diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-          gubergren, no sea takimata sanctus. s nisl ut aliquip ex ea commodo
-        </div>
-        <hr class="q-my-lg" />
+      <div
+        @click="scrolltovertically('lection')"
+        v-if="showmenu"
+        class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
+      >
+        <div class="flex items-center justify-center h-100 w-100">l</div>
       </div>
-      <!--Section 2 End-->
+      <div
+        @click="scrolltovertically('questions')"
+        v-if="showmenu"
+        class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
+      >
+        <div class="flex items-start justify-center h-100 w-100">q</div>
+      </div>
+      <div
+        @click="showmenu = !showmenu"
+        class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
+      >
+        <div class="flex items-center justify-center h-100 w-100">i</div>
+      </div>
     </div>
-    <!--Body/Text End-->
-  </div>
-  <!--Part 1: Story End-->
-  <!--Part 2: Notes-->
-  <div id="lection" class="flex justify-center">
-    <!--Body/Text-->
-    <div class="w-90">
-      <!--Header-->
-      <div class="text text-h4 text-weight-regular q-my-lg">Notes</div>
-      <!--Header End-->
-      <!--Section 1-->
-      <div>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut.
-        </div>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          Labore et dolore magna aliquyam erat, sed diam sanctus est Lorem ipsum dolor sit amet.
-        </div>
-        <figure class="w-100 q-ma-none q-mt-lg row text">
-          <q-img src="images/chapter_blockchain.png" />
-          <figcaption class="text-weight-light text-italic w-90 q-mt-xs">
-            Graphic 1: Blockchains
-          </figcaption>
-        </figure>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat,
-        </div>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          Sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-          kasd gubergren, no sea takimata sanctus est.
-        </div>
-        <figure class="w-100 q-ma-none q-mt-lg row text">
-          <q-img src="images/chapter_languages.png" />
-          <figcaption class="text-weight-light text-italic w-90 q-mt-xs">
-            Graphic 2: Programming Languages
-          </figcaption>
-        </figure>
-        <div class="text text-h5 text-weight-regular q-my-md">Subtopic 1:</div>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-          accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-          sanctus est Lorem ipsum dolor sit amet.
-        </div>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat.
-        </div>
-        <div class="text text-h6 text-weight-regular q-my-md">
-          Sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-          kasd gubergren, no sea takimata sanctus est
-        </div>
-        <hr class="q-my-lg" />
-      </div>
-      <!--Section 1 End-->
-    </div>
-    <!--Body/Text End-->
-  </div>
-  <!--Part 2: Notes End-->
-  <!--Part 3: Questions-->
-  <div id="questions" class="flex justify-center">
-    <!--Body/Text-->
-    <div class="w-90">
-      <!--Header-->
-      <div class="flex justify-center">
-        <div class="w-90 text text-h4 text-weight-regular q-my-lg">Variables</div>
-      </div>
-      <!--Header End-->
-      <!--Questions-->
-      <div>
-        <q-form>
-          <!--Question 1-->
-          <div>
-            <div class="flex justify-center">
-              <div class="w-90 text text-h6 text-weight-regular q-mb-lg">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat,
-              </div>
-            </div>
-            <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
-              ><span class="text text-weight-medium text-h6 text-left"
-                >Question 1: Lorem ipsum dolor sit amet, consetetur?</span
-              ></et-s-chat-nav
-            >
-            <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-              ><span class="text text-h3">...</span></et-s-chat-nav
-            >
-            <div class="q-mr-md q-mb-md">
-              <!--Radio Group (Invisible). Labels act as button/radio-->
-              <div class="checkbutton">
-                <label>
-                  <input type="radio" name="radioa2" value="a1" />
-                  <div class="text text-h5 q-my-sm">Answer 1</div>
-                </label>
-                <label>
-                  <input type="radio" name="radioa2" value="a2" />
-                  <div class="text text-h5 q-my-sm">Answer 2</div>
-                </label>
-                <label>
-                  <input type="radio" name="radioa2" value="a3" />
-                  <div class="text text-h5 q-my-sm">Answer 3</div>
-                </label>
-              </div>
-              <!--Radio Group End-->
-            </div>
+    <!--Menu End-->
+    <!--Part 1: Story-->
+
+    <div id="text" class="flex justify-center">
+      <!--Body/Text-->
+
+      <div class="w-80">
+        <!--Header-->
+        <div class="text text-h4 text-weight-regular q-my-md">Emotions</div>
+        <!--Header End-->
+        <!--Section 1-->
+        <div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Do you know the feeling of being not good enough? Not good enough for oneself. For the
+            only one who should always have your back. The one who should love you, support you,
+            like you would be their one and only.
           </div>
-          <!--Question 1 End-->
-          <!--Question 2-->
-          <div>
-            <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
-              ><span class="text text-weight-medium text-h6 text-left"
-                >Question 2: Lorem ipsum dolor sit amet, consetetur?</span
-              ></et-s-chat-nav
+          <div class="text text-h6 text-weight-regular q-my-md">
+            So, do you know this feeling? The pain in one’s throat. The feeling of being unable to
+            breath, to bear any more seconds of this cold burn, tearing at your emotions? Do you?
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            And if not, how is it? How is it to have everything under control? Sealed away, pushed
+            to the side, so no one can ever see it, not even yourself?
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Do you feel happy? Was life always this great? Like a perfect gift of mother nature?
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            A damn perfect diamond laid in your innocent hands when you once discovered the bright
+            and overwhelming light of the day, of the so beautiful time-space warped universe we so
+            impudent live in! A gift preserved by the blood of the poor, the burning roots of the
+            forest and the awful screams of the unworthy, unhuman parasites of this world!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Do you love it? Adore it? Tell me, how do you feel when you read this? Do you feel
+            awful?
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            No you surely don’t. You are happy right? Maybe even amused. You just see another stupid
+            game in this digital world, this app, which was carefully crafted by myself over the
+            course of many hurtful and even more stressful hours. Am I right? You don’t care, like
+            the rest of them! You just want to have some fun, to learn something new. You just seek
+            comfort by running away!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Tell me, what else should you be doing right now? Maybe you should be by the side of a
+            loved one, listening to them, caring about them, just being god damn by their side, who
+            cares if you just sit there, listen and shut your uncomfortable mouth!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            It’s not always about you, so why are you here? Why are you here again? Looking down at
+            your phone like a junkie on his daily dose? Do you need this?
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Do YOU really need this? Are YOU really doing this for yourself? Be honest, why do you
+            want all of this? Do you want to impress others? Oh, maybe you just want to be special
+            or loved, am I right?
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            But ask yourself: Could you even love yourself? Are you even worth it? Or are you not
+            even true to yourself?
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Come on, say it, how many times have you given up because you feared judgment? How many
+            god damn times have you looked at the mirror and wished to have someone stand next to
+            you, to complete you?
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            A few hundred, thousand times? Maybe even everyday. Is this really you? Hey, listen!
+            Don’t look away. You need to hear this. Just remember the next few lines before you yet
+            again go back to your life like it once was. Remember them. Carefully:
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            No one will ever complete you. No one will ever love you, if you can’t even love
+            yourself. No one and I mean no one can ever be you! So why are you trying to be someone
+            else? To impress others like they are some kind of judge?
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            And how does it feel? Still motivated to go on? Are you really ready to go down this
+            road? To go down another of the so often broken paths of hardships and destruction?
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Do you really feel like your past has been completed? No remorse? Nothing to say to
+            yourself or the ones around you? Are you sure that this is your way? That this is a
+            journey for you, for the one you want to be, not the one you are and especially not the
+            one others want you to be? Are you going down this road to be someone you can be proud
+            of? A person with morals and a person with a will to do more than just benefit from
+            others or even your own crippled, shut down mess of a self?
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Are you? I can’t judge, because I can’t understand. No one can. We all are just
+            individuals who seek for a warm hand we can reach out for, but at the end of the day I
+            can’t tell, if you are lying, if you ever read this or if you will ever stop bottling up
+            your emotions.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            I really can’t and trust me if I say that I would do anything to do so, but I will never
+            be able to. I can just listen, I can just write down these empty words that once built
+            up my heart, but I won’t be able to make them reach yours. I can just try, like we all
+            do. And I can only reach out with this letter to you this once.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            I won’t be the same me in an hour or a day, I will change, like everything does and like
+            you will if you keep on.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Keep on believing in yourself and keep on going through with your own decisions. Your
+            decisions, not anyone else’s! So if you still want to learn a thing or two about
+            programming, then go on.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Go on and listen to a little story written by me. A story too surreal to ever be true
+            and a story too true to ever be just a plain insignificant imagination of my hopefully
+            sane mind.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            I welcome you to a world under construction. Under the construction of your mind!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Welcome to the Construction Site!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">May your visit be short!</div>
+          <hr class="q-my-lg" />
+        </div>
+        <!--Section 1 End-->
+      </div>
+      <!--Body/Text End-->
+    </div>
+    <!--Part 1: Story End-->
+    <!--Part 2: Notes-->
+    <div id="lection" class="flex justify-center">
+      <!--Body/Text-->
+      <div class="w-80">
+        <!--Header-->
+        <div class="text text-h4 text-weight-regular q-my-lg">Die Struktur (HTML)</div>
+        <!--Header End-->
+        <!--Section 1-->
+        <div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            HTML (Hypertext Markup Language) ist eine Beschreibungssprache, welche für die
+            Entwicklung im Web von Anfang bis Ende nicht wegzudenken ist.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Der Sinn hinter solch einer Beschreibungssprache ist es, die Anordnung und Struktur
+            innerhalb einer Aufgabe, in diesem Fall, wie der genutzte Browser zum Aufrufen der
+            Webseite, diese interpretieren und umsetzen soll, text-basiert zu beschreiben.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Hierbei werden sogenannte Tags genutzt, um bestimmte semantische Strukturen genormt in
+            einem inkludierten Wertebereich (Zeilenabschnitt), dem Browser, mitzuteilen.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Derzeit wird dafür HTML5 oder auch xHTML genutzt.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Frühere Versionen, wie HTML4, existieren zwar noch, sollten jedoch heutzutage nicht mehr
+            verwendet werden.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Das alles klingt zwar schön und gut, jedoch hilft uns das bei der Entwicklung selbst
+            nicht weiter.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Um das Thema und HTML selbst etwas verständlicher zu gestalten, werden wir uns daher an
+            praktischen Beispielen und der online zur Verfügung stehenden Dokumentation orientieren.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Also genug Hypotaxen! Legen wir los!
+          </div>
+          <figure class="w-100 q-ma-none q-mt-lg row text">
+            <q-img src="images/chapter_blockchain.png" />
+            <figcaption class="text-weight-light text-italic w-90 q-mt-xs">
+              Graphic 1: Blockchains
+            </figcaption>
+          </figure>
+          <hr />
+          <!-- <div class="text text-h5 text-weight-regular q-my-md">Subtopic 1:</div> -->
+
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Bevor wir mit irgendwelchen fancy Tags oder Design-Layouts loslegen können, müssen wir
+            uns jedoch mit der Basis-Struktur von HTML vertraut machen!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Damit der Browser, also das Web, unsere HTML-Datei auch als solche ansieht, müssen wir
+            nicht nur die Datei mit .html erstellen, sondern auch ein paar grundlegende Tags
+            deklarieren, also erstellen.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Der &lt;!DOCTYPE html> sagt erstmal aus, dass es sich bei diesem Dokument (!Doc), um den
+            Typen (Type) HTML (html) handelt.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            &lt;!DOCTYPE html> ist dabei nicht Case-Sensitive und muss auch nicht am Ende des
+            Dokumentes geschlossen werden. Mit diesem Tag werden wir daher nicht viel mehr machen,
+            als ihn am Anfang des Dokuments zu deklarieren!
+          </div>
+          <div class="text text-italic text-h6 text-weight-regular q-my-md">
+            Case-Sensitive bedeutet, dass Groß- und Kleinschreibung hierbei nicht berücksichtigt
+            werden, wodurch auch Schreibweisen wie diese möglich sind: &lt;!DOCTYPE html>.
+          </div>
+          <div class="text text-italic text-h6 text-weight-regular q-my-md">
+            Natürlich ist so etwas nicht unbedingt angenehm zu lesen und wird daher ungern gesehen.
+            Allgemein gilt daher:
+          </div>
+          <div class="text text-italic text-h6 text-weight-regular q-my-md">
+            Variablen und Tags sollten immer dem camelCase oder dem snake_case folgen. Beide
+            Begriffe lernen wir später noch näher kennen.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Der wohl wichtigste Tag, der &lt;html> ... &lt;/html> steht direkt an unserer zweiten
+            Stelle.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Was uns hier direkt auffällt ist, dass im Gegensatz zum &lt;!DOCTYPE html>, dieser Tag
+            immer in einem Paar kommt und mit &lt;html> geöffnet, wie mit &lt;/html> geschlossen
+            werden muss.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Solche Tags gibt es in Haufe und werden allgemein als “Paired Tags” bezeichnet. Diese
+            Art von Tag wird immer mit dem gleichen Schlüsselwort plus einem vorgestellten “/”
+            beendet.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Aber auch an diesem Tag werden wir gebräuchlich nicht mehr viel herumbasteln,
+            stattdessen werden wir ihn nur schnell deklarieren und mit unserem Code in einem
+            untergeordneten Scoop fortführen.
+          </div>
+          <div class="text text-italic text-h6 text-weight-regular q-my-md">
+            Scoop: Ein Scoop ist ein Bereich, in welchem bestimmte Variablen oder Werte ihren
+            Gültigkeitsbereich definieren haben, dabei kann man sich es wie folgt vorstellen:
+          </div>
+          <div class="text text-italic text-h6 text-weight-regular q-my-md">
+            Im Falle von HTML bildet jedes Paired Tag eine weitere Ebene / Hülle, in welche
+            dazwischen stehende Elemente eingeschlossen sind.
+          </div>
+          <div class="text text-italic text-h6 text-weight-regular q-my-md">
+            Zur Veranschaulichung kann man daher eine Matrjoschka-Puppe nutzen.
+          </div>
+          <div class="text text-italic text-h6 text-weight-regular q-my-md">
+            Jedes Element ist in einer Puppe verankert und kann diese nicht verlassen, außer man
+            gibt ihm die “Rechte” die Puppe zu öffnen und auf eine höhere Ebene voranzuschreiten.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            In unserem geliebten &lt;html> Tag gibt es nun wieder zwei wichtige und unwegdenkbare
+            Tags:
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            &lt;head>&lt;/head>: Hier geben wir alle wichtigen Core-Informationen über unsere
+            Webseite an, wie Verlinkungen zu anderen Ressourcen.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Wir besprechen diese Tags später noch in Fülle anhand mehrerer Beispiele und Fragen.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Bis dahin beschäftigen wir uns jedoch noch etwas genauer mit dem &lt;body>&lt;/body>
+            Tag, da dieser den ganzen sichtbaren Kontent unserer Webseite beinhaltet.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Wie mit dem vorherigen Satz sicher schon klar wurde, kommen etwa 90% unseres HTML-Codes
+            zwischen dem Start- und Endtag unseres Body’s.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Um jedoch den Umfang hier etwas kürzer zu halten, stellen wir dir nur kurz ein paar
+            wichtige Tags vor und zeigen sie dir, mit dazugehöriger Erklärung in einem kleinen
+            Code-Pen Beispiel.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            &lt;div>&lt;/div> : Ein Block-Element welches, wenn nicht anders definiert, eine ganze
+            Zeile (deren Höhe abhängig vom Kontent und der Höhe des Divs abhängig ist) einnimmt.
+            Divs bilden somit ein gutes Mittel, um Scoops anzulegen und Elemente zu gruppieren!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            &lt;p>&lt;/p> : Dieser Tag wird genutzt, um Text anzuzeigen. Weitere Tags mit einer
+            ähnlichen Wirkungskraft (jedoch anderen Schrifteigenschaften) wären: h1 bis h6, dass h
+            für “Header” also Überschrift stehend. Der zu anzeigende Text wird bei all diesen Tags
+            zwischen Start- und Endtag geschrieben.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            &lt;img src="”...”" alt="”...”" />: Dieser Tag wird genutzt um Bilder auf einer Webseite
+            zu laden. Hierbei kann bei src (Source / Quelle) entweder ein lokaler Pfad zu einem Bild
+            oder auch ein Link zu einem Bild aus dem Web angegeben werden. Der Inhalt beim
+            alt=”...”-Part wird beim Fehlschlagen des Bildladens auf der Webseite angezeigt, kann
+            jedoch auch genutzt werden, um z.B. Bildschirm-Assistenten zu sagen, was genau an dieser
+            Stelle sein sollte.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            &lt;ungültig>&lt;/ungültig>: Falls wie hier ein nicht bekannter Tag genutzt wird, wird
+            der Inhalt dazwischen jedoch angezeigt, übernimmt dabei aber die Werte von seinem
+            Parent-Scoop/Object. Zu dieser Hierarchie- oder Vererbungs-Eigenschaft von HTML kommen
+            wir jedoch noch später.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Gut! Genug Theorie für den Anfang: Eine kleine Übung + Lösung haben wir hier für dich
+            vorbereitet:
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Übung: Grundlagen von HTML: Under Construction…
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Lösung: Grundlagen von HTML: Under Construction…
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Auf der Suche nach einer geeigneten Quelle für syntaktische oder semantische
+            Eigenschaften von HTML? Hier sind ein paar der offiziellen Dokumentationen über HTML:
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML?retiredLocale=de"
+              >Offizielle Dokumentation</a
             >
-            <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-              ><span class="text text-h3">...</span></et-s-chat-nav
-            >
-            <div class="q-mr-sm q-mb-md">
-              <!--Radio Group (Invisible). Labels act as button/radio-->
-              <div class="checkbutton q-mb-lg">
-                <label>
-                  <input type="radio" name="radioa3" value="a1" />
-                  <div class="text text-h5 q-my-sm">Answer 1</div>
-                </label>
-                <label>
-                  <input type="radio" name="radioa3" value="a2" />
-                  <div class="text text-h5 q-my-sm">Answer 2</div>
-                </label>
-                <label>
-                  <input type="radio" name="radioa3" value="a3" />
-                  <div class="text text-h5 q-my-sm">Answer 3</div>
-                </label>
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Psst! Wir werden im Laufe der nächsten Lektionen einiges davon noch durchgehen & auch
+            zeigen, wie solche Dokumentationen am besten zu lesen sind. Also bleibt gespannt!
+          </div>
+
+          <hr class="q-my-lg" />
+        </div>
+        <!--Section 1 End-->
+      </div>
+      <!--Body/Text End-->
+    </div>
+    <!--Part 2: Notes End-->
+    <!--Part 3: Questions-->
+    <div id="questions" class="flex justify-center">
+      <!--Body/Text-->
+      <div class="w-90">
+        <!--Header-->
+        <div class="flex justify-center">
+          <div class="w-90 text text-h4 text-weight-regular q-my-lg">Variables</div>
+        </div>
+        <!--Header End-->
+        <!--Questions-->
+        <div>
+          <q-form>
+            <!--Question 1-->
+            <div>
+              <div class="flex justify-center">
+                <div class="w-90 text text-h6 text-weight-regular q-mb-lg">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                  tempor invidunt ut labore et dolore magna aliquyam erat,
+                </div>
               </div>
-              <!--Radio Group End-->
-              <div
-                @click="hint1 = !hint1"
-                class="q-ml-sm subheader text-secondary text-h5 text-weight-bold text-italic"
+              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-weight-medium text-h6 text-left"
+                  >Question 1: Lorem ipsum dolor sit amet, consetetur?</span
+                ></et-s-chat-nav
               >
-                Hint?
-              </div>
-              <div v-if="hint1" class="flex justify-center">
-                <et-s-chat-nav class="q-mt-lg q-mb-md">
-                  <div class="q-ml-md w-100 text text-weight-medium text-h6 text-left">
-                    Here is a hint mister
-                  </div>
-                </et-s-chat-nav>
-              </div>
-            </div>
-          </div>
-          <!--Question 2 End-->
-          <!--Question 3-->
-          <div>
-            <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
-              ><span class="text text-weight-medium text-h6 text-left"
-                >Question 3: Lorem ipsum dolor sit amet, consetetur?</span
-              ></et-s-chat-nav
-            >
-            <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg">
-              <div class="flex items-center justify-center h-100 w-100">
-                <textarea
-                  placeholder="Type here ..."
-                  class="text-white text-mono inputbubble"
-                ></textarea>
-              </div>
-            </et-s-chat-nav>
-          </div>
-          <!--Question 3 End-->
-          <!--Question 4-->
-          <div>
-            <div class="flex justify-center">
-              <div class="w-90 text text-h6 text-weight-regular q-mb-lg">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat,
+              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-h3">...</span></et-s-chat-nav
+              >
+              <div class="q-mr-md q-mb-md">
+                <!--Radio Group (Invisible). Labels act as button/radio-->
+                <div class="checkbutton">
+                  <label>
+                    <input type="radio" name="radioa2" value="a1" />
+                    <div class="text text-h5 q-my-sm">Answer 1</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa2" value="a2" />
+                    <div class="text text-h5 q-my-sm">Answer 2</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa2" value="a3" />
+                    <div class="text text-h5 q-my-sm">Answer 3</div>
+                  </label>
+                </div>
+                <!--Radio Group End-->
               </div>
             </div>
-            <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
-              ><span class="text text-weight-medium text-h6 text-left"
-                >Question 4: Lorem ipsum dolor sit amet, consetetur?</span
-              ></et-s-chat-nav
-            >
-            <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-              ><span v-if="question4.length > 0" class="text text-h5">{{ question4 }}</span
-              ><span v-else class="text text-h3">...</span></et-s-chat-nav
-            >
-            <div class="q-mr-md q-mb-md">
-              <!--Radio Group (Invisible). Labels act as button/radio-->
-              <div class="flex items-center justify-center q-gutter-md checkbuttonmulti">
-                <label>
-                  <input type="checkbox" value="a1" v-model="question4" />
-                  <div class="text text-h6">This is incorrect.</div>
-                </label>
-                <label>
-                  <input type="checkbox" value="a2" v-model="question4" />
-                  <div class="text text-h6">This is correct.</div>
-                </label>
-                <label>
-                  <input type="checkbox" value="a3" v-model="question4" />
-                  <div class="text text-h6">Answer 2233</div>
-                </label>
-                <label>
-                  <input type="checkbox" value="a4" v-model="question4" />
-                  <div class="text text-h6">Very Long Answer.</div>
-                </label>
-                <label>
-                  <input type="checkbox" value="a5" v-model="question4" />
-                  <div class="text text-h6">Very Long Answer.</div>
-                </label>
-                <label>
-                  <input type="checkbox" value="a6" v-model="question4" />
-                  <div class="text text-h6">A + 4</div>
-                </label>
-                <label>
-                  <input type="checkbox" value="a7" v-model="question4" />
-                  <div class="text text-h6">Yes</div>
-                </label>
+            <!--Question 1 End-->
+            <!--Question 2-->
+            <div>
+              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-weight-medium text-h6 text-left"
+                  >Question 2: Lorem ipsum dolor sit amet, consetetur?</span
+                ></et-s-chat-nav
+              >
+              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-h3">...</span></et-s-chat-nav
+              >
+              <div class="q-mr-sm q-mb-md">
+                <!--Radio Group (Invisible). Labels act as button/radio-->
+                <div class="checkbutton q-mb-lg">
+                  <label>
+                    <input type="radio" name="radioa3" value="a1" />
+                    <div class="text text-h5 q-my-sm">Answer 1</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa3" value="a2" />
+                    <div class="text text-h5 q-my-sm">Answer 2</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa3" value="a3" />
+                    <div class="text text-h5 q-my-sm">Answer 3</div>
+                  </label>
+                </div>
+                <!--Radio Group End-->
+                <div
+                  @click="hint1 = !hint1"
+                  class="q-ml-sm subheader text-secondary text-h5 text-weight-bold text-italic"
+                >
+                  Hint?
+                </div>
+                <div v-if="hint1" class="flex justify-center">
+                  <et-s-chat-nav class="q-mt-lg q-mb-md">
+                    <div class="q-ml-md w-100 text text-weight-medium text-h6 text-left">
+                      Here is a hint mister
+                    </div>
+                  </et-s-chat-nav>
+                </div>
               </div>
-              <!--Radio Group End-->
+            </div>
+            <!--Question 2 End-->
+            <!--Question 3-->
+            <div>
+              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-weight-medium text-h6 text-left"
+                  >Question 3: Lorem ipsum dolor sit amet, consetetur?</span
+                ></et-s-chat-nav
+              >
+              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg">
+                <div class="flex items-center justify-center h-100 w-100">
+                  <textarea
+                    placeholder="Type here ..."
+                    class="text-white text-mono inputbubble"
+                  ></textarea>
+                </div>
+              </et-s-chat-nav>
+            </div>
+            <!--Question 3 End-->
+            <!--Question 4-->
+            <div>
+              <div class="flex justify-center">
+                <div class="w-90 text text-h6 text-weight-regular q-mb-lg">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                  tempor invidunt ut labore et dolore magna aliquyam erat,
+                </div>
+              </div>
+              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-weight-medium text-h6 text-left"
+                  >Question 4: Lorem ipsum dolor sit amet, consetetur?</span
+                ></et-s-chat-nav
+              >
+              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
+                ><span v-if="question4.length > 0" class="text text-h5">{{ question4 }}</span
+                ><span v-else class="text text-h3">...</span></et-s-chat-nav
+              >
+              <div class="q-mr-md q-mb-md">
+                <!--Radio Group (Invisible). Labels act as button/radio-->
+                <div class="flex items-center justify-center q-gutter-md checkbuttonmulti">
+                  <label>
+                    <input type="checkbox" value="a1" v-model="question4" />
+                    <div class="text text-h6">This is incorrect.</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="a2" v-model="question4" />
+                    <div class="text text-h6">This is correct.</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="a3" v-model="question4" />
+                    <div class="text text-h6">Answer 2233</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="a4" v-model="question4" />
+                    <div class="text text-h6">Very Long Answer.</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="a5" v-model="question4" />
+                    <div class="text text-h6">Very Long Answer.</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="a6" v-model="question4" />
+                    <div class="text text-h6">A + 4</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="a7" v-model="question4" />
+                    <div class="text text-h6">Yes</div>
+                  </label>
+                </div>
+                <!--Radio Group End-->
+              </div>
+            </div>
+            <!--Question 4 End-->
+          </q-form>
+        </div>
+        <!--Questions End-->
+        <!--Checkbar-->
+        <div class="w-100 row justify-center items-center q-my-xl">
+          <div class="col-6">
+            <div class="text-center text-secondary subheader text-h5 text-weight-bold">Check</div>
+            <div class="text-center subheader text-grey text-caption text-italic text-weight-light">
+              2 Errors found. <span class="jumperlink">click here!</span>
             </div>
           </div>
-          <!--Question 4 End-->
-        </q-form>
-      </div>
-      <!--Questions End-->
-      <!--Checkbar-->
-      <div class="w-100 row justify-center items-center q-my-xl">
-        <div class="col-6">
-          <div class="text-center text-secondary subheader text-h5 text-weight-bold">Check</div>
-          <div class="text-center subheader text-grey text-caption text-italic text-weight-light">
-            2 Errors found. <span class="jumperlink">click here!</span>
+          <div class="col-6 text-center subheader text-h6 text-weight-bold">
+            <div class="text-center text-secondary subheader text-h5 text-weight-bold">
+              Go Next!
+            </div>
+            <div class="text-center subheader text-grey text-caption text-italic text-weight-light">
+              Check your Answers to get a Star
+            </div>
           </div>
         </div>
-        <div class="col-6 text-center subheader text-h6 text-weight-bold">
-          <div class="text-center text-secondary subheader text-h5 text-weight-bold">Go Next!</div>
-          <div class="text-center subheader text-grey text-caption text-italic text-weight-light">
-            Check your Answers to get a Star
-          </div>
-        </div>
+        <!--Checkbar End-->
       </div>
-      <!--Checkbar End-->
+      <!--Body/Text End-->
     </div>
-    <!--Body/Text End-->
+    <!--Part 1: Story End-->
   </div>
-  <!--Part 1: Story End-->
 </template>
 <style lang="scss" scoped>
 .absolutetop {
