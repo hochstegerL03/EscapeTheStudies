@@ -375,26 +375,42 @@
               </div>
               <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
                 ><span class="text text-weight-medium text-h6 text-left"
-                  >Question 1: Lorem ipsum dolor sit amet, consetetur?</span
+                  >Question 1: Welche drei “Programmiersprachen” werden für eine moderne/zeitgemäße
+                  Website benötigt?</span
                 ></et-s-chat-nav
               >
               <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-h3">...</span></et-s-chat-nav
+                ><span class="text text-h3">{{ question1 }}</span></et-s-chat-nav
               >
               <div class="q-mr-md q-mb-md">
                 <!--Radio Group (Invisible). Labels act as button/radio-->
                 <div class="checkbutton">
                   <label>
-                    <input type="radio" name="radioa2" value="a1" />
-                    <div class="text text-h5 q-my-sm">Answer 1</div>
+                    <input
+                      type="radio"
+                      name="radioa2"
+                      value="JavaScript, HTML, CSS."
+                      v-model="question1"
+                    />
+                    <div class="text text-h5 q-my-sm">JavaScript, HTML, CSS.</div>
                   </label>
                   <label>
-                    <input type="radio" name="radioa2" value="a2" />
-                    <div class="text text-h5 q-my-sm">Answer 2</div>
+                    <input
+                      type="radio"
+                      name="radioa2"
+                      value="JavaScript, Vue, C#."
+                      v-model="question1"
+                    />
+                    <div class="text text-h5 q-my-sm">JavaScript, Vue, C#.</div>
                   </label>
                   <label>
-                    <input type="radio" name="radioa2" value="a3" />
-                    <div class="text text-h5 q-my-sm">Answer 3</div>
+                    <input
+                      type="radio"
+                      name="radioa2"
+                      value="HTML ,CSS, Python."
+                      v-model="question1"
+                    />
+                    <div class="text text-h5 q-my-sm">HTML ,CSS, Python.</div>
                   </label>
                 </div>
                 <!--Radio Group End-->
@@ -405,26 +421,45 @@
             <div>
               <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
                 ><span class="text text-weight-medium text-h6 text-left"
-                  >Question 2: Lorem ipsum dolor sit amet, consetetur?</span
+                  >Question 2: Welchen Fehler hatte die erste Frage?</span
                 ></et-s-chat-nav
               >
               <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-h3">...</span></et-s-chat-nav
+                ><span class="text text-h3">{{ question2 }}</span></et-s-chat-nav
               >
               <div class="q-mr-sm q-mb-md">
                 <!--Radio Group (Invisible). Labels act as button/radio-->
                 <div class="checkbutton q-mb-lg">
                   <label>
-                    <input type="radio" name="radioa3" value="a1" />
-                    <div class="text text-h5 q-my-sm">Answer 1</div>
+                    <input
+                      type="radio"
+                      name="radioa3"
+                      value="CSS & HTML sind eigentlich Beschreibungssprachen."
+                      v-model="question2"
+                    />
+                    <div class="text text-h5 q-my-sm">
+                      CSS & HTML sind eigentlich Beschreibungssprachen.
+                    </div>
                   </label>
                   <label>
-                    <input type="radio" name="radioa3" value="a2" />
-                    <div class="text text-h5 q-my-sm">Answer 2</div>
+                    <input
+                      type="radio"
+                      name="radioa3"
+                      value="JavaScript ist eigentlich eine Beschreibungssprache."
+                      v-model="question2"
+                    />
+                    <div class="text text-h5 q-my-sm">
+                      JavaScript ist eigentlich eine Beschreibungssprache.
+                    </div>
                   </label>
                   <label>
-                    <input type="radio" name="radioa3" value="a3" />
-                    <div class="text text-h5 q-my-sm">Answer 3</div>
+                    <input
+                      type="radio"
+                      name="radioa3"
+                      value="Es gab keinen Fehler: Trick-Question!"
+                      v-model="question2"
+                    />
+                    <div class="text text-h5 q-my-sm">Es gab keinen Fehler: Trick-Question!</div>
                   </label>
                 </div>
                 <!--Radio Group End-->
@@ -448,14 +483,17 @@
             <div>
               <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
                 ><span class="text text-weight-medium text-h6 text-left"
-                  >Question 3: Lorem ipsum dolor sit amet, consetetur?</span
-                ></et-s-chat-nav
+                  >Question 3: Deklariere drei Variablen: Die Konstante “change” mit dem Wert “Life
+                  always Changes”, die globale Variable “climateChange” mit dem booleschen Wert,
+                  “true”, und die lokale Variable “you” ohne Wertangabe:
+                </span></et-s-chat-nav
               >
               <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg">
                 <div class="flex items-center justify-center h-100 w-100">
                   <textarea
                     placeholder="Type here ..."
                     class="text-white text-mono inputbubble"
+                    v-model="question3"
                   ></textarea>
                 </div>
               </et-s-chat-nav>
@@ -463,66 +501,350 @@
             <!--Question 3 End-->
             <!--Question 4-->
             <div>
-              <div class="flex justify-center">
-                <div class="w-90 text text-h6 text-weight-regular q-mb-lg">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                  tempor invidunt ut labore et dolore magna aliquyam erat,
-                </div>
-              </div>
               <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
                 ><span class="text text-weight-medium text-h6 text-left"
-                  >Question 4: Lorem ipsum dolor sit amet, consetetur?</span
+                  >Question 4: Wie werden Datentypen in Vanilla JavaScript impliziert?</span
                 ></et-s-chat-nav
               >
               <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-                ><span v-if="question4.length > 0" class="text text-h5">{{ question4 }}</span
-                ><span v-else class="text text-h3">...</span></et-s-chat-nav
+                ><span class="text text-h3">{{ question4 }}</span></et-s-chat-nav
               >
-              <div class="q-mr-md q-mb-md">
+              <div class="q-mr-sm q-mb-md">
                 <!--Radio Group (Invisible). Labels act as button/radio-->
-                <div class="flex items-center justify-center q-gutter-md checkbuttonmulti">
+                <div class="checkbutton q-mb-lg">
                   <label>
-                    <input type="checkbox" value="a1" v-model="question4" />
-                    <div class="text text-h6">This is incorrect.</div>
+                    <input
+                      type="radio"
+                      name="radioa3"
+                      value="Dynamisch: Der Datentyp wird mit dem angegebenen Wert definiert."
+                      v-model="question4"
+                    />
+                    <div class="text text-h5 q-my-sm">
+                      Dynamisch: Der Datentyp wird mit dem angegebenen Wert definiert.
+                    </div>
                   </label>
                   <label>
-                    <input type="checkbox" value="a2" v-model="question4" />
-                    <div class="text text-h6">This is correct.</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="a3" v-model="question4" />
-                    <div class="text text-h6">Answer 2233</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="a4" v-model="question4" />
-                    <div class="text text-h6">Very Long Answer.</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="a5" v-model="question4" />
-                    <div class="text text-h6">Very Long Answer.</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="a6" v-model="question4" />
-                    <div class="text text-h6">A + 4</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="a7" v-model="question4" />
-                    <div class="text text-h6">Yes</div>
+                    <input
+                      type="radio"
+                      name="radioa3"
+                      value="Statisch: Der Datentyp muss beim Anlegen der Variable angegeben werden."
+                      v-model="question4"
+                    />
+                    <div class="text text-h5 q-my-sm">
+                      Statisch: Der Datentyp muss beim Anlegen der Variable angegeben werden.
+                    </div>
                   </label>
                 </div>
                 <!--Radio Group End-->
               </div>
             </div>
             <!--Question 4 End-->
+            <!--Question 5-->
+            <div>
+              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-weight-medium text-h6 text-left"
+                  >Question 5: Mit welchen dieser Tags kann kein Text in HTML angezeigt werden?
+                </span></et-s-chat-nav
+              >
+              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-h3">{{ question5 }}</span></et-s-chat-nav
+              >
+              <div class="q-mr-sm q-mb-md">
+                <!--Radio Group (Invisible). Labels act as button/radio-->
+                <div class="checkbutton q-mb-lg">
+                  <label>
+                    <input type="radio" name="radioa3" value="p" v-model="question5" />
+                    <div class="text text-h5 q-my-sm">p</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa3" value="h1" v-model="question5" />
+                    <div class="text text-h5 q-my-sm">h1</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa3" value="h6" v-model="question5" />
+                    <div class="text text-h5 q-my-sm">h6</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa3" value="div" v-model="question5" />
+                    <div class="text text-h5 q-my-sm">div</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa3" value="br" v-model="question5" />
+                    <div class="text text-h5 q-my-sm">br</div>
+                  </label>
+                </div>
+                <!--Radio Group End-->
+              </div>
+            </div>
+            <!--Question 5 End-->
+            <!--Question 6-->
+            <div>
+              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-weight-medium text-h6 text-left"
+                  >Question 6: Wie reagiert HTML auf folgenden Code?
+                  <h187>Werde ich angezeigt?</h187></span
+                ></et-s-chat-nav
+              >
+              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-h3">{{ question6 }}</span></et-s-chat-nav
+              >
+              <div class="q-mr-sm q-mb-md">
+                <!--Radio Group (Invisible). Labels act as button/radio-->
+                <div class="checkbutton q-mb-lg">
+                  <label>
+                    <input
+                      type="radio"
+                      name="radioa3"
+                      value="Es wird ein Fehler auf der Konsole ausgeworfen und der Text ignoriert."
+                      v-model="question6"
+                    />
+                    <div class="text text-h5 q-my-sm">
+                      Es wird ein Fehler auf der Konsole ausgeworfen und der Text ignoriert.
+                    </div>
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="radioa3"
+                      value="Der Text wird trotz falschem Tag angezeigt, jedoch mit den Font Values vom parent-Object."
+                      v-model="question6"
+                    />
+                    <div class="text text-h5 q-my-sm">
+                      Der Text wird trotz falschem Tag angezeigt, jedoch mit den Font Values vom
+                      parent-Object.
+                    </div>
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="radioa3"
+                      value="Die Webseite kann wegen dem Fehler nicht laden."
+                      v-model="question6"
+                    />
+                    <div class="text text-h5 q-my-sm">
+                      Die Webseite kann wegen dem Fehler nicht laden.
+                    </div>
+                  </label>
+                </div>
+                <!--Radio Group End-->
+              </div>
+            </div>
+            <!--Question 6 End-->
+            <!--Question 7-->
+            <div>
+              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-weight-medium text-h6 text-left"
+                  >Question 7: Welcher Output wird bei folgender Addition gegeben: console.log(“16”
+                  + 16);</span
+                ></et-s-chat-nav
+              >
+              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-h3">{{ question7 }}</span></et-s-chat-nav
+              >
+              <div class="q-mr-sm q-mb-md">
+                <!--Radio Group (Invisible). Labels act as button/radio-->
+                <div class="checkbutton q-mb-lg">
+                  <label>
+                    <input type="radio" name="radioa3" value="1616" v-model="question7" />
+                    <div class="text text-h5 q-my-sm">1616</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa3" value="32" v-model="question7" />
+                    <div class="text text-h5 q-my-sm">32</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa3" value="N.a.N" v-model="question7" />
+                    <div class="text text-h5 q-my-sm">N.a.N</div>
+                  </label>
+                </div>
+                <!--Radio Group End-->
+              </div>
+            </div>
+            <!--Question 7 End-->
+            <!--Question 8-->
+            <div>
+              <!-- <div class="flex justify-center">
+                <div class="w-90 text text-h6 text-weight-regular q-mb-lg">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                  tempor invidunt ut labore et dolore magna aliquyam erat,
+                </div>
+              </div> -->
+              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-weight-medium text-h6 text-left"
+                  >Question 8: Konstruiere eine einfache Funktion namens “double” in Javascript mit
+                  folgenden Parameter, “number”, welcher den Eingabeparameter mit sich selbst
+                  multipliziert und zurückgibt:</span
+                ></et-s-chat-nav
+              >
+              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
+                ><span v-if="question8.length > 0" class="text text-h5">{{ question8 }}</span
+                ><span v-else class="text text-h3">...</span></et-s-chat-nav
+              >
+              <div class="q-mr-md q-mb-md">
+                <!--Radio Group (Invisible). Labels act as button/radio-->
+                <div class="flex items-center justify-center q-gutter-md checkbuttonmulti">
+                  <label>
+                    <input type="checkbox" value="function" v-model="question8" />
+                    <div class="text text-h6">function</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="(number)" v-model="question8" />
+                    <div class="text text-h6">(number).</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="double" v-model="question8" />
+                    <div class="text text-h6">double</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="{" v-model="question8" />
+                    <div class="text text-h6">{</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="}" v-model="question8" />
+                    <div class="text text-h6">}</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="const" v-model="question8" />
+                    <div class="text text-h6">const</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="return" v-model="question8" />
+                    <div class="text text-h6">return</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="number * number;" v-model="question8" />
+                    <div class="text text-h6">number * number;</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="square(number);" v-model="question8" />
+                    <div class="text text-h6">square(number);</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="(double)" v-model="question8" />
+                    <div class="text text-h6">(double)</div>
+                  </label>
+                  <label>
+                    <input type="checkbox" value="number" v-model="question8" />
+                    <div class="text text-h6">number</div>
+                  </label>
+                </div>
+                <!--Radio Group End-->
+              </div>
+            </div>
+            <!--Question 8 End-->
+            <!--Question 9-->
+            <div>
+              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-weight-medium text-h6 text-left"
+                  >Question 9: Welcher der folgenden CSS Attribute ändert die Farbe der Schrift zu
+                  rot?</span
+                ></et-s-chat-nav
+              >
+              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-h3">{{ question9 }}</span></et-s-chat-nav
+              >
+              <div class="q-mr-sm q-mb-md">
+                <!--Radio Group (Invisible). Labels act as button/radio-->
+                <div class="checkbutton q-mb-lg">
+                  <label>
+                    <input
+                      type="radio"
+                      name="radioa3"
+                      value="background-color: red;"
+                      v-model="question9"
+                    />
+                    <div class="text text-h5 q-my-sm">background-color: red;</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa3" value="color: rot;" v-model="question9" />
+                    <div class="text text-h5 q-my-sm">color: rot;</div>
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="radioa3"
+                      value="font-color: red;"
+                      v-model="question9"
+                    />
+                    <div class="text text-h5 q-my-sm">font-color: red;</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa3" value="color: red;" v-model="question9" />
+                    <div class="text text-h5 q-my-sm">color: red;</div>
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="radioa3"
+                      value="font-color: #ff0000;"
+                      v-model="question9"
+                    />
+                    <div class="text text-h5 q-my-sm">font-color: #ff0000;</div>
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="radioa3"
+                      value="display-color: red;"
+                      v-model="question9"
+                    />
+                    <div class="text text-h5 q-my-sm">display-color: red;</div>
+                  </label>
+                </div>
+                <!--Radio Group End-->
+              </div>
+            </div>
+            <!--Question 9 End-->
+            <!--Question 10-->
+            <div>
+              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-weight-medium text-h6 text-left"
+                  >Question 10: Welche Version von HTML ist derzeit in Benutzung?
+                </span></et-s-chat-nav
+              >
+              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
+                ><span class="text text-h3">{{ question10 }}</span></et-s-chat-nav
+              >
+              <div class="q-mr-sm q-mb-md">
+                <!--Radio Group (Invisible). Labels act as button/radio-->
+                <div class="checkbutton q-mb-lg">
+                  <label>
+                    <input type="radio" name="radioa3" value="HTML3.5" v-model="question10" />
+                    <div class="text text-h5 q-my-sm">HTML3.5</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa3" value="HTML5" v-model="question10" />
+                    <div class="text text-h5 q-my-sm">HTML5</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa3" value="HTML9" v-model="question10" />
+                    <div class="text text-h5 q-my-sm">HTML9</div>
+                  </label>
+                  <label>
+                    <input type="radio" name="radioa3" value="HTML4" v-model="question10" />
+                    <div class="text text-h5 q-my-sm">HTML4</div>
+                  </label>
+                </div>
+                <!--Radio Group End-->
+              </div>
+            </div>
+            <!--Question 9 End-->
           </q-form>
         </div>
         <!--Questions End-->
         <!--Checkbar-->
         <div class="w-100 row justify-center items-center q-my-xl">
           <div class="col-6">
-            <div class="text-center text-secondary subheader text-h5 text-weight-bold">Check</div>
+            <div
+              class="text-center text-secondary subheader text-h5 text-weight-bold"
+              @click="trySub()"
+            >
+              Check
+            </div>
             <div class="text-center subheader text-grey text-caption text-italic text-weight-light">
-              2 Errors found. <span class="jumperlink">click here!</span>
+              <span v-if="falseQ.length > 0">{{ falseQ.length }} Error/s found.</span>
+              <span v-else>0 Errors found.</span>
+              <span class="jumperlink">click here!</span>
             </div>
           </div>
           <div class="col-6 text-center subheader text-h6 text-weight-bold">
@@ -629,7 +951,24 @@ textarea::placeholder {
 import EtSChatNav from '../components/EtSChatNav.vue';
 import { scroll } from 'quasar';
 import { ref } from 'vue';
-const question4 = ref([]);
+const question1 = ref();
+const question2 = ref();
+const question3 = ref();
+const question4 = ref();
+const question5 = ref();
+const question6 = ref();
+const question7 = ref();
+const question8 = ref([]);
+const question9 = ref();
+const question10 = ref();
+
+const re = RegExp(
+  /^\s*(let|var|const)*(?<name> change| yo|Life always Changes| climateChange|true).+\;/gm,
+);
+
+const rightQ = ref([]);
+const falseQ = ref([]);
+
 const showmenu = ref(false);
 const hint1 = ref(false);
 
@@ -642,4 +981,71 @@ function scrolltovertically(obj) {
   const duration = 1000;
   setVerticalScrollPosition(target, offset, duration);
 }
+
+const trySub = () => {
+  while (falseQ.value.length > 0) {
+    falseQ.value.pop();
+  }
+  while (rightQ.value.length > 0) {
+    rightQ.value.pop();
+  }
+  if (question1.value == 'JavaScript, HTML, CSS.') {
+    rightQ.value.push(question1.value);
+  } else {
+    falseQ.value.push(question1.value);
+  }
+  if (question2.value == 'CSS & HTML sind eigentlich Beschreibungssprachen.') {
+    rightQ.value.push(question2.value);
+  } else {
+    falseQ.value.push(question2.value);
+  }
+  if (re.exec(question3.value) !== null) {
+    rightQ.value.push(question3.value);
+  } else {
+    falseQ.value.push(question3.value);
+  }
+  if (question4.value == 'Dynamisch: Der Datentyp wird mit dem angegebenen Wert definiert.') {
+    rightQ.value.push(question4.value);
+  } else {
+    falseQ.value.push(question4.value);
+  }
+  if (question5.value == 'br') {
+    rightQ.value.push(question5.value);
+  } else {
+    falseQ.value.push(question5.value);
+  }
+  if (
+    question6.value ==
+    'Der Text wird trotz falschem Tag angezeigt, jedoch mit den Font Values vom parent-Object.'
+  ) {
+    rightQ.value.push(question6.value);
+  } else {
+    falseQ.value.push(question6.value);
+  }
+  if (question7.value == '1616') {
+    rightQ.value.push(question7.value);
+  } else {
+    falseQ.value.push(question7.value);
+  }
+  if (question8.value.toString() == 'function,double,(number),{,return,number * number;,}') {
+    rightQ.value.push(question8.value.toString());
+  } else {
+    // let text = question8.value.toString();
+    // console.log(text);
+    falseQ.value.push(question8.value.toString());
+  }
+  if (question9.value == 'color: red;') {
+    rightQ.value.push(question9.value);
+  } else {
+    falseQ.value.push(question9.value);
+  }
+  if (question10.value == 'HTML5') {
+    rightQ.value.push(question10.value);
+  } else {
+    falseQ.value.push(question10.value);
+  }
+  if (rightQ.value.length > 9) {
+    return alert('Congratulation you got 0 Errors! Great Job!');
+  }
+};
 </script>
