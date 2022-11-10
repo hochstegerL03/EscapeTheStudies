@@ -48,14 +48,14 @@
             </router-link>
           </div>
           <div>
-            <router-link to="/sign" class="">
+            <router-link disabled to="/sign" class="disabled">
               <et-s-chat-nav colortype="dark" direction="right" class="q-pa-sm q-my-lg titelold"
                 ><span>Login in</span></et-s-chat-nav
               >
             </router-link>
           </div>
           <div>
-            <router-link to="/sign" class="">
+            <router-link disabled to="/sign" class="disabled">
               <et-s-chat-nav colortype="white" class="q-pa-sm q-my-lg titelold"
                 ><span>Sign Up</span></et-s-chat-nav
               >

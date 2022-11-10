@@ -3,7 +3,9 @@
     :class="[direction, colortype]"
     class="flex justify-center items-center chat text-weight-bolder text-h5"
   >
-    <slot />
+    <div class="w-90 q-py-sm">
+      <slot />
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
