@@ -116,14 +116,15 @@
               <div class="col-4 cardbg-medium cardlection-end"></div>
             </div>
           </div>
-          <div class="w-100 q-pt-md disabled">
+          <div class="w-100 q-pt-md">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
                 <div class="subheader text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
                   Chapter 6: Closed Doors
                 </div>
               </div>
-              <div class="col-4 cardbg-medium cardlection-end"></div>
+              <router-link to="/escaperoom" class="col-4 cardbg-medium cardlection-end">
+              </router-link>
             </div>
           </div>
           <!--Chapters End-->
