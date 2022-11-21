@@ -207,14 +207,29 @@ alter table UserErledigtCollectable add constraint UserErledigtCollectable_userr
 alter table UserErledigtChallenge add constraint pk_UserErledigtChallenge_questionref foreign key (QuestionID) references Question(QuestionID);
 -- users with settings
 create role users;
+
 create role usersadmin with createrole in role users;
 
 create user dummyuser in role users password 'notsosave%password$foruserd<=?dummy/';
+
 create user superadmin in role usersadmin password 'notsosave%password$forsuper>=!admin/';
 
-grant select on course, chapter to users;
-grant create on database EtS_Database to usersadmin;
-grant select, insert, delete, update on all tables in schema public to usersadmin with grant option;
+grant
+select
+	on
+	course,
+	chapter to users;
+
+grant
+select
+	,
+	insert
+	,
+	delete
+	,
+	update
+	on
+	all tables in schema public to usersadmin with grant option;
 -- Inserts
 insert
 	into
@@ -522,8 +537,10 @@ values (4,
 
 insert
 	into
-	Challenge (ItemID, QuestionID)
-values (3,2);
+	Challenge (ItemID,
+	QuestionID)
+values (3,
+2);
 
 insert
 	into
@@ -534,7 +551,7 @@ values (4,
 
 insert
 	into
-	Collectable (ItemID	,
+	Collectable (ItemID ,
 	Description)
 values (1,
 'Somwhere where you always go and it is never dark');
