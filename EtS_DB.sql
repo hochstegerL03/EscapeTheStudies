@@ -217,6 +217,7 @@ create user superadmin in role usersadmin password 'notsosave%password$forsuper>
 grant
 select
 	on
+	question,
 	course,
 	chapter to users;
 
