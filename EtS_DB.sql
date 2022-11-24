@@ -1,3 +1,4 @@
+create database EtS_Database;
 -- Tabellen
 create table UserInformation
 (
