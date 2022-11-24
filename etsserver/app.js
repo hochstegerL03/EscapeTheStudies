@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import dotenv from 'dotenv';
 import path from 'path';
-// import routes from '';
+import routes from './routes/ets.js';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler.js';
 
 dotenv.config();
@@ -19,7 +19,7 @@ app.use(express.static(path.join(dirname, '/public')));
 
 app.use(express.json());
 
-// app.use('/EscapeTheStudies', routes);
+app.use('/escapethestudies', routes);
 
 app.use(errorHandler);
 

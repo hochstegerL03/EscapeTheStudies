@@ -2,6 +2,7 @@
   "name": "ets_server",
   "version": "1.0.0",
   "description": "This is the package.json file for this server.",
+  "type": "module",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
