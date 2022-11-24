@@ -5,6 +5,7 @@ import CoursesView from '../views/CoursesView.vue';
 import CourseOverviewView from '../views/CourseOverviewView.vue';
 import LogInView from '../views/LogInView.vue';
 import LectionView from '../views/LectionView.vue';
+import EscapeRoomView from '../views/EscapeRoomView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,11 @@ const router = createRouter({
       path: '/chapter',
       name: 'chapter',
       component: LectionView,
+    },
+    {
+      path: '/escaperoom',
+      name: 'escaperoom',
+      component: EscapeRoomView,
     },
   ],
 });
