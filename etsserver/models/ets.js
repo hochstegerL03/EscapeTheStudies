@@ -20,4 +20,9 @@ const dbGetGlobalInfo = async () => {
   return rows;
 };
 
-export { dbGetCourse, dbGetQuestion, dbGetAnswer, dbGetGlobalInfo };
+const dbGetRoomIm = async (name) => {
+  const { rows } = await query('SELECT roomimage from room WHERE roomposition =$1', [name]);
+  return rows;
+};
+
+export { dbGetCourse, dbGetQuestion, dbGetAnswer, dbGetGlobalInfo, dbGetRoomIm };
