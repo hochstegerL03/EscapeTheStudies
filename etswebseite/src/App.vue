@@ -136,11 +136,17 @@ a:active {
 }
 
 .w-100 {
-  width: 100%;
+  width: 100% !important;
 }
 .w-90 {
   width: 90%;
   max-width: 1024px;
+}
+.w-80 {
+  width: 80% !important;
+}
+.w-70 {
+  width: 70% !important;
 }
 
 .capped-sm {
@@ -148,12 +154,9 @@ a:active {
 }
 
 .h-100 {
-  height: 100%;
+  height: 100% !important;
 }
 
-.w-80 {
-  width: 80%;
-}
 .cardbg-light {
   background-color: $accent;
 }
