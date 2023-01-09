@@ -10,7 +10,11 @@
             <div class="row ets-escape-room-ui-container placeholder">
               <div class="col-2">
                 <div class="flex h-100 justify-center items-center">
-                  <img @click="changeRoom('left')" class="w-70" src="escaperoom/PointerLeft.svg" />
+                  <img
+                    @click="changeRoom('left')"
+                    class="w-70 capped"
+                    src="escaperoom/PointerLeft.svg"
+                  />
                 </div>
               </div>
               <div class="col-8">
@@ -36,7 +40,7 @@
                 <div class="flex h-100 justify-center items-center">
                   <img
                     @click="changeRoom('right')"
-                    class="w-70"
+                    class="w-70 capped"
                     src="escaperoom/PointerRight.svg"
                   />
                 </div>
@@ -81,13 +85,16 @@
 </template>
 
 <style lang="scss" scoped>
+.capped {
+  max-width: 5rem !important;
+}
 .ets-menu-highlight {
   color: $primary;
 }
 
 .ets-escape-room-container {
   width: 100%;
-  height: 40vh;
+  height: 50vh;
 }
 
 .bannernewscontainer-flex {
