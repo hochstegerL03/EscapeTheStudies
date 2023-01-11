@@ -108,7 +108,20 @@
         </div>
         <!--Info- / Progress-Bar End-->
         <!--Challenge-->
-        <div></div>
+        <div>
+          <!--Caption-->
+          <div></div>
+          <!--Caption End-->
+          <!--Body-->
+          <div></div>
+          <!--Body End-->
+          <!--Task-->
+          <div></div>
+          <!--Task End-->
+          <!--Validation-->
+          <div></div>
+          <!--Validation End-->
+        </div>
         <!--Challenge End-->
         <div></div>
       </div>
