@@ -4,7 +4,7 @@
     <div class="flex justify-center w-100 q-mt-lg">
       <div class="w-100">
         <!--Escape Room Visual Top-->
-        <div class="flex justify-center items-center q-mb-xl">
+        <div class="flex justify-center items-center q-mb-sm">
           <!--Main Window-->
           <div id="news" class="ets-escape-room-container q-py-md">
             <div class="row ets-escape-room-ui-container placeholder">
@@ -74,6 +74,39 @@
           <!--Placeholder Lection Banner End-->
         </div>
         <!--Escape Room Visual Top End-->
+        <!--Info- / Progress-Bar-->
+        <div class="">
+          <div class="row justify-center items-center">
+            <div class="col-12">
+              <div class="flex justify-center">
+                <div class="progressbar q-py-xs">
+                  <div class="flex items-center justify-center">
+                    <div class="q-gutter-x-md text-white titelold text-weight-regular text-h5">
+                      <span v-for="(slide, index) in slides" :key="index" :id="index">
+                        <span v-if="slide.isDone">c{{ index + 1 }}</span>
+                        <span v-else class="disabled">c{{ index + 1 }}</span>
+                      </span>
+                    </div>
+                    <div
+                      class="q-ml-lg q-gutter-x-sm text-right text-white titelold text-weight-regular text-h6"
+                    >
+                      <span v-for="(slide, index) in slides" :key="index" :id="index">
+                        <i v-if="slide.isDone" class="fa-solid fa-circle"></i>
+                        <i v-else class="fa-regular fa-circle"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4"></div>
+          </div>
+        </div>
+        <!--Info- / Progress-Bar End-->
+        <!--Challenge-->
+        <div></div>
+        <!--Challenge End-->
+        <div></div>
       </div>
     </div>
   </div>
@@ -117,6 +150,14 @@
   position: relative;
 }
 
+.progressbar {
+  background-color: $secondary;
+  width: 95%;
+  height: 100%;
+  max-height: 12vh;
+  border-radius: 15px;
+}
+
 .darkbar {
   background-color: $primary;
   width: 100%;
@@ -151,6 +192,10 @@ onMounted(() => {
   for (let index = 0; index < pages; index++) {
     selectors.value.push(document.getElementById(index));
   }
+  for (let index = 0; index < pages; index++) {
+    selectors.value[index].classList.remove('ets-menu-highlight');
+  }
+  selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
 });
 const selectors = ref([]);
 const pages = 3;
@@ -162,6 +207,7 @@ const slides = [
     challenge: 'challenge1',
     icon: 'escaperoom/phChallenge.svg',
     scaling: '10vw',
+    isDone: true,
     slide: 1,
   },
   {
@@ -170,6 +216,7 @@ const slides = [
     challenge: 'challenge2',
     icon: 'escaperoom/phChallenge.svg',
     scaling: '15vw',
+    isDone: true,
     slide: 1,
   },
   {
@@ -178,6 +225,7 @@ const slides = [
     challenge: 'challenge1',
     icon: 'escaperoom/phChallenge.svg',
     scaling: '10vw',
+    isDone: false,
     slide: 3,
   },
   {
@@ -186,6 +234,7 @@ const slides = [
     challenge: 'challenge2',
     icon: 'escaperoom/phChallenge.svg',
     scaling: '15vw',
+    isDone: true,
     slide: 2,
   },
 ];
