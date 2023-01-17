@@ -108,19 +108,103 @@
         </div>
         <!--Info- / Progress-Bar End-->
         <!--Challenge-->
-        <div>
-          <!--Caption-->
-          <div></div>
-          <!--Caption End-->
-          <!--Body-->
-          <div></div>
-          <!--Body End-->
-          <!--Task-->
-          <div></div>
-          <!--Task End-->
-          <!--Validation-->
-          <div></div>
-          <!--Validation End-->
+        <div class="flex justify-center">
+          <div class="w-90">
+            <!--Caption-->
+            <div class="q-mt-lg">
+              <div class="text-h5 text-bold subheader">Challenge 1:</div>
+            </div>
+            <!--Caption End-->
+            <!--Body-->
+            <div>
+              <!--Preview-->
+              <div>
+                <div class="placeholderPreview q-mt-md">
+                  <!--Note: durch Image ersetzen-->
+                </div>
+              </div>
+              <!--Preview End-->
+              <!--Explanation-->
+              <div>
+                <div class="text text-h6 text-weight-regular q-my-md">
+                  Hier kommt eine kleine Erklärung zu dem, was in Zukunft mal hier zu erledigen ist.
+                  Spannenden Insider und auch Theorie erwarten Sie schon bald hier ^^
+                </div>
+              </div>
+              <!--Explanation End-->
+            </div>
+            <!--Body End-->
+            <!--Task-->
+            <div>
+              <q-form>
+                <!--Question 10-->
+                <div>
+                  <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
+                    ><span class="text text-weight-medium text-h6 text-left"
+                      >Question 1: Wann wird EtS fertig sein?
+                    </span></et-s-chat-nav
+                  >
+                  <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
+                    ><span class="text text-h6">{{ question2 }}</span></et-s-chat-nav
+                  >
+                  <div class="q-mr-sm q-mb-md">
+                    <!--Radio Group (Invisible). Labels act as button/radio-->
+                    <div class="checkbutton q-mb-lg">
+                      <label>
+                        <input type="radio" name="radioa3" value="HTML3.5" v-model="question2" />
+                        <div class="text text-body1 q-my-sm">Januar 2023</div>
+                      </label>
+                      <label>
+                        <input type="radio" name="radioa3" value="HTML5" v-model="question2" />
+                        <div class="text text-body1 q-my-sm">Februar 2023</div>
+                      </label>
+                      <label>
+                        <input type="radio" name="radioa3" value="HTML9" v-model="question2" />
+                        <div class="text text-body1 q-my-sm">März 2023</div>
+                      </label>
+                      <label>
+                        <input type="radio" name="radioa3" value="HTML4" v-model="question2" />
+                        <div class="text text-body1 q-my-sm">April Fools! We never gonna finish</div>
+                      </label>
+                    </div>
+                    <!--Radio Group End-->
+                  </div>
+                </div>
+                <!--Question 10 End-->
+              </q-form>
+            </div>
+            <!--Task End-->
+            <!--Validation-->
+            <!--Checkbar-->
+            <div class="w-100 row justify-center items-start q-my-xl">
+              <div class="col-6">
+                <div
+                  class="text-center fakebutton text-secondary subheader text-h5 text-weight-bold"
+                >
+                  Check
+                </div>
+                <div
+                  class="text-center subheader text-grey text-caption text-italic text-weight-light"
+                >
+                  <span v-if="false">x Error/s found.</span>
+                  <span v-else>0 Errors found.</span>
+                  <span class="jumperlink">click here!</span>
+                </div>
+              </div>
+              <div class="col-6 text-center subheader text-h6 text-weight-bold">
+                <div class="text-center text-secondary subheader text-h5 text-weight-bold">
+                  Go Next!
+                </div>
+                <div
+                  class="text-center subheader text-grey text-caption text-italic text-weight-light"
+                >
+                  Check your Answers to get a Star
+                </div>
+              </div>
+            </div>
+            <!--Checkbar End-->
+            <!--Validation End-->
+          </div>
         </div>
         <!--Challenge End-->
         <div></div>
@@ -136,6 +220,25 @@
 }
 .ets-menu-highlight {
   color: $primary;
+}
+
+.checkbutton {
+  text-align: right;
+  font-weight: normal;
+  color: grey;
+}
+.checkbutton label input {
+  position: absolute;
+  display: none;
+  color: #fff !important;
+}
+
+.checkbutton input:checked + div {
+  color: black !important;
+}
+
+.fakebutton {
+  cursor: pointer;
 }
 
 .ets-escape-room-container {
@@ -159,6 +262,12 @@
 }
 .placeholder {
   background-color: $accent;
+}
+
+.placeholderPreview {
+  background-color: $accent;
+  width: 100%;
+  height: 20vh;
 }
 
 .lightbar {
@@ -207,6 +316,9 @@
 </style>
 <script setup>
 import { ref, onMounted } from 'vue';
+import EtSChatNav from '../components/EtSChatNav.vue';
+
+const question2 = ref('...');
 
 onMounted(() => {
   for (let index = 0; index < pages; index++) {
