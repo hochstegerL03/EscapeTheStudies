@@ -109,10 +109,10 @@
         <!--Info- / Progress-Bar End-->
         <!--Challenge-->
         <div class="flex justify-center">
-          <div class="w-90">
+          <div class="w-90" v-if="renderTask">
             <!--Caption-->
             <div class="q-mt-lg">
-              <div class="text-h5 text-bold subheader">Challenge 1:</div>
+              <div class="text-h5 text-bold subheader">{{ showedTask.title }}</div>
             </div>
             <!--Caption End-->
             <!--Body-->
@@ -127,8 +127,7 @@
               <!--Explanation-->
               <div>
                 <div class="text text-h6 text-weight-regular q-my-md">
-                  Hier kommt eine kleine Erklärung zu dem, was in Zukunft mal hier zu erledigen ist.
-                  Spannenden Insider und auch Theorie erwarten Sie schon bald hier ^^
+                  {{ showedTask.info }}
                 </div>
               </div>
               <!--Explanation End-->
@@ -141,30 +140,25 @@
                 <div>
                   <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
                     ><span class="text text-weight-medium text-h6 text-left"
-                      >Question 1: Wann wird EtS fertig sein?
+                      >{{ showedTask.challenge.question }}
                     </span></et-s-chat-nav
                   >
                   <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-                    ><span class="text text-h6">{{ question2 }}</span></et-s-chat-nav
+                    ><span class="text text-h6">{{
+                      showedTask.challenge.showedAnwer
+                    }}</span></et-s-chat-nav
                   >
                   <div class="q-mr-sm q-mb-md">
                     <!--Radio Group (Invisible). Labels act as button/radio-->
                     <div class="checkbutton q-mb-lg">
-                      <label>
-                        <input type="radio" name="radioa3" value="HTML3.5" v-model="question2" />
-                        <div class="text text-body1 q-my-sm">Januar 2023</div>
-                      </label>
-                      <label>
-                        <input type="radio" name="radioa3" value="HTML5" v-model="question2" />
-                        <div class="text text-body1 q-my-sm">Februar 2023</div>
-                      </label>
-                      <label>
-                        <input type="radio" name="radioa3" value="HTML9" v-model="question2" />
-                        <div class="text text-body1 q-my-sm">März 2023</div>
-                      </label>
-                      <label>
-                        <input type="radio" name="radioa3" value="HTML4" v-model="question2" />
-                        <div class="text text-body1 q-my-sm">April Fools! We never gonna finish</div>
+                      <label v-for="(answer, index) in showedTask.challenge.answers" :key="index">
+                        <input
+                          type="radio"
+                          name="radioa3"
+                          :value="answer"
+                          v-model="showedTask.challenge.showedAnwer"
+                        />
+                        <div class="text text-body1 q-my-sm">{{ answer }}</div>
                       </label>
                     </div>
                     <!--Radio Group End-->
@@ -318,8 +312,6 @@
 import { ref, onMounted } from 'vue';
 import EtSChatNav from '../components/EtSChatNav.vue';
 
-const question2 = ref('...');
-
 onMounted(() => {
   for (let index = 0; index < pages; index++) {
     selectors.value.push(document.getElementById(index));
@@ -332,11 +324,32 @@ onMounted(() => {
 const selectors = ref([]);
 const pages = 3;
 const pointer = ref(1);
+const showedTask = ref(null);
+const renderTask = ref(false);
+const challenge1 = {
+  question: 'Question 1: Wann wird EtS fertig sein?',
+  answers: ['Januar 2023', 'Februar 2023', 'März 2023', 'April Fools! We never gonna finish'],
+  showedAnwer: '...',
+  correctAnswer: 3,
+};
+const task1 = {
+  title: 'Challenge 1',
+  banner: '',
+  info: 'Hier kommt eine kleine Erklärung zu dem, was in Zukunft mal hier zu erledigen ist. Spannenden Insider und auch Theorie erwarten Sie schon bald hier ^^',
+  challenge: challenge1,
+};
+const task2 = {
+  title: 'Challenge 2',
+  banner: '',
+  info: 'Tada! Es hat gewechselt. Cool oder?',
+  challenge: challenge1,
+};
+
 const slides = [
   {
     pl: '20%',
     pt: '10%',
-    challenge: 'challenge1',
+    challenge: task1,
     icon: 'escaperoom/phChallenge.svg',
     scaling: '10vw',
     isDone: true,
@@ -345,7 +358,7 @@ const slides = [
   {
     pl: '35%',
     pt: '18%',
-    challenge: 'challenge2',
+    challenge: task2,
     icon: 'escaperoom/phChallenge.svg',
     scaling: '15vw',
     isDone: true,
@@ -354,7 +367,7 @@ const slides = [
   {
     pl: '20%',
     pt: '10%',
-    challenge: 'challenge1',
+    challenge: task1,
     icon: 'escaperoom/phChallenge.svg',
     scaling: '10vw',
     isDone: false,
@@ -363,7 +376,7 @@ const slides = [
   {
     pl: '35%',
     pt: '18%',
-    challenge: 'challenge2',
+    challenge: task2,
     icon: 'escaperoom/phChallenge.svg',
     scaling: '15vw',
     isDone: true,
@@ -371,7 +384,8 @@ const slides = [
   },
 ];
 function challenge(obj) {
-  alert(obj);
+  showedTask.value = obj;
+  if (showedTask.value) renderTask.value = true;
 }
 function changeRoom(direction) {
   if (direction == 'left' && pointer.value > 1) pointer.value--;
