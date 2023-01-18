@@ -31,8 +31,8 @@
           <!--Caption End-->
           <!--Impressum Body-->
           <div class="row q-mt-lg">
-            <!--Chapter 1-->
-            <div>
+            <!--Team-->
+            <div class="w-100">
               <div class="text-h6 text-weight-regular q-my-md">
                 Four Students, one class and only one Job: Graduate from the
                 <a href="https://www.htlwienwest.at/">HTL Wien West</a> and do so with style...
@@ -41,14 +41,13 @@
                 Okay, maybe we just want to graduate, even without style.
               </div>
               <div class="text-h6 text-weight-regular q-my-md">
-                <b>Raphael Losko</b> - The suicidal man who knows da wae.
+                <b>Raphael Losko</b> - Backend / Website Support.
               </div>
               <div class="text-h6 text-weight-regular q-my-md">
-                <b>Dominik Peric</b> - The Doki Doki Literature Club Member and Server Janitor.
+                <b>Dominik Peric</b> - Server / Database
               </div>
               <div class="text-h6 text-weight-regular q-my-md">
-                <b>Lukas Hochsteger</b> - Me. Fun Fact: I like to commit arson, make useless
-                Wireframes / Websites and to annoy Raphael Losko.
+                <b>Lukas Hochsteger</b> - Webdeveloper
               </div>
               <div class="text-h6 text-weight-regular q-my-md">That's it. Have a nice day.</div>
               <div class="text-h6 text-weight-regular q-my-md">
@@ -56,7 +55,24 @@
                 <a href="https://www.wikipedia.org/">Here!</a>
               </div>
             </div>
-            <!--Chapter 1-->
+            <!--Team Ende-->
+            <div class="row q-mt-xl w-100">
+              <div class="col-12 text-h6">Impressum</div>
+              <div class="col-md-6 col-12 q-mt-lg">
+                <div class="text-h6 text-weight-regular">Dominik</div>
+                <div class="text-h6 text-weight-regular">Peric</div>
+                <div class="text-h6 text-weight-regular">HTL Wien West</div>
+                <div class="text-h6 text-weight-regular">Thaliastraße 125</div>
+                <div class="text-h6 text-weight-regular">1160 Wien</div>
+              </div>
+              <div class="col-md-6 col-12 q-mt-lg">
+                <div class="text-h6 text-weight-regular underline">Kontaktaufnahme:</div>
+                <div class="text-h6 text-weight-regular">E-Mail: peric.d03@htlwienwest.at</div>
+                <div class="text-h6 text-weight-regular">Telefon: +43 678 1221811</div>
+                <div class="text-h6 text-weight-regular">Fax: -</div>
+                <div class="text-h6 text-weight-regular">Brieftaube: Rudi</div>
+              </div>
+            </div>
           </div>
           <!--Impressum Body End-->
         </div>
@@ -82,6 +98,10 @@
 <style lang="scss" scoped>
 .bannercap {
   max-height: 35rem;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .funnybtn {

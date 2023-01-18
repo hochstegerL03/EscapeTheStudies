@@ -231,9 +231,7 @@
   color: black !important;
 }
 
-.fakebutton {
-  cursor: pointer;
-}
+
 
 .ets-escape-room-container {
   width: 100%;
