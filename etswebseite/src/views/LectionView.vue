@@ -366,118 +366,16 @@
         <div class="flex justify-center">
           <q-form>
             <!--Question 1-->
-            <div>
-              <div class="flex">
-                <div class="w-90 text text-h6 text-weight-regular q-mb-lg">
-                  Lass uns damit mal mit ein paar einfachen und allgemeinen Fragen starten! Achtung,
-                  nicht alle Fragen sind in der derzeitigen Lektion erklärt!
-                </div>
-              </div>
-              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-weight-medium text-h6 text-left"
-                  >Question 1: Welche drei “Programmiersprachen” werden für eine moderne/zeitgemäße
-                  Website benötigt?</span
-                ></et-s-chat-nav
-              >
-              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-h6">{{ question1 }}</span></et-s-chat-nav
-              >
-              <div class="q-mr-md q-mb-md">
-                <!--Radio Group (Invisible). Labels act as button/radio-->
-                <div class="checkbutton">
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa2"
-                      value="JavaScript, HTML, CSS."
-                      v-model="question1"
-                    />
-                    <div class="text text-body1 q-my-sm">JavaScript, HTML, CSS.</div>
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa2"
-                      value="JavaScript, Vue, C#."
-                      v-model="question1"
-                    />
-                    <div class="text text-body1 q-my-sm">JavaScript, Vue, C#.</div>
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa2"
-                      value="HTML ,CSS, Python."
-                      v-model="question1"
-                    />
-                    <div class="text text-body1 q-my-sm">HTML ,CSS, Python.</div>
-                  </label>
-                </div>
-                <!--Radio Group End-->
-              </div>
-            </div>
+            <EtSQuestionMutlipleChoice
+              @changeAnswer="changeAnswer"
+              :question="questions[0]"
+            ></EtSQuestionMutlipleChoice>
             <!--Question 1 End-->
             <!--Question 2-->
-            <div>
-              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-weight-medium text-h6 text-left"
-                  >Question 2: Welchen Fehler hatte die erste Frage?</span
-                ></et-s-chat-nav
-              >
-              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-h6">{{ question2 }}</span></et-s-chat-nav
-              >
-              <div class="q-mr-sm q-mb-md">
-                <!--Radio Group (Invisible). Labels act as button/radio-->
-                <div class="checkbutton q-mb-lg">
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa3"
-                      value="CSS & HTML sind eigentlich Beschreibungssprachen."
-                      v-model="question2"
-                    />
-                    <div class="text text-body1 q-my-sm">
-                      CSS & HTML sind eigentlich Beschreibungssprachen.
-                    </div>
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa3"
-                      value="JavaScript ist eigentlich eine Beschreibungssprache."
-                      v-model="question2"
-                    />
-                    <div class="text text-body1 q-my-sm">
-                      JavaScript ist eigentlich eine Beschreibungssprache.
-                    </div>
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa3"
-                      value="Es gab keinen Fehler: Trick-Question!"
-                      v-model="question2"
-                    />
-                    <div class="text text-body1 q-my-sm">Es gab keinen Fehler: Trick-Question!</div>
-                  </label>
-                </div>
-                <!--Radio Group End-->
-                <div
-                  @click="hint1 = !hint1"
-                  class="q-ml-sm subheader text-secondary text-h5 text-weight-bold text-italic"
-                >
-                  Hint?
-                </div>
-                <div v-if="hint1" class="flex justify-center">
-                  <et-s-chat-nav class="q-mt-lg q-mb-md">
-                    <div class="q-ml-md w-100 text text-weight-medium text-h6 text-left">
-                      Here is a hint mister
-                    </div>
-                  </et-s-chat-nav>
-                </div>
-              </div>
-            </div>
+            <EtSQuestionMutlipleChoice
+              @changeAnswer="changeAnswer"
+              :question="questions[1]"
+            ></EtSQuestionMutlipleChoice>
             <!--Question 2 End-->
             <!--Question 3-->
             <div>
@@ -954,8 +852,41 @@ textarea::placeholder {
 </style>
 <script setup>
 import EtSChatNav from '../components/EtSChatNav.vue';
+import EtSQuestionMutlipleChoice from '../components/EtSQuestionMutlipleChoice.vue';
 import { scroll } from 'quasar';
 import { ref } from 'vue';
+
+const questions = ref([
+  {
+    id: 1,
+    type: 'multipleChoice',
+    description:
+      'Lass uns damit mal mit ein paar einfachen und allgemeinen Fragen starten! Achtung, nicht alle Fragen sind in der derzeitigen Lektion erklärt!',
+    question:
+      'Welche drei “Programmiersprachen” werden für eine moderne/zeitgemäße Website benötigt?',
+    answers: ['JavaScript, HTML, CSS.', 'JavaScript, Vue, C#.', 'HTML ,CSS, Python.'],
+    showedAnswer: '',
+    correctAnswer: 'JavaScript, HTML, CSS.', //hier gehört ein Regex hin
+  },
+  {
+    id: 2,
+    type: 'multipleChoice',
+    description: '',
+    question: 'Welchen Fehler hatte die erste Frage?',
+    answers: [
+      'CSS & HTML sind eigentlich Beschreibungssprachen.',
+      'JavaScript ist eigentlich eine Beschreibungssprache.',
+      'Es gab keinen Fehler: Trick-Question!',
+    ],
+    showedAnswer: '',
+    correctAnswer: 'CSS & HTML sind eigentlich Beschreibungssprachen.', //hier gehört ein Regex hin
+  },
+]);
+
+function changeAnswer(answer, id) {
+  questions.value[questions.value.findIndex((el) => el.id == id)].showedAnswer = answer;
+}
+
 const question1 = ref();
 const question2 = ref();
 const question3 = ref();

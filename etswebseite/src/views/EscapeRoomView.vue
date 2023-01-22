@@ -145,7 +145,7 @@
                   >
                   <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
                     ><span class="text text-h6">{{
-                      showedTask.challenge.showedAnwer
+                      showedTask.challenge.showedAnswer
                     }}</span></et-s-chat-nav
                   >
                   <div class="q-mr-sm q-mb-md">
@@ -156,7 +156,7 @@
                           type="radio"
                           name="radioa3"
                           :value="answer"
-                          v-model="showedTask.challenge.showedAnwer"
+                          v-model="showedTask.challenge.showedAnswer"
                         />
                         <div class="text text-body1 q-my-sm">{{ answer }}</div>
                       </label>
@@ -327,7 +327,7 @@ const renderTask = ref(false);
 const challenge1 = {
   question: 'Question 1: Wann wird EtS fertig sein?',
   answers: ['Januar 2023', 'Februar 2023', 'März 2023', 'April Fools! We never gonna finish'],
-  showedAnwer: '...',
+  showedAnswer: '...',
   correctAnswer: 3,
 };
 const task1 = {
