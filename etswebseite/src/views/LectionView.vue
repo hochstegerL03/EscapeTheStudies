@@ -365,370 +365,30 @@
         <!--Questions-->
         <div class="flex justify-center">
           <q-form>
-            <!--Question 1-->
-            <EtSQuestionMutlipleChoice
-              @changeAnswer="changeAnswer"
-              :question="questions[0]"
-            ></EtSQuestionMutlipleChoice>
-            <!--Question 1 End-->
-            <!--Question 2-->
-            <EtSQuestionMutlipleChoice
-              @changeAnswer="changeAnswer"
-              :question="questions[1]"
-            ></EtSQuestionMutlipleChoice>
-            <!--Question 2 End-->
-            <!--Question 3-->
-            <div>
-              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-weight-medium text-h6 text-left"
-                  >Question 3: Deklariere drei Variablen: Die Konstante “change” mit dem Wert “Life
-                  always Changes”, die globale Variable “climateChange” mit dem booleschen Wert,
-                  “true”, und die lokale Variable “you” ohne Wertangabe:
-                </span></et-s-chat-nav
+            <div v-for="(question, index) in questions" :key="question.id">
+              <!--Multiple Choice Question-->
+              <EtSQuestionMutlipleChoice
+                v-if="question.type == 'multipleChoice'"
+                @changeAnswer="changeAnswer"
+                :question="question"
+              ></EtSQuestionMutlipleChoice>
+              <!--Multiple Choice Question End-->
+              <!--Text Input Question-->
+              <EtSQuestionTextInput
+                v-else-if="question.type == 'textInput'"
+                @changeAnswer="changeAnswer"
+                :question="question"
               >
-              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg">
-                <div class="flex items-center justify-center h-100 w-100">
-                  <textarea
-                    placeholder="Type here ..."
-                    class="text-white text-mono inputbubble text-h6"
-                    v-model="question3"
-                  ></textarea>
-                </div>
-              </et-s-chat-nav>
+              </EtSQuestionTextInput>
+              <!--Text Input Question End-->
+              <!--Build Answer Question-->
+              <EtSQuestionBuildAnswer
+                v-else-if="question.type === 'buildAnswer'"
+                @changeAnswer="changeAnswer"
+                :question="question"
+              ></EtSQuestionBuildAnswer>
+              <!--Build Answer Question End-->
             </div>
-            <!--Question 3 End-->
-            <!--Question 4-->
-            <div>
-              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-weight-medium text-h6 text-left"
-                  >Question 4: Wie werden Datentypen in Vanilla JavaScript impliziert?</span
-                ></et-s-chat-nav
-              >
-              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-h6">{{ question4 }}</span></et-s-chat-nav
-              >
-              <div class="q-mr-sm q-mb-md">
-                <!--Radio Group (Invisible). Labels act as button/radio-->
-                <div class="checkbutton q-mb-lg">
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa3"
-                      value="Dynamisch: Der Datentyp wird mit dem angegebenen Wert definiert."
-                      v-model="question4"
-                    />
-                    <div class="text text-body1 q-my-sm">
-                      Dynamisch: Der Datentyp wird mit dem angegebenen Wert definiert.
-                    </div>
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa3"
-                      value="Statisch: Der Datentyp muss beim Anlegen der Variable angegeben werden."
-                      v-model="question4"
-                    />
-                    <div class="text text-body1 q-my-sm">
-                      Statisch: Der Datentyp muss beim Anlegen der Variable angegeben werden.
-                    </div>
-                  </label>
-                </div>
-                <!--Radio Group End-->
-              </div>
-            </div>
-            <!--Question 4 End-->
-            <!--Question 5-->
-            <div>
-              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-weight-medium text-h6 text-left"
-                  >Question 5: Mit welchen dieser Tags kann kein Text in HTML angezeigt werden?
-                </span></et-s-chat-nav
-              >
-              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-h6">{{ question5 }}</span></et-s-chat-nav
-              >
-              <div class="q-mr-sm q-mb-md">
-                <!--Radio Group (Invisible). Labels act as button/radio-->
-                <div class="checkbutton q-mb-lg">
-                  <label>
-                    <input type="radio" name="radioa3" value="p" v-model="question5" />
-                    <div class="text text-body1 q-my-sm">p</div>
-                  </label>
-                  <label>
-                    <input type="radio" name="radioa3" value="h1" v-model="question5" />
-                    <div class="text text-body1 q-my-sm">h1</div>
-                  </label>
-                  <label>
-                    <input type="radio" name="radioa3" value="h6" v-model="question5" />
-                    <div class="text text-body1 q-my-sm">h6</div>
-                  </label>
-                  <label>
-                    <input type="radio" name="radioa3" value="div" v-model="question5" />
-                    <div class="text text-body1 q-my-sm">div</div>
-                  </label>
-                  <label>
-                    <input type="radio" name="radioa3" value="br" v-model="question5" />
-                    <div class="text text-body1 q-my-sm">br</div>
-                  </label>
-                </div>
-                <!--Radio Group End-->
-              </div>
-            </div>
-            <!--Question 5 End-->
-            <!--Question 6-->
-            <div>
-              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-weight-medium text-h6 text-left"
-                  >Question 6: Wie reagiert HTML auf folgenden Code? &lt;h187>Werde ich
-                  angezeigt?&lt;/h187></span
-                ></et-s-chat-nav
-              >
-              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-h6">{{ question6 }}</span></et-s-chat-nav
-              >
-              <div class="q-mr-sm q-mb-md">
-                <!--Radio Group (Invisible). Labels act as button/radio-->
-                <div class="checkbutton q-mb-lg">
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa3"
-                      value="Es wird ein Fehler auf der Konsole ausgeworfen und der Text ignoriert."
-                      v-model="question6"
-                    />
-                    <div class="text text-body1 q-my-sm">
-                      Es wird ein Fehler auf der Konsole ausgeworfen und der Text ignoriert.
-                    </div>
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa3"
-                      value="Der Text wird trotz falschem Tag angezeigt, jedoch mit den Font Values vom parent-Object."
-                      v-model="question6"
-                    />
-                    <div class="text text-body1 q-my-sm">
-                      Der Text wird trotz falschem Tag angezeigt, jedoch mit den Font Values vom
-                      parent-Object.
-                    </div>
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa3"
-                      value="Die Webseite kann wegen dem Fehler nicht laden."
-                      v-model="question6"
-                    />
-                    <div class="text text-body1 q-my-sm">
-                      Die Webseite kann wegen dem Fehler nicht laden.
-                    </div>
-                  </label>
-                </div>
-                <!--Radio Group End-->
-              </div>
-            </div>
-            <!--Question 6 End-->
-            <!--Question 7-->
-            <div>
-              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-weight-medium text-h6 text-left"
-                  >Question 7: Welcher Output wird bei folgender Addition gegeben: console.log(“16”
-                  + 16);</span
-                ></et-s-chat-nav
-              >
-              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-h6">{{ question7 }}</span></et-s-chat-nav
-              >
-              <div class="q-mr-sm q-mb-md">
-                <!--Radio Group (Invisible). Labels act as button/radio-->
-                <div class="checkbutton q-mb-lg">
-                  <label>
-                    <input type="radio" name="radioa3" value="1616" v-model="question7" />
-                    <div class="text text-body1 q-my-sm">1616</div>
-                  </label>
-                  <label>
-                    <input type="radio" name="radioa3" value="32" v-model="question7" />
-                    <div class="text text-body1 q-my-sm">32</div>
-                  </label>
-                  <label>
-                    <input type="radio" name="radioa3" value="N.a.N" v-model="question7" />
-                    <div class="text text-body1 q-my-sm">N.a.N</div>
-                  </label>
-                </div>
-                <!--Radio Group End-->
-              </div>
-            </div>
-            <!--Question 7 End-->
-            <!--Question 8-->
-            <div>
-              <!-- <div class="flex justify-center">
-                <div class="w-90 text text-h6 text-weight-regular q-mb-lg">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                  tempor invidunt ut labore et dolore magna aliquyam erat,
-                </div>
-              </div> -->
-              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-weight-medium text-h6 text-left"
-                  >Question 8: Konstruiere eine einfache Funktion namens “double” in Javascript mit
-                  folgenden Parameter, “number”, welcher den Eingabeparameter mit sich selbst
-                  multipliziert und zurückgibt:</span
-                ></et-s-chat-nav
-              >
-              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-                ><span v-if="question8.length > 0" class="text text-h5">{{
-                  question8.join(' ')
-                }}</span
-                ><span v-else class="text text-h6">...</span></et-s-chat-nav
-              >
-              <div class="q-mr-md q-mb-md">
-                <!--Radio Group (Invisible). Labels act as button/radio-->
-                <div class="flex items-center justify-center q-gutter-md checkbuttonmulti">
-                  <label>
-                    <input type="checkbox" value="function" v-model="question8" />
-                    <div class="text text-body1">function</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="(number)" v-model="question8" />
-                    <div class="text text-body1">(number).</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="double" v-model="question8" />
-                    <div class="text text-body1">double</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="{" v-model="question8" />
-                    <div class="text text-body1">{</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="}" v-model="question8" />
-                    <div class="text text-body1">}</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="const" v-model="question8" />
-                    <div class="text text-body1">const</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="return" v-model="question8" />
-                    <div class="text text-body1">return</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="number * number;" v-model="question8" />
-                    <div class="text text-body1">number * number;</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="square(number);" v-model="question8" />
-                    <div class="text text-body1">square(number);</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="(double)" v-model="question8" />
-                    <div class="text text-body1">(double)</div>
-                  </label>
-                  <label>
-                    <input type="checkbox" value="number" v-model="question8" />
-                    <div class="text text-body1">number</div>
-                  </label>
-                </div>
-                <!--Radio Group End-->
-              </div>
-            </div>
-            <!--Question 8 End-->
-            <!--Question 9-->
-            <div>
-              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-weight-medium text-h6 text-left"
-                  >Question 9: Welcher der folgenden CSS Attribute ändert die Farbe der Schrift zu
-                  rot?</span
-                ></et-s-chat-nav
-              >
-              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-h6">{{ question9 }}</span></et-s-chat-nav
-              >
-              <div class="q-mr-sm q-mb-md">
-                <!--Radio Group (Invisible). Labels act as button/radio-->
-                <div class="checkbutton q-mb-lg">
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa3"
-                      value="background-color: red;"
-                      v-model="question9"
-                    />
-                    <div class="text text-body1 q-my-sm">background-color: red;</div>
-                  </label>
-                  <label>
-                    <input type="radio" name="radioa3" value="color: rot;" v-model="question9" />
-                    <div class="text text-body1 q-my-sm">color: rot;</div>
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa3"
-                      value="font-color: red;"
-                      v-model="question9"
-                    />
-                    <div class="text text-body1 q-my-sm">font-color: red;</div>
-                  </label>
-                  <label>
-                    <input type="radio" name="radioa3" value="color: red;" v-model="question9" />
-                    <div class="text text-body1 q-my-sm">color: red;</div>
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa3"
-                      value="font-color: #ff0000;"
-                      v-model="question9"
-                    />
-                    <div class="text text-body1 q-my-sm">font-color: #ff0000;</div>
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="radioa3"
-                      value="display-color: red;"
-                      v-model="question9"
-                    />
-                    <div class="text text-body1 q-my-sm">display-color: red;</div>
-                  </label>
-                </div>
-                <!--Radio Group End-->
-              </div>
-            </div>
-            <!--Question 9 End-->
-            <!--Question 10-->
-            <div>
-              <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-weight-medium text-h6 text-left"
-                  >Question 10: Welche Version von HTML ist derzeit in Benutzung?
-                </span></et-s-chat-nav
-              >
-              <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-                ><span class="text text-h6">{{ question10 }}</span></et-s-chat-nav
-              >
-              <div class="q-mr-sm q-mb-md">
-                <!--Radio Group (Invisible). Labels act as button/radio-->
-                <div class="checkbutton q-mb-lg">
-                  <label>
-                    <input type="radio" name="radioa3" value="HTML3.5" v-model="question10" />
-                    <div class="text text-body1 q-my-sm">HTML3.5</div>
-                  </label>
-                  <label>
-                    <input type="radio" name="radioa3" value="HTML5" v-model="question10" />
-                    <div class="text text-body1 q-my-sm">HTML5</div>
-                  </label>
-                  <label>
-                    <input type="radio" name="radioa3" value="HTML9" v-model="question10" />
-                    <div class="text text-body1 q-my-sm">HTML9</div>
-                  </label>
-                  <label>
-                    <input type="radio" name="radioa3" value="HTML4" v-model="question10" />
-                    <div class="text text-body1 q-my-sm">HTML4</div>
-                  </label>
-                </div>
-                <!--Radio Group End-->
-              </div>
-            </div>
-            <!--Question 9 End-->
           </q-form>
         </div>
         <!--Questions End-->
@@ -780,79 +440,11 @@
 .jumperlink {
   text-decoration: underline;
 }
-
-.checkbutton {
-  text-align: right;
-  font-weight: normal;
-  color: grey;
-}
-.checkbutton label input {
-  position: absolute;
-  display: none;
-  color: #fff !important;
-}
-
-.checkbutton input:checked + div {
-  color: black !important;
-}
-
-.checkbuttonmulti {
-  text-align: right;
-  font-weight: normal;
-  color: grey;
-}
-.checkbuttonmulti label input {
-  position: absolute;
-  display: none;
-  color: #fff !important;
-}
-
-.checkbuttonmulti input:checked + div {
-  text-decoration: line-through;
-}
-
-.inputbubble {
-  background-color: transparent;
-  border: none;
-  width: 100%;
-  height: 100%;
-  min-height: 7rem;
-}
-.inputbubble:focus {
-  border: none;
-  outline: none;
-}
-
-textarea {
-  resize: vertical;
-  overflow: hidden;
-}
-
-textarea::-webkit-input-placeholder {
-  color: white;
-}
-
-textarea:-moz-placeholder {
-  /* Firefox 18- */
-  color: white;
-}
-
-textarea::-moz-placeholder {
-  /* Firefox 19+ */
-  color: white;
-}
-
-textarea:-ms-input-placeholder {
-  color: white;
-}
-
-textarea::placeholder {
-  color: white;
-}
 </style>
 <script setup>
-import EtSChatNav from '../components/EtSChatNav.vue';
 import EtSQuestionMutlipleChoice from '../components/EtSQuestionMutlipleChoice.vue';
+import EtSQuestionTextInput from '../components/EtSQuestionTextInput.vue';
+import EtSQuestionBuildAnswer from '../components/EtSQuestionBuildAnswer.vue';
 import { scroll } from 'quasar';
 import { ref } from 'vue';
 
@@ -881,9 +473,110 @@ const questions = ref([
     showedAnswer: '',
     correctAnswer: 'CSS & HTML sind eigentlich Beschreibungssprachen.', //hier gehört ein Regex hin
   },
+  {
+    id: 3,
+    type: 'textInput',
+    description: '',
+    question:
+      'Deklariere drei Variablen: Die Konstante “change” mit dem Wert “Life always Changes”, die globale Variable “climateChange” mit dem booleschen Wert, “true”, und die lokale Variable “you” ohne Wertangabe:',
+    showedAnswer: '',
+    correctAnswer: 'const change = “Life always Changes”; var climateChange = true; let you;', //hier gehört ein Regex hin
+  },
+  {
+    id: 4,
+    type: 'multipleChoice',
+    description: '',
+    question: 'Wie werden Datentypen in Vanilla JavaScript impliziert?',
+    answers: [
+      'Dynamisch: Der Datentyp wird mit dem angegebenen Wert definiert.',
+      'Statisch: Der Datentyp muss beim Anlegen der Variable angegeben werden.',
+    ],
+    showedAnswer: '',
+    correctAnswer: 'Dynamisch: Der Datentyp wird mit dem angegebenen Wert definiert.', //hier gehört ein Regex hin
+  },
+  {
+    id: 5,
+    type: 'multipleChoice',
+    description: '',
+    question: 'Mit welchen dieser Tags kann kein Text in HTML angezeigt werden?',
+    answers: ['p', 'h1', 'h6', 'div', 'br'],
+    showedAnswer: '',
+    correctAnswer: 'br', //hier gehört ein Regex hin
+  },
+  {
+    id: 6,
+    type: 'multipleChoice',
+    description: '',
+    question: 'Wie reagiert HTML auf folgenden Code? <h187>Werde ich angezeigt?</h187>',
+    answers: [
+      'Es wird ein Fehler auf der Konsole ausgeworfen und der Text ignoriert.',
+      'Der Text wird trotz falschem Tag angezeigt, jedoch mit den Font Values vom parent-Object.',
+      'Die Webseite kann wegen dem Fehler nicht laden.',
+    ],
+    showedAnswer: '',
+    correctAnswer:
+      'Der Text wird trotz falschem Tag angezeigt, jedoch mit den Font Values vom parent-Object.', //hier gehört ein Regex hin
+  },
+  {
+    id: 7,
+    type: 'multipleChoice',
+    description: '',
+    question: 'Welcher Output wird bei folgender Addition gegeben: console.log(“16” + 16);',
+    answers: ['1616', '32', 'N.a.N'],
+    showedAnswer: '',
+    correctAnswer: '1616', //hier gehört ein Regex hin
+  },
+  {
+    id: 8,
+    type: 'buildAnswer',
+    description: '',
+    question:
+      'Konstruiere eine einfache Funktion namens “double” in Javascript mit folgenden Parameter, “number”, welcher den Eingabeparameter mit sich selbst multipliziert und zurückgibt:',
+    answers: [
+      'function',
+      '(number).',
+      'double',
+      '{',
+      '}',
+      'const',
+      'return',
+      'number * number;',
+      'square(number);',
+      '(double)',
+      'number',
+    ],
+    showedAnswer: [],
+    correctAnswer: 'function double (number) { return number * number; }', //hier gehört ein Regex hin
+  },
+  {
+    id: 9,
+    type: 'multipleChoice',
+    description: '',
+    question: 'Welcher der folgenden CSS Attribute ändert die Farbe der Schrift zu rot?',
+    answers: [
+      'background-color: red;',
+      'color: rot;',
+      'font-color: red;',
+      'color: red;',
+      'font-color: #ff0000;',
+      'display-color: red;',
+    ],
+    showedAnswer: '',
+    correctAnswer: 'color: red;', //hier gehört ein Regex hin
+  },
+  {
+    id: 10,
+    type: 'multipleChoice',
+    description: '',
+    question: 'Welche Version von HTML ist derzeit in Benutzung?',
+    answers: ['HTML3.5', 'HTML5', 'HTML9', 'HTML4'],
+    showedAnswer: '',
+    correctAnswer: 'HTML5', //hier gehört ein Regex hin
+  },
 ]);
 
 function changeAnswer(answer, id) {
+  console.log(answer);
   questions.value[questions.value.findIndex((el) => el.id == id)].showedAnswer = answer;
 }
 
