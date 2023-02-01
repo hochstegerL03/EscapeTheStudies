@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import dotenv from 'dotenv';
 import path from 'path';
+import cors from 'cors';
 import routes from './routes/ets.js';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler.js';
 
@@ -14,6 +15,7 @@ const app = express();
 
 app.use(morgan('dev'));
 app.use(helmet());
+app.use(cors());
 
 app.use(express.static(path.join(dirname, '/public')));
 
