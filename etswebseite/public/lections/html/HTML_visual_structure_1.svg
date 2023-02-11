@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 317.37 358.15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #eef7f9;
+      }
+
+      .cls-3 {
+        font-size: 12px;
+      }
+
+      .cls-3, .cls-4 {
+        font-family: SourceSerifPro-BoldIt, 'Source Serif Pro';
+        font-style: italic;
+        font-weight: 700;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        fill: #231f20;
+      }
+
+      .cls-6 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-7 {
+        fill: #e39578;
+      }
+
+      .cls-8 {
+        fill: #016d77;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-12 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-13 {
+        fill: #82c5bf;
+      }
+
+      .cls-14 {
+        letter-spacing: 0em;
+      }
+
+      .cls-15 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-16 {
+        fill: none;
+      }
+
+      .cls-17 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-18 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        font-size: 18px;
+      }
+
+      .cls-19 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-20 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-21 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-22 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-23 {
+        fill: #fdddd2;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-16" width="170.08" height="358.15" rx="41.98" ry="41.98"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <g>
+          <rect class="cls-2" x="0" y="0" width="170.08" height="358.15" rx="41.98" ry="41.98"/>
+          <g class="cls-15">
+            <g>
+              <rect id="Rechteck_22" data-name="Rechteck 22" class="cls-8" x="-4.05" y="73.35" width="182.9" height="21.97"/>
+              <rect id="Rechteck_23" data-name="Rechteck 23" class="cls-13" x="-4.05" y="95.32" width="182.9" height="59.88"/>
+              <rect id="Rechteck_25" data-name="Rechteck 25" class="cls-23" x="-4.05" y="155.04" width="182.9" height="166.71"/>
+              <rect id="Rechteck_26" data-name="Rechteck 26" class="cls-7" x="-4.05" y="321.32" width="182.9" height="36.83"/>
+            </g>
+          </g>
+        </g>
+        <rect class="cls-1" x="11.76" y="16.51" width="61.53" height="13.31" rx="5.89" ry="5.89"/>
+        <rect class="cls-1" x="131.49" y="15.75" width="20.73" height="14.84" rx="7.42" ry="7.42"/>
+        <rect class="cls-1" x="90.48" y="15.75" width="33.05" height="14.84" rx="7.42" ry="7.42"/>
+        <rect class="cls-1" x="18.48" y="42.8" width="132.65" height="21.93" rx="4.25" ry="4.25"/>
+        <rect class="cls-1" x="83.93" y="100.24" width="71.89" height="49.31" rx="12.63" ry="12.63"/>
+        <rect class="cls-1" x="6.09" y="106.29" width="53.44" height="36.65" rx="12.63" ry="12.63"/>
+        <rect class="cls-1" x="45.86" y="161.38" width="108.93" height="148.36" rx="12.63" ry="12.63"/>
+        <rect class="cls-1" x="11.36" y="173.27" width="25.25" height="129.82" rx="12.63" ry="12.63"/>
+        <rect class="cls-1" x="40.27" y="329.23" width="89.54" height="21.17" rx="10.58" ry="10.58"/>
+      </g>
+      <g>
+        <g>
+          <rect class="cls-2" x="193.47" y="52.73" width="14.83" height="51.4"/>
+          <rect class="cls-8" x="193.47" y="104.06" width="14.83" height="15.09"/>
+          <rect class="cls-13" x="193.47" y="118.97" width="14.83" height="41.71"/>
+          <rect class="cls-23" x="193.47" y="160.68" width="14.83" height="116.4"/>
+          <rect class="cls-7" x="193.47" y="276.95" width="14.83" height="32.47"/>
+        </g>
+        <g>
+          <g>
+            <text class="cls-4" transform="translate(228.98 183.56)"><tspan class="cls-17" x="0" y="0">A</tspan><tspan class="cls-9" x="11.72" y="0">b</tspan><tspan class="cls-14" x="21.28" y="0">s</tspan><tspan class="cls-19" x="28.73" y="0">c</tspan><tspan x="36.79" y="0">hnitt </tspan><tspan x="0" y="21.6">2: </tspan><tspan class="cls-18" x="19.62" y="21.6">B</tspan><tspan x="30.94" y="21.6">o</tspan><tspan class="cls-11" x="40.54" y="21.6">d</tspan><tspan x="50.53" y="21.6">y</tspan></text>
+            <rect class="cls-5" x="216.85" y="113.3" width="2.83" height="154.96"/>
+          </g>
+          <g>
+            <text class="cls-3" transform="translate(226.88 74.33)"><tspan class="cls-6" x="0" y="0">A</tspan><tspan class="cls-21" x="7.81" y="0">b</tspan><tspan class="cls-14" x="14.18" y="0">s</tspan><tspan class="cls-22" x="19.15" y="0">c</tspan><tspan x="24.53" y="0">hnitt 1: </tspan><tspan class="cls-12" x="0" y="14.4">H</tspan><tspan class="cls-10" x="8.68" y="14.4">e</tspan><tspan x="14.22" y="14.4">a</tspan><tspan class="cls-14" x="21.05" y="14.4">d</tspan><tspan x="27.83" y="14.4">er</tspan></text>
+            <rect class="cls-5" x="217.56" y="54.88" width="1.42" height="46.43"/>
+          </g>
+          <g>
+            <text class="cls-3" transform="translate(226.88 288.25)"><tspan class="cls-6" x="0" y="0">A</tspan><tspan class="cls-21" x="7.81" y="0">b</tspan><tspan class="cls-14" x="14.18" y="0">s</tspan><tspan class="cls-22" x="19.15" y="0">c</tspan><tspan x="24.53" y="0">hnitt 3: </tspan><tspan class="cls-20" x="0" y="14.4">F</tspan><tspan x="6.06" y="14.4">oo</tspan><tspan class="cls-14" x="18.85" y="14.4">t</tspan><tspan x="22.92" y="14.4">er</tspan></text>
+            <rect class="cls-5" x="217.56" y="276.31" width="1.42" height="30.98"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

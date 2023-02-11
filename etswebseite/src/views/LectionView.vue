@@ -165,7 +165,10 @@
       <!--Body/Text-->
       <div class="w-80">
         <!--Header-->
-        <div class="text text-h4 text-weight-regular q-my-lg">Die Struktur (HTML)</div>
+        <div class="text text-h4 text-weight-regular q-mt-lg">Was ist HTML</div>
+        <figcaption class="text-weight-light text-italic q-mt-xs q-mb-lg">
+          - The Constructor
+        </figcaption>
         <!--Header End-->
         <!--Section 1-->
         <div>
@@ -176,7 +179,7 @@
           <div class="text text-h6 text-weight-regular q-my-md">
             Der Sinn hinter solch einer Beschreibungssprache ist es, die Anordnung und Struktur
             innerhalb einer Aufgabe, in diesem Fall, wie der genutzte Browser zum Aufrufen der
-            Webseite, diese interpretieren und umsetzen soll, text-basiert zu beschreiben.
+            Webseite diese interpretieren und umsetzen soll, text-basiert zu beschreiben.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
             Hierbei werden sogenannte Tags genutzt, um bestimmte semantische Strukturen genormt in
@@ -189,6 +192,9 @@
             Frühere Versionen, wie HTML4, existieren zwar noch, sollten jedoch heutzutage nicht mehr
             verwendet werden.
           </div>
+          <div class="w-100 flex justify-center">
+            <img src="lections/html/HTML_visual_structure_1.svg" class="q-my-lg image" />
+          </div>
           <div class="text text-h6 text-weight-regular q-my-md">
             Das alles klingt zwar schön und gut, jedoch hilft uns das bei der Entwicklung selbst
             nicht weiter.
@@ -198,7 +204,7 @@
             praktischen Beispielen und der online zur Verfügung stehenden Dokumentation orientieren.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Also genug Hypotaxen! Legen wir los!
+            Also genug Hypotaxen! Legen wir los!!
           </div>
           <!-- <figure class="w-100 q-ma-none q-mt-lg row text">
             <q-img src="images/chapter_blockchain.png" />
@@ -219,28 +225,32 @@
             deklarieren, also erstellen.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Der &lt;!DOCTYPE html> sagt erstmal aus, dass es sich bei diesem Dokument (!Doc), um den
-            Typen (Type) HTML (html) handelt.
+            Der &lt;!DOCTYPE html> sagt erstmal aus, dass es sich bei diesem Dokument (!DOC), um den
+            Typen (TYPE) HTML (html) handelt.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
             &lt;!DOCTYPE html> ist dabei nicht Case-Sensitive und muss auch nicht am Ende des
             Dokumentes geschlossen werden. Mit diesem Tag werden wir daher nicht viel mehr machen,
             als ihn am Anfang des Dokuments zu deklarieren!
           </div>
-          <div class="text text-italic text-h6 text-weight-regular q-my-md">
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
             Case-Sensitive bedeutet, dass Groß- und Kleinschreibung hierbei nicht berücksichtigt
             werden, wodurch auch Schreibweisen wie diese möglich sind: &lt;!DOCTYPE html>.
           </div>
-          <div class="text text-italic text-h6 text-weight-regular q-my-md">
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
             Natürlich ist so etwas nicht unbedingt angenehm zu lesen und wird daher ungern gesehen.
             Allgemein gilt daher:
           </div>
-          <div class="text text-italic text-h6 text-weight-regular q-my-md">
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
             Variablen und Tags sollten immer dem camelCase oder dem snake_case folgen. Beide
             Begriffe lernen wir später noch näher kennen.
           </div>
+          <hr />
+          <div class="w-100 flex justify-center">
+            <img src="lections/html/HTML_visual_paired-tags_1.svg" class="q-my-lg image" />
+          </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Der wohl wichtigste Tag, der &lt;html> ... &lt;/html> steht direkt an unserer zweiten
+            Der wohl wichtigste Tag, der &lt;html>...&lt;/html> steht direkt an unserer zweiten
             Stelle.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
@@ -249,7 +259,7 @@
             werden muss.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Solche Tags gibt es in Haufe und werden allgemein als “Paired Tags” bezeichnet. Diese
+            Solche Tags gibt es in Häufen und werden allgemein als “Paired Tags” bezeichnet. Diese
             Art von Tag wird immer mit dem gleichen Schlüsselwort plus einem vorgestellten “/”
             beendet.
           </div>
@@ -258,20 +268,27 @@
             stattdessen werden wir ihn nur schnell deklarieren und mit unserem Code in einem
             untergeordneten Scoop fortführen.
           </div>
-          <div class="text text-italic text-h6 text-weight-regular q-my-md">
-            Scoop: Ein Scoop ist ein Bereich, in welchem bestimmte Variablen oder Werte ihren
-            Gültigkeitsbereich definieren haben, dabei kann man sich es wie folgt vorstellen:
+          <hr />
+          <div class="w-100 flex justify-center">
+            <img src="lections/html/HTML_visual_scope_2.svg" class="q-my-lg image" />
           </div>
-          <div class="text text-italic text-h6 text-weight-regular q-my-md">
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
+            Scope: Ein Scope ist ein Bereich, in welchem bestimmte Variablen oder Werte ihren
+            Gültigkeitsbereich definiert haben, dabei kann man sich es wie folgt vorstellen:
+          </div>
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
             Im Falle von HTML bildet jedes Paired Tag eine weitere Ebene / Hülle, in welche
-            dazwischen stehende Elemente eingeschlossen sind.
+            dazwischen stehende Elemente eingeschlossen sind..
           </div>
-          <div class="text text-italic text-h6 text-weight-regular q-my-md">
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
             Zur Veranschaulichung kann man daher eine Matrjoschka-Puppe nutzen.
           </div>
-          <div class="text text-italic text-h6 text-weight-regular q-my-md">
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
             Jedes Element ist in einer Puppe verankert und kann diese nicht verlassen, außer man
             gibt ihm die “Rechte” die Puppe zu öffnen und auf eine höhere Ebene voranzuschreiten.
+          </div>
+          <div class="w-100 flex justify-center">
+            <img src="lections/html/HTML_visual_scope_1.svg" class="q-my-lg image" />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
             In unserem geliebten &lt;html> Tag gibt es nun wieder zwei wichtige und unwegdenkbare
@@ -327,10 +344,10 @@
             vorbereitet:
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Übung: Grundlagen von HTML: Under Construction…
+            <a href="https://codepen.io/hochstegerL03/pen/qByeKKq ">Übung: Grundlagen von HTML:</a>
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Lösung: Grundlagen von HTML: Under Construction…
+            <a href="https://codepen.io/hochstegerL03/pen/gOjVKje ">Lösung: Grundlagen von HTML:</a>
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
             Auf der Suche nach einer geeigneten Quelle für syntaktische oder semantische
@@ -342,8 +359,11 @@
             >
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Psst! Wir werden im Laufe der nächsten Lektionen einiges davon noch durchgehen & auch
-            zeigen, wie solche Dokumentationen am besten zu lesen sind. Also bleibt gespannt!
+            <a href="https://devdocs.io/html/ ">Dev Docs</a>
+          </div>
+          <div class="text text-h6 text-weight-light text-italic q-my-md">
+            Achtung! Devdocs ist auch offline nutzbar, also der Spitzenkandidat für Tests in
+            späteren technischen Ausbildungen!
           </div>
 
           <hr class="q-my-lg" />

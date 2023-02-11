@@ -434,6 +434,8 @@
   position: relative;
   height: 100%;
 }
+
+
 </style>
 <script setup>
 import EtSChatNav from '../components/EtSChatNav.vue';

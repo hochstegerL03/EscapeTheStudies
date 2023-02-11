@@ -198,4 +198,8 @@ a:active {
   white-space: nowrap;
   overflow: auto;
 }
+
+.image {
+  max-width: 500px;
+}
 </style>
