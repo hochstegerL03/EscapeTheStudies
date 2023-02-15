@@ -165,123 +165,163 @@
       <!--Body/Text-->
       <div class="w-80">
         <!--Header-->
-        <div class="text text-h4 text-weight-regular q-mt-lg">Was ist HTML</div>
+        <div class="text text-h4 text-weight-regular q-mt-lg">Introduction</div>
         <figcaption class="text-weight-light text-italic q-mt-xs q-mb-lg">
-          - The Constructor
+          - Environment und Setup
         </figcaption>
         <!--Header End-->
         <!--Section 1-->
         <div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            HTML (Hypertext Markup Language) ist eine Beschreibungssprache, welche für die
-            Entwicklung im Web von Anfang bis Ende nicht wegzudenken ist.
+            Um Webseiten zu programmieren braucht man eigentlich nicht viel mehr als einen
+            Texteditor und eine funktionierende Tastatur (eine Maus wäre natürlich auch zu
+            empfehlen).
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Der Sinn hinter solch einer Beschreibungssprache ist es, die Anordnung und Struktur
-            innerhalb einer Aufgabe, in diesem Fall, wie der genutzte Browser zum Aufrufen der
-            Webseite diese interpretieren und umsetzen soll, text-basiert zu beschreiben.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Hierbei werden sogenannte Tags genutzt, um bestimmte semantische Strukturen genormt in
-            einem inkludierten Wertebereich (Zeilenabschnitt), dem Browser, mitzuteilen.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Derzeit wird dafür HTML5 oder auch xHTML genutzt.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Frühere Versionen, wie HTML4, existieren zwar noch, sollten jedoch heutzutage nicht mehr
-            verwendet werden.
+            Jedoch heißt das aber auch, viel Syntax auswendig lernen zu müssen. Und dafür sind wir
+            schließlich nicht hier.
           </div>
           <div class="w-100 flex justify-center">
-            <img src="lections/html/HTML_visual_structure_1.svg" class="q-my-lg image" />
+            <img src="lections/introduction/Introduction_text-editor_1.PNG" class="q-my-lg image" />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Das alles klingt zwar schön und gut, jedoch hilft uns das bei der Entwicklung selbst
-            nicht weiter.
+            Und visuell haut uns dieser Texteditor auch nicht vom Hocker! Selbst ich kenne mich da
+            bei meinem eigenen Code gleich kaum noch aus.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Um das Thema und HTML selbst etwas verständlicher zu gestalten, werden wir uns daher an
-            praktischen Beispielen und der online zur Verfügung stehenden Dokumentation orientieren.
+            Und sprechen wir gar nicht erst vom horizontalen und vertikalen Scroll-Erlebnis, denn
+            erleben möchte man das wohl eher kaum.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Also genug Hypotaxen! Legen wir los!!
+            Mit Anwendungen wie
+            <a href="https://code.visualstudio.com/">Visual Studio Code</a> können wir uns aber
+            viele dieser Mühen ersparen.
           </div>
-          <!-- <figure class="w-100 q-ma-none q-mt-lg row text">
-            <q-img src="images/chapter_blockchain.png" />
-            <figcaption class="text-weight-light text-italic w-90 q-mt-xs">
-              Graphic 1: Blockchains
-            </figcaption>
-          </figure> -->
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Zusätzlich erleichtert es uns auch, unseren Code später lokal zu hosten und
+            auszuprobieren.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Darum, oft ungerne gesehen und meistens recht unspannend, folgt nun ein kleines Tutorial
+            zum Setup unseres Environments, wie die Vorstellung eines weiteren kleinen Gadgets,
+            welches wir gerne mal im Laufe der Lektionen verwenden.
+          </div>
           <hr />
-          <!-- <div class="text text-h5 text-weight-regular q-my-md">Subtopic 1:</div> -->
 
+          <div class="text text-h6 text-weight-bold q-my-md">Visual Studio Code:</div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Bevor wir mit irgendwelchen fancy Tags oder Design-Layouts loslegen können, müssen wir
-            uns jedoch mit der Basis-Struktur von HTML vertraut machen!
+            Zuerst sollte man wissen, dass Visual Studio Code selbst entweder lokal, also nach einem
+            Download direkt am Computer, somit auch ohne notwendige Internetverbindung, oder übers
+            Web, also im Browser, laufen kann.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Damit der Browser, also das Web, unsere HTML-Datei auch als solche ansieht, müssen wir
-            nicht nur die Datei mit .html erstellen, sondern auch ein paar grundlegende Tags
-            deklarieren, also erstellen.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Der &lt;!DOCTYPE html> sagt erstmal aus, dass es sich bei diesem Dokument (!DOC), um den
-            Typen (TYPE) HTML (html) handelt.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            &lt;!DOCTYPE html> ist dabei nicht Case-Sensitive und muss auch nicht am Ende des
-            Dokumentes geschlossen werden. Mit diesem Tag werden wir daher nicht viel mehr machen,
-            als ihn am Anfang des Dokuments zu deklarieren!
+            Wir wollen jedoch Visual Studio Code nun offline nutzen, da einige Erweiterungen und
+            coole Features im Web nicht unterstützt werden.
           </div>
           <div class="text text-italic text-h6 text-weight-light q-my-md">
-            Case-Sensitive bedeutet, dass Groß- und Kleinschreibung hierbei nicht berücksichtigt
-            werden, wodurch auch Schreibweisen wie diese möglich sind: &lt;!DOCTYPE html>.
+            Für all welche, die jedoch sich mit der Browserversion beschäftigen wollen:
+            <a href="https://code.visualstudio.com/">Visual Studio Code Web</a>.
           </div>
-          <div class="text text-italic text-h6 text-weight-light q-my-md">
-            Natürlich ist so etwas nicht unbedingt angenehm zu lesen und wird daher ungern gesehen.
-            Allgemein gilt daher:
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Kommen wir jedoch zum Download, Nach einer kleinen typischen und geliebten Prozedur des
+            Leidens sollte Visual Studio Code ähnlich dem gleichen:
           </div>
-          <div class="text text-italic text-h6 text-weight-light q-my-md">
-            Variablen und Tags sollten immer dem camelCase oder dem snake_case folgen. Beide
-            Begriffe lernen wir später noch näher kennen.
+          <div class="w-100 flex justify-center">
+            <img
+              src="lections/introduction/Introduction_visual-studio-code_1.PNG"
+              class="q-my-lg image"
+            />
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Falls der Hintergrund etwas heller und augenstechender ist einfach Strg+K und danach
+            Strg+T drücken.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Im folgenden Menü können wir dann das Color Theme von Visual Studio Code ändern.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Keine Sorge, falls keines deinem Geschmack entspricht gibt es dutzend unter
+            Erweiterungen zum Installieren.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Und zum Thema Erweiterungen. Erweiterungen sind, was Visual Studio Code ausmacht, denn
+            durch diese können wir Hilfen und visuelle Goodies uns unter den Nagel reißen.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Einige Erlesene wissen das hier sicherlich schon, aber Visual Studio Code wurde nicht
+            nur für HTML gemacht, sondern kann auch Programmiersprachen wie Python oder Frameworks
+            wie Vue.js unterstützen, jedoch nur, solange man auch die richtigen Erweiterungen
+            installiert hat!
           </div>
           <hr />
           <div class="w-100 flex justify-center">
-            <img src="lections/html/HTML_visual_paired-tags_1.svg" class="q-my-lg image" />
+            <img
+              src="lections/introduction/Introduction_visual-studio-code-extensions_1.png"
+              class="q-my-lg image"
+            />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Der wohl wichtigste Tag, der &lt;html>...&lt;/html> steht direkt an unserer zweiten
-            Stelle.
+            Als allererstes, auch wenn es wirklich simpel ist, so sieht das Zeichen für
+            Erweiterungen aus und so auch das Menü.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Was uns hier direkt auffällt ist, dass im Gegensatz zum &lt;!DOCTYPE html>, dieser Tag
-            immer in einem Paar kommt und mit &lt;html> geöffnet, wie mit &lt;/html> geschlossen
-            werden muss.
+            Suchen und wie man den “Installieren” Button zu klicken hat, muss ich hoffentlich nicht
+            weiter erläutern :)
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Solche Tags gibt es in Häufen und werden allgemein als “Paired Tags” bezeichnet. Diese
-            Art von Tag wird immer mit dem gleichen Schlüsselwort plus einem vorgestellten “/”
-            beendet.
+            Darum eine kleine Checkliste für euch:
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Aber auch an diesem Tag werden wir gebräuchlich nicht mehr viel herumbasteln,
-            stattdessen werden wir ihn nur schnell deklarieren und mit unserem Code in einem
-            untergeordneten Scoop fortführen.
+            <ul class="lineList">
+              <li>Live Preview (optional) - Microsoft</li>
+              <li>Live Server - Ritwick Dey</li>
+              <li>Prettier - Code formatter - Prettier</li>
+              <li>Auto Close Tag - Jun Han</li>
+              <li>Auto Rename Tag - Jun Han</li>
+              <li>Highlight Matching Tag - vincaslt</li>
+              <li>HTML CSS Support - ecmel</li>
+              <li>htmltagwrap - Brad Gashler</li>
+              <li>IntelliSense for CSS class names in HTML - Zignd</li>
+              <li>JavaScript (ES6) code snippets - charalampos karypidis</li>
+            </ul>
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Sooo, das waren jetzt zwar ein paar Extensions, aber hey, wenigstens sind sie klein und
+            schnell zum herunterladen :)
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Und was jetzt? Naja, der Rest in Visual Studio Code ist ziemlich selbst erklärend.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Über “File” kann man einen Ordner oder ein File öffnen und mit Rechtsklick auf ein File
+            kann man tolle Sachen mit diesem machen, wie zum Beispiel unseren Live-Server starten.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Beim Hovern über einem Ordner fallen einem vielleicht noch ein paar kleine Symbole auf,
+            welche man anklicken könnte (kann sicher nicht schaden, das einmal auszuprobieren).
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Aber ansonsten sind wir hier erst mal fertig!
           </div>
           <hr />
-          <div class="w-100 flex justify-center">
-            <img src="lections/html/HTML_visual_scope_2.svg" class="q-my-lg image" />
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Aber hey, hab ich nicht irgendwas von einem kleinen Gadget gesagt?
           </div>
-          <div class="text text-italic text-h6 text-weight-light q-my-md">
-            Scope: Ein Scope ist ein Bereich, in welchem bestimmte Variablen oder Werte ihren
-            Gültigkeitsbereich definiert haben, dabei kann man sich es wie folgt vorstellen:
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Natürlich hab ich das, also lasst uns
+            <a href="https://codepen.io/your-work">CodePen</a> willkommen heißen!
           </div>
-          <div class="text text-italic text-h6 text-weight-light q-my-md">
-            Im Falle von HTML bildet jedes Paired Tag eine weitere Ebene / Hülle, in welche
-            dazwischen stehende Elemente eingeschlossen sind..
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Nicht immer wollen oder müssen wir lokal über Visual Studio Code arbeiten, auch wenn das
+            natürlich immer schön ist, wollen wir ja ein bisschen Mobilität in den Alltag bringen.
           </div>
-          <div class="text text-italic text-h6 text-weight-light q-my-md">
-            Zur Veranschaulichung kann man daher eine Matrjoschka-Puppe nutzen.
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Über CodePen kannst du nun ganz einfach über unser Profil die verschiedensten Aufgaben
+            finden und lösen, alles ohne an einem Rechner sitzen zu müssen.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Und <a href="https://codepen.io/hochstegerL03">hier</a> geht es auch schon direkt zu
+            unserem kleinen Profil, ein Follow wäre natürlich immer lieb an dieser Stelle.
           </div>
           <div class="text text-italic text-h6 text-weight-light q-my-md">
             Jedes Element ist in einer Puppe verankert und kann diese nicht verlassen, außer man
@@ -459,6 +499,10 @@
 
 .jumperlink {
   text-decoration: underline;
+}
+
+.image {
+  width: 100%;
 }
 </style>
 <script setup>
