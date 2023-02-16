@@ -165,66 +165,134 @@
       <!--Body/Text-->
       <div class="w-80">
         <!--Header-->
-        <div class="text text-h4 text-weight-regular q-mt-lg">Introduction</div>
+        <div class="text text-h4 text-weight-regular q-mt-lg">Was ist CSS?</div>
         <figcaption class="text-weight-light text-italic q-mt-xs q-mb-lg">
-          - Environment und Setup
+          - The Designer
         </figcaption>
         <!--Header End-->
         <!--Section 1-->
         <div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Um Webseiten zu programmieren braucht man eigentlich nicht viel mehr als einen
-            Texteditor und eine funktionierende Tastatur (eine Maus wäre natürlich auch zu
-            empfehlen).
+            Wir können zwar jetzt Sachen anordnen, aber schön sieht das Ganze noch nicht wirklich
+            aus.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Jedoch heißt das aber auch, viel Syntax auswendig lernen zu müssen. Und dafür sind wir
-            schließlich nicht hier.
-          </div>
-          <div class="w-100 flex justify-center">
-            <img src="lections/introduction/Introduction_text-editor_1.PNG" class="q-my-lg image" />
+            Mit CSS ändern wir das aber mal ganz flott. CSS ist eine Beschreibungssprache, ganz wie
+            HTML und dient dazu, das Verhalten und die Gestalt unserer HTML-Objekte zu manipulieren.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Und visuell haut uns dieser Texteditor auch nicht vom Hocker! Selbst ich kenne mich da
-            bei meinem eigenen Code gleich kaum noch aus.
+            Also was müssen wir wissen, um mit CSS starten zu können?
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Und sprechen wir gar nicht erst vom horizontalen und vertikalen Scroll-Erlebnis, denn
-            erleben möchte man das wohl eher kaum.
+            Also als erstes ist es wichtig zu verstehen, dass wir kein Grundgerüst, wie in HTML,
+            benötigen und direkt nach dem Anlegen einer Datei, mit dem Kürzel .css, losstarten
+            können.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Mit Anwendungen wie
-            <a href="https://code.visualstudio.com/">Visual Studio Code</a> können wir uns aber
-            viele dieser Mühen ersparen.
+            Als nächstes wäre es auch praktisch zu wissen, was Klassen sind, denn die werden wir
+            öfter nutzen müssen.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
             Zusätzlich erleichtert es uns auch, unseren Code später lokal zu hosten und
             auszuprobieren.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Darum, oft ungerne gesehen und meistens recht unspannend, folgt nun ein kleines Tutorial
-            zum Setup unseres Environments, wie die Vorstellung eines weiteren kleinen Gadgets,
-            welches wir gerne mal im Laufe der Lektionen verwenden.
-          </div>
-          <hr />
-
-          <div class="text text-h6 text-weight-bold q-my-md">Visual Studio Code:</div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Zuerst sollte man wissen, dass Visual Studio Code selbst entweder lokal, also nach einem
-            Download direkt am Computer, somit auch ohne notwendige Internetverbindung, oder übers
-            Web, also im Browser, laufen kann.
+            Einfach gesagt, in CSS erstellen wir Regeln, wie der Browser bestimmte Sachen für uns
+            darstellen soll. Diese Regeln, können wir dann in html einen Objekt innerhalb der
+            <span class="text-italic text-weight-light">&lt;></span> (Spitzen-Klammern) eines Tags
+            mit dem Stichwort
+            <span class="text-italic text-weight-light">class=”unsereCSSKlasse”</span> übergeben.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Wir wollen jedoch Visual Studio Code nun offline nutzen, da einige Erweiterungen und
-            coole Features im Web nicht unterstützt werden.
+            Das könnte also nun wie folgt so ausschauen:
           </div>
           <div class="text text-italic text-h6 text-weight-light q-my-md">
-            Für all welche, die jedoch sich mit der Browserversion beschäftigen wollen:
-            <a href="https://code.visualstudio.com/">Visual Studio Code Web</a>.
+            &lt;p> class=”coolerParagraph”>&lt;/p>
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Kommen wir jedoch zum Download, Nach einer kleinen typischen und geliebten Prozedur des
-            Leidens sollte Visual Studio Code ähnlich dem gleichen:
+            Das ist schon mal ganz cool, ne? Aber vielleicht sollte ich auch noch erklären, wie wir
+            diese Klasse oder Regeln für
+            <span class="text-italic text-weight-light">coolerParagraph</span> anlegen.
+          </div>
+
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Also, schnell und einfach, es gibt drei Arten eine Klasse zu deklarieren: mit einem
+            <span class="text-italic text-weight-light">#, .</span>
+            oder nix vor dem Namen der Klasse. Wofür die 3 Zeichen?
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Naja, ein Punkt vor dem Namen steht dafür, dass wir einer Klasse, welcher wir einen Tag
+            mit <span class="text-italic text-weight-light">class</span> übergeben können. anlegen
+            wollen.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Ein Hashtag steht dafür, dass wir einem Objekt mit einer speziellen ID dieser Klasse
+            zuweisen wollen. Zu IDs kommen wir später noch.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Kein Zeichen vor dem Namen steht dafür, dass alle Tags, mit dieser Bezeichnung, so
+            formatiert werden sollen..
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Aber wie funktioniert das Ganze nun grundsätzlich? Nehmen wir mal unseren
+            <span class="text-italic text-weight-light">coolerParagraph</span> als Beispiel.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Es handelt hier sich wahrscheinlich darum, dass wir den Text gerne anders hätten.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Da gibt es jetzt ganz viele Möglichkeiten, welche ich sicherlich nicht alle aufzählen
+            und erklären kann. Dafür sind die Online Dokumentationen sehr wichtig.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            In dieser Lektion schneiden wir daher nur ein paar wichtige Stichwörter oder
+            <span class="text-italic text-weight-light">Optionen</span>, wie
+            <span class="text-italic text-weight-light">Properties</span> an.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Für Text gebe es daher folgende:
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <ul class="lineList">
+              <li>
+                <b>color:</b> Die Farbe der Schrift. Kann als
+                <span class="text-italic text-weight-light">Hex (#000000)</span>,
+                <span class="text-italic text-weight-light">RGB (rgb(0,0,0,0))</span>
+                oder mit einem vordefinierten Namen (<span class="text-italic text-weight-light"
+                  >red, yellow, etc.</span
+                >) festgelegt werden.
+              </li>
+              <div class="text text-italic text-h6 text-weight-light q-my-md">
+                Wofür die 4te Null bei RGB steht? Ganz einfach, damit gibt man die Transparenz an. 1
+                ist dabei 100% sichtbar und 0 wäre komplett transparent.
+              </div>
+              <li>
+                <b>font-family:</b> Gibt an, welche Schriftart benutzt werden soll. Es gibt
+                bestimmte Schrifte, welche standardmäßig vorhanden sind, ansonsten müssen diese im
+                HTML File verlinkt werden.
+              </li>
+              <li>
+                <b>font-weight:</b> Gibt an, wie Dick die Schrift aussehen soll. Soll sie
+                <span class="text-italic text-weight-light">bold</span>,
+                <span class="text-italic text-weight-light">bolder</span>,
+                <span class="text-italic text-weight-light">lighter</span> oder
+                <span class="text-italic text-weight-light">normal</span> sein.
+              </li>
+              <li>
+                <b>font-style:</b> Ähnlich wie
+                <span class="text-italic text-weight-light">font-weight</span>, nur dass nicht die
+                Dicke der Schrift, sondern die Art der Schrift angegeben wird. Also
+                <span class="text-italic text-weight-light">italic</span>,
+                <span class="text-italic text-weight-light">bold</span> und
+                <span class="text-italic text-weight-light">normal</span>.
+              </li>
+              <li>Auto Rename Tag - Jun Han</li>
+              <li>Highlight Matching Tag - vincaslt</li>
+              <li>HTML CSS Support - ecmel</li>
+              <li>htmltagwrap - Brad Gashler</li>
+              <li>IntelliSense for CSS class names in HTML - Zignd</li>
+              <li>JavaScript (ES6) code snippets - charalampos karypidis</li>
+            </ul>
           </div>
           <div class="w-100 flex justify-center">
             <img
@@ -323,7 +391,6 @@
             Und <a href="https://codepen.io/hochstegerL03">hier</a> geht es auch schon direkt zu
             unserem kleinen Profil, ein Follow wäre natürlich immer lieb an dieser Stelle.
           </div>
-          
 
           <hr class="q-my-lg" />
         </div>
