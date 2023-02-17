@@ -286,112 +286,287 @@
                 <span class="text-italic text-weight-light">bold</span> und
                 <span class="text-italic text-weight-light">normal</span>.
               </li>
-              <li>Auto Rename Tag - Jun Han</li>
-              <li>Highlight Matching Tag - vincaslt</li>
-              <li>HTML CSS Support - ecmel</li>
-              <li>htmltagwrap - Brad Gashler</li>
-              <li>IntelliSense for CSS class names in HTML - Zignd</li>
-              <li>JavaScript (ES6) code snippets - charalampos karypidis</li>
-            </ul>
-          </div>
-          <div class="w-100 flex justify-center">
-            <img
-              src="lections/introduction/Introduction_visual-studio-code_1.PNG"
-              class="q-my-lg image"
-            />
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Falls der Hintergrund etwas heller und augenstechender ist einfach Strg+K und danach
-            Strg+T drücken.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Im folgenden Menü können wir dann das Color Theme von Visual Studio Code ändern.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Keine Sorge, falls keines deinem Geschmack entspricht gibt es dutzend unter
-            Erweiterungen zum Installieren.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Und zum Thema Erweiterungen. Erweiterungen sind, was Visual Studio Code ausmacht, denn
-            durch diese können wir Hilfen und visuelle Goodies uns unter den Nagel reißen.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Einige Erlesene wissen das hier sicherlich schon, aber Visual Studio Code wurde nicht
-            nur für HTML gemacht, sondern kann auch Programmiersprachen wie Python oder Frameworks
-            wie Vue.js unterstützen, jedoch nur, solange man auch die richtigen Erweiterungen
-            installiert hat!
-          </div>
-          <hr />
-          <div class="w-100 flex justify-center">
-            <img
-              src="lections/introduction/Introduction_visual-studio-code-extensions_1.png"
-              class="q-my-lg image"
-            />
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Als allererstes, auch wenn es wirklich simpel ist, so sieht das Zeichen für
-            Erweiterungen aus und so auch das Menü.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Suchen und wie man den “Installieren” Button zu klicken hat, muss ich hoffentlich nicht
-            weiter erläutern :)
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Darum eine kleine Checkliste für euch:
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            <ul class="lineList">
-              <li>Live Preview (optional) - Microsoft</li>
-              <li>Live Server - Ritwick Dey</li>
-              <li>Prettier - Code formatter - Prettier</li>
-              <li>Auto Close Tag - Jun Han</li>
-              <li>Auto Rename Tag - Jun Han</li>
-              <li>Highlight Matching Tag - vincaslt</li>
-              <li>HTML CSS Support - ecmel</li>
-              <li>htmltagwrap - Brad Gashler</li>
-              <li>IntelliSense for CSS class names in HTML - Zignd</li>
-              <li>JavaScript (ES6) code snippets - charalampos karypidis</li>
+              <li>
+                <b>font-size:</b> Sagt HTML wie groß die Schrift sein soll. Dafür haben wir mehrere
+                Einheiten, wie <span class="text-italic text-weight-light">px</span>,
+                <span class="text-italic text-weight-light">rem</span>,
+                <span class="text-italic text-weight-light">em</span>, (fixe Werte) oder
+                <span class="text-italic text-weight-light">%</span>,
+                <span class="text-italic text-weight-light">vw</span> und
+                <span class="text-italic text-weight-light">vh</span> (dynamische Werte, ändern sich
+                mit der Größe des Fensters).
+              </li>
+              <li><b>letter-spacing:</b> Der Abstand zwischen den einzelnen Schriftzeichen.</li>
+              <li><b>line-height:</b> Der Abstand zwischen den einzelnen Zeilen.</li>
+              <li>
+                <b>text-align:</b> Wo der Text in seinem Container (Platz, welchen der Tag einnimmt)
+                stehen soll. Hier gibt es die 3 Optionen von
+                <span class="text-italic text-weight-light">left</span>,
+                <span class="text-italic text-weight-light">right</span> und
+                <span class="text-italic text-weight-light">center</span>.
+              </li>
+              <li>
+                <b>text-decoration:</b> Damit können wir coole Sachen, wie underline oder overline
+                erstellen. Hier wird es schon komplexer, da man Farbe, Style (<span
+                  class="text-italic text-weight-light"
+                  >wavy</span
+                >, <span class="text-italic text-weight-light">solid</span>), Dicke (<span
+                  class="text-italic text-weight-light"
+                  >px</span
+                >, <span class="text-italic text-weight-light">rem</span>,
+                <span class="text-italic text-weight-light">%</span>) und was (<span
+                  class="text-italic text-weight-light"
+                  >overline</span
+                >, <span class="text-italic text-weight-light">underline</span>) angeben muss.
+              </li>
+              <li>
+                <b>text-transform:</b> Damit können wir sagen, dass wir unter anderem wollen, dass
+                alles in <span class="text-italic text-weight-light">uppercase</span> oder
+                <span class="text-italic text-weight-light">lowercase</span> dargestellt werden
+                soll. Kann ganz nützlich sein, aber könnte man auch unschön direkt in HTML lösen.
+              </li>
+              <li>
+                <b>text-variant:</b> Hiermit kann man bestimmen, ob ein Text in z.B.
+                <span class="text-italic text-weight-light">small-caps</span>
+                dargestellt werden soll, cool ne? (Frag mich nicht wofür man das realistisch gesehen
+                braucht).
+              </li>
             </ul>
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Sooo, das waren jetzt zwar ein paar Extensions, aber hey, wenigstens sind sie klein und
-            schnell zum herunterladen :)
+            So. Jetzt kennen wir ganz viele Optionen, aber wie nutzen wir die? Gute Frage und dafür
+            auch gleich ein kleines Beispiel, vielleicht kann man damit auch gleich den Aufbau einer
+            Klasse erraten.
+          </div>
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
+            .coolerParagraph{ <br />color: red; <br />font-style: italic; <br />text-decoration:
+            solid underline #006d77 7px; <br />font-size: 1rem; <br />font-family: Arial, Helvetica,
+            sans-serif; <br />}
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Und was jetzt? Naja, der Rest in Visual Studio Code ist ziemlich selbst erklärend.
+            So jetzt haben wir gleich mal ein paar tolle Properties im Einsatz gesehen und
+            zusätzlich sogar, wie so eine Klasse aufgebaut ist. Also, was ist nun das Wichtigste zur
+            Syntax?
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Über “File” kann man einen Ordner oder ein File öffnen und mit Rechtsklick auf ein File
-            kann man tolle Sachen mit diesem machen, wie zum Beispiel unseren Live-Server starten.
+            Naja, wir schreiben immer
+            <span class="text-italic text-weight-light">property: werte;</span> Der
+            <span class="text-italic text-weight-light">;</span> gibt an, dass wir mit dem Property
+            mal fertig sind und nicht in der nächsten Zeile noch immer was hinzufügen wollen.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Beim Hovern über einem Ordner fallen einem vielleicht noch ein paar kleine Symbole auf,
-            welche man anklicken könnte (kann sicher nicht schaden, das einmal auszuprobieren).
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Aber ansonsten sind wir hier erst mal fertig!
+            Die <span class="text-italic text-weight-light">{}</span> geben Anfang und Ende unserer
+            Klasse an. Alles zwischen den Beiden zählt zu dieser Klasse.
           </div>
           <hr />
           <div class="text text-h6 text-weight-regular q-my-md">
-            Aber hey, hab ich nicht irgendwas von einem kleinen Gadget gesagt?
+            Und was ist mit diesen IDs, die ich vorher erwähnt habe? Naja, eine ID ist wie ein Name,
+            ein einzigartiger Name.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Natürlich hab ich das, also lasst uns
-            <a href="https://codepen.io/your-work">CodePen</a> willkommen heißen!
+            Jede ID kann in HTML nur einmal vergeben werden und dient dazu, dass wir ein Objekt klar
+            von allen anderen unterscheiden können, was manchmal sehr praktisch ist.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Nicht immer wollen oder müssen wir lokal über Visual Studio Code arbeiten, auch wenn das
-            natürlich immer schön ist, wollen wir ja ein bisschen Mobilität in den Alltag bringen.
+            Wie geben wir eine ID nun aber nur her? Na so:
+          </div>
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
+            &lt;p id="”Timmy”">&lt;/p>
+          </div>
+          <div class="w-100 flex justify-center">
+            <img src="lections/css/CSS_ids_1.svg" class="q-my-lg image image-long" />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Über CodePen kannst du nun ganz einfach über unser Profil die verschiedensten Aufgaben
-            finden und lösen, alles ohne an einem Rechner sitzen zu müssen.
+            So das wars aber auch schon mit unserem Ausflug zu IDs!
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Und <a href="https://codepen.io/hochstegerL03">hier</a> geht es auch schon direkt zu
-            unserem kleinen Profil, ein Follow wäre natürlich immer lieb an dieser Stelle.
+            Sind wir eigentlich jetzt mit CSS schon fertig? Naja, nicht wirklich. Es gibt tausende
+            Optionen in CSS. Von Keyframes, zu –webkit, dem Verschachteln von Klassen und vieles
+            weitere, aber das wäre zu komplex für den Anfang.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Darum hier noch weitere wichtige Properties, mit welchen wir herumspielen können:
+          </div>
+          <hr />
+          <div class="text text-h6 text-weight-bold q-my-md">Padding & Margin:</div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Was ist das? Gute Frage, anstrengend zu beantworten. Einfach gesagt, damit geben wir
+            einen Abstand um ein Element an.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Dieser Abstand kann innerhalb (padding) des Objektes sein oder außerhalb (margin). Um
+            mir viele Worte zu ersparen, hier eine kleine Grafik.
+          </div>
+          <div class="w-100 flex justify-center">
+            <img src="lections/css/CSS_margin_padding_1.svg" class="q-my-lg image" />
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Und wie machen wir das jetzt in CSS? Ja einfach so:
+          </div>
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
+            .example{ <br />padding: 1rem; <br />margin: 1rem; <br />}
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Tada! Jetzt haben wir in alle Richtungen jeweils 1rem Padding und Margin! Und die coolen
+            Kids können jetzt auch noch einen Padding oder ein Margin nur oben, rechts, unten oder
+            links bestimmen und das so:
+          </div>
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
+            .example{ <br />padding: 1rem 0rem 1rem 0rem; /* padding oben und unten */ <br />margin:
+            0rem 1rem 0rem 1rem; /* margin links und rechts */ <br />}
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Und was sind diese coolen
+            <span class="text-italic text-weight-light">/* Kommentare */</span> nun. Naja,
+            Kommentare, hab ich ja schon erwähnt!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Noch mehr nützliches Wissen? Sure, here you got it!
+          </div>
+          <hr />
+          <div class="text text-h6 text-weight-bold q-my-md">Einheiten:</div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Naja, wir können jetzt auch verschiedene Maßen nutzen, um unsere Größen zu bestimmen.
+            Beginnen wir also einfach. <span class="text-italic text-weight-light">px</span> sind
+            eine fixe Einheit, nämlich die Pixel am Bildschirm. Next!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <span class="text-italic text-weight-light">em</span> ist eine relative Größe zu der
+            Schriftgröße des Parent-Objekts, heißt, wenn 16px die Schriftgröße des Parent-Objekts
+            wäre, wäre 1em gleich 16px.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Und was ist <span class="text-italic text-weight-light">rem</span>, naja, es ist wie
+            <span class="text-italic text-weight-light">em</span> nur relativ zum Root-Element,
+            daher auch das r, cool oder? Heißt, wenn der Body 16px als Schriftgröße hat, ist 1rem
+            gleich 16px!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Jetzt zu den coolen Einheiten aber!
+            <span class="text-italic text-weight-light">%</span> gibt an, wie viel Prozent des
+            Parent-Objektes eingenommen werden soll, klingt sehr logisch und simpel.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <span class="text-italic text-weight-light">vh</span> also, auch wenn wir das noch nicht
+            so genau durchgegangen sind, der sichtbare und nutzbare Tab wird Viewport genannt, wie
+            oben auch beim HTML Layout definiert.
+            <span class="text-italic text-weight-light">1vh</span> ist daher
+            <span class="text-italic text-weight-light">1%</span> der Höhe des aktuellen Viewports,
+            das ändert sich natürlich, wenn man den Browser kleiner zieht.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Und was ist ein <span class="text-italic text-weight-light">vw</span>? Genau das
+            Gleiche, wie vh, nur dass es sich auf die Breite des aktuellen Viewports bezieht, heißt,
+            1vw ist 1% der Breite des Fensters!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">So, Einheiten, check! Easy!</div>
+          <hr />
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <b>Nächste wichtige Info:</b>
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <span class="text-italic text-weight-light">width</span> und
+            <span class="text-italic text-weight-light">height</span> zwei sehr sehr wichtige
+            Properties und auch sehr logische. Mit width kann man angeben, wie viel der vorhandenen
+            Breite des Parent-Objektes ein Element einnehmen soll und mit height, geschieht das
+            Gleiche nur auf die Höhe bezogen.
           </div>
 
+          <div class="text text-h6 text-weight-regular q-my-md">Let’s keep the speedrun going!</div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Also <span class="text-italic text-weight-light">background-color</span>, sehr cool und
+            praktisch. Was das macht? Logisch, oder? Es gibt die Hintergrundfarbe eines Elementes
+            an.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Erinnert ihr euch noch an die Grafik für Margin und Padding? Die Fläche bei “You” & die
+            Fläche, welche durch das Padding entstehen, nehmen hierbei die Farbe des
+            <span class="text-italic text-weight-light">background-color</span> an.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Wie gibt man das jetzt an? Genauso wie bei color also easy peasy!
+          </div>
+          <hr />
+          <div class="text text-h6 text-weight-bold q-my-md">Flexbox:</div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Sehr viel flexibler als dieser Kurs bietet Flexbox die Möglichkeit, dass sich Elemente
+            fließend aufteilen und bewegen können.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Bei der Gelegenheit würde ich gleich gerne erwähnen, dass wir nicht alles von Flexbox
+            hier benutzen werden und können!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Also ein kurzer Dive in das Thema! Es gibt das sogenannte
+            <span class="text-italic text-weight-light">display</span> Property, welches angibt, wie
+            ein Element Platz in seinem Parent-Objekt einnimmt.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Dabei gibt es drei Properties, welche wir uns in diesem Rahmen anschauen werden. Ja, ich
+            weiß es gibt sonst noch sehr viele mehr, aber die interessieren uns gerade nicht, sorry.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <span class="text-italic text-weight-light">inline-block</span>: Ist wie ein
+            <span class="text-italic text-weight-light">inline</span>
+            Objekt, jaja ich hab noch nicht erklärt, was das überhaupt ist, nur dass man die Höhe
+            und Breite manipulieren, also in CSS verändern kann. Einfach gesagt, ein inline-block
+            und auch ein <span class="text-italic text-weight-light">inline</span> Element nehmen
+            nur den Platz ein, welchen sie auch wirklich brauchen.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <span class="text-italic text-weight-light">block:</span> Ein block Element ist wie ein
+            <span class="text-italic text-weight-light">inline</span> Element, nur dass es immer
+            eine ganze Zeile einnimmt, also die Gesamtbreite des Parent-Objektes.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <span class="text-italic text-weight-light">flex:</span> Und was macht jetzt
+            <span class="text-italic text-weight-light">flex</span>? Einfach gesagt, mit
+            <span class="text-italic text-weight-light">flex</span> können wir Elemente in
+            Parent-Objekten, welche diese Property haben, viel genauer und besser, bzw. dynamischer
+            platzieren. Beispielsweise kann mit
+            <span class="text-italic text-weight-light">flex</span> definiert werden, wann Elemente
+            in die nächste Zeile überfließen, wie viel Platz sie einnehmen und wie sie innerhalb des
+            Flex Objektes platziert werden sollen.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Das ganze ist jetzt eher schwer vorstellbar, darum eine kleine Grafik mit Beispiel-Code
+            ^^
+          </div>
+          <div class="w-100 flex justify-center">
+            <img src="lections/css/CSS_display_1.svg" class="q-my-lg image" />
+          </div>
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
+            .inline-block{ <br />display: inline-block; <br />}
+          </div>
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
+            .block{ <br />display: block; <br />}
+          </div>
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
+            .flex{ <br />display: flex; <br />}
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Aber wie werden jetzt die Elemente in Flex unterschiedlich dargestellt? Naja, dafür gibt
+            man den Elementen drinnen und manchmal dem Flex selber ein paar Properties.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Werden wir diese alle hier durchgehen? Nein, aber dafür hier ein kleiner
+            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Cheat-Sheet</a>!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Zufrieden mit dem Einsteiger-Kurs? Wer weiß, aber das war es leider schon. Also ab ins
+            CSS Rätseln und Recherchieren!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <a href="https://codepen.io/hochstegerL03/pen/GRXJXJx">Übung: Grundlagen von CSS</a>
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <a href="https://codepen.io/hochstegerL03/pen/YzOXOqE">Lösung: Grundlagen von CSS</a>
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Tipp: Die letzte Übung mit der Flexbox kann ohne weitere Flex-Properties gemeistert
+            werden. Nur <span class="text-italic text-weight-light">display: flex;</span> ist
+            notwendig!
+          </div>
           <hr class="q-my-lg" />
         </div>
         <!--Section 1 End-->
@@ -489,6 +664,9 @@
 
 .image {
   width: 100%;
+}
+.image-long {
+  max-height: 10rem;
 }
 </style>
 <script setup>
