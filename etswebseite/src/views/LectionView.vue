@@ -165,238 +165,336 @@
       <!--Body/Text-->
       <div class="w-80">
         <!--Header-->
-        <div class="text text-h4 text-weight-regular q-mt-lg">Was ist CSS?</div>
+        <div class="text text-h4 text-weight-regular q-mt-lg">Was ist JavaScript</div>
         <figcaption class="text-weight-light text-italic q-mt-xs q-mb-lg">
-          - The Designer
+          - The Mastermind
         </figcaption>
         <!--Header End-->
         <!--Section 1-->
         <div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Wir können zwar jetzt Sachen anordnen, aber schön sieht das Ganze noch nicht wirklich
-            aus.
+            HTML gibt zwar die Struktur an und CSS lässt uns das ganze recht schön gestalten, jedoch
+            ist nicht immer alles so schön statisch und einfältig, wie wir es der Einfachheitshalber
+            gerne hätten.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Mit CSS ändern wir das aber mal ganz flott. CSS ist eine Beschreibungssprache, ganz wie
-            HTML und dient dazu, das Verhalten und die Gestalt unserer HTML-Objekte zu manipulieren.
+            Und genau deshalb brauchen wir JavaScript. JavaScript ist - jetzt aber auch mal wirklich
+            - die erste Programmiersprache, welche wir aktiv nutzen werden.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Also was müssen wir wissen, um mit CSS starten zu können?
+            Aber was kann JavaScript? JavaScript kann so einiges. Der beliebteste Use-Case wäre
+            dabei das Event-Handling.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Also als erstes ist es wichtig zu verstehen, dass wir kein Grundgerüst, wie in HTML,
-            benötigen und direkt nach dem Anlegen einer Datei, mit dem Kürzel .css, losstarten
-            können.
+            Bis jetzt konnten wir zwar schon Buttons und andere schöne “interaktive” Elemente
+            gestalten, jedoch sind diese ohne JavaScript, wie sagt man das am Besten, etwas weniger
+            interaktiv und ziemlich nutzlos.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Als nächstes wäre es auch praktisch zu wissen, was Klassen sind, denn die werden wir
-            öfter nutzen müssen.
+            Beginnen wir jedoch erstmal wieder mit den Basics.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Zusätzlich erleichtert es uns auch, unseren Code später lokal zu hosten und
-            auszuprobieren.
+            Statt dem Dateikürzel .css oder .html nutzen wir nun .js, passend stehend zu JavaScript.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Einfach gesagt, in CSS erstellen wir Regeln, wie der Browser bestimmte Sachen für uns
-            darstellen soll. Diese Regeln, können wir dann in html einen Objekt innerhalb der
-            <span class="text-italic text-weight-light">&lt;></span> (Spitzen-Klammern) eines Tags
-            mit dem Stichwort
-            <span class="text-italic text-weight-light">class=”unsereCSSKlasse”</span> übergeben.
+            Ähnlich wie bei unserer CSS Datei, müssen wir kein spezielles Grundgerüst anlegen und
+            können stattdessen direkt drauf los arbeiten.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Das könnte also nun wie folgt so ausschauen:
+            Aber bevor wir beginnen, uns kreativ auszuleben, sollten wir zuerst ein paar wichtige
+            Grundlagen in der Theorie besprechen.
           </div>
-          <div class="text text-italic text-h6 text-weight-light q-my-md">
-            &lt;p> class=”coolerParagraph”>&lt;/p>
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Das ist schon mal ganz cool, ne? Aber vielleicht sollte ich auch noch erklären, wie wir
-            diese Klasse oder Regeln für
-            <span class="text-italic text-weight-light">coolerParagraph</span> anlegen.
-          </div>
+          <div class="text text-h6 text-weight-bold q-my-md">Variablen:</div>
 
           <div class="text text-h6 text-weight-regular q-my-md">
-            Also, schnell und einfach, es gibt drei Arten eine Klasse zu deklarieren: mit einem
-            <span class="text-italic text-weight-light">#, .</span>
-            oder nix vor dem Namen der Klasse. Wofür die 3 Zeichen?
+            Bis jetzt haben wir Daten oder Elemente, wie Wörter, Sätze, stets direkt genutzt, ohne
+            diese einer Variable zuzuweisen.?
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Naja, ein Punkt vor dem Namen steht dafür, dass wir einer Klasse, welcher wir einen Tag
-            mit <span class="text-italic text-weight-light">class</span> übergeben können. anlegen
-            wollen.
+            Naja, nicht ganz, denn die Nutzung von Tags oder CSS-Klassen kommt von der
+            Funktionalität recht nahe heran.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Ein Hashtag steht dafür, dass wir einem Objekt mit einer speziellen ID dieser Klasse
-            zuweisen wollen. Zu IDs kommen wir später noch.
+            Variablen sind ganz einfach gesagt, eine Methode, um Werte oder Funktionen einem
+            Stichwort, dem Namen der Variable, zuzuweisen.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Kein Zeichen vor dem Namen steht dafür, dass alle Tags, mit dieser Bezeichnung, so
-            formatiert werden sollen..
+            Dadurch können Funktionen oder Werte öfters genutzt und schnell und einfach nachträglich
+            geändert werden, obwohl das auch nicht immer ganz der Wahrheit entspricht.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Aber wie funktioniert das Ganze nun grundsätzlich? Nehmen wir mal unseren
-            <span class="text-italic text-weight-light">coolerParagraph</span> als Beispiel.
+            Um es aber etwas einfacher hier zu halten, stellen wir nur kurz die 3 Arten von
+            Variablen vor und unterscheiden zwischen Deklaration und Zuweisung von Werten.
+          </div>
+          <div class="text text-h6 text-weight-bold q-my-md">Let:</div>
+          <div class="w-100 flex justify-center">
+            <img src="lections/javascript/JavaScript_var_let_1.svg" class="q-my-lg image" />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Es handelt hier sich wahrscheinlich darum, dass wir den Text gerne anders hätten.
+            Let ist der moderne Bruder oder die moderne Schwester von Var. Keine Sorge, zu dieser
+            Art der Deklaration kommen wir noch!
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Da gibt es jetzt ganz viele Möglichkeiten, welche ich sicherlich nicht alle aufzählen
-            und erklären kann. Dafür sind die Online Dokumentationen sehr wichtig.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            In dieser Lektion schneiden wir daher nur ein paar wichtige Stichwörter oder
-            <span class="text-italic text-weight-light">Optionen</span>, wie
-            <span class="text-italic text-weight-light">Properties</span> an.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Für Text gebe es daher folgende:
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            <ul class="lineList">
-              <li>
-                <b>color:</b> Die Farbe der Schrift. Kann als
-                <span class="text-italic text-weight-light">Hex (#000000)</span>,
-                <span class="text-italic text-weight-light">RGB (rgb(0,0,0,0))</span>
-                oder mit einem vordefinierten Namen (<span class="text-italic text-weight-light"
-                  >red, yellow, etc.</span
-                >) festgelegt werden.
-              </li>
-              <div class="text text-italic text-h6 text-weight-light q-my-md">
-                Wofür die 4te Null bei RGB steht? Ganz einfach, damit gibt man die Transparenz an. 1
-                ist dabei 100% sichtbar und 0 wäre komplett transparent.
-              </div>
-              <li>
-                <b>font-family:</b> Gibt an, welche Schriftart benutzt werden soll. Es gibt
-                bestimmte Schrifte, welche standardmäßig vorhanden sind, ansonsten müssen diese im
-                HTML File verlinkt werden.
-              </li>
-              <li>
-                <b>font-weight:</b> Gibt an, wie Dick die Schrift aussehen soll. Soll sie
-                <span class="text-italic text-weight-light">bold</span>,
-                <span class="text-italic text-weight-light">bolder</span>,
-                <span class="text-italic text-weight-light">lighter</span> oder
-                <span class="text-italic text-weight-light">normal</span> sein.
-              </li>
-              <li>
-                <b>font-style:</b> Ähnlich wie
-                <span class="text-italic text-weight-light">font-weight</span>, nur dass nicht die
-                Dicke der Schrift, sondern die Art der Schrift angegeben wird. Also
-                <span class="text-italic text-weight-light">italic</span>,
-                <span class="text-italic text-weight-light">bold</span> und
-                <span class="text-italic text-weight-light">normal</span>.
-              </li>
-              <li>
-                <b>font-size:</b> Sagt HTML wie groß die Schrift sein soll. Dafür haben wir mehrere
-                Einheiten, wie <span class="text-italic text-weight-light">px</span>,
-                <span class="text-italic text-weight-light">rem</span>,
-                <span class="text-italic text-weight-light">em</span>, (fixe Werte) oder
-                <span class="text-italic text-weight-light">%</span>,
-                <span class="text-italic text-weight-light">vw</span> und
-                <span class="text-italic text-weight-light">vh</span> (dynamische Werte, ändern sich
-                mit der Größe des Fensters).
-              </li>
-              <li><b>letter-spacing:</b> Der Abstand zwischen den einzelnen Schriftzeichen.</li>
-              <li><b>line-height:</b> Der Abstand zwischen den einzelnen Zeilen.</li>
-              <li>
-                <b>text-align:</b> Wo der Text in seinem Container (Platz, welchen der Tag einnimmt)
-                stehen soll. Hier gibt es die 3 Optionen von
-                <span class="text-italic text-weight-light">left</span>,
-                <span class="text-italic text-weight-light">right</span> und
-                <span class="text-italic text-weight-light">center</span>.
-              </li>
-              <li>
-                <b>text-decoration:</b> Damit können wir coole Sachen, wie underline oder overline
-                erstellen. Hier wird es schon komplexer, da man Farbe, Style (<span
-                  class="text-italic text-weight-light"
-                  >wavy</span
-                >, <span class="text-italic text-weight-light">solid</span>), Dicke (<span
-                  class="text-italic text-weight-light"
-                  >px</span
-                >, <span class="text-italic text-weight-light">rem</span>,
-                <span class="text-italic text-weight-light">%</span>) und was (<span
-                  class="text-italic text-weight-light"
-                  >overline</span
-                >, <span class="text-italic text-weight-light">underline</span>) angeben muss.
-              </li>
-              <li>
-                <b>text-transform:</b> Damit können wir sagen, dass wir unter anderem wollen, dass
-                alles in <span class="text-italic text-weight-light">uppercase</span> oder
-                <span class="text-italic text-weight-light">lowercase</span> dargestellt werden
-                soll. Kann ganz nützlich sein, aber könnte man auch unschön direkt in HTML lösen.
-              </li>
-              <li>
-                <b>text-variant:</b> Hiermit kann man bestimmen, ob ein Text in z.B.
-                <span class="text-italic text-weight-light">small-caps</span>
-                dargestellt werden soll, cool ne? (Frag mich nicht wofür man das realistisch gesehen
-                braucht).
-              </li>
-            </ul>
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            So. Jetzt kennen wir ganz viele Optionen, aber wie nutzen wir die? Gute Frage und dafür
-            auch gleich ein kleines Beispiel, vielleicht kann man damit auch gleich den Aufbau einer
-            Klasse erraten.
+            Let gibt uns die Möglichkeit, die Variable jederzeit zu ändern und auf einen gewünschten
+            Scope zu beschränken.
           </div>
           <div class="text text-italic text-h6 text-weight-light q-my-md">
-            .coolerParagraph{ <br />color: red; <br />font-style: italic; <br />text-decoration:
-            solid underline #006d77 7px; <br />font-size: 1rem; <br />font-family: Arial, Helvetica,
-            sans-serif; <br />}
+            Achtung: Der Scope wird dadurch bestimmt, wo wir die Variable anlegen!
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            So jetzt haben wir gleich mal ein paar tolle Properties im Einsatz gesehen und
-            zusätzlich sogar, wie so eine Klasse aufgebaut ist. Also, was ist nun das Wichtigste zur
-            Syntax?
+            Wir können solch eine Variable auch ganz einfach deklarieren:
+            <span class="text-italic text-weight-light">let newVariable = gewünschterWert;</span>
+            oder auch <span class="text-italic text-weight-light">let newVariable;</span>
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Naja, wir schreiben immer
-            <span class="text-italic text-weight-light">property: werte;</span> Der
-            <span class="text-italic text-weight-light">;</span> gibt an, dass wir mit dem Property
-            mal fertig sind und nicht in der nächsten Zeile noch immer was hinzufügen wollen.
+            Für was <span class="text-italic text-weight-light">newVariable</span> und
+            <span class="text-italic text-weight-light">gewünschterWert</span> wohl stehen, muss ich
+            kaum erklären. Jedoch eine Notiz zur Syntax ganz schnell:
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Die <span class="text-italic text-weight-light">{}</span> geben Anfang und Ende unserer
-            Klasse an. Alles zwischen den Beiden zählt zu dieser Klasse.
+            <span class="text-italic text-weight-light">newVariable</span> ist ein Wort, welches als
+            Name der Variable genutzt werden soll. Nicht alle UTF-8 Zeichen können hierfür genutzt
+            werden, aber solange man sich an das Alphabet (ohne Sonderzeichen) hält, ist man hier
+            immer an der sicheren Seite.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <span class="text-italic text-weight-light">gewünschterWert</span> ist der zugewiesene
+            Wert der Variable, wessen Datentyp dynamisch von JavaScript bestimmt wird.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Simpel gesagt, es gibt verschiedene Arten, wie das System Wörter oder Zeichen behandelt.
+            Darunter fallen:
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <b>String</b>, eine Zeichenfolge, wie Sätze und Wörter, welche innerhalb von
+            <span class="text-italic text-weight-light">“”</span>,
+            <span class="text-italic text-weight-light">‘’</span> oder
+            <span class="text-italic text-weight-light">``</span> in der Deklaration angegeben
+            werden müssen, Beispiel:
+            <span class="text-italic text-weight-light">let string = “gewünschterWert”;</span>
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <b>Zahlen</b> (Integer oder Number / Numeric), hierbei ist eine Erklärung wahrscheinlich
+            überflüssig, darum direkt zu den Beispielen:
+            <span class="text-italic text-weight-light">let integer = 8;</span> oder
+            <span class="text-italic text-weight-light">let number = 8.76;</span>
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <b>Boolean</b>, einfach gesagt “Richtig” oder “Falsch”, also zwei States, ähnlich wie
+            bei der Binomialverteilung (YaY Mathe, we love it). Da wir aber im Englischen hier sind,
+            heißt es <span class="text-italic text-weight-light">true</span> oder
+            <span class="text-italic text-weight-light">false</span> (keine Anführungszeichen, da
+            wir ja keinen String sondern einen Boolean übergeben wollen). Statt true oder false
+            können auch
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy?retiredLocale=de"
+              >Truthy</a
+            >
+            oder
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy?retiredLocale=de"
+              >Falsy</a
+            >
+            Values genutzt werden.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Beispiele für Falsy Values, also Werte welche bei Bedingungen oder Umwandlung in
+            boolesche Werte als <span class="text-italic text-weight-light">false</span> gesehen
+            werden, wären: 0, -0, 0n, null, undefined, NaN oder “”, also ein leerer String.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Nun, es gibt jetzt auch noch die Datentypen
+            <span class="text-italic text-weight-light">undefined</span>,
+            <span class="text-italic text-weight-light">null</span>,
+            <span class="text-italic text-weight-light">NaN</span> oder der Fall, in welchem wir
+            einer Variable den Wert einer anderen oder einer vordefinierten Funktion, wie Variable
+            übergeben, aber der Einfachheitshalber, behandeln wir diese hier erstmals weniger und
+            sehr ungenau.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Das einzige was zu wissen ist, ist das
+            <span class="text-italic text-weight-light">null</span> und
+            <span class="text-italic text-weight-light">undefined</span> beide dafür stehen, dass
+            die Variable “leer” also undefiniert ist und
+            <span class="text-italic text-weight-light">null</span> meistens gewünscht ist und
+            <span class="text-italic text-weight-light">undefined</span> eher unabsichtlich oder
+            automatisch (wie im Fall dieser Deklaration:
+            <span class="text-italic text-weight-light">let var;</span> Es wurde kein Wert
+            angegeben, also ist es automatisch nach JavaScript
+            <span class="text-italic text-weight-light">undefined</span>).
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Bei der Übergabe von bereits existierenden Funktionen oder Variablen, werden diese
+            einfach nach dem = geschrieben:
+            <span class="text-italic text-weight-light">let newVar = valueOfOldVar;</span>
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Puh, jetzt haben wir ja glatt alle Datentypen am Beispiel eines Let bearbeitet, aber was
+            machen die anderen 2 Arten von Variablen dann noch?
           </div>
           <hr />
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Und was ist mit diesen IDs, die ich vorher erwähnt habe? Naja, eine ID ist wie ein Name,
-            ein einzigartiger Name.
+          <div class="text text-h6 text-weight-bold q-my-md">Const:</div>
+          <div class="w-100 flex justify-center">
+            <img src="lections/javascript/JavaScript_var_const_1.svg" class="q-my-lg image" />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Jede ID kann in HTML nur einmal vergeben werden und dient dazu, dass wir ein Objekt klar
-            von allen anderen unterscheiden können, was manchmal sehr praktisch ist.
+            Const steht für eine Konstante. Wow, wer hätte das nur erraten können. Und wie ist Const
+            jetzt anders zu Let?
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Wie geben wir eine ID nun aber nur her? Na so:
+            Naja, als erstes ist Const konstant, heißt einmal deklariert, kann der Wert nicht weiter
+            geändert werden. Alles andere bleibt aber ansonsten eigentlich gleich.
           </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Heißt, um es kurz zu fassen:
+            <span class="text-italic text-weight-light">const ant = gewünschterWert;</span> ist
+            gültig, jedoch <span class="text-italic text-weight-light">const ant;</span> nicht!
+          </div>
+          <hr />
+          <div class="text text-h6 text-weight-bold q-my-md">Var:</div>
+          <div class="w-100 flex justify-center">
+            <img src="lections/javascript/JavaScript_var_var_1.svg" class="q-my-lg image" />
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Und was kann Var jetzt eigentlich noch anderes? Naja, es ist auf jeden Fall man ziemlich
+            alt und hält sich wie manche ältere, glatzköpfige Personen eher weniger an Grenzen, also
+            Scopes.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Var kommt daher noch aus einer Zeit, wo Variable immer und überall gültig waren, also
+            auch im Gültigkeitsbereich einer anderen, eingebundenen JavaScript Datei!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Var sollte daher wirklich nur in ganz speziellen Situationen genutzt werden, ansonsten
+            ist ein gut platziertes Let immer besser.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Andere Unterschiede? Nope, das wars. Deklaration und alles andere ändern sich bis auf
+            das Stichwort var anstatt von let nicht weiters.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Aber warte mal… Irgendwas über das Ändern von Werten oder Variablen wurde doch erwähnt,
+            oder nicht? Genau! Dazu kommen wir jetzt.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Deklarieren war das Wort, welches bis jetzt im Kontext vom Anlegen und Zuweisen von
+            Variable von mir genutzt wurde, jedoch ist eine Deklaration auch so:
+            <span class="text-italic text-weight-light">let var;</span> bereits vollständig.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Der Wert wäre hier, außer bei einem const, also gar nicht notwendig, denn das könnte man
+            nachträglich auch so:
+            <span class="text-italic text-weight-light">var = 5;</span> ändern.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Eine Deklaration bedeutet nur, dass wir eine Variable zum ersten mal anlegen und dem
+            System sagen: “Hey du, alles ab jetzt was so heißt, referenziert diesen Wert”, danach
+            können wir also noch immer auf diese zugreifen und deren Wert ändern und das auch noch
+            ganz einfach.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Alles was wir davor gemacht haben, bleibt eigentlich gleich, nur dass wir das let /
+            const / var nun endlich auslassen können. Heißt, wir können das alles hier machen:
+          </div>
+
           <div class="text text-italic text-h6 text-weight-light q-my-md">
-            &lt;p id="”Timmy”">&lt;/p>
+            var = 2;<br />
+            //value: 2<br />
+            var = “zwei”;<br />
+            //value: “zwei<br />
+            var = 2 + 2;<br />
+            //value: 4<br />
+            var = var + 2;<br />
+            //value: 6
           </div>
           <div class="w-100 flex justify-center">
-            <img src="lections/css/CSS_ids_1.svg" class="q-my-lg image image-long" />
+            <img src="lections/javascript/JavaScript_change_var_1.svg" class="q-my-lg image" />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            So das wars aber auch schon mit unserem Ausflug zu IDs!
+            Aber wie hat das Letzte jetzt eigentlich funktioniert? Simpel gesagt, mit dem + Zeichen
+            kann man auch Variablen kombinieren, also
+            <span class="text-italic text-weight-light">var + var;</span> oder
+            <span class="text-italic text-weight-light">var + 2;</span> wären beides gültige
+            Nutzungsweisen vom + Zeichen.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Sind wir eigentlich jetzt mit CSS schon fertig? Naja, nicht wirklich. Es gibt tausende
-            Optionen in CSS. Von Keyframes, zu –webkit, dem Verschachteln von Klassen und vieles
-            weitere, aber das wäre zu komplex für den Anfang.
+            Es gibt jetzt natürlich noch viele weitere Arten, unsere Variable zu verändern, wie ++
+            oder -- (Zählen / Ziehen 1 zu / von einer Zahl (ab)). Aber wir kommen derzeit auch gut
+            ohne aus.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Darum hier noch weitere wichtige Properties, mit welchen wir herumspielen können:
+            Wichtig ist nur, wenn man 2 verschiedene Datentypen mit + verbindet, kann das oft und
+            schnell zu Fehlern kommen, da JavaScript automatisch versucht, beide Datentypen zum
+            gleichen zu konvertieren.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Bei <span class="text-italic text-weight-light">2 + “2”</span> ist das zum Glück noch
+            einfach und JavaScript gibt uns auch zum Glück gleich 4 zurück, aber selbst hier wird es
+            schnell komisch, da <span class="text-italic text-weight-light">“2” + 2</span> auf
+            einmal “22” ausgibt.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Komisch, oder? Aber das ist zu kompliziert zu erklären. Einfach gesagt: Meistens wird
+            der erste Wert bei einer + Verknüpfung als Referenz- oder Wunschwert genommen und der
+            zweite diesem angepasst.
           </div>
           <hr />
-          <div class="text text-h6 text-weight-bold q-my-md">Padding & Margin:</div>
+          <div class="text text-h6 text-weight-bold q-my-md">Vergleichsoperatoren:</div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Was ist das? Gute Frage, anstrengend zu beantworten. Einfach gesagt, damit geben wir
-            einen Abstand um ein Element an.
+            Es ist zwar schön und gut, dass wir Werte in sogenannten Variablen speichern können,
+            jedoch sollten wir auch in der Lage sein, Interaktionen logisch zu verbinden und Code,
+            wie später auch Teile der Webseite, bedingt zu rendern, also anzuzeigen oder
+            auszuführen.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Dieser Abstand kann innerhalb (padding) des Objektes sein oder außerhalb (margin). Um
-            mir viele Worte zu ersparen, hier eine kleine Grafik.
+            Dafür brauchen wir jedoch erstmal eine Methode, um Bedingungen zu setzen und Werte zu
+            vergleichen.
           </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Zum Vergleichen kommen daher, mit passendem Namen, Vergleichsoperatoren ins Spiel.
+            Folgende Vergleichsoperatoren können genutzt werden:
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <b>==</b>: Die beiden Werte sind von der Bedeutung aus gleich, der Datentyp kann jedoch
+            unterschiedlich sein.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <b>===</b>: Die beiden Werte sind identisch. Datentyp muss hier übereinstimmen!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <b>!=</b>: Die beiden Werte sind ungleich, also unterschiedlich. Trifft nicht zu, wenn
+            nur der Datentyp unterschiedlich ist.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <b>!==</b>: Die beiden Werte sind ungleich, dieses Mal wird der Datentyp berücksichtigt!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <b>&lt;</b>: Der vorhergehende Wert ist kleiner als der Zweite.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <b>&lt;=</b>: Der vorhergehende Wert ist kleiner oder gleich dem Zweite.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <b>></b>: Der vorhergehende Wert ist größer als der Zweite.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <b>>=</b>: Der vorhergehende Wert ist größer oder gleich dem Zweite.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            So. Jetzt wissen wir, welche Vergleichsoperatoren es gibt, aber wie setzen wir diese
+            jetzt eigentlich ein? Ganz einfach. Vor und nach dem Operator kommt jeweils ein Wert,
+            Beispiel:
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Ganz einfach. Vor und nach dem Operator kommt jeweils ein Wert, Beispiel:
+            <span class="text-italic text-weight-light">2 > 3;</span> (hier würde natürlich jetzt
+            <span class="text-italic text-weight-light">false</span> herauskommen), und tada, die
+            zwei Werte werden verglichen und als Boolean behandelt.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Aber wie können wir jetzt mehrere Bedingungen auf einmal setzen? Wie würde es denn
+            ausschauen, wenn wir gerne hätten, dass Timmy größer als Sam, aber kleiner als Susanne
+            wäre?
+          </div>
+
           <div class="w-100 flex justify-center">
             <img src="lections/css/CSS_margin_padding_1.svg" class="q-my-lg image" />
           </div>
