@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = 'https://qyiwkgwvtdxnsowzibpm.supabase.co/';
-const supabaseKey = process.env.SUPABASE_KEY;
+const supabaseKey = process.env.REACT_APP_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 const dbGetCourse = async () => {
