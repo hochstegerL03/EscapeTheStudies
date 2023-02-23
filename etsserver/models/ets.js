@@ -2,8 +2,8 @@ import supabase from '../config/supabaseClient.js';
 
 const dbGetCourse = async () => {
   const { error, data } = await supabase.from('course').select();
-  if (!error) return data;
-  return error;
+  if (error) return error;
+  return data;
 };
 
 const dbGetQuesition = async () => {
