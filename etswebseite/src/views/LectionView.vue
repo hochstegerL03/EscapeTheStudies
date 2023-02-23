@@ -494,177 +494,304 @@
             ausschauen, wenn wir gerne hätten, dass Timmy größer als Sam, aber kleiner als Susanne
             wäre?
           </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Dafür kommen logische Operationen jetzt ins Spiel!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Logische Operationen geben uns die Möglichkeit, mehrere Bedingungen oder Vergleiche zu
+            einem einzigen zu verknüpfen. Es gibt 2 Operatoren, welche wir uns hier auch gleich
+            anschauen werden.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <b>&&</b> (UND-Operator): Wenn die erste und die zweite Bedingung zustimmen, dann kommt
+            true heraus.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <b>||</b> (ODER-Operator): Wenn einer der beiden Bedingungen true ist, wird true
+            zurückgeliefert.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Logische Operatoren nutzt man nun, anhand unseres kleinen Beispiels vorher, wie folgt:
+          </div>
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
+            Sam &lt; Timmy && Timmy &lt; Susanne
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Aber wie können wir das jetzt auch sinnvoll nutzen, ganz einfach, mit console.log(). Was
+            ist das? Naja, kurz gesagt eine Funktion, welche von JavaScript selbst zur Verfügung
+            gestellt wird.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Mit dieser wird es uns erlaubt, Werte oder sonst was auf der Console (F12 im Browser
+            oder auch auf Deutsch unter dem Wort KOMMANDOZEILE unter Windows zu finden) auszugeben.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Was bringt uns das? Garnichts! Hab ich einfach nur vergessen, das bis jetzt zu erwähnen
+            und dachte, hey, was für ein guter und sicherlich gescripteter Witz es hier sein könnte,
+            ja. Absolut. Aber weiter im Programm!
+          </div>
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
+            console.log(Sam &lt; Timmy && Timmy &lt; Susanne);
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">In der Konsole:</div>
+          <div class="text text-italic text-h6 text-weight-light q-my-md">true</div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Also falls Timmy wirklich kleiner als Susanne und größer als Sam ist.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Puhh, jetzt wissen wir, wie wir Variablen anlegen, diese ändern aber auch wie wir diese
+            Vergleichen und sinnvollerweise ausgeben, anstatt sie mit einer If-Bedingung zum Rendern
+            von Code zu nutzen.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Apropos If-Bedingungen, oder auf Deutsch, Wenn-Bedingungen - ja ich weiß, dass keiner
+            die so nennt - können genutzt werden, um dem Programm oder Browser zu sagen: “Hey, mach
+            das nur wenn, danke, bitte!”.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Jetzt wo wir wissen, was das ist, lasst es uns nutzen, um verschiedene Timmys
+            auszugeben. Oh, und die Syntax erkläre ich jetzt nicht genauer, hehe. Die werdet ihr
+            schon noch selber gleich sehen!
+          </div>
 
           <div class="w-100 flex justify-center">
-            <img src="lections/css/CSS_margin_padding_1.svg" class="q-my-lg image" />
+            <img src="lections/javascript/JavaScript_if_1.svg" class="q-my-lg image" />
           </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Und wie machen wir das jetzt in CSS? Ja einfach so:
-          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">Und nochmal in uncool:</div>
           <div class="text text-italic text-h6 text-weight-light q-my-md">
-            .example{ <br />padding: 1rem; <br />margin: 1rem; <br />}
+            if (Sam &lt; Timmy && Susanne > Timmy){<br />
+            console.log(“Sam &lt; Timmy && Susanne > Timmy”);<br />
+            }<br />
+            else if (Sam > Timmy && Susanne > Timmy){<br />
+            console.log(“Sam > Timmy && Susanne > Timmy”);<br />
+            }<br />
+            else if(Sam > Timmy && Susanne &lt; Timmy){<br />
+            console.log(“Sam > Timmy && Susanne &lt; Timmy”);<br />
+            }<br />
+            //Bonus!<br />
+            else{<br />
+            console.log(“Alle andere 3*2*1 Optionen”);<br />
+            }
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Tada! Jetzt haben wir in alle Richtungen jeweils 1rem Padding und Margin! Und die coolen
-            Kids können jetzt auch noch einen Padding oder ein Margin nur oben, rechts, unten oder
-            links bestimmen und das so:
-          </div>
-          <div class="text text-italic text-h6 text-weight-light q-my-md">
-            .example{ <br />padding: 1rem 0rem 1rem 0rem; /* padding oben und unten */ <br />margin:
-            0rem 1rem 0rem 1rem; /* margin links und rechts */ <br />}
+            Kleiner lustiger Einwurf: Die <span class="text-italic text-weight-light">;</span> nach
+            jedem Befehl sind keine Dekoration, sondern wichtig, damit JavaScript weiß, dass dieser
+            eine Befehl zu Ende ist, also bitte immer schön brav beachten ^^.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Und was sind diese coolen
-            <span class="text-italic text-weight-light">/* Kommentare */</span> nun. Naja,
-            Kommentare, hab ich ja schon erwähnt!
+            Oh und die <span class="text-italic text-weight-light">{}</span> geben immer einen neuen
+            Scope an, cool oder. Heißt jede lokale Variable (let) ist nur in dem Scope oder darunter
+            stehenden Scopes verfügbar, in welchem diese auch erstellt wurde. Genauere Details zu
+            Scopes findest du in der ersten Lektion.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Noch mehr nützliches Wissen? Sure, here you got it!
+            Noch irgendwelche Frage? Ja, well that’s your bad. Just kidding.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Alsoo, bei <span class="text-italic text-weight-light">if</span> kommt die erste
+            Bedingung, welche wir überprüfen lassen wollen , hinein. In allen nachfolgenden
+            <span class="text-italic text-weight-light">else if</span>s kommen dann weitere
+            Bedingungen hinein, welche nur geprüft werden sollen, falls die darüberstehenden, also
+            auch das if, keinen Treffer gefunden haben,
+            <span class="text-italic text-weight-light">false</span> zurücklieferten.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Das <span class="text-italic text-weight-light">else</span> wird nur verwendet, wenn
+            alle anderen Bedingungen nicht zugetroffen haben und steht für “alle anderen
+            Möglichkeiten”, darum wird hier auch keine Bedingung benötigt. So, und wie kann man
+            jetzt mehrere Bedingungen nacheinander machen?
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Ganz einfach: Mit ifs im if :). Und mehrere Bedingungen nacheinander? Easy, einfach
+            mehrere Ifs nacheinander ^^
           </div>
           <hr />
-          <div class="text text-h6 text-weight-bold q-my-md">Einheiten:</div>
+          <div class="text text-h6 text-weight-bold q-my-md">Schleifen (nicht die Bunten):</div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Naja, wir können jetzt auch verschiedene Maßen nutzen, um unsere Größen zu bestimmen.
-            Beginnen wir also einfach. <span class="text-italic text-weight-light">px</span> sind
-            eine fixe Einheit, nämlich die Pixel am Bildschirm. Next!
+            Und was mache ich nun, wenn ich einen Prozess öfter wiederholen möchte?
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            <span class="text-italic text-weight-light">em</span> ist eine relative Größe zu der
-            Schriftgröße des Parent-Objekts, heißt, wenn 16px die Schriftgröße des Parent-Objekts
-            wäre, wäre 1em gleich 16px.
+            Sagen wir einmal, ich habe eine Array, also eine Liste von Objekten, Werte, whatever -
+            ja wir haben das bis jetzt noch nicht gemacht, i knoooooow - und wollen jeden einzelnen
+            Wert alleine ausgeben. Dafür gibt es jetzt Schleifen.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Und was ist <span class="text-italic text-weight-light">rem</span>, naja, es ist wie
-            <span class="text-italic text-weight-light">em</span> nur relativ zum Root-Element,
-            daher auch das r, cool oder? Heißt, wenn der Body 16px als Schriftgröße hat, ist 1rem
-            gleich 16px!
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Jetzt zu den coolen Einheiten aber!
-            <span class="text-italic text-weight-light">%</span> gibt an, wie viel Prozent des
-            Parent-Objektes eingenommen werden soll, klingt sehr logisch und simpel.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            <span class="text-italic text-weight-light">vh</span> also, auch wenn wir das noch nicht
-            so genau durchgegangen sind, der sichtbare und nutzbare Tab wird Viewport genannt, wie
-            oben auch beim HTML Layout definiert.
-            <span class="text-italic text-weight-light">1vh</span> ist daher
-            <span class="text-italic text-weight-light">1%</span> der Höhe des aktuellen Viewports,
-            das ändert sich natürlich, wenn man den Browser kleiner zieht.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Und was ist ein <span class="text-italic text-weight-light">vw</span>? Genau das
-            Gleiche, wie vh, nur dass es sich auf die Breite des aktuellen Viewports bezieht, heißt,
-            1vw ist 1% der Breite des Fensters!
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">So, Einheiten, check! Easy!</div>
-          <hr />
-          <div class="text text-h6 text-weight-regular q-my-md">
-            <b>Nächste wichtige Info:</b>
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            <span class="text-italic text-weight-light">width</span> und
-            <span class="text-italic text-weight-light">height</span> zwei sehr sehr wichtige
-            Properties und auch sehr logische. Mit width kann man angeben, wie viel der vorhandenen
-            Breite des Parent-Objektes ein Element einnehmen soll und mit height, geschieht das
-            Gleiche nur auf die Höhe bezogen.
-          </div>
-
-          <div class="text text-h6 text-weight-regular q-my-md">Let’s keep the speedrun going!</div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Also <span class="text-italic text-weight-light">background-color</span>, sehr cool und
-            praktisch. Was das macht? Logisch, oder? Es gibt die Hintergrundfarbe eines Elementes
-            an.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Erinnert ihr euch noch an die Grafik für Margin und Padding? Die Fläche bei “You” & die
-            Fläche, welche durch das Padding entstehen, nehmen hierbei die Farbe des
-            <span class="text-italic text-weight-light">background-color</span> an.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Wie gibt man das jetzt an? Genauso wie bei color also easy peasy!
+            Und davon sogar mehrere Arten. Für uns sind jetzt erstmal While- und For-Schleifen
+            wichtig.
           </div>
           <hr />
-          <div class="text text-h6 text-weight-bold q-my-md">Flexbox:</div>
+          <div class="text text-h6 text-weight-bold q-my-md">While-Schleife:</div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Sehr viel flexibler als dieser Kurs bietet Flexbox die Möglichkeit, dass sich Elemente
-            fließend aufteilen und bewegen können.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Bei der Gelegenheit würde ich gleich gerne erwähnen, dass wir nicht alles von Flexbox
-            hier benutzen werden und können!
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Also ein kurzer Dive in das Thema! Es gibt das sogenannte
-            <span class="text-italic text-weight-light">display</span> Property, welches angibt, wie
-            ein Element Platz in seinem Parent-Objekt einnimmt.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Dabei gibt es drei Properties, welche wir uns in diesem Rahmen anschauen werden. Ja, ich
-            weiß es gibt sonst noch sehr viele mehr, aber die interessieren uns gerade nicht, sorry.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            <span class="text-italic text-weight-light">inline-block</span>: Ist wie ein
-            <span class="text-italic text-weight-light">inline</span>
-            Objekt, jaja ich hab noch nicht erklärt, was das überhaupt ist, nur dass man die Höhe
-            und Breite manipulieren, also in CSS verändern kann. Einfach gesagt, ein inline-block
-            und auch ein <span class="text-italic text-weight-light">inline</span> Element nehmen
-            nur den Platz ein, welchen sie auch wirklich brauchen.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            <span class="text-italic text-weight-light">block:</span> Ein block Element ist wie ein
-            <span class="text-italic text-weight-light">inline</span> Element, nur dass es immer
-            eine ganze Zeile einnimmt, also die Gesamtbreite des Parent-Objektes.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            <span class="text-italic text-weight-light">flex:</span> Und was macht jetzt
-            <span class="text-italic text-weight-light">flex</span>? Einfach gesagt, mit
-            <span class="text-italic text-weight-light">flex</span> können wir Elemente in
-            Parent-Objekten, welche diese Property haben, viel genauer und besser, bzw. dynamischer
-            platzieren. Beispielsweise kann mit
-            <span class="text-italic text-weight-light">flex</span> definiert werden, wann Elemente
-            in die nächste Zeile überfließen, wie viel Platz sie einnehmen und wie sie innerhalb des
-            Flex Objektes platziert werden sollen.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Das ganze ist jetzt eher schwer vorstellbar, darum eine kleine Grafik mit Beispiel-Code
-            ^^
+            Einfach gesagt, solange die Bedingung true ist, wiederholt sich alles. Immer und immer
+            wieder.
           </div>
           <div class="w-100 flex justify-center">
-            <img src="lections/css/CSS_display_1.svg" class="q-my-lg image" />
+            <img src="lections/javascript/JavaScript_while_loop_1.svg" class="q-my-lg image" />
+            <img src="lections/javascript/JavaScript_while_loop_2.svg" class="q-my-lg image" />
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Ein guter Verwendungszweck dafür wäre unter anderem das unendliche Erweitern eines
+            Strings, um den Browser eines Users zum Abstürzen zu bringen. Hier der Code dafür ^^
           </div>
           <div class="text text-italic text-h6 text-weight-light q-my-md">
-            .inline-block{ <br />display: inline-block; <br />}
+            let breakVar = “DDos”;<br />
+            while (true) {<br />
+            breakVar = 'D' + breakVar;<br />
+            }
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Tada! Und so schnell kann man einen Browser oder zu mindestens Tab eines Users
+            überfordern. Aja und eine kleine Erklärung,
+            <span class="text-italic text-weight-light">true</span> ist unsere Bedingung hier, heißt
+            egal was, diese Schleife hört nie auf!
+          </div>
+          <hr />
+          <div class="text text-h6 text-weight-bold q-my-md">For-Schleife:</div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Eine For-Schleife geht x-Durchgänge durch, durchaus praktisch. Wofür kann man das nun
+            brauchen? Naja, wenn man zu faul ist, eine While-Schleife mit einem hochzählenden
+            Prozess (Variable und Wertzuweisung/Erhöhung) zu modifizieren, bietet eine For-Schleife
+            schon alles, was man braucht.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Möchte man 10 Mal einen Wert ausgeben, oder eine Array auslesen, bei beiden ist eine
+            For-Schleife ein Must-Have!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Kleines Beispiel, um mal etwas schneller voran zu schreiten:
           </div>
           <div class="text text-italic text-h6 text-weight-light q-my-md">
-            .block{ <br />display: block; <br />}
+            let array = [1,2,3,4,5,6];<br />
+            for(let i = 0; i &lt; array.length; i++){<br />
+            console.log(array[i]);<br />
+            }
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Kurze Basics zu Arrays. Wie vorher schon gesagt, sind Arrays Listen von Objekten oder
+            Werten, bei uns oben, beinhaltet die Liste verschiedene Zahlen (Numbers).
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Weil wir cool sind und die Zahl 0 aus Liebe zu unserem Computer mögen, beginnen wir,
+            wenn es ums Programmieren geht, meistens mit der Zahl 0 beim Zählen, heißt unser erstes
+            Objekt in der Array nennen wir das 0-te Objekt.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Wie greifen wir jedoch jetzt auf Elemente in der Array zu? Ganz einfach. Wir geben nach
+            unserer Array (array) einfach innerhalb von ein paar nicen eckigen Klammern ([], wow die
+            sehen ja aus wie die Klammern bei der Deklaration der Array, what a coincidence) an,
+            welche Stelle wir gerne stibitzen würden.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Also für das erste Element der Array wäre das jetzt:
+            <span class="text-italic text-weight-light">array[0];</span> und für die Letzte:
+            <span class="text-italic text-weight-light">array[array.length-1];</span>
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Und was ist jetzt <span class="text-italic text-weight-light">array.length</span> und
+            dieses -1 für? Naja, array.length gibt uns irgendwie passend auch, die Länge der Array
+            an, also wie viele Elemente diese beinhaltet und das -1 ist dafür da, dass wir ja mit 0
+            beginnen zu zählen und somit auch das letzte Element einer 12 Elemente langen Liste als
+            11-tes Element bezeichnen, obwohl die Länge ja eigentlich 12 wäre.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Easy? Ja. Also weiter im Programm.
+          </div>
+          <hr />
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Könnt ihr euch noch an die For-Schleife von vorher erinnern? Jagut, ich auch nicht, Also
+            hier nochmal:
           </div>
           <div class="text text-italic text-h6 text-weight-light q-my-md">
-            .flex{ <br />display: flex; <br />}
+            let array = [1,2,3,4,5,6];<br />
+            for(let i = 0; i &lt; array.length; i++){<br />
+            console.log(array[i]);<br />
+            }
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Aber wie werden jetzt die Elemente in Flex unterschiedlich dargestellt? Naja, dafür gibt
-            man den Elementen drinnen und manchmal dem Flex selber ein paar Properties.
+            Und auch noch eine kurze Erklärung:
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Werden wir diese alle hier durchgehen? Nein, aber dafür hier ein kleiner
-            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Cheat-Sheet</a>!
+            <span class="text-italic text-weight-light">let i = 0;</span> Erstellt eine Variable
+            welche im Scope der For-Schleife gültig ist und gibt ihr einen Anfangswert von 0 (man
+            kann natürlich auch was anderes nehmen).
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Zufrieden mit dem Einsteiger-Kurs? Wer weiß, aber das war es leider schon. Also ab ins
-            CSS Rätseln und Recherchieren!
+            <span class="text-italic text-weight-light">i &lt; array.length;</span> Ist unsere
+            Bedingung, solange diese erfüllt wird, wiederholt sich unser Code-Abschnitt innerhalb
+            der For-Schleife.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            <a href="https://codepen.io/hochstegerL03/pen/GRXJXJx">Übung: Grundlagen von CSS</a>
+            <span class="text-italic text-weight-light">i++;</span> Die Funktion, welche nach jedem
+            Durchgang ausgeführt werden soll, bei uns wird i um 1 nach jedem Durchgang erhöht.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            <a href="https://codepen.io/hochstegerL03/pen/YzOXOqE">Lösung: Grundlagen von CSS</a>
+            Und der Rest sollte simpel sein. YaY!
+          </div>
+          <hr />
+          <div class="text text-h6 text-weight-bold q-my-md">Funktionen:</div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Cooles Thema, aber davon mehr in der HTL, viel Spaß!
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Tipp: Die letzte Übung mit der Flexbox kann ohne weitere Flex-Properties gemeistert
-            werden. Nur <span class="text-italic text-weight-light">display: flex;</span> ist
-            notwendig!
+            Na, joke. Es gibt bessere Quellen, nämlich mich oder das Internet. Well, probably das
+            Internet aber, hey, ich bin part davon baby!
           </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Aber kurze Zusammenfassung (nicht relevant für den Escape Room, oder kaum, aber ich fühl
+            mich irgendwie gezwungen es wenigstens anzuschneiden). Funktionen sind Code-Abschnitte,
+            welche man öfter verwenden möchte, aber nicht öfter schreiben möchte. Cool, oder?
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Einfach gesagt, man erstellt eine Funktion und kann diese später im Code aufrufen. Damit
+            eine Funktion divers genutzt werden kann, können sogenannte Parameter übergeben werden,
+            welche beim Aufruf einen gewünschten Wert annehmen und dann in der Funktion genutzt
+            werden können.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Kurzes Beispiel und dann bin ich auch schon weg!
+          </div>
+
+          <div class="text text-italic text-h6 text-weight-light q-my-md">
+            function eineFunktion(zahl1, zahl2){<br />
+            let summe = zahl1 + zahl2;<br />
+            return summe;<br />
+            }<br />
+            console.log(eineFunktion(10,2));
+          </div>
+
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Mini-Erklärung: <span class="text-italic text-weight-light">function</span> ist wie
+            <span class="text-italic text-weight-light">let</span> oder
+            <span class="text-italic text-weight-light">const</span> unsere Art, JavaScript zu
+            sagen, dass wir eine Funktion deklarieren wollen.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <span class="text-italic text-weight-light">eineFunktion</span> ist wie wir die Funktion
+            nennen wollen und zahl1, zahl2 sind unsere Parameter.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Mit <span class="text-italic text-weight-light">return</span> geben wir einen Wert
+            zurück, welcher dann im z.B. console.log() genutzt wird. Bei unserem Beispiel würde
+            jetzt 12 in der Konsole ausgegeben werden.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Aber jetzt Schluss mit lustig und ab in die Konsole!
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <a href="https://codepen.io/hochstegerL03/pen/PodzGKm"
+              >Übung: Grundlagen von JavaScript</a
+            >
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            <a href="https://codepen.io/hochstegerL03/pen/ZEMOpJm"
+              >Lösung: Grundlagen von JavaScript:</a
+            >
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            Achtung! Es ist dieses Mal zu empfehlen, die Übung lokal über Visual Studio Code zu
+            machen!
+          </div>
+
           <hr class="q-my-lg" />
         </div>
         <!--Section 1 End-->
