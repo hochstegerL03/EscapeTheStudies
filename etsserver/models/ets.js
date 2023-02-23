@@ -1,8 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
-
-const supabaseUrl = 'https://qyiwkgwvtdxnsowzibpm.supabase.co/';
-const supabaseKey = process.env.SUPABASE_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
+import supabase from '../config/supabaseClient.js';
 
 const dbGetCourse = async () => {
   const { error, data } = await supabase.from('course').select();
