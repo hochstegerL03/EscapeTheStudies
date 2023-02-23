@@ -2,11 +2,3 @@ GET http://localhost:3000/escapethestudies/courses
 ################################################################
 GET http://localhost:3000/escapethestudies/question
 ################################################################
-GET http://localhost:3000/escapethestudies/answer
-################################################################
-GET http://localhost:3000/escapethestudies/global
-################################################################
-GET http://localhost:3000/escapethestudies/room?room=Living Room
-################################################################
-GET http://localhost:3000/escapethestudies/room?room=Living Ro0m
-################################################################
