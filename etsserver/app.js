@@ -6,6 +6,12 @@ import path from 'path';
 import cors from 'cors';
 import routes from './routes/ets.js';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler.js';
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = 'https://qyiwkgwvtdxnsowzibpm.supabase.co/';
+const subabaseKey = process.env.SUBABASE_KEY;
+const subabase = createClient(supabaseUrl, subabaseKey);
+
 
 dotenv.config();
 

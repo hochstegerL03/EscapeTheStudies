@@ -5,7 +5,7 @@ import {
   dbGetAnswer,
   dbGetGlobalInfo,
   dbGetRoomIm,
-} from '../models/ets.js';
+} from '../models/ets_pg.js';
 
 const getCourse = async (req, res) => res.status(200).json(await dbGetCourse());
 
