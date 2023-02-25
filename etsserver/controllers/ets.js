@@ -1,8 +1,10 @@
 // import validator from 'is-my-json-valid';
-import { dbGetCourse, dbGetQuesition } from '../models/ets.js';
+import { dbGetCourse, dbGetQuesition, dbGetAnswer } from '../models/ets.js';
 
 const getCourse = async (req, res) => res.status(200).json(await dbGetCourse());
 
 const getQuestion = async (req, res) => res.status(200).json(await dbGetQuesition());
 
-export { getCourse, getQuestion };
+const getAnswer = async (req, res) => res.status(200).json(await dbGetAnswer());
+
+export { getCourse, getQuestion, getAnswer };
