@@ -2,5 +2,5 @@ GET http://localhost:3000/escapethestudies/courses
 ################################################################
 GET http://localhost:3000/escapethestudies/question
 ################################################################
-GET http://http://localhost:3000/escapethestudies/answer
+GET http://localhost:3000/escapethestudies/answer
 ################################################################################################
