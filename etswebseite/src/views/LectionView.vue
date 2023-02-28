@@ -38,121 +38,43 @@
 
       <div class="w-80">
         <!--Header-->
-        <div class="text text-h4 text-weight-regular q-my-md">Emotions</div>
+        <div class="text text-h4 text-weight-regular q-my-md">ER</div>
         <!--Header End-->
         <!--Section 1-->
         <div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Do you know the feeling of being not good enough? Not good enough for oneself. For the
-            only one who should always have your back. The one who should love you, support you,
-            like you would be their one and only.
+            And with this your awfully self-moving, strange body finishes its morning routine. Your
+            teeth brushed, your hair combed and this stinging pain in your throat stopped.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            So, do you know this feeling? The pain in one’s throat. The feeling of being unable to
-            breath, to bear any more seconds of this cold burn, tearing at your emotions? Do you?
+            What was this weird feeling in your stomach only? Hunger? Who knows. You can’t continue
+            your weak string of thoughts before the body once more moves.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            And if not, how is it? How is it to have everything under control? Sealed away, pushed
-            to the side, so no one can ever see it, not even yourself?
+            Moving to another room. To another setting. A setting without a hard wooden floor,
+            without a depressing humidity in the air. A setting without this mysterious feeling of
+            pain and broken glass.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Do you feel happy? Was life always this great? Like a perfect gift of mother nature?
+            Even though you don’t understand why, your body feels collected again. Once you leave
+            the bathroom, you feel like your shattered past has been trapped behind that closed
+            door. You feel like the music in your head could bring you joy again and you realize
+            that nothing will end like you believed it would.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            A damn perfect diamond laid in your innocent hands when you once discovered the bright
-            and overwhelming light of the day, of the so beautiful time-space warped universe we so
-            impudent live in! A gift preserved by the blood of the poor, the burning roots of the
-            forest and the awful screams of the unworthy, unhuman parasites of this world!
+            And with those emotions your downfall began.
+          </div>
+          <div class="text text-h6 text-weight-regular q-my-md">...</div>
+          <div class="text text-h6 text-weight-regular q-my-md">
+            “Wait, why is the door closed? And where is the key? God dammit. Let me get out of this
+            rat hole!”.
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
-            Do you love it? Adore it? Tell me, how do you feel when you read this? Do you feel
-            awful?
+            His screams were futile. No one would ever let him leave again. This broken down room
+            would be his death. Don’t believe me? Just look and despair yourself!
           </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            No you surely don’t. You are happy right? Maybe even amused. You just see another stupid
-            game in this digital world, this app, which was carefully crafted by myself over the
-            course of many hurtful and even more stressful hours. Am I right? You don’t care, like
-            the rest of them! You just want to have some fun, to learn something new. You just seek
-            comfort by running away!
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Tell me, what else should you be doing right now? Maybe you should be by the side of a
-            loved one, listening to them, caring about them, just being god damn by their side, who
-            cares if you just sit there, listen and shut your uncomfortable mouth!
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            It’s not always about you, so why are you here? Why are you here again? Looking down at
-            your phone like a junkie on his daily dose? Do you need this?
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Do YOU really need this? Are YOU really doing this for yourself? Be honest, why do you
-            want all of this? Do you want to impress others? Oh, maybe you just want to be special
-            or loved, am I right?
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            But ask yourself: Could you even love yourself? Are you even worth it? Or are you not
-            even true to yourself?
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Come on, say it, how many times have you given up because you feared judgment? How many
-            god damn times have you looked at the mirror and wished to have someone stand next to
-            you, to complete you?
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            A few hundred, thousand times? Maybe even everyday. Is this really you? Hey, listen!
-            Don’t look away. You need to hear this. Just remember the next few lines before you yet
-            again go back to your life like it once was. Remember them. Carefully:
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            No one will ever complete you. No one will ever love you, if you can’t even love
-            yourself. No one and I mean no one can ever be you! So why are you trying to be someone
-            else? To impress others like they are some kind of judge?
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            And how does it feel? Still motivated to go on? Are you really ready to go down this
-            road? To go down another of the so often broken paths of hardships and destruction?
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Do you really feel like your past has been completed? No remorse? Nothing to say to
-            yourself or the ones around you? Are you sure that this is your way? That this is a
-            journey for you, for the one you want to be, not the one you are and especially not the
-            one others want you to be? Are you going down this road to be someone you can be proud
-            of? A person with morals and a person with a will to do more than just benefit from
-            others or even your own crippled, shut down mess of a self?
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Are you? I can’t judge, because I can’t understand. No one can. We all are just
-            individuals who seek for a warm hand we can reach out for, but at the end of the day I
-            can’t tell, if you are lying, if you ever read this or if you will ever stop bottling up
-            your emotions.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            I really can’t and trust me if I say that I would do anything to do so, but I will never
-            be able to. I can just listen, I can just write down these empty words that once built
-            up my heart, but I won’t be able to make them reach yours. I can just try, like we all
-            do. And I can only reach out with this letter to you this once.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            I won’t be the same me in an hour or a day, I will change, like everything does and like
-            you will if you keep on.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Keep on believing in yourself and keep on going through with your own decisions. Your
-            decisions, not anyone else’s! So if you still want to learn a thing or two about
-            programming, then go on.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Go on and listen to a little story written by me. A story too surreal to ever be true
-            and a story too true to ever be just a plain insignificant imagination of my hopefully
-            sane mind.
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            I welcome you to a world under construction. Under the construction of your mind!
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">
-            Welcome to the Construction Site!
-          </div>
-          <div class="text text-h6 text-weight-regular q-my-md">May your visit be short!</div>
+          <div class="text text-h6 text-weight-regular q-my-md">Welcome to the ER, Sam!</div>
+
           <hr class="q-my-lg" />
         </div>
         <!--Section 1 End-->
