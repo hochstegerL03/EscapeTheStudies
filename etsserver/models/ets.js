@@ -8,8 +8,14 @@ const dbGetCourse = async () => {
 
 const dbGetQuesition = async () => {
   const { error, data } = await supabase.from('question').select();
-  if (!error) return data;
-  return error;
+  if (error) return error;
+  return data;
 };
 
-export { dbGetCourse, dbGetQuesition };
+const dbGetAnswer = async () => {
+  const { error, data } = await supabase.from('answer').select();
+  if (error) return error;
+  return data;
+};
+
+export { dbGetCourse, dbGetQuesition, dbGetAnswer };
