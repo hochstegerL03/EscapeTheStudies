@@ -32,10 +32,10 @@
         <!--News-->
         <div class="flex justify-center items-center q-mb-xl">
           <!--Placeholder Lection Banner-->
-          <div id="news" class="bannernewscontainer q-py-md">
-            <div class="bannernewsoverlay bannernews placeholder">
+          <div id="news" class="ets-news q-py-md">
+            <div class="ets-news-overlay placeholder">
               <div class="flex items-start justify-center">
-                <header class="fitbanner">
+                <header class="ets-py-2">
                   <p class="q-pa-md text text-h5">
                     Just an Act: Learn the Magic of Web-Development!
                   </p>
@@ -45,8 +45,8 @@
               <footer class="absolute-bottom">
                 <div class="row">
                   <div class="col-9">
-                    <div class="bar-wrapper">
-                      <div class="lightbar">
+                    <div class="ets-bar-wrapper">
+                      <div class="ets-lightbar">
                         <div class="flex items-center justify-center h-100">
                           <div
                             class="text-white text-center q-pb-xs ets-header text-weight-bold text-h6"
@@ -55,9 +55,9 @@
                           </div>
                         </div>
                       </div>
-                      <div class="darkbar">
+                      <div class="ets-darkbar">
                         <div class="flex items-center justify-end h-100">
-                          <div class="darkbarcontent">
+                          <div class="ets-darkbar-content">
                             <span
                               class="text-white text-left ets-header text-weight-bold text-italic text-h5"
                               >...</span
@@ -69,7 +69,7 @@
                   </div>
                   <div class="col-3">
                     <span
-                      class="text-primary float-right fitbanner text-center ets-header text-weight-bolder text-h5"
+                      class="text-primary float-right ets-py-2 text-center ets-header text-weight-bolder text-h5"
                       >New!</span
                     >
                   </div>
@@ -80,12 +80,12 @@
           <!--Placeholder Lection Banner End-->
 
           <!--Placeholder Lection Info Banner-->
-          <div id="newsdetails" class="bannernewscontainer-flex q-py-md">
-            <div class="bannernewsoverlay bannernewsdetails placeholder">
+          <div id="newsdetails" class="ets-news-flex q-py-md">
+            <div class="ets-news-overlay ets-news-info placeholder">
               <header>
                 <div class="header-30">
                   <div class="row items-start justify-center h-100">
-                    <div class="infobar col-3">
+                    <div class="ets-news-tag col-3">
                       <div class="row items-center justify-center h-100">
                         <div class="text-white q-pb-xs ets-header text-weight-bold text-h6">
                           Info
@@ -346,15 +346,12 @@
 </template>
 
 <style lang="scss" scoped>
-.bannernewscontainer {
+.ets-news {
   width: 100%;
   height: 35vh;
 }
 
-.bannerlong {
-  width: 100%;
-  height: 15vh;
-}
+
 
 .chat-bubble {
   width: 100%;
@@ -364,16 +361,16 @@
   height: 35vh;
 }
 
-.bannernewscontainer-flex {
+.ets-news-flex {
   width: 100%;
 }
 .bannernews {
   border-radius: 15px;
 }
-.bannernewsdetails {
+.ets-news-info {
   border-radius: 0px 0px 15px 15px;
 }
-.bannernewsoverlay {
+.ets-news-overlay {
   width: 100%;
   height: 100%;
   position: relative;
@@ -382,7 +379,7 @@
   background-color: $accent;
 }
 
-.lightbar {
+.ets-lightbar {
   background-color: $secondary;
   width: 80%;
   height: 100%;
@@ -392,14 +389,14 @@
   position: relative;
 }
 
-.infobar {
+.ets-news-tag {
   background-color: $secondary;
   width: 100%;
   height: 75% !important;
   border-radius: 0vw 15px 15px 0vw;
 }
 
-.darkbar {
+.ets-darkbar {
   background-color: $primary;
   width: 100%;
   height: 100%;
@@ -409,12 +406,12 @@
   bottom: 0;
   position: absolute;
 }
-.darkbarcontent {
+.ets-darkbar-content {
   width: 15%;
   float: right;
 }
 
-.fitbanner {
+.ets-py-2 {
   width: 96%;
 }
 
@@ -426,7 +423,7 @@
   height: 6.5vh;
 }
 
-.bar-wrapper {
+.ets-bar-wrapper {
   position: relative;
   height: 100%;
 }
