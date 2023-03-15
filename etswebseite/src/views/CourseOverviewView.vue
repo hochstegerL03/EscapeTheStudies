@@ -43,13 +43,13 @@
       </div>
       <!--Scroll Tag Bar End-->
       <!--Body-->
-      <div class="w-90 q-mt-md">
+      <div class="ets-w-90 q-mt-md">
         <div class="row justify-center items-center q-mb-md">
           <!--Header-->
           <div class="col-12 text-center ets-header text-h5 text-weight-bolder">Just an Act:</div>
           <!--Header End-->
           <!--Description-->
-          <div class="w-90">
+          <div class="ets-w-90">
             <div class="col-12 text text-h6 q-my-md text-weight-regular">
               Welcome to a World full of Magic, Drama and Webtechnology. In this little Beginner
               friendly Course we will teach you how to use basic Bootstrap, HTML, JavaScript and

@@ -6,11 +6,11 @@
       <q-img class="q-mb-md ets-banner-small" src="images/home_gears_banner.jpg"></q-img>
       <!--Banner End-->
       <!--Infos-->
-      <et-s-header
+      <EtSHeader
         titel="Escape the Studies"
         content="Brace yourself and enter a brand new Universe of Tech and Games"
         link="Learn more..."
-      ></et-s-header>
+      ></EtSHeader>
       <!--Infos Ende-->
       <!--OnePage Menu-->
       <OnPageMenu></OnPageMenu>
@@ -19,7 +19,7 @@
     <!--Header End-->
     <!--Content-->
     <div class="flex justify-center ets-w-100 q-mt-lg">
-      <div class="w-90">
+      <div class="ets-w-90">
         <!--Progress-->
         <div class="text-center text-body1 q-mb-sm text-grey">Current Status: Closed Alpha</div>
         <div class="text-center text-body2 text-italic q-mb-md text-grey">
@@ -148,7 +148,7 @@
               Escape the Studies is an <a href="https://opensource.org/osd">Open-Source</a> Platform
               for learning in style.
             </div>
-            <figcaption class="text-weight-light text-italic w-90 q-mt-xs">
+            <figcaption class="text-weight-light text-italic ets-w-90 q-mt-xs">
               - sponsored by HTL Wien West
             </figcaption>
           </figure>
@@ -173,7 +173,7 @@
             <!--Image-->
             <figure class="ets-w-100 q-ma-none q-mt-lg row">
               <q-img src="images/mathe_meme.png" />
-              <figcaption class="text-weight-light text-italic w-90 q-mt-xs">
+              <figcaption class="text-weight-light text-italic ets-w-90 q-mt-xs">
                 - HTL Wien West Deluxe Memes
               </figcaption>
             </figure>
@@ -272,7 +272,7 @@
                 </div>
                 <!--Figcaption Author-sama-->
                 <figure class="ets-w-100 q-ma-none row text">
-                  <figcaption class="text-weight-light text-italic w-90">
+                  <figcaption class="text-weight-light text-italic ets-w-90">
                     - Thanks ~your Author-sama
                   </figcaption>
                 </figure>
@@ -300,7 +300,7 @@
           <!--Caption-->
           <figure class="ets-w-100 q-ma-none row text">
             <div class="text-weight-bold text-h5">Escape the Studies has a future… I guess.</div>
-            <figcaption class="text-weight-light text-italic w-90 q-mt-xs">- idk</figcaption>
+            <figcaption class="text-weight-light text-italic ets-w-90 q-mt-xs">- idk</figcaption>
           </figure>
           <!--Caption End-->
           <!--How will we continue Body-->
@@ -326,7 +326,7 @@
                   Puhh, we are finally done here. Let's grab a Cookie or two and make a
                   well-deserved break.
                 </div>
-                <figcaption class="text-weight-light text-italic w-90 q-mt-sm">
+                <figcaption class="text-weight-light text-italic ets-w-90 q-mt-sm">
                   - Love, your EtS-Team
                 </figcaption>
               </figure>

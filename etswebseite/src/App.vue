@@ -84,7 +84,6 @@ function toggleRightDrawer() {
   rightDrawerOpen.value = !rightDrawerOpen.value;
 }
 </script>
-<style lang="scss" scoped></style>
 <style lang="scss">
 // Überarbeitet
 
@@ -182,7 +181,7 @@ a:active {
 .ets-w-100 {
   width: 100% !important;
 }
-.w-90 {
+.ets-w-90 {
   width: 90%;
   max-width: 1024px;
 }
@@ -201,23 +200,19 @@ a:active {
   height: 100% !important;
 }
 
-.cardbg-light {
-  background-color: $accent;
-}
 
-.cardbg-medium {
-  background-color: $secondary;
-}
 
-.cardlection {
+
+
+.ets-card-lection {
   border-radius: 15px;
 }
 
-.cardlection-start {
+.ets-card-lection-start {
   border-radius: 15px 0px 0px 15px;
 }
 
-.cardlection-end {
+.ets-card-lection-end {
   border-radius: 0px 15px 15px 0px;
   height: 100% !important;
 }
