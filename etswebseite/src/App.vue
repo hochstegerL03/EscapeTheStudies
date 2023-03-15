@@ -23,7 +23,7 @@
       </div>
       <!--Close Btn End-->
       <!--Drawer Menu-->
-      <div class="row justify-center w-100">
+      <div class="row justify-center ets-w-100">
         <div class="w-80">
           <div class="text-center q-mb-xl text-h3 titelold">Escape the Studies</div>
           <div>
@@ -121,6 +121,10 @@ function toggleRightDrawer() {
   background-color: $secondary;
 }
 
+.placeholder {
+  background-color: $accent;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
@@ -139,7 +143,7 @@ function toggleRightDrawer() {
   user-select: none;
 }
 
-.disabled {
+.ets-disabled {
   opacity: 0.5;
   pointer-events: none;
 }
@@ -175,7 +179,7 @@ a:active {
   color: $primary;
 }
 
-.w-100 {
+.ets-w-100 {
   width: 100% !important;
 }
 .w-90 {

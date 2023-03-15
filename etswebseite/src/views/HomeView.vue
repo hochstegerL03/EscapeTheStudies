@@ -18,7 +18,7 @@
     </div>
     <!--Header End-->
     <!--Content-->
-    <div class="flex justify-center w-100 q-mt-lg">
+    <div class="flex justify-center ets-w-100 q-mt-lg">
       <div class="w-90">
         <!--Progress-->
         <div class="text-center text-body1 q-mb-sm text-grey">Current Status: Closed Alpha</div>
@@ -33,7 +33,7 @@
         <div class="flex justify-center items-center q-mb-xl">
           <!--Placeholder Lection Banner-->
           <div id="news" class="ets-news q-py-md">
-            <div class="ets-news-overlay placeholder">
+            <div class="ets-news-overlay ets-news-rounded placeholder">
               <div class="flex items-start justify-center">
                 <header class="ets-py-2">
                   <p class="q-pa-md text text-h5">
@@ -47,7 +47,7 @@
                   <div class="col-9">
                     <div class="ets-bar-wrapper">
                       <div class="ets-lightbar">
-                        <div class="flex items-center justify-center h-100">
+                        <div class="flex items-center justify-center ets-h-100">
                           <div
                             class="text-white text-center q-pb-xs ets-header text-weight-bold text-h6"
                           >
@@ -56,7 +56,7 @@
                         </div>
                       </div>
                       <div class="ets-darkbar">
-                        <div class="flex items-center justify-end h-100">
+                        <div class="flex items-center justify-end ets-h-100">
                           <div class="ets-darkbar-content">
                             <span
                               class="text-white text-left ets-header text-weight-bold text-italic text-h5"
@@ -83,10 +83,10 @@
           <div id="newsdetails" class="ets-news-flex q-py-md">
             <div class="ets-news-overlay ets-news-info placeholder">
               <header>
-                <div class="header-30">
-                  <div class="row items-start justify-center h-100">
+                <div class="">
+                  <div class="row items-start justify-center ets-h-100">
                     <div class="ets-news-tag col-3">
-                      <div class="row items-center justify-center h-100">
+                      <div class="row items-center justify-center ets-h-100">
                         <div class="text-white q-pb-xs ets-header text-weight-bold text-h6">
                           Info
                         </div>
@@ -113,19 +113,19 @@
         <!--News End-->
         <!--Home Navbar-->
         <div class="flex justify-center items-center q-mb-xl">
-          <div id="homenav" class="chat-bubble">
-            <et-s-chat-nav
+          <div id="homenav" class="ets-chat-bubble">
+            <EtSChatNav
               @click="scrolltovertically('whatisets')"
               colortype="dark"
               direction="right"
               class="q-pa-md q-mb-lg"
-              ><span class="ets-header">What is EtS?</span></et-s-chat-nav
+              ><span class="ets-header">What is EtS?</span></EtSChatNav
             >
-            <et-s-chat-nav @click="scrolltovertically('yourlittlejourney')" class="q-pa-md q-my-lg"
-              ><span class="ets-header">Your little journey begins here.</span></et-s-chat-nav
+            <EtSChatNav @click="scrolltovertically('yourlittlejourney')" class="q-pa-md q-my-lg"
+              ><span class="ets-header">Your little journey begins here.</span></EtSChatNav
             >
-            <et-s-chat-nav @click="scrolltovertically('continue')" class="q-pa-md q-mt-lg"
-              ><span class="ets-header">How will we continue?</span></et-s-chat-nav
+            <EtSChatNav @click="scrolltovertically('continue')" class="q-pa-md q-mt-lg"
+              ><span class="ets-header">How will we continue?</span></EtSChatNav
             >
           </div>
         </div>
@@ -135,15 +135,15 @@
         <div class="q-my-lg">
           <!--Bubble Caption-->
           <div class="row justify-center items-center q-mt-lg">
-            <div id="whatisets" class="chat-bubble">
-              <et-s-chat-nav colortype="dark" direction="right" class="q-pa-md q-mb-lg"
-                ><span class="ets-header">What is EtS?</span></et-s-chat-nav
+            <div id="whatisets" class="ets-chat-bubble">
+              <EtSChatNav colortype="dark" direction="right" class="q-pa-md q-mb-lg"
+                ><span class="ets-header">What is EtS?</span></EtSChatNav
               >
             </div>
           </div>
           <!--Bubble Caption End-->
           <!--Caption-->
-          <figure class="w-100 q-ma-none row text">
+          <figure class="ets-w-100 q-ma-none row text">
             <div class="text-weight-bold text-h5">
               Escape the Studies is an <a href="https://opensource.org/osd">Open-Source</a> Platform
               for learning in style.
@@ -169,9 +169,9 @@
                 Distribution barely cross your mind ever again.
               </div>
             </div>
-            <!--Chapter 1-->
+            <!--Chapter 1 End-->
             <!--Image-->
-            <figure class="w-100 q-ma-none q-mt-lg row text">
+            <figure class="ets-w-100 q-ma-none q-mt-lg row">
               <q-img src="images/mathe_meme.png" />
               <figcaption class="text-weight-light text-italic w-90 q-mt-xs">
                 - HTL Wien West Deluxe Memes
@@ -193,10 +193,10 @@
                 enjoy it.
               </div>
               <div class="text-h6 text-weight-regular text-italic q-my-md">
-                <a class="disabled">So join us on our little journey! </a>
+                <a class="ets-disabled">So join us on our little journey! </a>
               </div>
             </div>
-            <!--Chapter 2-->
+            <!--Chapter 2 End-->
           </div>
           <!--What is EtS Body End-->
         </div>
@@ -206,15 +206,15 @@
         <div class="q-my-lg">
           <!--Bubble Caption-->
           <div class="row justify-center items-center q-mt-lg">
-            <div id="yourlittlejourney" class="chat-bubble">
-              <et-s-chat-nav colortype="dark" direction="right" class="q-pa-md q-mb-lg"
-                ><span class="ets-header">Your little journey begins here.</span></et-s-chat-nav
+            <div id="yourlittlejourney" class="ets-chat-bubble">
+              <EtSChatNav colortype="dark" direction="right" class="q-pa-md q-mb-lg"
+                ><span class="ets-header">Your little journey begins here.</span></EtSChatNav
               >
             </div>
           </div>
           <!--Bubble Caption End-->
           <!--Caption-->
-          <div class="row text">
+          <div class="row">
             <div class="text-weight-bold text-h5">
               Escape the Studies is a
               <a href="https://www.linguee.de/englisch-deutsch/uebersetzung/free+to+use.html"
@@ -226,14 +226,14 @@
           <!--Caption End-->
           <!--Your little journey begins here Body-->
           <div class="row q-mt-lg">
-            <!--Chapter 1-->
+            <!--Chapter 3-->
             <div>
               <!--Q1-->
               <div>
                 <div class="text-h6 text-italic q-my-md">Already have an Account?</div>
                 <div class="text-h6 text-weight-regular q-my-md">
                   Go straight to our hand-picked Selection of Courses and enjoy the fantastic world
-                  of read-learn and <a class="disabled">Play!</a>
+                  of read-learn and <a class="ets-disabled">Play!</a>
                 </div>
               </div>
               <!--Q1 End-->
@@ -242,7 +242,7 @@
                 <div class="text-h6 text-italic q-my-md">New as a Study-Adventurer?</div>
                 <div class="text-h6 text-weight-regular q-my-md">
                   Don't worry. Everyone begins without an Account one day. So choose your Class
-                  (Google Account) wisely and <a class="disabled">get started!</a>
+                  (Google Account) wisely and <a class="ets-disabled">get started!</a>
                 </div>
               </div>
               <!--Q2 End-->
@@ -263,15 +263,15 @@
                 </div>
                 <div div class="text-h6 text-weight-regular q-my-md">
                   Hello!?!? You still here!? Oh you are? Fantastic! I see great potential in you. So
-                  better <a class="disabled">sign up</a> now and give me my well owned Bonus!
+                  better <a class="ets-disabled">sign up</a> now and give me my well owned Bonus!
                 </div>
                 <div div class="text-h6 text-weight-regular q-my-md">
                   Happy now? See that happens if you leave me without a script and five minutes to
                   spare. I maybe have highlighted it three times already, but if you still haven't
-                  done it: <a class="disabled">Sign up here!</a>
+                  done it: <a class="ets-disabled">Sign up here!</a>
                 </div>
                 <!--Figcaption Author-sama-->
-                <figure class="w-100 q-ma-none row text">
+                <figure class="ets-w-100 q-ma-none row text">
                   <figcaption class="text-weight-light text-italic w-90">
                     - Thanks ~your Author-sama
                   </figcaption>
@@ -280,7 +280,7 @@
               </div>
               <!--Q3 End-->
             </div>
-            <!--Chapter 1-->
+            <!--Chapter 3 End-->
           </div>
           <!--Your little journey begins here Body End-->
         </div>
@@ -290,37 +290,38 @@
         <div class="q-my-lg">
           <!--Bubble Caption-->
           <div class="row justify-center items-center q-mt-lg">
-            <div id="continue" class="chat-bubble">
-              <et-s-chat-nav colortype="dark" direction="right" class="q-pa-md q-mb-lg"
-                ><span class="ets-header">How will we continue?</span></et-s-chat-nav
+            <div id="continue" class="ets-chat-bubble">
+              <EtSChatNav colortype="dark" direction="right" class="q-pa-md q-mb-lg"
+                ><span class="ets-header">How will we continue?</span></EtSChatNav
               >
             </div>
           </div>
           <!--Bubble Caption End-->
           <!--Caption-->
-          <figure class="w-100 q-ma-none row text">
+          <figure class="ets-w-100 q-ma-none row text">
             <div class="text-weight-bold text-h5">Escape the Studies has a future… I guess.</div>
             <figcaption class="text-weight-light text-italic w-90 q-mt-xs">- idk</figcaption>
           </figure>
           <!--Caption End-->
           <!--How will we continue Body-->
           <div class="row q-mt-lg">
-            <!--Chapter 1-->
+            <!--Chapter 4-->
             <div>
               <div class="text-h6 text-weight-regular q-my-md">
                 We are still just a diploma Project after all. So maybe we will continue on and
-                maybe we won't. But don't worry. Our great <a class="disabled">Documentations</a>,
+                maybe we won't. But don't worry. Our great
+                <a class="ets-disabled">Documentations</a>,
                 <a href="https://github.com/hochstegerL03/EscapeTheStudies">Source-Code</a> and
-                <a class="disabled">Course</a> will continue on!
+                <a class="ets-disabled">Course</a> will continue on!
               </div>
               <div class="text-h6 text-weight-regular q-my-md">
-                We even got a small <a class="disabled">Checklist</a> with things to do for our
+                We even got a small <a class="ets-disabled">Checklist</a> with things to do for our
                 future selfs or replacements:
               </div>
               <div class="text-center text-h6 text-mono text-weight-light q-my-lg">
                 Imagine an inserted Checklist
               </div>
-              <figure class="w-100 q-ma-none">
+              <figure class="ets-w-100 q-ma-none">
                 <div class="text-h6 text-weight-regular q-mt-md">
                   Puhh, we are finally done here. Let's grab a Cookie or two and make a
                   well-deserved break.
@@ -330,7 +331,7 @@
                 </figcaption>
               </figure>
             </div>
-            <!--Chapter 1-->
+            <!--Chapter 4 End-->
           </div>
         </div>
         <!--How will we continue End-->
@@ -351,20 +352,15 @@
   height: 35vh;
 }
 
-
-
-.chat-bubble {
-  width: 100%;
-}
-
-.textbanner {
-  height: 35vh;
-}
-
 .ets-news-flex {
   width: 100%;
 }
-.bannernews {
+
+.ets-chat-bubble {
+  width: 100%;
+}
+
+.ets-news-rounded {
   border-radius: 15px;
 }
 .ets-news-info {
@@ -374,9 +370,6 @@
   width: 100%;
   height: 100%;
   position: relative;
-}
-.placeholder {
-  background-color: $accent;
 }
 
 .ets-lightbar {
@@ -415,12 +408,8 @@
   width: 96%;
 }
 
-.h-100 {
+.ets-h-100 {
   height: 100%;
-}
-
-.header-30 {
-  height: 6.5vh;
 }
 
 .ets-bar-wrapper {
