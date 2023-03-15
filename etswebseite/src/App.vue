@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHr lpR ffr">
+  <q-layout view="hHr lpR ffr" >
     <q-header reveal class="bg-white text-black" height-hint="98">
       <q-toolbar>
         <!--Navbar used for the Main Navigation -->
@@ -86,6 +86,25 @@ function toggleRightDrawer() {
 </script>
 <style lang="scss" scoped></style>
 <style lang="scss">
+// Überarbeitet
+
+.ets-underline {
+  text-decoration: underline;
+}
+
+.ets-container {
+  max-width: 1024px;
+  background-color: white;
+}
+
+.ets-button-menu {
+  background-color: $secondary;
+  color: white;
+  height: 8vh;
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');

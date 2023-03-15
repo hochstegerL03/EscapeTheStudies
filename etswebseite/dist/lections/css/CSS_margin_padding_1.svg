@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 437.35 179.29">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Roboto-MediumItalic, Roboto;
+        font-size: 16.03px;
+        font-style: italic;
+        font-weight: 500;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #006d77;
+      }
+
+      .cls-3 {
+        fill: #edf6f9;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #ffddd2;
+      }
+
+      .cls-6, .cls-2, .cls-5 {
+        font-family: ReemKufi-Bold, 'Reem Kufi';
+        font-size: 24.66px;
+        font-weight: 700;
+        opacity: .96;
+      }
+
+      .cls-6, .cls-7 {
+        fill: #83c5be;
+      }
+
+      .cls-8 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-7 {
+        stroke: #006d77;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect class="cls-4" y=".31" width="319.11" height="178.99"/>
+      <rect class="cls-7" x="54.55" y="34.8" width="210" height="110"/>
+      <g>
+        <rect class="cls-3" x="120.06" y="69.11" width="78.98" height="41.37"/>
+        <text class="cls-1" transform="translate(146.2 94.48)"><tspan class="cls-8" x="0" y="0">Y</tspan><tspan x="9.05" y="0">ou</tspan></text>
+      </g>
+      <text class="cls-6" transform="translate(338.48 56.52)"><tspan x="0" y="0">Padding</tspan></text>
+      <text class="cls-5" transform="translate(338.48 21.41)"><tspan x="0" y="0">Ma</tspan><tspan class="cls-9" x="38.52" y="0">r</tspan><tspan x="48.14" y="0">gin</tspan></text>
+      <text class="cls-2" transform="translate(338.48 91.98)"><tspan x="0" y="0">Bo</tspan><tspan class="cls-9" x="30.04" y="0">r</tspan><tspan x="39.66" y="0">der</tspan></text>
+    </g>
+  </g>
+</svg>

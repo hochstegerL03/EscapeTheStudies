@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 415 580.12">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Roboto-MediumItalic, Roboto;
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 500;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-linejoin: round;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-linecap: round;
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        stroke: #006d77;
+        stroke-width: 8px;
+      }
+
+      .cls-2, .cls-7 {
+        fill: #e29578;
+      }
+
+      .cls-8, .cls-5 {
+        fill: #ffddd2;
+      }
+
+      .cls-3, .cls-4, .cls-6 {
+        fill: none;
+      }
+
+      .cls-9 {
+        fill: #83c5be;
+      }
+
+      .cls-4, .cls-6 {
+        stroke: #000;
+        stroke-width: 3px;
+      }
+
+      .cls-10 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-6 {
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <g>
+          <g>
+            <rect class="cls-5" x="7.88" y="74.71" width="98.5" height="98.5"/>
+            <circle cx="32.53" cy="116.06" r="5.16"/>
+            <circle cx="79.27" cy="105.37" r="5.16"/>
+            <path class="cls-6" d="m49.88,123.71c.22.38,7.26,4.56,12.71,3.5,5.29-1.03,9.11-6.98,9.29-7.5"/>
+            <g>
+              <rect class="cls-7" x="87.91" y="110" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(213.59 183.27) rotate(158.06)"/>
+              <rect class="cls-7" x="84.73" y="110.89" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(202.4 194.51) rotate(162.07)"/>
+              <rect class="cls-7" x="81.88" y="111.82" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(197.12 197.19) rotate(162.07)"/>
+            </g>
+            <g>
+              <rect class="cls-7" x="34.07" y="124.64" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(115.3 231.59) rotate(158.06)"/>
+              <rect class="cls-7" x="30.9" y="125.53" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(101.86 239.65) rotate(162.07)"/>
+              <rect class="cls-7" x="28.04" y="126.45" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(96.57 242.33) rotate(162.07)"/>
+            </g>
+          </g>
+          <g>
+            <path class="cls-9" d="m307.13,134.11c.61-1.36,3.88-8.27,11-10.72,6.43-2.21,12.44.45,16,3.57,2.36,2.07,1.98,2.88,4,4.76,6.58,6.14,19.58,5.93,24-1.19,3.3-5.31-.75-10.34,3-17.86,2.22-4.45,6.93-9.3,11-8.34,5.13,1.22,3.32,10.3,11,16.67,3.86,3.21,9.16,4.93,16,7.14,1.65.54,3.04.93,4,1.19v42.87h-96l-4-38.11Z"/>
+            <rect class="cls-3" x="308.19" y="74.71" width="98.5" height="98.5"/>
+            <circle cx="376.04" cy="133.4" r="4.1"/>
+            <circle cx="350.83" cy="148.7" r="4.1"/>
+            <path class="cls-6" d="m362.01,153.64c.23.15,4.66,2.96,9.45.68,4.61-2.19,5.35-7.07,5.4-7.43"/>
+          </g>
+          <g>
+            <path class="cls-7" d="m158.09,132.21c7.02-10.59,11.72-12.53,14.85-12,4.84.82,5.54,7.53,13.86,12,1.31.7,6.02,3.17,11.88,3,10.32-.3,11.92-8.4,22.77-10,5.48-.81,9.87.55,17.82,3,6.81,2.1,12.16,4.83,15.84,7l1.28,37-97.21-.18-1.07-39.82Z"/>
+            <rect class="cls-3" x="157.88" y="74.71" width="98.5" height="98.5"/>
+            <circle cx="235.61" cy="141.81" r="4.1"/>
+            <circle cx="208.4" cy="155.12" r="4.1"/>
+            <path class="cls-4" d="m220.59,157.14c4.11,2.5,9.06,2.05,11.89-.79,2.69-2.7,2.43-6.49,2.38-7.13"/>
+          </g>
+        </g>
+        <text class="cls-1" transform="translate(3.35 44.62)"><tspan x="0" y="0">if (</tspan><tspan class="cls-7" x="28.58" y="0">Sam</tspan><tspan x="75.84" y="0" xml:space="preserve"> &lt;</tspan><tspan class="cls-10" x="93.71" y="0"> </tspan><tspan class="cls-9" x="98.93" y="0">Timmy</tspan><tspan x="171.45" y="0" xml:space="preserve"> &amp;&amp; </tspan><tspan class="cls-8" x="213.28" y="0">Susanne</tspan><tspan x="304.09" y="0" xml:space="preserve"> &gt;</tspan><tspan class="cls-10" x="322.24" y="0"> </tspan><tspan class="cls-9" x="327.46" y="0">Timmy</tspan><tspan x="399.97" y="0">)</tspan></text>
+      </g>
+      <g>
+        <g>
+          <g>
+            <rect class="cls-2" x="7.88" y="274.66" width="98.5" height="98.5"/>
+            <circle cx="32.53" cy="316" r="5.16"/>
+            <circle cx="79.27" cy="305.32" r="5.16"/>
+            <path class="cls-6" d="m49.88,323.66c.22.38,7.26,4.56,12.71,3.5,5.29-1.03,9.11-6.98,9.29-7.5"/>
+            <g>
+              <rect class="cls-8" x="87.91" y="309.95" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(288.31 568.67) rotate(158.06)"/>
+              <rect class="cls-8" x="84.73" y="310.84" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(263.97 584.68) rotate(162.07)"/>
+              <rect class="cls-8" x="81.88" y="311.76" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(258.69 587.37) rotate(162.07)"/>
+            </g>
+            <g>
+              <rect class="cls-8" x="34.07" y="324.59" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(190.01 617) rotate(158.06)"/>
+              <rect class="cls-8" x="30.9" y="325.47" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(163.43 629.82) rotate(162.07)"/>
+              <rect class="cls-8" x="28.04" y="326.4" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(158.15 632.5) rotate(162.07)"/>
+            </g>
+          </g>
+          <g>
+            <path class="cls-8" d="m307.13,334.05c.61-1.36,3.88-8.27,11-10.72,6.43-2.21,12.44.45,16,3.57,2.36,2.07,1.98,2.88,4,4.76,6.58,6.14,19.58,5.93,24-1.19,3.3-5.31-.75-10.34,3-17.86,2.22-4.45,6.93-9.3,11-8.34,5.13,1.22,3.32,10.3,11,16.67,3.86,3.21,9.16,4.93,16,7.14,1.65.54,3.04.93,4,1.19v42.87h-96l-4-38.11Z"/>
+            <rect class="cls-3" x="308.19" y="274.66" width="98.5" height="98.5"/>
+            <circle cx="376.04" cy="333.34" r="4.1"/>
+            <circle cx="350.83" cy="348.65" r="4.1"/>
+            <path class="cls-6" d="m362.01,353.59c.23.15,4.66,2.96,9.45.68,4.61-2.19,5.35-7.07,5.4-7.43"/>
+          </g>
+          <g>
+            <path class="cls-9" d="m158.09,332.16c7.02-10.59,11.72-12.53,14.85-12,4.84.82,5.54,7.53,13.86,12,1.31.7,6.02,3.17,11.88,3,10.32-.3,11.92-8.4,22.77-10,5.48-.81,9.87.55,17.82,3,6.81,2.1,12.16,4.83,15.84,7l1.28,37-97.21-.18-1.07-39.82Z"/>
+            <rect class="cls-3" x="157.88" y="274.66" width="98.5" height="98.5"/>
+            <circle cx="235.61" cy="341.76" r="4.1"/>
+            <circle cx="208.4" cy="355.06" r="4.1"/>
+            <path class="cls-4" d="m220.59,357.09c4.11,2.5,9.06,2.05,11.89-.79,2.69-2.7,2.43-6.49,2.38-7.13"/>
+          </g>
+        </g>
+        <text class="cls-1" transform="translate(21.58 230.98)"><tspan x="0" y="0">else if (</tspan><tspan class="cls-7" x="77.91" y="0">Sam</tspan><tspan x="125.17" y="0" xml:space="preserve"> &gt;</tspan><tspan class="cls-10" x="143.32" y="0"> </tspan><tspan class="cls-9" x="148.54" y="0">Timmy</tspan><tspan x="221.05" y="0" xml:space="preserve"> &amp;&amp; </tspan><tspan class="cls-8" x="262.89" y="0">Susanne</tspan><tspan x="353.7" y="0" xml:space="preserve"> &gt; </tspan><tspan class="cls-9" x="145.51" y="28.8">Timmy</tspan><tspan x="218.02" y="28.8">)</tspan></text>
+      </g>
+      <g>
+        <g>
+          <g>
+            <rect class="cls-2" x="7.88" y="477.62" width="98.5" height="98.5"/>
+            <circle cx="32.53" cy="518.96" r="5.16"/>
+            <circle cx="79.27" cy="508.27" r="5.16"/>
+            <path class="cls-6" d="m49.88,526.62c.22.38,7.26,4.56,12.71,3.5,5.29-1.03,9.11-6.98,9.29-7.5"/>
+            <g>
+              <rect class="cls-8" x="87.91" y="512.91" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(364.15 959.88) rotate(158.06)"/>
+              <rect class="cls-8" x="84.73" y="513.79" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(326.47 980.74) rotate(162.07)"/>
+              <rect class="cls-8" x="81.88" y="514.72" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(321.18 983.42) rotate(162.07)"/>
+            </g>
+            <g>
+              <rect class="cls-8" x="34.07" y="527.54" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(265.85 1008.21) rotate(158.06)"/>
+              <rect class="cls-8" x="30.9" y="528.43" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(225.93 1025.87) rotate(162.07)"/>
+              <rect class="cls-8" x="28.04" y="529.35" width="2.25" height="4.67" rx="1.12" ry="1.12" transform="translate(220.64 1028.56) rotate(162.07)"/>
+            </g>
+          </g>
+          <g>
+            <path class="cls-9" d="m307.13,537.01c.61-1.36,3.88-8.27,11-10.72,6.43-2.21,12.44.45,16,3.57,2.36,2.07,1.98,2.88,4,4.76,6.58,6.14,19.58,5.93,24-1.19,3.3-5.31-.75-10.34,3-17.86,2.22-4.45,6.93-9.3,11-8.34,5.13,1.22,3.32,10.3,11,16.67,3.86,3.21,9.16,4.93,16,7.14,1.65.54,3.04.93,4,1.19v42.87h-96l-4-38.11Z"/>
+            <rect class="cls-3" x="308.19" y="477.62" width="98.5" height="98.5"/>
+            <circle cx="376.04" cy="536.3" r="4.1"/>
+            <circle cx="350.83" cy="551.6" r="4.1"/>
+            <path class="cls-6" d="m362.01,556.55c.23.15,4.66,2.96,9.45.68,4.61-2.19,5.35-7.07,5.4-7.43"/>
+          </g>
+          <g>
+            <path class="cls-8" d="m158.09,535.12c7.02-10.59,11.72-12.53,14.85-12,4.84.82,5.54,7.53,13.86,12,1.31.7,6.02,3.17,11.88,3,10.32-.3,11.92-8.4,22.77-10,5.48-.81,9.87.55,17.82,3,6.81,2.1,12.16,4.83,15.84,7l1.28,37-97.21-.18-1.07-39.82Z"/>
+            <rect class="cls-3" x="157.88" y="477.62" width="98.5" height="98.5"/>
+            <circle cx="235.61" cy="544.71" r="4.1"/>
+            <circle cx="208.4" cy="558.02" r="4.1"/>
+            <path class="cls-4" d="m220.59,560.04c4.11,2.5,9.06,2.05,11.89-.79,2.69-2.7,2.43-6.49,2.38-7.13"/>
+          </g>
+        </g>
+        <text class="cls-1" transform="translate(21.72 433.94)"><tspan x="0" y="0">else if (</tspan><tspan class="cls-7" x="77.91" y="0">Sam</tspan><tspan x="125.17" y="0" xml:space="preserve"> &gt;</tspan><tspan class="cls-10" x="143.32" y="0"> </tspan><tspan class="cls-9" x="148.54" y="0">Timmy</tspan><tspan x="221.05" y="0" xml:space="preserve"> &amp;&amp; </tspan><tspan class="cls-8" x="262.89" y="0">Susanne</tspan><tspan x="353.7" y="0" xml:space="preserve"> &lt; </tspan><tspan class="cls-9" x="145.37" y="28.8">Timmy</tspan><tspan x="217.88" y="28.8">)</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
