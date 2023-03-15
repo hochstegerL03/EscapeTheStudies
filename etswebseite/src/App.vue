@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHr lpR ffr" >
+  <q-layout view="hHr lpR ffr">
     <q-header reveal class="bg-white text-black" height-hint="98">
       <q-toolbar>
         <!--Navbar used for the Main Navigation -->
@@ -88,21 +88,37 @@ function toggleRightDrawer() {
 <style lang="scss">
 // Überarbeitet
 
+//Typografie
+.ets-text {
+  font-family: 'Roboto', sans-serif;
+}
+
+.ets-header {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
 .ets-underline {
   text-decoration: underline;
 }
 
-.ets-container {
-  max-width: 1024px;
-  background-color: white;
-}
-
+//Elements
 .ets-button-menu {
   background-color: $secondary;
   color: white;
   height: 8vh;
   border-radius: 20px 20px 0px 0px;
   width: 100%;
+}
+
+.ets-banner {
+  max-height: 50vh;
+  background-color: $secondary;
+}
+
+.ets-banner-small{
+  max-height: 20vh;
+  background-color: $secondary;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,700&display=swap');
@@ -128,9 +144,7 @@ function toggleRightDrawer() {
   pointer-events: none;
 }
 
-.subheader {
-  font-family: 'Source Sans Pro', sans-serif;
-}
+
 .footer {
   font-size: 0.86rem;
 }
@@ -138,9 +152,6 @@ function toggleRightDrawer() {
   font-family: 'Roboto', sans-serif;
 }
 
-.text {
-  font-family: 'Roboto', sans-serif;
-}
 .text-mono {
   font-family: 'Roboto Mono', monospace;
 }

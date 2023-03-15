@@ -46,7 +46,7 @@
       <div class="w-90 q-mt-md">
         <div class="row justify-center items-center q-mb-md">
           <!--Header-->
-          <div class="col-12 text-center subheader text-h5 text-weight-bolder">Just an Act:</div>
+          <div class="col-12 text-center ets-header text-h5 text-weight-bolder">Just an Act:</div>
           <!--Header End-->
           <!--Description-->
           <div class="w-90">
@@ -65,7 +65,7 @@
           <div class="w-100 q-pt-md">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
-                <div class="subheader text-h6 text-weight-bold q-my-sm q-mx-md">
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
                   Chapter 1: Spectator
                 </div>
               </div>
@@ -79,7 +79,7 @@
           <div class="w-100 q-pt-md">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
-                <div class="subheader text-h6 text-weight-bold q-my-sm q-mx-md">
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
                   Chapter 2: The Act
                 </div>
               </div>
@@ -89,7 +89,7 @@
           <div class="w-100 q-pt-md disabled">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
-                <div class="subheader text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
                   Chapter 3: Another Promise
                 </div>
               </div>
@@ -99,7 +99,7 @@
           <div class="w-100 q-pt-md disabled">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
-                <div class="subheader text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
                   Chapter 4: Over the Watch
                 </div>
               </div>
@@ -109,7 +109,7 @@
           <div class="w-100 q-pt-md disabled">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
-                <div class="subheader text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
                   Chapter 5: Another Sky
                 </div>
               </div>
@@ -119,7 +119,7 @@
           <div class="w-100 q-pt-md">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
-                <div class="subheader text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
                   Chapter 6: Closed Doors
                 </div>
               </div>
@@ -135,8 +135,8 @@
       <!--Buttons-->
       <div class="funnybtn w-100 row justify-center items-center q-mt-xl">
         <router-link to="/courses" class="col-6 text-white">
-          <div class="text-center subheader text-h6 text-weight-bold">Give Up</div>
-          <div class="text-center subheader text-body2 text-italic">or go Home</div>
+          <div class="text-center ets-header text-h6 text-weight-bold">Give Up</div>
+          <div class="text-center ets-header text-body2 text-italic">or go Home</div>
         </router-link>
       </div>
       <!--Buttons End-->

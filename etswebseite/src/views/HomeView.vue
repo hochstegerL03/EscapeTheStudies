@@ -3,7 +3,7 @@
     <!--Header-->
     <div>
       <!--Default Banner. Can be modified -->
-      <q-img class="q-mb-md bannerlong" src="images/home_gears_banner.jpg"></q-img>
+      <q-img class="q-mb-md ets-banner-small" src="images/home_gears_banner.jpg"></q-img>
       <!--Banner End-->
       <!--Infos-->
       <et-s-header
@@ -13,11 +13,7 @@
       ></et-s-header>
       <!--Infos Ende-->
       <!--OnePage Menu-->
-      <q-tabs align="justify" class="subheader text-weight-bolder">
-        <q-route-tab to="/" label="Home" />
-        <q-route-tab to="/courses" label="Courses" />
-        <q-route-tab to="/about" label="About us" />
-      </q-tabs>
+      <OnPageMenu></OnPageMenu>
       <!--OnePage Menu End-->
     </div>
     <!--Header End-->
@@ -28,7 +24,7 @@
         <div class="text-center text-body1 q-mb-sm text-grey">Current Status: Closed Alpha</div>
         <div class="text-center text-body2 text-italic q-mb-md text-grey">
           Eine kleine Demo finden Sie
-          <router-link class="q-mt-md text-body1 text text-weight-medium" to="/chapter">
+          <router-link class="q-mt-md text-body2 text-weight-medium" to="/chapter">
             <a>hier!</a>
           </router-link>
         </div>
@@ -53,7 +49,7 @@
                       <div class="lightbar">
                         <div class="flex items-center justify-center h-100">
                           <div
-                            class="text-white text-center q-pb-xs subheader text-weight-bold text-h6"
+                            class="text-white text-center q-pb-xs ets-header text-weight-bold text-h6"
                           >
                             HTML, JavaScript
                           </div>
@@ -63,7 +59,7 @@
                         <div class="flex items-center justify-end h-100">
                           <div class="darkbarcontent">
                             <span
-                              class="text-white text-left subheader text-weight-bold text-italic text-h5"
+                              class="text-white text-left ets-header text-weight-bold text-italic text-h5"
                               >...</span
                             >
                           </div>
@@ -73,7 +69,7 @@
                   </div>
                   <div class="col-3">
                     <span
-                      class="text-primary float-right fitbanner text-center subheader text-weight-bolder text-h5"
+                      class="text-primary float-right fitbanner text-center ets-header text-weight-bolder text-h5"
                       >New!</span
                     >
                   </div>
@@ -91,7 +87,7 @@
                   <div class="row items-start justify-center h-100">
                     <div class="infobar col-3">
                       <div class="row items-center justify-center h-100">
-                        <div class="text-white q-pb-xs subheader text-weight-bold text-h6">
+                        <div class="text-white q-pb-xs ets-header text-weight-bold text-h6">
                           Info
                         </div>
                       </div>
@@ -123,13 +119,13 @@
               colortype="dark"
               direction="right"
               class="q-pa-md q-mb-lg"
-              ><span class="subheader">What is EtS?</span></et-s-chat-nav
+              ><span class="ets-header">What is EtS?</span></et-s-chat-nav
             >
             <et-s-chat-nav @click="scrolltovertically('yourlittlejourney')" class="q-pa-md q-my-lg"
-              ><span class="subheader">Your little journey begins here.</span></et-s-chat-nav
+              ><span class="ets-header">Your little journey begins here.</span></et-s-chat-nav
             >
             <et-s-chat-nav @click="scrolltovertically('continue')" class="q-pa-md q-mt-lg"
-              ><span class="subheader">How will we continue?</span></et-s-chat-nav
+              ><span class="ets-header">How will we continue?</span></et-s-chat-nav
             >
           </div>
         </div>
@@ -141,7 +137,7 @@
           <div class="row justify-center items-center q-mt-lg">
             <div id="whatisets" class="chat-bubble">
               <et-s-chat-nav colortype="dark" direction="right" class="q-pa-md q-mb-lg"
-                ><span class="subheader">What is EtS?</span></et-s-chat-nav
+                ><span class="ets-header">What is EtS?</span></et-s-chat-nav
               >
             </div>
           </div>
@@ -212,7 +208,7 @@
           <div class="row justify-center items-center q-mt-lg">
             <div id="yourlittlejourney" class="chat-bubble">
               <et-s-chat-nav colortype="dark" direction="right" class="q-pa-md q-mb-lg"
-                ><span class="subheader">Your little journey begins here.</span></et-s-chat-nav
+                ><span class="ets-header">Your little journey begins here.</span></et-s-chat-nav
               >
             </div>
           </div>
@@ -296,7 +292,7 @@
           <div class="row justify-center items-center q-mt-lg">
             <div id="continue" class="chat-bubble">
               <et-s-chat-nav colortype="dark" direction="right" class="q-pa-md q-mb-lg"
-                ><span class="subheader">How will we continue?</span></et-s-chat-nav
+                ><span class="ets-header">How will we continue?</span></et-s-chat-nav
               >
             </div>
           </div>
@@ -434,12 +430,11 @@
   position: relative;
   height: 100%;
 }
-
-
 </style>
 <script setup>
 import EtSChatNav from '../components/EtSChatNav.vue';
 import EtSHeader from '../components/EtSHeader.vue';
+import OnPageMenu from '../components/OnPageMenu.vue';
 import { scroll } from 'quasar';
 const { getScrollTarget, setVerticalScrollPosition } = scroll;
 

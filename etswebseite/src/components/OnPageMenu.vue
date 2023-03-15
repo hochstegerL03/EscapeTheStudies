@@ -1,9 +1,15 @@
 <template>
-  <q-tabs align="justify" class="subheader text-weight-bolder">
-    <q-route-tab to="/" label="Home" />
-    <q-route-tab to="/courses" label="Courses" />
-    <q-route-tab to="/about" label="About us" />
+  <q-tabs align="justify" class="ets-text text-weight-bold">
+    <q-route-tab to="/" class="ets-text-tab">Home</q-route-tab>
+
+    <q-route-tab to="/courses" class="ets-text-tab">Courses</q-route-tab>
+    <q-route-tab to="/about" class="ets-text-tab">About us</q-route-tab>
   </q-tabs>
 </template>
-<style scoped></style>
+<style scoped>
+.ets-text-tab {
+  font-size: calc(100% + 0.5vw) !important;
+  line-height: calc(200% + 1vw) !important;
+}
+</style>
 <script setup></script>

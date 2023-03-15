@@ -12,7 +12,7 @@
       ></et-s-header>
       <!--Infos Ende-->
       <!--OnePage Menu-->
-      <q-tabs align="justify" class="subheader text-weight-bolder">
+      <q-tabs align="justify" class="ets-header text-weight-bolder">
         <q-route-tab to="/" label="Home" />
         <q-route-tab disable to="/courses" label="Courses" />
         <q-route-tab to="/about" label="About us" />
@@ -29,7 +29,7 @@
           <div class="w-100 q-py-md">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
-                <div class="subheader text-h5 text-weight-bold q-ma-md">Just an Act:</div>
+                <div class="ets-header text-h5 text-weight-bold q-ma-md">Just an Act:</div>
                 <div class="text text-h6 q-ma-md text-weight-light">
                   Learn the Magic of Web-Development!
                 </div>
@@ -43,7 +43,7 @@
           <div class="w-100 q-pt-md">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
-                <div class="subheader text-h6 text-weight-bold q-my-sm q-mx-md">
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
                   Chapter 1: Spectator
                 </div>
               </div>
@@ -57,7 +57,7 @@
           <div class="w-100 q-pt-md">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
-                <div class="subheader text-h6 text-weight-bold q-my-sm q-mx-md">
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
                   Chapter 2: The Act
                 </div>
               </div>
@@ -67,7 +67,7 @@
           <div class="w-100 q-pt-md disabled">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
-                <div class="subheader text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
                   Chapter 3: Another Promise
                 </div>
               </div>
@@ -89,7 +89,7 @@
           <div class="w-100 q-py-md">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
-                <div class="subheader text-h5 text-weight-bold text-italic q-ma-md">
+                <div class="ets-header text-h5 text-weight-bold text-italic q-ma-md">
                   Your Project:
                 </div>
                 <div class="text text-h6 q-ma-md text-weight-regular">
@@ -104,7 +104,7 @@
           <div class="w-100 q-pt-md">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
-                <div class="subheader text-h6 text-weight-bold q-my-sm q-mx-md">Step 1: Login</div>
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">Step 1: Login</div>
               </div>
               <div class="col-4 cardbg-medium cardlection-end">
                 <div class="flex justify-center items-center checkmark">
@@ -116,7 +116,7 @@
           <div class="w-100 q-pt-md">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
-                <div class="subheader text-h6 text-weight-bold q-my-sm q-mx-md">
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
                   Step 2: Contact us
                 </div>
               </div>
@@ -126,7 +126,7 @@
           <div class="w-100 q-pt-md disabled">
             <div class="row justify-center items-center cardlection h-100">
               <div class="col-8 cardbg-light cardlection-start">
-                <div class="subheader text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
                   Step 3: Celebrate
                 </div>
               </div>
@@ -140,7 +140,7 @@
         </div>
         <!--Lection 2 End-->
         <!--Construction-->
-        <div class="text-center subheader text-h4 text-italic q-mb-xl">To be continue...</div>
+        <div class="text-center ets-header text-h4 text-italic q-mb-xl">To be continue...</div>
         <div class="footerspace"></div>
 
         <!--Construction End-->

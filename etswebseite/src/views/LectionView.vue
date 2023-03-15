@@ -764,22 +764,22 @@
         <div class="w-100 row justify-center items-start q-my-xl">
           <div class="col-6">
             <div
-              class="text-center fakebutton text-secondary subheader text-h5 text-weight-bold"
+              class="text-center fakebutton text-secondary ets-header text-h5 text-weight-bold"
               @click="trySub()"
             >
               Check
             </div>
-            <div class="text-center subheader text-grey text-caption text-italic text-weight-light">
+            <div class="text-center ets-header text-grey text-caption text-italic text-weight-light">
               <span v-if="falseQ.length > 0">{{ falseQ.length }} Error/s found.</span>
               <span v-else>0 Errors found.</span>
               <span class="jumperlink">click here!</span>
             </div>
           </div>
-          <div class="col-6 text-center subheader text-h6 text-weight-bold">
-            <div class="text-center text-secondary subheader text-h5 text-weight-bold">
+          <div class="col-6 text-center ets-header text-h6 text-weight-bold">
+            <div class="text-center text-secondary ets-header text-h5 text-weight-bold">
               Go Next!
             </div>
-            <div class="text-center subheader text-grey text-caption text-italic text-weight-light">
+            <div class="text-center ets-header text-grey text-caption text-italic text-weight-light">
               Check your Answers to get a Star
             </div>
           </div>
