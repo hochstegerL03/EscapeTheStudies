@@ -7,27 +7,27 @@
         v-if="showmenu"
         class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
       >
-        <div class="flex items-center justify-center h-100 w-100 fakebutton">t</div>
+        <div class="flex items-center justify-center ets-h-100 w-100 fakebutton">t</div>
       </div>
       <div
         @click="scrolltovertically('lection')"
         v-if="showmenu"
         class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
       >
-        <div class="flex items-center justify-center h-100 w-100 fakebutton">l</div>
+        <div class="flex items-center justify-center ets-h-100 w-100 fakebutton">l</div>
       </div>
       <div
         @click="scrolltovertically('questions')"
         v-if="showmenu"
         class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
       >
-        <div class="flex items-start justify-center h-100 w-100 fakebutton">q</div>
+        <div class="flex items-start justify-center ets-h-100 w-100 fakebutton">q</div>
       </div>
       <div
         @click="showmenu = !showmenu"
         class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
       >
-        <div class="flex items-center justify-center h-100 w-100">i</div>
+        <div class="flex items-center justify-center ets-h-100 w-100">i</div>
       </div>
     </div>
     <!--Menu End-->

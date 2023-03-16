@@ -196,7 +196,7 @@ a:active {
   max-width: 800px;
 }
 
-.h-100 {
+.ets-h-100 {
   height: 100% !important;
 }
 
@@ -217,13 +217,13 @@ a:active {
   height: 100% !important;
 }
 
-.checkmark {
+.ets-font-icon {
   height: 100% !important;
   font-size: 2rem;
   color: white;
 }
 
-.cappeddesc {
+.ets-overflow-scroll {
   white-space: nowrap;
   overflow: auto;
 }

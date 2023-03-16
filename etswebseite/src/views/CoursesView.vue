@@ -23,7 +23,7 @@
         <div class="flex justify-center q-mb-xl">
           <!--Header Lection 1-->
           <div class="ets-w-100 q-py-md">
-            <div class="row justify-center items-center ets-card-lection h-100">
+            <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
                 <div class="ets-header text-h5 text-weight-bold q-ma-md">Just an Act:</div>
                 <div class="text text-h6 q-ma-md text-weight-light">
@@ -37,21 +37,21 @@
           <!--Header Lection 1 End-->
           <!--Lection 1 Chapter Cards-->
           <div class="ets-w-100 q-pt-md">
-            <div class="row justify-center items-center ets-card-lection h-100">
+            <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
                 <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
                   Chapter 1: Spectator
                 </div>
               </div>
               <div class="col-4 bg-secondary ets-card-lection-end">
-                <div class="flex justify-center items-center checkmark">
+                <div class="flex justify-center items-center ets-font-icon">
                   <i class="fa-regular fa-square-check"></i>
                 </div>
               </div>
             </div>
           </div>
           <div class="ets-w-100 q-pt-md">
-            <div class="row justify-center items-center ets-card-lection h-100">
+            <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
                 <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
                   Chapter 2: The Act
@@ -61,9 +61,11 @@
             </div>
           </div>
           <div class="ets-w-100 q-pt-md disabled">
-            <div class="row justify-center items-center ets-card-lection h-100">
+            <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
-                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
+                <div
+                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
+                >
                   Chapter 3: Another Promise
                 </div>
               </div>
@@ -72,7 +74,7 @@
           </div>
           <!--Lection 1 Chapter Cards End-->
           <!--Lection 1 Link-->
-          <router-link class="q-mt-md text-body1 text text-weight-medium" to="/cooverview">
+          <router-link class="q-mt-md text-body1 ets-text text-weight-medium" to="/cooverview">
             <a>See more</a>
           </router-link>
 
@@ -83,7 +85,7 @@
         <div class="flex justify-center q-mb-xl disabled">
           <!--Header Lection 2-->
           <div class="ets-w-100 q-py-md">
-            <div class="row justify-center items-center ets-card-lection h-100">
+            <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
                 <div class="ets-header text-h5 text-weight-bold text-italic q-ma-md">
                   Your Project:
@@ -98,19 +100,19 @@
           <!--Header Lection 2 End-->
           <!--Lection 2 Chapter Cards-->
           <div class="ets-w-100 q-pt-md">
-            <div class="row justify-center items-center ets-card-lection h-100">
+            <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
                 <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">Step 1: Login</div>
               </div>
               <div class="col-4 bg-secondary ets-card-lection-end">
-                <div class="flex justify-center items-center checkmark">
+                <div class="flex justify-center items-center ets-font-icon">
                   <i class="fa-regular fa-square-check"></i>
                 </div>
               </div>
             </div>
           </div>
           <div class="ets-w-100 q-pt-md">
-            <div class="row justify-center items-center ets-card-lection h-100">
+            <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
                 <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
                   Step 2: Contact us
@@ -120,9 +122,11 @@
             </div>
           </div>
           <div class="ets-w-100 q-pt-md disabled">
-            <div class="row justify-center items-center ets-card-lection h-100">
+            <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
-                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
+                <div
+                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
+                >
                   Step 3: Celebrate
                 </div>
               </div>
@@ -137,7 +141,6 @@
         <!--Lection 2 End-->
         <!--Construction-->
         <div class="text-center ets-header text-h4 text-italic q-mb-xl">To be continue...</div>
-        <div class="footerspace"></div>
 
         <!--Construction End-->
       </div>
@@ -146,11 +149,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-.footerspace {
-  height: 10vh !important;
-}
-</style>
+<style lang="scss" scoped></style>
 <script setup>
 import EtSHeader from '../components/EtSHeader.vue';
 import OnPageMenu from '../components/OnPageMenu.vue';

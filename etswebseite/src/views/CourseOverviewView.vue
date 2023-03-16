@@ -2,8 +2,8 @@
   <div>
     <div>
       <div class="header q-mt-md">
-        <div class="headeroverlay h-100">
-          <div class="flex justify-center items-center h-100">
+        <div class="headeroverlay ets-h-100">
+          <div class="flex justify-center items-center ets-h-100">
             <div class="shadowbox">
               <div class="text-white text-h4 text-weight-bolder">Just an Act</div>
             </div>
@@ -21,20 +21,20 @@
         <div class="scrollbar">
           <div class="row no-wrap inline items-center q-my-sm">
             <div class="tagbox q-mx-sm">
-              <div class="flex items-center justify-center h-100 text-h6 text-center text">
+              <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">
                 HTML
               </div>
             </div>
             <div class="tagbox q-mx-sm">
-              <div class="flex items-center justify-center h-100 text-h6 text-center text">
+              <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">
                 JavaScript
               </div>
             </div>
             <div class="tagbox q-mx-sm">
-              <div class="flex items-center justify-center h-100 text-h6 text-center text">Vue</div>
+              <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">Vue</div>
             </div>
             <div class="tagbox q-mx-sm">
-              <div class="flex items-center justify-center h-100 text-h6 text-center text">
+              <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">
                 Bootstrap
               </div>
             </div>
@@ -63,7 +63,7 @@
         <div class="flex justify-center q-mb-xl">
           <!--Chapters-->
           <div class="w-100 q-pt-md">
-            <div class="row justify-center items-center cardlection h-100">
+            <div class="row justify-center items-center cardlection ets-h-100">
               <div class="col-8 cardbg-light cardlection-start">
                 <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
                   Chapter 1: Spectator
@@ -77,7 +77,7 @@
             </div>
           </div>
           <div class="w-100 q-pt-md">
-            <div class="row justify-center items-center cardlection h-100">
+            <div class="row justify-center items-center cardlection ets-h-100">
               <div class="col-8 cardbg-light cardlection-start">
                 <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
                   Chapter 2: The Act
@@ -87,7 +87,7 @@
             </div>
           </div>
           <div class="w-100 q-pt-md disabled">
-            <div class="row justify-center items-center cardlection h-100">
+            <div class="row justify-center items-center cardlection ets-h-100">
               <div class="col-8 cardbg-light cardlection-start">
                 <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
                   Chapter 3: Another Promise
@@ -97,7 +97,7 @@
             </div>
           </div>
           <div class="w-100 q-pt-md disabled">
-            <div class="row justify-center items-center cardlection h-100">
+            <div class="row justify-center items-center cardlection ets-h-100">
               <div class="col-8 cardbg-light cardlection-start">
                 <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
                   Chapter 4: Over the Watch
@@ -107,7 +107,7 @@
             </div>
           </div>
           <div class="w-100 q-pt-md disabled">
-            <div class="row justify-center items-center cardlection h-100">
+            <div class="row justify-center items-center cardlection ets-h-100">
               <div class="col-8 cardbg-light cardlection-start">
                 <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
                   Chapter 5: Another Sky
@@ -117,7 +117,7 @@
             </div>
           </div>
           <div class="w-100 q-pt-md">
-            <div class="row justify-center items-center cardlection h-100">
+            <div class="row justify-center items-center cardlection ets-h-100">
               <div class="col-8 cardbg-light cardlection-start">
                 <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
                   Chapter 6: Closed Doors

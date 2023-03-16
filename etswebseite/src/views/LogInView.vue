@@ -31,7 +31,7 @@
         <!--Chat Input-->
         <div class="row justify-start items-center q-ma-md q-gutter-sm w-100">
           <div class="col-9 chatinput">
-            <div class="flex items-center justify-center h-100">
+            <div class="flex items-center justify-center ets-h-100">
               <div class="q-mx-md text-center text-mono">Let the Programming begin...</div>
             </div>
           </div>

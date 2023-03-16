@@ -9,7 +9,7 @@
           <div id="news" class="ets-escape-room-container q-py-md">
             <div class="row ets-escape-room-ui-container placeholder">
               <div class="col-2">
-                <div class="flex h-100 justify-center items-center">
+                <div class="flex ets-h-100 justify-center items-center">
                   <img
                     @click="changeRoom('left')"
                     class="w-70 capped"
@@ -19,8 +19,8 @@
               </div>
               <div class="col-8">
                 <!--Escape Room Content-->
-                <main class="w-100 h-100">
-                  <div class="w-100 h-100">
+                <main class="w-100 ets-h-100">
+                  <div class="w-100 ets-h-100">
                     <div
                       v-for="(slide, index) in slides.filter((ch) => ch.slide == pointer)"
                       :key="index"
@@ -37,7 +37,7 @@
                 <!--Escape Room Content End-->
               </div>
               <div class="col-2">
-                <div class="flex h-100 justify-center items-center">
+                <div class="flex ets-h-100 justify-center items-center">
                   <img
                     @click="changeRoom('right')"
                     class="w-70 capped"
@@ -298,9 +298,7 @@
   width: 96%;
 }
 
-.h-100 {
-  height: 100%;
-}
+
 
 .header-30 {
   height: 6.5vh;
