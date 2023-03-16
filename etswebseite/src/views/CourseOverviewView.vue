@@ -1,24 +1,24 @@
 <template>
   <div>
     <div>
-      <div class="header q-mt-md">
-        <div class="headeroverlay ets-h-100">
+      <div class="ets-preview q-mt-md">
+        <div class="ets-preview-overlay ets-h-100">
           <div class="flex justify-center items-center ets-h-100">
-            <div class="shadowbox">
-              <div class="text-white text-h4 text-weight-bolder">Just an Act</div>
+            <div class="ets-text-shadow">
+              <div class="ets-header text-white text-h4 text-weight-bolder">Just an Act</div>
             </div>
             <div class="text-white absolute-bottom-right q-ma-md">
               <i class="fa-regular fa-star"></i>
             </div>
           </div>
         </div>
-        <img class="headerimg" src="images/just_an_act_placeholder.jpg" />
+        <img class="ets-banner ets-w-100" src="images/just_an_act_placeholder.jpg" />
       </div>
     </div>
     <div class="flex justify-center items-center">
       <!--Scroll Tag Bar-->
-      <div class="w-100">
-        <div class="scrollbar">
+      <div class="ets-w-100">
+        <div class="ets-scrollbar">
           <div class="row no-wrap inline items-center q-my-sm">
             <div class="tagbox q-mx-sm">
               <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">
@@ -31,7 +31,9 @@
               </div>
             </div>
             <div class="tagbox q-mx-sm">
-              <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">Vue</div>
+              <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">
+                Vue
+              </div>
             </div>
             <div class="tagbox q-mx-sm">
               <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">
@@ -144,33 +146,29 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.header {
+.ets-preview {
   width: 100%;
   height: 100%;
   position: relative;
 }
-.headeroverlay {
+.ets-preview-overlay {
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-.headerimg {
-  height: 33vh;
-  width: 100%;
-}
-
-.shadowbox {
+.ets-text-shadow {
   text-shadow: 5px 5px 5px black;
 }
 
-.scrollbar {
+.ets-scrollbar {
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  cursor: grab;
 }
 
-.scrollbar::-webkit-scrollbar {
+.ets-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
@@ -209,7 +207,7 @@ const relativeScroll = ref();
 
 onMounted(() => {
   //get .scrollbar Object
-  scrollbarTags.value = document.querySelector('.scrollbar');
+  scrollbarTags.value = document.querySelector('.ets-scrollbar');
 
   //onMouseMove
   scrollbarTags.value.addEventListener('mousemove', (e) => {
