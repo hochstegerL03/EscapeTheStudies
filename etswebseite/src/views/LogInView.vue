@@ -1,22 +1,19 @@
 <template>
   <div class="flex justify-center">
-    <div class="capped-sm">
+    <div class="ets-max-screen-800">
       <!--Infos-->
-      <et-s-header
+      <EtSHeader
         titel="Welcome"
         content="Discover a World decorated with Code and Style!"
-      ></et-s-header>
+      ></EtSHeader>
       <!--Infos Ende-->
       <!--Image Logo-->
       <div class="flex justify-center items-center q-mt-xl">
-        <q-img class="w-50 q-mt-lg q-mb-md" src="svgs/logo.svg"></q-img>
+        <q-img class="ets-w-50 q-mt-lg q-mb-md" src="svgs/logo.svg"></q-img>
         <!--Chat Nav-->
-        <div class="w-90">
-          <et-s-chat-nav class="q-pa-md q-my-lg"
-            ><span class="titelold">Login with Google</span></et-s-chat-nav
-          >
-          <et-s-chat-nav colortype="dark" direction="right" class="q-pa-md q-mt-lg"
-            ><span class="titelold">Sign Up</span></et-s-chat-nav
+        <div class="ets-w-90">
+          <EtSChatNav class="q-pa-md q-my-lg"
+            ><span class="ets-title">Login with Google</span></EtSChatNav
           >
 
           <!--Guest-->
@@ -29,13 +26,13 @@
         </div>
         <!--Chat Nav-->
         <!--Chat Input-->
-        <div class="row justify-start items-center q-ma-md q-gutter-sm w-100">
-          <div class="col-9 chatinput">
+        <div class="row justify-start items-center q-ma-md q-gutter-sm ets-w-100">
+          <div class="col-9 ets-chat-decoration">
             <div class="flex items-center justify-center ets-h-100">
-              <div class="q-mx-md text-center text-mono">Let the Programming begin...</div>
+              <div class="q-mx-md text-center ets-text-mono">Let the Programming begin...</div>
             </div>
           </div>
-          <div class="col-2 chatinput round"></div>
+          <div class="col-2 ets-chat-decoration ets-round"></div>
         </div>
         <!--Chat Input End-->
       </div>
@@ -44,16 +41,12 @@
   <!--Image Logo End-->
 </template>
 <style lang="scss" scoped>
-.w-50 {
-  width: 50%;
-}
-
-.chatinput {
+.ets-chat-decoration {
   background-color: $accent;
   border-radius: 35px;
   height: 4rem !important;
 }
-.round {
+.ets-round {
   border-radius: 50%;
   width: 4rem !important;
 }

@@ -9,7 +9,7 @@
       <div class="flex items-center justify-center h-100 w-100">
         <textarea
           placeholder="Type here ..."
-          class="text-white text-mono inputbubble text-h6"
+          class="text-white ets-text-mono inputbubble text-h6"
           v-model="showedAnswer"
         ></textarea>
       </div>

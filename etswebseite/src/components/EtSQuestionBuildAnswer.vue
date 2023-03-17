@@ -1,11 +1,6 @@
 <template>
   <div>
-    <!-- <div class="flex justify-center">
-                <div class="w-90 text text-h6 text-weight-regular q-mb-lg">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                  tempor invidunt ut labore et dolore magna aliquyam erat,
-                </div>
-              </div> -->
+
     <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
       ><span class="text text-weight-medium text-h6 text-left">{{
         question.question

@@ -24,39 +24,39 @@
       <!--Close Btn End-->
       <!--Drawer Menu-->
       <div class="row justify-center ets-w-100">
-        <div class="w-80">
-          <div class="text-center q-mb-xl text-h3 titelold">Escape the Studies</div>
+        <div class="ets-w-80">
+          <div class="text-center q-mb-xl text-h3 ets-title">Escape the Studies</div>
           <div>
             <router-link to="/">
-              <et-s-chat-nav colortype="white" class="q-pa-sm q-my-lg titelold"
+              <et-s-chat-nav colortype="white" class="q-pa-sm q-my-lg ets-title"
                 ><span>Home</span></et-s-chat-nav
               >
             </router-link>
           </div>
           <div>
             <router-link to="/courses" class="">
-              <et-s-chat-nav colortype="dark" direction="right" class="q-pa-sm q-my-lg titelold"
+              <et-s-chat-nav colortype="dark" direction="right" class="q-pa-sm q-my-lg ets-title"
                 ><span>Courses</span></et-s-chat-nav
               >
             </router-link>
           </div>
           <div>
             <router-link to="/about">
-              <et-s-chat-nav colortype="white" class="q-pa-sm q-my-lg titelold"
+              <et-s-chat-nav colortype="white" class="q-pa-sm q-my-lg ets-title"
                 ><span>About Us</span></et-s-chat-nav
               >
             </router-link>
           </div>
           <div>
             <router-link disabled to="/sign" class="disabled">
-              <et-s-chat-nav colortype="dark" direction="right" class="q-pa-sm q-my-lg titelold"
+              <et-s-chat-nav colortype="dark" direction="right" class="q-pa-sm q-my-lg ets-title"
                 ><span>Login in</span></et-s-chat-nav
               >
             </router-link>
           </div>
           <div>
             <router-link disabled to="/sign" class="disabled">
-              <et-s-chat-nav colortype="white" class="q-pa-sm q-my-lg titelold"
+              <et-s-chat-nav colortype="white" class="q-pa-sm q-my-lg ets-title"
                 ><span>Sign Up</span></et-s-chat-nav
               >
             </router-link>
@@ -96,9 +96,26 @@ function toggleRightDrawer() {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-
 .ets-underline {
   text-decoration: underline;
+}
+
+.ets-image-capped {
+  max-height: 10rem;
+}
+
+.ets-text-shadow {
+  text-shadow: 5px 5px 5px black;
+}
+
+.ets-lightbar {
+  background-color: $secondary;
+  width: 80%;
+  height: 100%;
+  max-height: 6vh;
+  border-radius: 0vw 15px 15px 15px;
+  z-index: 1;
+  position: relative;
 }
 
 //Elements
@@ -115,7 +132,7 @@ function toggleRightDrawer() {
   background-color: $secondary;
 }
 
-.ets-banner-small{
+.ets-banner-small {
   max-height: 20vh;
   background-color: $secondary;
 }
@@ -128,11 +145,11 @@ function toggleRightDrawer() {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-.titelold {
+.ets-title {
   font-family: 'Lobster', cursive;
 }
 
-.fakebutton {
+.ets-fake-button {
   cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -142,11 +159,16 @@ function toggleRightDrawer() {
   user-select: none;
 }
 
+.placeholder-preview {
+  background-color: $accent;
+  width: 100%;
+  height: 25vh;
+}
+
 .ets-disabled {
   opacity: 0.5;
   pointer-events: none;
 }
-
 
 .footer {
   font-size: 0.86rem;
@@ -155,7 +177,7 @@ function toggleRightDrawer() {
   font-family: 'Roboto', sans-serif;
 }
 
-.text-mono {
+.ets-text-mono {
   font-family: 'Roboto Mono', monospace;
 }
 a {
@@ -185,24 +207,25 @@ a:active {
   width: 90%;
   max-width: 1024px;
 }
-.w-80 {
+.ets-w-80 {
   width: 80% !important;
 }
 .w-70 {
   width: 70% !important;
 }
 
-.capped-sm {
+.ets-w-50 {
+  width: 50% !important;
+}
+
+
+.ets-max-screen-800 {
   max-width: 800px;
 }
 
 .ets-h-100 {
   height: 100% !important;
 }
-
-
-
-
 
 .ets-card-lection {
   border-radius: 15px;
@@ -226,6 +249,9 @@ a:active {
 .ets-overflow-scroll {
   white-space: nowrap;
   overflow: auto;
+}
+.ets-overflow-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 .image {

@@ -372,15 +372,7 @@
   position: relative;
 }
 
-.ets-lightbar {
-  background-color: $secondary;
-  width: 80%;
-  height: 100%;
-  max-height: 6vh;
-  border-radius: 0vw 15px 15px 15px;
-  z-index: 1;
-  position: relative;
-}
+
 
 .ets-news-tag {
   background-color: $secondary;

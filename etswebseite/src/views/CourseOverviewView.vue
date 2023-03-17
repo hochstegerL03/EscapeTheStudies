@@ -20,22 +20,22 @@
       <div class="ets-w-100">
         <div class="ets-scrollbar">
           <div class="row no-wrap inline items-center q-my-sm">
-            <div class="tagbox q-mx-sm">
+            <div class="ets-tag q-mx-sm">
               <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">
                 HTML
               </div>
             </div>
-            <div class="tagbox q-mx-sm">
+            <div class="ets-tag q-mx-sm">
               <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">
                 JavaScript
               </div>
             </div>
-            <div class="tagbox q-mx-sm">
+            <div class="ets-tag q-mx-sm">
               <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">
                 Vue
               </div>
             </div>
-            <div class="tagbox q-mx-sm">
+            <div class="ets-tag q-mx-sm">
               <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">
                 Bootstrap
               </div>
@@ -64,68 +64,80 @@
         <!--Chapter Cards-->
         <div class="flex justify-center q-mb-xl">
           <!--Chapters-->
-          <div class="w-100 q-pt-md">
-            <div class="row justify-center items-center cardlection ets-h-100">
-              <div class="col-8 cardbg-light cardlection-start">
-                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
+          <div class="ets-w-100 q-pt-md">
+            <div class="row justify-center items-center ets-card-lection ets-h-100">
+              <div class="col-8 bg-accent ets-card-lection-start">
+                <div
+                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
+                >
                   Chapter 1: Spectator
                 </div>
               </div>
-              <router-link to="/chapter" class="col-4 cardbg-medium cardlection-end">
-                <div class="flex justify-center items-center checkmark">
+              <router-link to="/chapter" class="col-4 bg-secondary ets-card-lection-end">
+                <div class="flex justify-center items-center ets-font-icon">
                   <i class="fa-regular fa-square-check"></i>
                 </div>
               </router-link>
             </div>
           </div>
-          <div class="w-100 q-pt-md">
-            <div class="row justify-center items-center cardlection ets-h-100">
-              <div class="col-8 cardbg-light cardlection-start">
-                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
+          <div class="ets-w-100 q-pt-md">
+            <div class="row justify-center items-center ets-card-lection ets-h-100">
+              <div class="col-8 bg-accent ets-card-lection-start">
+                <div
+                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
+                >
                   Chapter 2: The Act
                 </div>
               </div>
-              <div class="col-4 cardbg-medium cardlection-end"></div>
+              <div class="col-4 bg-secondary ets-card-lection-end"></div>
             </div>
           </div>
-          <div class="w-100 q-pt-md disabled">
-            <div class="row justify-center items-center cardlection ets-h-100">
-              <div class="col-8 cardbg-light cardlection-start">
-                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
+          <div class="ets-w-100 q-pt-md disabled">
+            <div class="row justify-center items-center ets-card-lection ets-h-100">
+              <div class="col-8 bg-accent ets-card-lection-start">
+                <div
+                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
+                >
                   Chapter 3: Another Promise
                 </div>
               </div>
-              <div class="col-4 cardbg-medium cardlection-end"></div>
+              <div class="col-4 bg-secondary ets-card-lection-end"></div>
             </div>
           </div>
-          <div class="w-100 q-pt-md disabled">
-            <div class="row justify-center items-center cardlection ets-h-100">
-              <div class="col-8 cardbg-light cardlection-start">
-                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
+          <div class="ets-w-100 q-pt-md disabled">
+            <div class="row justify-center items-center ets-card-lection ets-h-100">
+              <div class="col-8 bg-accent ets-card-lection-start">
+                <div
+                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
+                >
                   Chapter 4: Over the Watch
                 </div>
               </div>
-              <div class="col-4 cardbg-medium cardlection-end"></div>
+              <div class="col-4 bg-secondary ets-card-lection-end"></div>
             </div>
           </div>
-          <div class="w-100 q-pt-md disabled">
-            <div class="row justify-center items-center cardlection ets-h-100">
-              <div class="col-8 cardbg-light cardlection-start">
-                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
+          <div class="ets-w-100 q-pt-md disabled">
+            <div class="row justify-center items-center ets-card-lection ets-h-100">
+              <div class="col-8 bg-accent ets-card-lection-start">
+                <div
+                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
+                >
                   Chapter 5: Another Sky
                 </div>
               </div>
-              <div class="col-4 cardbg-medium cardlection-end"></div>
+              <div class="col-4 bg-secondary ets-card-lection-end"></div>
             </div>
           </div>
-          <div class="w-100 q-pt-md">
-            <div class="row justify-center items-center cardlection ets-h-100">
-              <div class="col-8 cardbg-light cardlection-start">
-                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md cappeddesc">
+          <div class="ets-w-100 q-pt-md">
+            <div class="row justify-center items-center ets-card-lection ets-h-100">
+              <div class="col-8 bg-accent ets-card-lection-start">
+                <div
+                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
+                >
                   Chapter 6: Closed Doors
                 </div>
               </div>
-              <router-link to="/escaperoom" class="col-4 cardbg-medium cardlection-end">
+              <router-link to="/escaperoom" class="col-4 bg-secondary ets-card-lection-end">
               </router-link>
             </div>
           </div>
@@ -135,7 +147,7 @@
       </div>
       <!--Body End-->
       <!--Buttons-->
-      <div class="funnybtn w-100 row justify-center items-center q-mt-xl">
+      <div class="ets-button-menu ets-w-100 row justify-center items-center q-mt-xl">
         <router-link to="/courses" class="col-6 text-white">
           <div class="text-center ets-header text-h6 text-weight-bold">Give Up</div>
           <div class="text-center ets-header text-body2 text-italic">or go Home</div>
@@ -157,10 +169,6 @@
   position: absolute;
 }
 
-.ets-text-shadow {
-  text-shadow: 5px 5px 5px black;
-}
-
 .ets-scrollbar {
   overflow: auto;
   -ms-overflow-style: none;
@@ -172,7 +180,7 @@
   display: none;
 }
 
-.tagbox {
+.ets-tag {
   background-color: $secondary;
   width: 40vw;
   min-height: 20px;
@@ -180,13 +188,6 @@
   max-height: 50px;
   border-radius: 20px;
   color: white;
-}
-
-.funnybtn {
-  background-color: $secondary;
-  color: white;
-  height: 8vh;
-  border-radius: 20px 20px 0px 0px;
 }
 </style>
 <script setup>

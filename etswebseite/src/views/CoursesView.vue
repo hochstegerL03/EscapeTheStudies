@@ -39,7 +39,7 @@
           <div class="ets-w-100 q-pt-md">
             <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
-                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll">
                   Chapter 1: Spectator
                 </div>
               </div>
@@ -53,7 +53,7 @@
           <div class="ets-w-100 q-pt-md">
             <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
-                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll">
                   Chapter 2: The Act
                 </div>
               </div>
@@ -102,7 +102,7 @@
           <div class="ets-w-100 q-pt-md">
             <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
-                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">Step 1: Login</div>
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll">Step 1: Login</div>
               </div>
               <div class="col-4 bg-secondary ets-card-lection-end">
                 <div class="flex justify-center items-center ets-font-icon">
@@ -114,7 +114,7 @@
           <div class="ets-w-100 q-pt-md">
             <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
-                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md">
+                <div class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll">
                   Step 2: Contact us
                 </div>
               </div>

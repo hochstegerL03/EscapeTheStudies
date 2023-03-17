@@ -1,31 +1,31 @@
 <template>
   <div>
     <!--Menu-->
-    <div class="fixed-bottom-right absolutetop">
+    <div class="fixed-bottom-right ets-absolute-top">
       <div
         @click="scrolltovertically('text')"
         v-if="showmenu"
-        class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
+        class="ets-bubble-menu ets-title text-h3 q-my-md q-mx-lg text-white text-center"
       >
-        <div class="flex items-center justify-center ets-h-100 w-100 fakebutton">t</div>
+        <div class="flex items-center justify-center ets-h-100 w-100 ets-fake-button">t</div>
       </div>
       <div
         @click="scrolltovertically('lection')"
         v-if="showmenu"
-        class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
+        class="ets-bubble-menu ets-title text-h3 q-my-md q-mx-lg text-white text-center"
       >
-        <div class="flex items-center justify-center ets-h-100 w-100 fakebutton">l</div>
+        <div class="flex items-center justify-center ets-h-100 w-100 ets-fake-button">l</div>
       </div>
       <div
         @click="scrolltovertically('questions')"
         v-if="showmenu"
-        class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
+        class="ets-bubble-menu ets-title text-h3 q-my-md q-mx-lg text-white text-center"
       >
-        <div class="flex items-start justify-center ets-h-100 w-100 fakebutton">q</div>
+        <div class="flex items-start justify-center ets-h-100 w-100 ets-fake-button">q</div>
       </div>
       <div
         @click="showmenu = !showmenu"
-        class="menustatic titelold text-h3 q-my-md q-mx-lg text-white text-center"
+        class="ets-bubble-menu ets-title text-h3 q-my-md q-mx-lg text-white text-center"
       >
         <div class="flex items-center justify-center ets-h-100 w-100">i</div>
       </div>
@@ -36,7 +36,7 @@
     <div id="text" class="flex justify-center">
       <!--Body/Text-->
 
-      <div class="w-80">
+      <div class="ets-w-80">
         <!--Header-->
         <div class="text text-h4 text-weight-regular q-my-md">ER</div>
         <!--Header End-->
@@ -85,7 +85,7 @@
     <!--Part 2: Notes-->
     <div id="lection" class="flex justify-center">
       <!--Body/Text-->
-      <div class="w-80">
+      <div class="ets-w-80">
         <!--Header-->
         <div class="text text-h4 text-weight-regular q-mt-lg">Was ist JavaScript</div>
         <figcaption class="text-weight-light text-italic q-mt-xs q-mb-lg">
@@ -150,7 +150,7 @@
           </div>
           <div class="text text-h6 text-weight-bold q-my-md">Let:</div>
           <div class="w-100 flex justify-center">
-            <img src="lections/javascript/JavaScript_var_let_1.svg" class="q-my-lg image" />
+            <q-img src="lections/javascript/JavaScript_var_let_1.svg" class="q-my-lg image" />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
             Let ist der moderne Bruder oder die moderne Schwester von Var. Keine Sorge, zu dieser
@@ -724,7 +724,7 @@
     <!--Part 3: Questions-->
     <div id="questions" class="flex justify-center">
       <!--Body/Text-->
-      <div class="w-80">
+      <div class="ets-w-80">
         <!--Header-->
         <div>
           <div class="text text-h4 text-weight-regular q-my-md">Basics</div>
@@ -764,22 +764,26 @@
         <div class="w-100 row justify-center items-start q-my-xl">
           <div class="col-6">
             <div
-              class="text-center fakebutton text-secondary ets-header text-h5 text-weight-bold"
+              class="text-center ets-fake-button text-secondary ets-header text-h5 text-weight-bold"
               @click="trySub()"
             >
               Check
             </div>
-            <div class="text-center ets-header text-grey text-caption text-italic text-weight-light">
+            <div
+              class="text-center ets-header text-grey text-caption text-italic text-weight-light"
+            >
               <span v-if="falseQ.length > 0">{{ falseQ.length }} Error/s found.</span>
               <span v-else>0 Errors found.</span>
-              <span class="jumperlink">click here!</span>
+              <span class="ets-underline">click here!</span>
             </div>
           </div>
           <div class="col-6 text-center ets-header text-h6 text-weight-bold">
             <div class="text-center text-secondary ets-header text-h5 text-weight-bold">
               Go Next!
             </div>
-            <div class="text-center ets-header text-grey text-caption text-italic text-weight-light">
+            <div
+              class="text-center ets-header text-grey text-caption text-italic text-weight-light"
+            >
               Check your Answers to get a Star
             </div>
           </div>
@@ -792,29 +796,17 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.absolutetop {
+.ets-absolute-top {
   z-index: 999;
 }
-.menustatic {
+.ets-bubble-menu {
   background-color: $secondary;
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
 }
-.fakebutton {
-  cursor: pointer;
-}
 
-.jumperlink {
-  text-decoration: underline;
-}
 
-.image {
-  width: 100%;
-}
-.image-long {
-  max-height: 10rem;
-}
 </style>
 <script setup>
 import EtSQuestionMutlipleChoice from '../components/EtSQuestionMutlipleChoice.vue';
@@ -951,7 +943,6 @@ const questions = ref([
 ]);
 
 function changeAnswer(answer, id) {
-  console.log(answer);
   questions.value[questions.value.findIndex((el) => el.id == id)].showedAnswer = answer;
 }
 
