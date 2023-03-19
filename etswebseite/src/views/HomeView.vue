@@ -172,7 +172,9 @@
             <!--Chapter 1 End-->
             <!--Image-->
             <figure class="ets-w-100 q-ma-none q-mt-lg row">
-              <q-img src="images/mathe_meme.png" />
+              <q-img
+                src="https://qyiwkgwvtdxnsowzibpm.supabase.co/storage/v1/object/public/pictures/images/mathe_meme.png?t=2023-03-19T11%3A46%3A10.405Z "
+              />
               <figcaption class="text-weight-light text-italic ets-w-90 q-mt-xs">
                 - HTL Wien West Deluxe Memes
               </figcaption>
@@ -337,7 +339,9 @@
         <!--How will we continue End-->
         <!--Cookie-->
         <div class="row justify-center q-mb-lg">
-          <q-img src="images/cookie_coffee.png" />
+          <q-img
+            src="https://qyiwkgwvtdxnsowzibpm.supabase.co/storage/v1/object/public/pictures/images/cookie_coffee.png?t=2023-03-19T11%3A45%3A30.523Z"
+          />
         </div>
         <!--Cookie End-->
       </div>
@@ -371,8 +375,6 @@
   height: 100%;
   position: relative;
 }
-
-
 
 .ets-news-tag {
   background-color: $secondary;
