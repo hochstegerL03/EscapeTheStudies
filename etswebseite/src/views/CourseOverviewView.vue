@@ -12,7 +12,10 @@
             </div>
           </div>
         </div>
-        <img class="ets-banner ets-w-100" src="images/just_an_act_placeholder.jpg" />
+        <img
+          class="ets-banner ets-w-100"
+          src="https://qyiwkgwvtdxnsowzibpm.supabase.co/storage/v1/object/public/pictures/images/just_an_act_placeholder.jpg?t=2023-03-19T11%3A46%3A07.321Z"
+        />
       </div>
     </div>
     <div class="flex justify-center items-center">

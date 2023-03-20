@@ -15,6 +15,7 @@
           <EtSChatNav class="q-pa-md q-my-lg"
             ><span class="ets-title">Login with Google</span></EtSChatNav
           >
+          <span class="row justify-center"><GoogleLogin :callback="callback" /></span>
 
           <!--Guest-->
           <div class="flex justify-center q-my-lg">
@@ -54,4 +55,12 @@
 <script setup>
 import EtSHeader from '../components/EtSHeader.vue';
 import EtSChatNav from '../components/EtSChatNav.vue';
+import { decodeCredential } from 'vue3-google-login';
+
+const callback = (response) => {
+  // This callback will be triggered when the user selects or login to
+  // his Google account from the popup
+  const userData = decodeCredential(response.credential);
+  console.log('Handle the userData', userData.email);
+};
 </script>

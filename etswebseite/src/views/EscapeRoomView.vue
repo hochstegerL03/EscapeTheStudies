@@ -31,6 +31,7 @@
                         :src="slide.icon"
                         :style="`width: ${slide.scaling};   `"
                       />
+                      <q-img :src="slide.img" />
                     </div>
                   </div>
                 </main>
@@ -293,6 +294,7 @@ const slides = [
     scaling: '10vw',
     isDone: true,
     slide: 1,
+    img: 'images/wand1.png',
   },
   {
     pl: '35%',
@@ -302,6 +304,7 @@ const slides = [
     scaling: '15vw',
     isDone: true,
     slide: 1,
+    img: 'images/wand2.png',
   },
   {
     pl: '20%',
@@ -311,6 +314,7 @@ const slides = [
     scaling: '10vw',
     isDone: false,
     slide: 3,
+    img: 'images/wand3.png',
   },
   {
     pl: '35%',
@@ -320,6 +324,7 @@ const slides = [
     scaling: '15vw',
     isDone: true,
     slide: 2,
+    img: 'images/wand4.png',
   },
 ];
 function challenge(obj) {

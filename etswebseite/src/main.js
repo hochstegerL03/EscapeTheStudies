@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import { Quasar } from 'quasar';
 import { createPinia } from 'pinia';
+import vue3GoogleLogin from 'vue3-google-login';
 
 import App from './App.vue';
 import router from './router';
@@ -23,5 +24,8 @@ app.use(Quasar, {
 });
 app.use(pinia);
 app.use(router);
+app.use(vue3GoogleLogin, {
+  clientId: '381874584720-p14r1psu4un55rs6sslceif7f6pi3idj.apps.googleusercontent.com',
+});
 
 app.mount('#app');

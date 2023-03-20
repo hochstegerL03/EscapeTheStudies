@@ -4,7 +4,10 @@
       <!--Header-->
       <div>
         <!--Default Banner. Can be modified -->
-        <q-img class="q-mb-md ets-banner" src="images/about_success_banner.jpg"></q-img>
+        <q-img
+          class="q-mb-md ets-banner"
+          src="https://qyiwkgwvtdxnsowzibpm.supabase.co/storage/v1/object/public/pictures/images/about_success_banner.jpg?t=2023-03-19T11%3A45%3A25.004Z"
+        ></q-img>
         <!--Banner End-->
         <!--OnePage Menu-->
         <OnPageMenu></OnPageMenu>
@@ -77,11 +80,15 @@
         <!--Funny Buttons-->
         <div class="ets-button-menu row justify-center items-center">
           <div class="col-6">
-            <div class="text-center ets-header text-body1 text-weight-bold ets-fake-button">Commit Arson</div>
+            <div class="text-center ets-header text-body1 text-weight-bold ets-fake-button">
+              Commit Arson
+            </div>
             <div class="text-center ets-header text-body2 text-italic">Arson Committed: Yes</div>
           </div>
           <div class="col-6">
-            <div class="text-center ets-header text-body1 text-weight-bold ets-fake-button">Data Security</div>
+            <div class="text-center ets-header text-body1 text-weight-bold ets-fake-button">
+              Data Security
+            </div>
             <div class="text-center ets-header text-body2 text-italic">Smart People: > 1</div>
           </div>
         </div>
