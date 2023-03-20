@@ -1,7 +1,7 @@
 import supabase from '../config/supabaseClient.js';
 
 const dbGetCourse = async () => {
-  const { error, data } = await supabase.from('course').select();
+  const { error, data } = await supabase.from('course').select().order('courseid');
   if (error) return error;
   return data;
 };
@@ -13,7 +13,7 @@ const dbGetQuesition = async () => {
 };
 
 const dbGetAnswer = async () => {
-  const { error, data } = await supabase.from('answers').select();
+  const { error, data } = await supabase.from('answers').select().order('answerid');
   if (error) return error;
   return data;
 };
