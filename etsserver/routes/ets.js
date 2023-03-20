@@ -6,6 +6,6 @@ const router = express.Router();
 
 router.get('/courses', asyncHandler(getCourse));
 router.get('/question', asyncHandler(getQuestion));
-router.get('/answer', asyncHandler(getAnswer));
+router.get('/answers', asyncHandler(getAnswer));
 
 export default router;

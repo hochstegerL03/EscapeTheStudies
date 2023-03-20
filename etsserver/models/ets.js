@@ -13,7 +13,7 @@ const dbGetQuesition = async () => {
 };
 
 const dbGetAnswer = async () => {
-  const { error, data } = await supabase.from('answer').select();
+  const { error, data } = await supabase.from('answers').select();
   if (error) return error;
   return data;
 };
