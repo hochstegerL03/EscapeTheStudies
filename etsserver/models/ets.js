@@ -7,7 +7,7 @@ const dbGetCourse = async () => {
 };
 
 const dbGetQuesition = async () => {
-  const { error, data } = await supabase.from('question').select();
+  const { error, data } = await supabase.from('question').select().order('questionid');
   if (error) return error;
   return data;
 };
