@@ -41,4 +41,20 @@ const dbGetChapter = async (chapId) => {
   return data;
 };
 
-export { dbGetCourse, dbGetQuesitionChapter1, dbGetAnswer, dbGetUsers, dbGetChapter };
+const dbGetTextData = async (sectId) => {
+  const { data, error } = await supabase
+    .from('textdata')
+    .select(`textid, isheader, text, section:sectionid ( section )`)
+    .eq('sectionid', sectId);
+  if (error) return error;
+  return data;
+};
+
+export {
+  dbGetCourse,
+  dbGetQuesitionChapter1,
+  dbGetAnswer,
+  dbGetUsers,
+  dbGetChapter,
+  dbGetTextData,
+};

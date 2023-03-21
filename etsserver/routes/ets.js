@@ -6,6 +6,7 @@ import {
   getAnswer,
   getUser,
   getChapter,
+  getTextData,
 } from '../controllers/ets.js';
 
 const router = express.Router();
@@ -15,5 +16,6 @@ router.get('/question/:id', asyncHandler(getQuestionChapter1));
 router.get('/answers', asyncHandler(getAnswer));
 router.get('/users', asyncHandler(getUser));
 router.get('/chapter/:id', asyncHandler(getChapter));
+router.get('/textdata/:id', asyncHandler(getTextData));
 
 export default router;
