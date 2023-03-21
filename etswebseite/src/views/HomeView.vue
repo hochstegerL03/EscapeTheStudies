@@ -419,7 +419,18 @@ import EtSChatNav from '../components/EtSChatNav.vue';
 import EtSHeader from '../components/EtSHeader.vue';
 import OnPageMenu from '../components/OnPageMenu.vue';
 import { scroll } from 'quasar';
+import { ref, onMounted } from 'vue';
+import { useTextData } from '../stores/textdata.js';
+
 const { getScrollTarget, setVerticalScrollPosition } = scroll;
+const textDataStore = useTextData();
+let textData = ref();
+
+onMounted(async () => {
+  await textDataStore.textDataStore();
+  textData.value = textDataStore.HomeView;
+  console.log(textData);
+});
 
 function scrolltovertically(obj) {
   const el = document.getElementById(obj);
