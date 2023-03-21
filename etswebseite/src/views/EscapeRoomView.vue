@@ -8,9 +8,8 @@
           <!--Main Window-->
           <div id="news" class="ets-escape-room-container q-py-md">
             <div class="row ets-escape-room-ui-container">
-              <q-img :src="slides[0].img" />
               <div class="col-2">
-                <div class="flex ets-h-100 justify-center items-center">
+                <div class="flex ets-h-100 justify-center items-center bg-dark">
                   <img
                     @click="changeRoom('left')"
                     class="w-70 ets-max-5"
@@ -18,10 +17,12 @@
                   />
                 </div>
               </div>
+
               <div class="col-8">
                 <!--Escape Room Content-->
                 <main class="ets-w-100 ets-h-100">
                   <div class="ets-w-100 ets-h-100">
+                    <q-img :src="slides[0].img" />
                     <div
                       v-for="(slide, index) in slides.filter((ch) => ch.slide == pointer)"
                       :key="index"
@@ -38,7 +39,7 @@
                 </main>
                 <!--Escape Room Content End-->
               </div>
-              <div class="col-2">
+              <div class="col-2 bg-dark">
                 <div class="flex ets-h-100 justify-center items-center">
                   <img
                     @click="changeRoom('right')"
@@ -304,6 +305,7 @@ const slides = [
     scaling: '15vw',
     isDone: true,
     slide: 2,
+    img: 'images/wand2.png',
   },
   {
     pl: '20%',
@@ -313,6 +315,7 @@ const slides = [
     scaling: '10vw',
     isDone: false,
     slide: 3,
+    img: 'images/wand3.png',
   },
   {
     pl: '100%',
@@ -322,6 +325,7 @@ const slides = [
     scaling: '15vw',
     isDone: true,
     slide: 4,
+    img: 'images/wand4.png',
   },
 ];
 function challenge(obj) {
@@ -329,10 +333,19 @@ function challenge(obj) {
   if (showedTask.value) renderTask.value = true;
 }
 function changeRoom(direction) {
-  if (direction == 'left' && pointer.value > 1) pointer.value--;
-  else if (direction == 'left' && pointer.value < 2) pointer.value = pages;
-  else if (direction == 'right' && pointer.value < pages) pointer.value++;
-  else pointer.value = 1;
+  if (direction == 'left' && pointer.value > 1) {
+    pointer.value--;
+    eRoomImg.value = slides[pointer.value].img;
+  } else if (direction == 'left' && pointer.value < 2) {
+    pointer.value = pages;
+    eRoomImg.value = slides[pointer.value].img;
+  } else if (direction == 'right' && pointer.value < pages) {
+    pointer.value++;
+    eRoomImg.value = slides[pointer.value].img;
+  } else {
+    pointer.value = 1;
+    eRoomImg.value = slides[pointer.value].img;
+  }
   for (let index = 0; index < pages; index++) {
     selectors.value[index].classList.remove('ets-menu-highlight');
   }
@@ -345,4 +358,6 @@ function changeRoomMenu(index) {
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
 }
+
+const eRoomImg = ref(slides[0].img);
 </script>
