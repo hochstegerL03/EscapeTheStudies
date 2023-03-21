@@ -6,16 +6,39 @@ const dbGetCourse = async () => {
   return data;
 };
 
-const dbGetQuesition = async () => {
-  const { error, data } = await supabase.from('question').select().order('questionid');
+const dbGetQuesitionChapter1 = async (chapId) => {
+  const { error, data } = await supabase
+    .from('question')
+    .select()
+    .eq('chapterid', chapId)
+    .order('questionid');
   if (error) return error;
   return data;
 };
 
 const dbGetAnswer = async () => {
-  const { error, data } = await supabase.from('answers').select().order('answerid');
+  // const { error, data } = await supabase.from('answers').select().order('answerid');
+  // if (error) return error;
+  // return data;
+  const { data, error } = await supabase
+    .from('answers')
+    .select(
+      'answerid,questionid,answeroptions,answershowed,correctanswer,question:questionid ( question )',
+    );
   if (error) return error;
   return data;
 };
 
-export { dbGetCourse, dbGetQuesition, dbGetAnswer };
+const dbGetUsers = async () => {
+  const { data, error } = await supabase.from('userinformation').select();
+  if (error) return error;
+  return data;
+};
+
+const dbGetChapter = async (chapId) => {
+  const { data, error } = await supabase.from('chapter').select().eq('courseid', chapId);
+  if (error) return error;
+  return data;
+};
+
+export { dbGetCourse, dbGetQuesitionChapter1, dbGetAnswer, dbGetUsers, dbGetChapter };

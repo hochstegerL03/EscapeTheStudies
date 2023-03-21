@@ -1,6 +1,10 @@
 GET http://localhost:3000/escapethestudies/courses
 ################################################################
-GET http://localhost:3000/escapethestudies/question
+GET http://localhost:3000/escapethestudies/question/1
 ################################################################
 GET http://localhost:3000/escapethestudies/answers
-################################################################################################
+################################################################
+GET http://localhost:3000/escapethestudies/users
+################################################################
+GET http://localhost:3000/escapethestudies/chapter/2
+################################################################
