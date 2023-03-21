@@ -9,7 +9,7 @@ const dbGetCourse = async () => {
 const dbGetQuesitionChapter1 = async (chapId) => {
   const { error, data } = await supabase
     .from('question')
-    .select()
+    .select('*, questiontype:questiontypeid (questiontype)')
     .eq('chapterid', chapId)
     .order('questionid');
   if (error) return error;
@@ -51,7 +51,7 @@ const dbGetTextData = async (sectId) => {
 };
 
 const dbGetQuestionType = async () => {
-  const { data, error } = await supabase.from('questiontype').select();
+  const { data, error } = await supabase.from('questiontype').select().order('questiontypeid');
   if (error) return error;
   return data;
 };

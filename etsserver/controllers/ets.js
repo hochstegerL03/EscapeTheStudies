@@ -33,7 +33,7 @@ const getTextData = async (req, res) => {
   res.status(200).json(await dbGetTextData(id));
 };
 
-const getQuestionType = async (req, res) => res.status(200).json(dbGetQuestionType());
+const getQuestionType = async (req, res) => res.status(200).json(await dbGetQuestionType());
 
 export {
   getCourse,
