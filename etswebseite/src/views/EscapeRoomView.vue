@@ -7,7 +7,8 @@
         <div class="flex justify-center items-center q-mb-sm">
           <!--Main Window-->
           <div id="news" class="ets-escape-room-container q-py-md">
-            <div class="row ets-escape-room-ui-container placeholder">
+            <div class="row ets-escape-room-ui-container">
+              <q-img :src="slides[0].img" />
               <div class="col-2">
                 <div class="flex ets-h-100 justify-center items-center">
                   <img
@@ -26,12 +27,12 @@
                       :key="index"
                       :style="`position: absolute; left: ${slide.pl}; top: ${slide.pt};`"
                     >
-                      <img
+                      <div
                         @click="challenge(slide.challenge)"
-                        :src="slide.icon"
-                        :style="`width: ${slide.scaling};   `"
-                      />
-                      <q-img :src="slide.img" />
+                        :style="`width: ${slide.scaling};  opacity: 0.0;`"
+                      >
+                        click
+                      </div>
                     </div>
                   </div>
                 </main>
@@ -120,8 +121,8 @@
             <div>
               <!--Preview-->
               <div>
-                <div class="placeholder-preview q-mt-md">
-                  <!--Note: durch Image ersetzen-->
+                <div class="q-mt-md">
+                  <!--Insert IMG here-->
                 </div>
               </div>
               <!--Preview End-->
@@ -211,7 +212,6 @@
 
 .ets-escape-room-container {
   width: 100%;
-  height: 50vh;
 }
 
 .ets-escape-room-ui-container {
@@ -254,7 +254,7 @@ onMounted(() => {
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
 });
 const selectors = ref([]);
-const pages = 3;
+const pages = 4;
 const pointer = ref(1);
 const showedTask = ref(null);
 const renderTask = ref(false);
@@ -287,8 +287,8 @@ const task2 = {
 
 const slides = [
   {
-    pl: '20%',
-    pt: '10%',
+    pl: '55%',
+    pt: '2%',
     challenge: task1,
     icon: 'escaperoom/phChallenge.svg',
     scaling: '10vw',
@@ -303,8 +303,7 @@ const slides = [
     icon: 'escaperoom/phChallenge.svg',
     scaling: '15vw',
     isDone: true,
-    slide: 1,
-    img: 'images/wand2.png',
+    slide: 2,
   },
   {
     pl: '20%',
@@ -314,17 +313,15 @@ const slides = [
     scaling: '10vw',
     isDone: false,
     slide: 3,
-    img: 'images/wand3.png',
   },
   {
-    pl: '35%',
-    pt: '18%',
+    pl: '100%',
+    pt: '100%',
     challenge: task2,
     icon: 'escaperoom/phChallenge.svg',
     scaling: '15vw',
     isDone: true,
-    slide: 2,
-    img: 'images/wand4.png',
+    slide: 4,
   },
 ];
 function challenge(obj) {
