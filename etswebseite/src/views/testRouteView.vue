@@ -9,9 +9,10 @@ let question = ref([]);
 
 onMounted(async () => {
   await courseStore.getCourse();
-  await courseStore.getQAndA();
+  await courseStore.getQuestion(1);
+  await courseStore.getAnswers();
   course.value = courseStore.course;
-  answer.value = courseStore.answer;
+  answer.value = courseStore.answers;
   question.value = courseStore.question;
 });
 </script>

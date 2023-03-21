@@ -10,3 +10,5 @@ GET http://localhost:3000/escapethestudies/chapter/2
 ################################################################
 GET http://localhost:3000/escapethestudies/textdata/5
 ################################################################
+GET http://localhost:3000/escapethestudies/questiontype
+################################################################

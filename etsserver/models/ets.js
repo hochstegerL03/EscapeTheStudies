@@ -50,6 +50,12 @@ const dbGetTextData = async (sectId) => {
   return data;
 };
 
+const dbGetQuestionType = async () => {
+  const { data, error } = await supabase.from('questiontype').select();
+  if (error) return error;
+  return data;
+};
+
 export {
   dbGetCourse,
   dbGetQuesitionChapter1,
@@ -57,4 +63,5 @@ export {
   dbGetUsers,
   dbGetChapter,
   dbGetTextData,
+  dbGetQuestionType,
 };

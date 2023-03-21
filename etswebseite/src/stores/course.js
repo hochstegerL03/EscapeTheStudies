@@ -12,10 +12,12 @@ export const useCourseStore = defineStore('course', {
       const { data } = await axios.get('http://localhost:3000/escapethestudies/courses');
       this.course = data;
     },
-    async getQAndA() {
-      const question = await axios.get('http://localhost:3000/escapethestudies/question');
+    async getQuestion(id) {
+      const question = await axios.get(`http://localhost:3000/escapethestudies/question/${id}`);
       this.question = question.data;
-      const answers = await axios.get('http://localhost:3000/escapethestudies/answer');
+    },
+    async getAnswers() {
+      const answers = await axios.get('http://localhost:3000/escapethestudies/answers');
       this.answers = answers.data;
     },
   },

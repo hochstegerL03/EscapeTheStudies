@@ -6,6 +6,7 @@ import {
   dbGetUsers,
   dbGetChapter,
   dbGetTextData,
+  dbGetQuestionType,
 } from '../models/ets.js';
 
 const getCourse = async (req, res) => res.status(200).json(await dbGetCourse());
@@ -32,4 +33,14 @@ const getTextData = async (req, res) => {
   res.status(200).json(await dbGetTextData(id));
 };
 
-export { getCourse, getQuestionChapter1, getAnswer, getUser, getChapter, getTextData };
+const getQuestionType = async (req, res) => res.status(200).json(dbGetQuestionType());
+
+export {
+  getCourse,
+  getQuestionChapter1,
+  getAnswer,
+  getUser,
+  getChapter,
+  getTextData,
+  getQuestionType,
+};
