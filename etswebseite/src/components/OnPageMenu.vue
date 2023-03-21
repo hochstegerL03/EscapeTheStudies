@@ -1,5 +1,5 @@
 <template>
-  <q-tabs align="justify" class="ets-text text-weight-bold">
+  <q-tabs align="justify" class="ets-header text-weight-bold">
     <q-route-tab to="/" class="ets-text-tab">Home</q-route-tab>
 
     <q-route-tab to="/courses" class="ets-text-tab">Courses</q-route-tab>

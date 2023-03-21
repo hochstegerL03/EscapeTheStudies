@@ -93,7 +93,7 @@ function toggleRightDrawer() {
 }
 
 .ets-header {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Serif Pro', serif;
 }
 
 .ets-underline {
@@ -141,7 +141,7 @@ function toggleRightDrawer() {
   background-color: $accent;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
