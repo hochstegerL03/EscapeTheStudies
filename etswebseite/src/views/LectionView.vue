@@ -652,7 +652,7 @@
             &lt;p id="”Timmy”">&lt;/p>
           </div>
           <div class="w-100 flex justify-center">
-            <img src="lections/css/CSS_ids_1.svg" class="q-my-lg image image-long" />
+            <img src="lections/css/CSS_ids_1.svg" class="q-my-lg ets-image-capped" />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
             So das wars aber auch schon mit unserem Ausflug zu IDs!

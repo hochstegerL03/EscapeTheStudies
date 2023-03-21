@@ -218,7 +218,6 @@ a:active {
   width: 50% !important;
 }
 
-
 .ets-max-screen-800 {
   max-width: 800px;
 }
