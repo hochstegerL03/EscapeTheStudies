@@ -16,7 +16,7 @@
       <!--Header End-->
       <!--Content-->
       <div class="flex justify-center q-mt-lg">
-        <div class="w-90">
+        <div class="ets-w-90">
           <!--Impressum-->
           <div class="q-my-lg ets-text">
             <!--Caption-->
