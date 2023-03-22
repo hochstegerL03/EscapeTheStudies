@@ -3,12 +3,12 @@ import axios from 'axios';
 
 export const useTextData = defineStore('textdata', {
   state: () => ({
-    HomeView: [],
+    homeView: [],
   }),
   actions: {
     async textDataStore() {
       const { data } = await axios.get('http://localhost:3000/escapethestudies/textdata/4');
-      this.HomeView = data;
+      this.homeView = data;
     },
   },
   getters: {},

@@ -10,7 +10,7 @@
       <!--Banner End-->
       <!--Infos-->
       <EtSHeader
-        titel="Escape the Studies"
+        :titel="title"
         content="Brace yourself and enter a brand new Universe of Tech and Games"
         link="Learn more..."
       ></EtSHeader>
@@ -424,12 +424,15 @@ import { useTextData } from '../stores/textdata.js';
 
 const { getScrollTarget, setVerticalScrollPosition } = scroll;
 const textDataStore = useTextData();
-let textData = ref();
+let textData = ref([]);
+let title = ref();
 
 onMounted(async () => {
   await textDataStore.textDataStore();
-  textData.value = textDataStore.HomeView;
+  textData.value = textDataStore.homeView;
   console.log(textData);
+  title.value = textData.value[0].text;
+  console.log(title);
 });
 
 function scrolltovertically(obj) {
