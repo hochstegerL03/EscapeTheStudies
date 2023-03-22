@@ -11,10 +11,9 @@
       <!--Infos-->
 
       <EtSHeader
-        v-if="isHeader[0] != null"
-        :titel="isHeader[0].text"
-        :content="isHeader[1].text"
-        :link="isHeader[2].text"
+        titel="Escape the Studies"
+        content="Brace yourself and enter a brand new Universe of Tech and Games"
+        link="Learn more..."
       ></EtSHeader>
       <!--Infos Ende-->
       <!--OnePage Menu-->
@@ -442,6 +441,7 @@ const { getScrollTarget, setVerticalScrollPosition } = scroll;
 let textData = ref([]);
 let isHeader = ref([]);
 let isNotHeader = ref([]);
+let newChapter = ref();
 
 onMounted(async () => {
   let promises = [];
