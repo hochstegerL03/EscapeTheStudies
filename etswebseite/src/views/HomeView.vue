@@ -11,10 +11,9 @@
       <!--Infos-->
 
       <EtSHeader
-        v-if="isHeader[0] != null"
-        :titel="isHeader[0].text"
-        :content="isHeader[1].text"
-        :link="isHeader[2].text"
+        titel="Escape the Studies"
+        content="Brace yourself and enter a brand new Universe of Tech and Games"
+        link="Learn more..."
       ></EtSHeader>
       <!--Infos Ende-->
       <!--OnePage Menu-->
@@ -44,7 +43,7 @@
               <div class="flex items-start justify-center">
                 <header class="ets-py-2">
                   <p class="q-pa-md text text-h5">
-                    Just an Act: Learn the Magic of Web-Development!
+                    {{ newChapter }} Just an Act: Learn the Magic of Web-Development!
                   </p>
                 </header>
               </div>
@@ -432,6 +431,7 @@ const { getScrollTarget, setVerticalScrollPosition } = scroll;
 let textData = ref([]);
 let isHeader = ref([]);
 let isNotHeader = ref([]);
+let newChapter = ref();
 
 onMounted(async () => {
   let promises = [];
