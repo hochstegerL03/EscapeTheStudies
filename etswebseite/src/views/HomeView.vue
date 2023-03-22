@@ -10,7 +10,7 @@
       <!--Banner End-->
       <!--Infos-->
       <EtSHeader
-        :titel="title"
+        :titel="isHeader[0].text"
         content="Brace yourself and enter a brand new Universe of Tech and Games"
         link="Learn more..."
       ></EtSHeader>
@@ -425,14 +425,23 @@ import { useTextData } from '../stores/textdata.js';
 const { getScrollTarget, setVerticalScrollPosition } = scroll;
 const textDataStore = useTextData();
 let textData = ref([]);
-let title = ref();
+let isHeader = ref([]);
+let isNotHeader = ref([]);
 
 onMounted(async () => {
-  await textDataStore.textDataStore();
+  let promises = [];
   textData.value = textDataStore.homeView;
   console.log(textData);
-  title.value = textData.value[0].text;
-  console.log(title);
+  for (let index = 0; index < textData.value.length; index++) {
+    if (textData.value[index].isheader == true) {
+      promises.push(isHeader.value.push(textData.value[index]));
+    } else {
+      promises.push(isNotHeader.value.push(textData.value[index]));
+    }
+  }
+  await Promise.all(promises);
+  console.log(isHeader);
+  console.log(isNotHeader);
 });
 
 function scrolltovertically(obj) {
