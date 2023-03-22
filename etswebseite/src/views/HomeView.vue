@@ -9,8 +9,9 @@
       ></q-img>
       <!--Banner End-->
       <!--Infos-->
+      {{ isHeader }}
       <EtSHeader
-        :titel="isHeader[0].text"
+        titel="Escape the Studies"
         content="Brace yourself and enter a brand new Universe of Tech and Games"
         link="Learn more..."
       ></EtSHeader>
