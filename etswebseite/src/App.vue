@@ -253,7 +253,7 @@ a:active {
   display: none;
 }
 
-.image {
+.ets-image {
   max-width: 500px;
 }
 </style>

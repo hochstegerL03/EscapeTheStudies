@@ -39,51 +39,60 @@
         <!--News-->
         <div class="flex justify-center items-center q-mb-xl">
           <!--Placeholder Lection Banner-->
-          <div id="news" class="ets-news q-py-md">
-            <div class="ets-news-overlay ets-news-rounded placeholder">
-              <div class="flex items-start justify-center">
-                <header class="ets-py-2">
-                  <p class="q-pa-md text text-h5">
-                    Just an Act: Learn the Magic of Web-Development!
-                  </p>
-                </header>
-              </div>
-              <main></main>
-              <footer class="absolute-bottom">
-                <div class="row">
-                  <div class="col-9">
-                    <div class="ets-bar-wrapper">
-                      <div class="ets-lightbar">
-                        <div class="flex items-center justify-center ets-h-100">
-                          <div
-                            class="text-white text-center q-pb-xs ets-header text-weight-bold text-h6"
-                          >
-                            HTML, JavaScript
+          <div></div>
+          <div id="news" class="ets-w-100 q-my-md placeholder-news ets-news-rounded">
+            <div class="ets-news">
+              <!-- <q-img class="ets-news-rounded" src="images/wand1.png" /> -->
+              <div class="placeholder-news ets-news-rounded"></div>
+              <div class="absolute absolute-top ets-w-100 ets-h-100">
+                <div class="flex items-start justify-center">
+                  <header class="ets-py-2">
+                    <!-- <p class="q-pa-md text text-h5 ets-text-shadow text-white">
+                      Just an Act: Learn the Magic of Web-Development!
+                    </p> -->
+                    <p class="q-pa-md text text-h5">
+                      Just an Act: Learn the Magic of Web-Development!
+                    </p>
+                  </header>
+                </div>
+                <main></main>
+                <footer class="absolute-bottom">
+                  <div class="row">
+                    <div class="col-9">
+                      <div class="ets-bar-wrapper">
+                        <div class="ets-lightbar">
+                          <div class="flex items-center justify-center ets-h-100">
+                            <div
+                              class="text-white text-center q-pb-xs ets-header text-weight-bold text-h6"
+                            >
+                              HTML, JavaScript
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="ets-darkbar">
-                        <div class="flex items-center justify-end ets-h-100">
-                          <div class="ets-darkbar-content">
-                            <span
-                              class="text-white text-left ets-header text-weight-bold text-italic text-h5"
-                              >...</span
-                            >
+                        <div class="ets-darkbar">
+                          <div class="flex items-center justify-end ets-h-100">
+                            <div class="ets-darkbar-content">
+                              <span
+                                class="text-white text-left ets-header text-weight-bold text-italic text-h5"
+                                >...</span
+                              >
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <div class="col-3">
+                      <span
+                        class="text-primary float-right ets-py-2 text-center ets-header text-weight-bolder text-h5"
+                        >New!</span
+                      >
+                    </div>
                   </div>
-                  <div class="col-3">
-                    <span
-                      class="text-primary float-right ets-py-2 text-center ets-header text-weight-bolder text-h5"
-                      >New!</span
-                    >
-                  </div>
-                </div>
-              </footer>
+                </footer>
+              </div>
             </div>
           </div>
+
           <!--Placeholder Lection Banner End-->
 
           <!--Placeholder Lection Info Banner-->
@@ -358,9 +367,15 @@
 </template>
 
 <style lang="scss" scoped>
+.placeholder-news {
+  height: 20rem;
+  background-color: $accent;
+}
+
 .ets-news {
   width: 100%;
-  height: 35vh;
+  max-height: 35vh;
+  position: relative;
 }
 
 .ets-news-flex {
@@ -376,11 +391,6 @@
 }
 .ets-news-info {
   border-radius: 0px 0px 15px 15px;
-}
-.ets-news-overlay {
-  width: 100%;
-  height: 100%;
-  position: relative;
 }
 
 .ets-news-tag {

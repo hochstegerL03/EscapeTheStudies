@@ -4,12 +4,13 @@
     <div class="flex justify-center ets-w-100 q-my-lg">
       <div class="ets-w-100">
         <!--Escape Room Visual Top-->
-        <div class="flex justify-center items-center q-mb-sm">
-          <!--Main Window-->
-          <div id="news" class="ets-escape-room-container q-py-md">
-            <div class="row ets-escape-room-ui-container">
-              <div class="col-1 bg-secondary">
-                <div class="flex ets-h-100 justify-center items-center ">
+        <!--Main Window-->
+        <div class="q-py-md">
+          <div class="relative-position">
+            <q-img :src="slides[0].img" />
+            <div class="row ets-w-100 ets-h-100 absolute absolute-top">
+              <div class="col-1 ">
+                <div class="flex ets-h-100 justify-center items-center">
                   <img
                     @click="changeRoom('left')"
                     class="w-70 ets-max-5"
@@ -22,7 +23,6 @@
                 <!--Escape Room Content-->
                 <main class="ets-w-100 ets-h-100">
                   <div class="ets-w-100 ets-h-100">
-                    <q-img :src="slides[0].img" />
                     <div
                       v-for="(slide, index) in slides.filter((ch) => ch.slide == pointer)"
                       :key="index"
@@ -39,7 +39,7 @@
                 </main>
                 <!--Escape Room Content End-->
               </div>
-              <div class="col-1 bg-secondary">
+              <div class="col-1 ">
                 <div class="flex ets-h-100 justify-center items-center">
                   <img
                     @click="changeRoom('right')"
@@ -61,7 +61,7 @@
                             class="q-gutter-x-lg text-white text-center ets-header text-weight-bold text-body1"
                           >
                             <span
-                            class="ets-fake-button"
+                              class="ets-fake-button"
                               v-for="(page, index) in pages"
                               :key="index"
                               :id="index"
@@ -79,7 +79,6 @@
               <!--Escape Room Navigation End-->
             </div>
           </div>
-          <!--Placeholder Lection Banner End-->
         </div>
         <!--Escape Room Visual Top End-->
         <!--Info- / Progress-Bar-->
@@ -210,16 +209,6 @@
 }
 .ets-menu-highlight {
   color: $primary;
-}
-
-.ets-escape-room-container {
-  width: 100%;
-}
-
-.ets-escape-room-ui-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
 }
 
 .ets-progressbar {
