@@ -4,7 +4,7 @@
     <div>
       <!--Default Banner. Can be modified -->
       <q-img
-        class="q-mb-md ets-banner-small"
+        class="q-mb-md ets-banner"
         src="https://qyiwkgwvtdxnsowzibpm.supabase.co/storage/v1/object/public/pictures/images/home_gears_banner.jpg"
       ></q-img>
       <!--Banner End-->
