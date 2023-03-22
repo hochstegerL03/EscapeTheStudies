@@ -9,10 +9,12 @@
       ></q-img>
       <!--Banner End-->
       <!--Infos-->
+
       <EtSHeader
-        :titel="title"
-        content="Brace yourself and enter a brand new Universe of Tech and Games"
-        link="Learn more..."
+        v-if="isHeader[0] != null"
+        :titel="isHeader[0].text"
+        :content="isHeader[1].text"
+        :link="isHeader[2].text"
       ></EtSHeader>
       <!--Infos Ende-->
       <!--OnePage Menu-->
@@ -24,7 +26,9 @@
     <div class="flex justify-center ets-w-100 q-mt-lg">
       <div class="ets-w-90">
         <!--Progress-->
-        <div class="text-center text-body1 q-mb-sm text-grey">Current Status: Closed Alpha</div>
+        <div class="text-center text-body1 q-mb-sm text-grey" v-if="isNotHeader[0] != null">
+          {{ isNotHeader[0].text }}
+        </div>
         <div class="text-center text-body2 text-italic q-mb-md text-grey">
           Eine kleine Demo finden Sie
           <router-link class="q-mt-md text-body2 text-weight-medium" to="/chapter">
@@ -420,19 +424,30 @@ import EtSHeader from '../components/EtSHeader.vue';
 import OnPageMenu from '../components/OnPageMenu.vue';
 import { scroll } from 'quasar';
 import { ref, onMounted } from 'vue';
-import { useTextData } from '../stores/textdata.js';
+// import { useTextData } from '../stores/textdata.js';
+import axios from 'axios';
 
 const { getScrollTarget, setVerticalScrollPosition } = scroll;
-const textDataStore = useTextData();
+// const textDataStore = useTextData();
 let textData = ref([]);
-let title = ref();
+let isHeader = ref([]);
+let isNotHeader = ref([]);
 
 onMounted(async () => {
-  await textDataStore.textDataStore();
-  textData.value = textDataStore.homeView;
+  let promises = [];
+  const { data } = await axios.get('http://localhost:3000/escapethestudies/textdata/4');
+  textData.value = data;
   console.log(textData);
-  title.value = textData.value[0].text;
-  console.log(title);
+  for (let index = 0; index < textData.value.length; index++) {
+    if (textData.value[index].isheader == true) {
+      promises.push(isHeader.value.push(textData.value[index]));
+    } else {
+      promises.push(isNotHeader.value.push(textData.value[index]));
+    }
+  }
+  await Promise.all(promises);
+  console.log(isHeader);
+  console.log(isNotHeader);
 });
 
 function scrolltovertically(obj) {
