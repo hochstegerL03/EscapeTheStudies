@@ -8,6 +8,8 @@ import {
   getChapter,
   getTextData,
   getQuestionType,
+  getNews,
+  getTag,
 } from '../controllers/ets.js';
 
 const router = express.Router();
@@ -19,5 +21,7 @@ router.get('/users', asyncHandler(getUser));
 router.get('/chapter/:id', asyncHandler(getChapter));
 router.get('/textdata/:id', asyncHandler(getTextData));
 router.get('/questiontype', asyncHandler(getQuestionType));
+router.get('/news', asyncHandler(getNews));
+router.get('/tag', asyncHandler(getTag));
 
 export default router;

@@ -6,8 +6,8 @@ export const useTextData = defineStore('textdata', {
     homeView: [],
   }),
   actions: {
-    async textDataStore() {
-      const { data } = await axios.get('http://localhost:3000/escapethestudies/textdata/4');
+    async textDataStore(id) {
+      const { data } = await axios.get(`http://localhost:3000/escapethestudies/textdata/${id}`);
       this.homeView = data;
     },
   },
