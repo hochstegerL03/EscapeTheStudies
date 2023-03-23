@@ -77,7 +77,7 @@
           </div>
           <!--Impressum End-->
         </div>
-        <!--Funny Buttons-->
+        <!--Button Menu-->
         <div class="ets-button-menu row justify-center items-center">
           <div class="col-6">
             <div class="text-center ets-header text-body1 text-weight-bold ets-fake-button">
@@ -92,7 +92,7 @@
             <div class="text-center ets-header text-body2 text-italic">Smart People: > 1</div>
           </div>
         </div>
-        <!--Funny Buttons End-->
+        <!--Button Menu End-->
       </div>
       <!--Content-->
     </div>
