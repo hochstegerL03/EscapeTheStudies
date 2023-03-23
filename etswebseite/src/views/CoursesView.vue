@@ -153,7 +153,7 @@
         </div>
         <!--Lection 2 End-->
         <!--Construction-->
-        <div class="text-center ets-header text-h4 text-italic q-mb-xl">To be continue...</div>
+        <div class="text-center ets-header text-h4 text-italic q-mb-xl">To be continued...</div>
 
         <!--Construction End-->
       </div>

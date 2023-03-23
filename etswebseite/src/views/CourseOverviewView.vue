@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!--Header-->
     <div>
       <div class="ets-preview q-mt-md">
         <div class="ets-preview-overlay ets-h-100">
@@ -18,6 +19,8 @@
         />
       </div>
     </div>
+    <!--Header End-->
+    <!--Content-->
     <div class="flex justify-center items-center">
       <!--Scroll Tag Bar-->
       <div class="ets-w-100">
@@ -158,6 +161,7 @@
       </div>
       <!--Buttons End-->
     </div>
+    <!--Content End-->
   </div>
 </template>
 <style lang="scss" scoped>
