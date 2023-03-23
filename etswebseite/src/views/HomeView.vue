@@ -14,6 +14,7 @@
         titel="Escape the Studies"
         content="Brace yourself and enter a brand new Universe of Tech and Games"
         link="Learn more..."
+        url="https://github.com/hochstegerL03/EscapeTheStudies"
       ></EtSHeader>
       <!--Infos Ende-->
       <!--OnePage Menu-->
@@ -38,8 +39,8 @@
         <!--News-->
         <div class="flex justify-center items-center q-mb-xl">
           <!--Placeholder Lection Banner-->
-          <div></div>
-          <div id="news" class="ets-w-100 q-my-md placeholder-news ets-news-rounded">
+
+          <div id="news" class="ets-w-100 q-my-sm">
             <div class="ets-news">
               <!-- <q-img class="ets-news-rounded" src="images/wand1.png" /> -->
               <div class="placeholder-news ets-news-rounded"></div>
@@ -61,9 +62,7 @@
                       <div class="ets-bar-wrapper">
                         <div class="ets-lightbar">
                           <div class="flex items-center justify-center ets-h-100">
-                            <div
-                              class="text-white text-center q-pb-xs ets-header text-weight-bold text-h6"
-                            >
+                            <div class="text-white text-center ets-header text-weight-bold text-h6">
                               HTML, JavaScript
                             </div>
                           </div>
@@ -99,17 +98,17 @@
             <div class="ets-news-overlay ets-news-info placeholder">
               <header>
                 <div class="">
-                  <div class="row items-start justify-center ets-h-100">
-                    <div class="ets-news-tag col-3">
+                  <div class="row  items-start justify-center ets-h-100">
+                    <div class="ets-news-tag col-3 self-end">
                       <div class="row items-center justify-center ets-h-100">
-                        <div class="text-white q-pb-xs ets-header text-weight-bold text-h6">
+                        <div class="text-white ets-header text-weight-bold text-h5">
                           Info
                         </div>
                       </div>
                     </div>
 
                     <div class="col-6 self-end">
-                      <div class="text text-center self-end text-h5">Just an Act:</div>
+                      <div class="text text-center text-h5">Just an Act:</div>
                     </div>
                     <div class="col-3"></div>
                   </div>
@@ -367,13 +366,13 @@
 
 <style lang="scss" scoped>
 .placeholder-news {
-  height: 20rem;
+  height: 17.5rem;
   background-color: $accent;
 }
 
 .ets-news {
   width: 100%;
-  max-height: 35vh;
+  height: 100%;
   position: relative;
 }
 
@@ -394,8 +393,6 @@
 
 .ets-news-tag {
   background-color: $secondary;
-  width: 100%;
-  height: 75% !important;
   border-radius: 0vw 15px 15px 0vw;
 }
 

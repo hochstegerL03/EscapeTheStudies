@@ -25,11 +25,6 @@
   color: black;
 }
 
-.white {
-  background-color: white;
-  color: black;
-}
-
 .dark {
   background-color: $primary;
   color: white;

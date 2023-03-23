@@ -3,7 +3,7 @@
     <q-header reveal class="bg-white text-black" height-hint="98">
       <q-toolbar>
         <!--Navbar used for the Main Navigation -->
-        <et-s-navbar @showRightMenu="toggleRightDrawer"></et-s-navbar>
+        <EtSNavbar @showRightMenu="toggleRightDrawer"></EtSNavbar>
         <!--Navbar End-->
       </q-toolbar>
     </q-header>
@@ -170,12 +170,6 @@ function toggleRightDrawer() {
   pointer-events: none;
 }
 
-.footer {
-  font-size: 0.86rem;
-}
-.header {
-  font-family: 'Roboto', sans-serif;
-}
 
 .ets-text-mono {
   font-family: 'Roboto Mono', monospace;
@@ -209,9 +203,6 @@ a:active {
 }
 .ets-w-80 {
   width: 80% !important;
-}
-.w-70 {
-  width: 70% !important;
 }
 
 .ets-w-50 {

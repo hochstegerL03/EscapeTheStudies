@@ -58,14 +58,14 @@
               <!--Team Ende-->
               <div class="row q-mt-xl ets-text-grow">
                 <div class="col-12">Impressum</div>
-                <div class="col-md-6 col-12 q-mt-lg">
+                <div class="col-sm-6 col-12 q-mt-lg">
                   <div class="text-weight-regular">Dominik</div>
                   <div class="text-weight-regular">Peric</div>
                   <div class="text-weight-regular">HTL Wien West</div>
                   <div class="text-weight-regular">Thaliastraße 125</div>
                   <div class="text-weight-regular">1160 Wien</div>
                 </div>
-                <div class="col-md-6 col-12 q-mt-lg">
+                <div class="col-sm-6 col-12 q-mt-lg">
                   <div class="text-weight-regular ets-underline">Kontaktaufnahme:</div>
                   <div class="text-weight-regular">E-Mail: peric.d03@htlwienwest.at</div>
                   <div class="text-weight-regular">Telefon: +43 678 1221811</div>
