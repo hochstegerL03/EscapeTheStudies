@@ -7,6 +7,8 @@ import {
   dbGetChapter,
   dbGetTextData,
   dbGetQuestionType,
+  dbGetNews,
+  dbGetTag,
 } from '../models/ets.js';
 
 const getCourse = async (req, res) => res.status(200).json(await dbGetCourse());
@@ -35,6 +37,10 @@ const getTextData = async (req, res) => {
 
 const getQuestionType = async (req, res) => res.status(200).json(await dbGetQuestionType());
 
+const getNews = async (req, res) => res.status(200).json(await dbGetNews());
+
+const getTag = async (req, res) => res.status(200).json(await dbGetTag());
+
 export {
   getCourse,
   getQuestionChapter1,
@@ -43,4 +49,6 @@ export {
   getChapter,
   getTextData,
   getQuestionType,
+  getNews,
+  getTag,
 };

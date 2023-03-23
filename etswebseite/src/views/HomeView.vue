@@ -26,8 +26,8 @@
     <div class="flex justify-center ets-w-100 q-mt-lg">
       <div class="ets-w-90">
         <!--Progress-->
-        <div class="text-center text-body1 q-mb-sm text-grey" v-if="isNotHeader[0] != null">
-          {{ isNotHeader[0].text }}
+        <div class="text-center text-body1 q-mb-sm text-grey" v-if="newChapter[0]">
+          {{ newChapter[0].text }}
         </div>
         <div class="text-center text-body2 text-italic q-mb-md text-grey">
           Eine kleine Demo finden Sie
@@ -50,8 +50,8 @@
                     <!-- <p class="q-pa-md text text-h5 ets-text-shadow text-white">
                       Just an Act: Learn the Magic of Web-Development!
                     </p> -->
-                    <p class="q-pa-md text text-h5">
-                      Just an Act: Learn the Magic of Web-Development!
+                    <p class="q-pa-md text text-h5" v-if="newChapter[0]">
+                      {{ newChapter[0].text }}
                     </p>
                   </header>
                 </div>
@@ -108,16 +108,17 @@
                     </div>
 
                     <div class="col-6 self-end">
-                      <div class="text text-center text-h5">Just an Act:</div>
+                      <div class="text text-center text-h5" v-if="news[0]">
+                        {{ news[0].title }}
+                      </div>
                     </div>
                     <div class="col-3"></div>
                   </div>
                 </div>
               </header>
               <main class="q-pb-lg">
-                <div class="text-h6 text-weight-light q-pa-md text-italic">
-                  Learn more about the Beauty behind programming. Discover a breathtaking world
-                  ruled by a fool scheme ...
+                <div class="text-h6 text-weight-light q-pa-md text-italic" v-if="news[0]">
+                  {{ news[0].description }}
                 </div>
               </main>
             </div>
@@ -430,21 +431,21 @@ import EtSHeader from '../components/EtSHeader.vue';
 import OnPageMenu from '../components/OnPageMenu.vue';
 import { scroll } from 'quasar';
 import { ref, onMounted } from 'vue';
-// import { useTextData } from '../stores/textdata.js';
+import { useTextData } from '../stores/textdata.js';
 import axios from 'axios';
 
 const { getScrollTarget, setVerticalScrollPosition } = scroll;
-// const textDataStore = useTextData();
+const textDataStore = useTextData();
 let textData = ref([]);
 let isHeader = ref([]);
 let isNotHeader = ref([]);
-let newChapter = ref();
+let newChapter = ref([]);
+let news = ref([]);
 
 onMounted(async () => {
   let promises = [];
-  const { data } = await axios.get('http://localhost:3000/escapethestudies/textdata/4');
-  textData.value = data;
-  console.log(textData);
+  await textDataStore.textDataStore(4);
+  textData.value = textDataStore.homeView;
   for (let index = 0; index < textData.value.length; index++) {
     if (textData.value[index].isheader == true) {
       promises.push(isHeader.value.push(textData.value[index]));
@@ -453,8 +454,12 @@ onMounted(async () => {
     }
   }
   await Promise.all(promises);
-  console.log(isHeader);
-  console.log(isNotHeader);
+  newChapter.value = isNotHeader.value.filter(
+    (e) => e.text == 'Just an Act: Learn the Magic of Web-Development!',
+  );
+  const { data } = await axios.get('http://localhost:3000/escapethestudies/news');
+  news.value = data;
+  console.log();
 });
 
 function scrolltovertically(obj) {

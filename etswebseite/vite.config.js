@@ -7,7 +7,9 @@ export default defineConfig({
   base: '/',
   plugins: [
     vue({
-      template: { transformAssetUrls },
+      template: {
+        transformAssetUrls,
+      },
     }),
 
     quasar({

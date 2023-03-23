@@ -103,7 +103,10 @@
             schließlich nicht hier.
           </div>
           <div class="ets-w-100 flex justify-center">
-            <q-img src="lections/introduction/Introduction_text-editor_1.PNG" class="q-my-lg ets-image" />
+            <q-img
+              src="lections/introduction/Introduction_text-editor_1.PNG"
+              class="q-my-lg ets-image"
+            />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
             Und visuell haut uns dieser Texteditor auch nicht vom Hocker! Selbst ich kenne mich da
@@ -1562,7 +1565,7 @@ import EtSQuestionMutlipleChoice from '../components/EtSQuestionMutlipleChoice.v
 import EtSQuestionTextInput from '../components/EtSQuestionTextInput.vue';
 import EtSQuestionBuildAnswer from '../components/EtSQuestionBuildAnswer.vue';
 import { scroll } from 'quasar';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const questions = ref([
   {

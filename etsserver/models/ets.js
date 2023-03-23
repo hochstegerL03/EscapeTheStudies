@@ -56,6 +56,18 @@ const dbGetQuestionType = async () => {
   return data;
 };
 
+const dbGetNews = async () => {
+  const { data, error } = await supabase.from('news').select();
+  if (error) return error;
+  return data;
+};
+
+const dbGetTag = async () => {
+  const { data, error } = await supabase.from('question').select();
+  if (error) return error;
+  return data;
+};
+
 export {
   dbGetCourse,
   dbGetQuesitionChapter1,
@@ -64,4 +76,6 @@ export {
   dbGetChapter,
   dbGetTextData,
   dbGetQuestionType,
+  dbGetNews,
+  dbGetTag,
 };
