@@ -23,7 +23,7 @@ const dbGetAnswer = async () => {
   const { data, error } = await supabase
     .from('answers')
     .select(
-      'answerid,questionid,answeroptions,answershowed,correctanswer,question:questionid ( question )',
+      'answerid,questionid,answeroptions,answershowed,correctanswer,question:questionid ( question, questiontypeid )',
     );
   if (error) return error;
   return data;

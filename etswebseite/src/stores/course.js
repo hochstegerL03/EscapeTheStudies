@@ -6,6 +6,7 @@ export const useCourseStore = defineStore('course', {
     course: [],
     question: [],
     answers: [],
+    questionType: [],
   }),
   actions: {
     async getCourse() {
@@ -19,6 +20,10 @@ export const useCourseStore = defineStore('course', {
     async getAnswers() {
       const answers = await axios.get('http://localhost:3000/escapethestudies/answers');
       this.answers = answers.data;
+    },
+    async getQuestionType() {
+      const questionType = await axios.get('http://localhost:3000/escapethestudies/questiontype');
+      this.questionType = questionType.data;
     },
   },
   getters: {},
