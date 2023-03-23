@@ -9,7 +9,7 @@
           <div class="relative-position">
             <q-img :src="slides[0].img" />
             <div class="row ets-w-100 ets-h-100 absolute absolute-top">
-              <div class="col-1 ">
+              <div class="col-1">
                 <div class="flex ets-h-100 justify-center items-center">
                   <img
                     @click="changeRoom('left')"
@@ -28,18 +28,19 @@
                       :key="index"
                       :style="`position: absolute; left: ${slide.pl}; top: ${slide.pt};`"
                     >
-                      <div
-                        @click="challenge(slide.challenge)"
-                        :style="`width: ${slide.scaling};  opacity: 0.0;`"
-                      >
-                        click
+                      <div @click="challenge(slide.challenge)" :style="`width: ${slide.scaling}; `">
+                        <q-btn
+                          round
+                          class="bg-white"
+                          :style="`width: ${slide.scaling}; opacity: 0.2;`"
+                        ></q-btn>
                       </div>
                     </div>
                   </div>
                 </main>
                 <!--Escape Room Content End-->
               </div>
-              <div class="col-1 ">
+              <div class="col-1">
                 <div class="flex ets-h-100 justify-center items-center">
                   <img
                     @click="changeRoom('right')"
@@ -278,11 +279,11 @@ const task2 = {
 
 const slides = [
   {
-    pl: '55%',
-    pt: '2%',
+    pl: '58%',
+    pt: '5%',
     challenge: task1,
     icon: 'escaperoom/phChallenge.svg',
-    scaling: '10vw',
+    scaling: '10%',
     isDone: true,
     slide: 1,
     img: 'images/wand1.png',
