@@ -63,7 +63,7 @@ const dbGetNews = async () => {
 };
 
 const dbGetTag = async () => {
-  const { data, error } = await supabase.from('pictures').select();
+  const { data, error } = await supabase.from('question').select();
   if (error) return error;
   return data;
 };
