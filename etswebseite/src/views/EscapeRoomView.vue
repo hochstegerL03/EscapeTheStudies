@@ -4,12 +4,12 @@
     <div class="flex justify-center ets-w-100 q-my-lg">
       <div class="ets-w-100">
         <!--Escape Room Visual Top-->
-        <!--Main Window-->
         <div class="q-py-md">
           <div class="relative-position">
-            <q-img :src="slides[0].img" />
+            <q-img :src="eRoomImg" />
             <div class="row ets-w-100 ets-h-100 absolute absolute-top">
-              <div class="col-1 ">
+              <!--Left Overlay-->
+              <div class="col-1">
                 <div class="flex ets-h-100 justify-center items-center">
                   <img
                     @click="changeRoom('left')"
@@ -18,7 +18,8 @@
                   />
                 </div>
               </div>
-
+              <!--Left Overlay End-->
+              <!--Main Overlay-->
               <div class="col-10">
                 <!--Escape Room Content-->
                 <main class="ets-w-100 ets-h-100">
@@ -39,7 +40,9 @@
                 </main>
                 <!--Escape Room Content End-->
               </div>
-              <div class="col-1 ">
+              <!--Main Overlay End-->
+              <!--Right Overlay-->
+              <div class="col-1">
                 <div class="flex ets-h-100 justify-center items-center">
                   <img
                     @click="changeRoom('right')"
@@ -48,7 +51,7 @@
                   />
                 </div>
               </div>
-
+              <!--Right Overlay End-->
               <!--Escape Room Navigation-->
               <footer class="absolute-bottom">
                 <div class="row justify-center items-center">
@@ -62,7 +65,7 @@
                           >
                             <span
                               class="ets-fake-button"
-                              v-for="(page, index) in pages"
+                              v-for="(page, index) in slides.length"
                               :key="index"
                               :id="index"
                               @click="changeRoomMenu(index)"
@@ -81,7 +84,7 @@
           </div>
         </div>
         <!--Escape Room Visual Top End-->
-        <!--Info- / Progress-Bar-->
+        <!--Progress-Bar-->
         <div class="">
           <div class="row justify-center items-center">
             <div class="col-12">
@@ -109,8 +112,8 @@
             <div class="col-4"></div>
           </div>
         </div>
-        <!--Info- / Progress-Bar End-->
-        <!--Challenge-->
+        <!--Progress Bar End-->
+        <!--Text / Challenge Content-->
         <div class="flex justify-center">
           <div class="ets-w-90" v-if="renderTask">
             <!--Caption-->
@@ -196,7 +199,7 @@
             <!--Validation End-->
           </div>
         </div>
-        <!--Challenge End-->
+        <!--Text / Challenge Content End-->
       </div>
     </div>
   </div>
@@ -236,16 +239,16 @@ import EtSQuestionTextInput from '../components/EtSQuestionTextInput.vue';
 import EtSQuestionBuildAnswer from '../components/EtSQuestionBuildAnswer.vue';
 
 onMounted(() => {
-  for (let index = 0; index < pages; index++) {
+  for (let index = 0; index < slides.length; index++) {
     selectors.value.push(document.getElementById(index));
   }
-  for (let index = 0; index < pages; index++) {
+  for (let index = 0; index < slides.length; index++) {
     selectors.value[index].classList.remove('ets-menu-highlight');
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
 });
 const selectors = ref([]);
-const pages = 4;
+
 const pointer = ref(1);
 const showedTask = ref(null);
 const renderTask = ref(false);
@@ -325,25 +328,25 @@ function challenge(obj) {
 function changeRoom(direction) {
   if (direction == 'left' && pointer.value > 1) {
     pointer.value--;
-    eRoomImg.value = slides[pointer.value].img;
-  } else if (direction == 'left' && pointer.value < 2) {
-    pointer.value = pages;
-    eRoomImg.value = slides[pointer.value].img;
-  } else if (direction == 'right' && pointer.value < pages) {
+    eRoomImg.value = slides[pointer.value - 1].img;
+  } else if (direction == 'left' && pointer.value == 1) {
+    pointer.value = slides.length;
+    eRoomImg.value = slides[pointer.value - 1].img;
+  } else if (direction == 'right' && pointer.value < slides.length) {
     pointer.value++;
-    eRoomImg.value = slides[pointer.value].img;
+    eRoomImg.value = slides[pointer.value - 1].img;
   } else {
     pointer.value = 1;
-    eRoomImg.value = slides[pointer.value].img;
+    eRoomImg.value = slides[pointer.value - 1].img;
   }
-  for (let index = 0; index < pages; index++) {
+  for (let index = 0; index < slides.length; index++) {
     selectors.value[index].classList.remove('ets-menu-highlight');
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
 }
 function changeRoomMenu(index) {
   pointer.value = index + 1;
-  for (let index = 0; index < pages; index++) {
+  for (let index = 0; index < slides.length; index++) {
     selectors.value[index].classList.remove('ets-menu-highlight');
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
