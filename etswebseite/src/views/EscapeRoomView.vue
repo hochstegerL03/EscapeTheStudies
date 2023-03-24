@@ -1,19 +1,19 @@
 <template>
-  <div>
+  <div class="ets-w-100">
     <!--Content-->
     <div class="flex justify-center ets-w-100 q-my-lg">
       <div class="ets-w-100">
         <!--Escape Room Visual Top-->
         <div class="q-py-md">
           <div class="relative-position">
-            <q-img :src="eRoomImg" />
+            <q-img :src="slides[pointer - 1].img" />
             <div class="row ets-w-100 ets-h-100 absolute absolute-top">
               <!--Left Overlay-->
               <div class="col-1">
                 <div class="flex ets-h-100 justify-center items-center">
                   <img
                     @click="changeRoom('left')"
-                    class="w-70 ets-max-5"
+                    class="ets-w-80 ets-max-5"
                     src="escaperoom/PointerLeft.svg"
                   />
                 </div>
@@ -33,7 +33,7 @@
                         <q-btn
                           round
                           class="bg-white"
-                          :style="`width: ${slide.scaling}; opacity: 0.2;`"
+                          :style="`width: ${slide.scaling}; height: ${slide.scaling}; opacity: 0.2;`"
                         ></q-btn>
                       </div>
                     </div>
@@ -47,7 +47,7 @@
                 <div class="flex ets-h-100 justify-center items-center">
                   <img
                     @click="changeRoom('right')"
-                    class="w-70 ets-max-5"
+                    class="ets-w-80 ets-max-5"
                     src="escaperoom/PointerRight.svg"
                   />
                 </div>
@@ -115,7 +115,7 @@
         </div>
         <!--Progress Bar End-->
         <!--Text / Challenge Content-->
-        <div class="flex justify-center">
+        <div class="flex justify-center ets-w-100">
           <div class="ets-w-90" v-if="renderTask">
             <!--Caption-->
             <div class="q-mt-lg">
@@ -312,12 +312,12 @@ const slides = [
     img: 'images/wand3.png',
   },
   {
-    pl: '100%',
-    pt: '100%',
-    challenge: task2,
+    pl: '20%',
+    pt: '10%',
+    challenge: task1,
     icon: 'escaperoom/phChallenge.svg',
-    scaling: '15vw',
-    isDone: true,
+    scaling: '10vw',
+    isDone: false,
     slide: 4,
     img: 'images/wand4.png',
   },
@@ -329,16 +329,12 @@ function challenge(obj) {
 function changeRoom(direction) {
   if (direction == 'left' && pointer.value > 1) {
     pointer.value--;
-    eRoomImg.value = slides[pointer.value - 1].img;
   } else if (direction == 'left' && pointer.value == 1) {
     pointer.value = slides.length;
-    eRoomImg.value = slides[pointer.value - 1].img;
   } else if (direction == 'right' && pointer.value < slides.length) {
     pointer.value++;
-    eRoomImg.value = slides[pointer.value - 1].img;
   } else {
     pointer.value = 1;
-    eRoomImg.value = slides[pointer.value - 1].img;
   }
   for (let index = 0; index < slides.length; index++) {
     selectors.value[index].classList.remove('ets-menu-highlight');
@@ -353,5 +349,4 @@ function changeRoomMenu(index) {
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
 }
 
-const eRoomImg = ref(slides[0].img);
 </script>

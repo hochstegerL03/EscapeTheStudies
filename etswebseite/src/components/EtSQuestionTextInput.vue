@@ -1,11 +1,11 @@
 <template>
   <div>
-    <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
+    <EtSChatNav class="q-px-md q-py-sm q-mb-lg"
       ><span class="text text-weight-medium text-h6 text-left"
         >{{ question.question }}
-      </span></et-s-chat-nav
+      </span></EtSChatNav
     >
-    <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg">
+    <EtSChatNav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg">
       <div class="flex items-center justify-center h-100 w-100">
         <textarea
           placeholder="Type here ..."
@@ -13,7 +13,7 @@
           v-model="showedAnswer"
         ></textarea>
       </div>
-    </et-s-chat-nav>
+    </EtSChatNav>
   </div>
 </template>
 <style scoped>

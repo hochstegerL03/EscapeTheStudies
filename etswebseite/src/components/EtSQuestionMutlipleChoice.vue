@@ -5,13 +5,13 @@
         {{ question.description }}
       </div>
     </div>
-    <et-s-chat-nav class="q-px-md q-py-sm q-mb-lg"
+    <EtSChatNav class="q-px-md q-py-sm q-mb-lg"
       ><span class="text text-weight-medium text-h6 text-left">{{
         question.question
-      }}</span></et-s-chat-nav
+      }}</span></EtSChatNav
     >
-    <et-s-chat-nav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-      ><span class="text text-h6">{{ question.showedAnswer }}</span></et-s-chat-nav
+    <EtSChatNav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
+      ><span class="text text-h6">{{ question.showedAnswer }}</span></EtSChatNav
     >
     <div class="q-mr-md q-mb-md">
       <!--Radio Group (Invisible). Labels act as button/radio-->
