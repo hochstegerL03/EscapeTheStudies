@@ -25,4 +25,9 @@ const dbGetRoomIm = async (name) => {
   return rows;
 };
 
+const dbGetChapter = async (id) => {
+  const { rows } = await query('SELECT * FROM chapter WHERE chapterid =$1', [id]);
+  return rows;
+};
+
 export { dbGetCourse, dbGetQuestion, dbGetAnswer, dbGetGlobalInfo, dbGetRoomIm };

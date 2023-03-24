@@ -98,12 +98,10 @@
             <div class="ets-news-overlay ets-news-info placeholder">
               <header>
                 <div class="">
-                  <div class="row  items-start justify-center ets-h-100">
+                  <div class="row items-start justify-center ets-h-100">
                     <div class="ets-news-tag col-3 self-end">
                       <div class="row items-center justify-center ets-h-100">
-                        <div class="text-white ets-header text-weight-bold text-h5">
-                          Info
-                        </div>
+                        <div class="text-white ets-header text-weight-bold text-h5">Info</div>
                       </div>
                     </div>
 
@@ -459,7 +457,7 @@ onMounted(async () => {
   );
   const { data } = await axios.get('http://localhost:3000/escapethestudies/news');
   news.value = data;
-  console.log();
+  console.log(news);
 });
 
 function scrolltovertically(obj) {
