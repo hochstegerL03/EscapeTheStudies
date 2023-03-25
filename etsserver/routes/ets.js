@@ -10,6 +10,7 @@ import {
   getQuestionType,
   getNews,
   getTag,
+  insertUser,
 } from '../controllers/ets.js';
 
 const router = express.Router();
@@ -23,5 +24,6 @@ router.get('/textdata/:id', asyncHandler(getTextData));
 router.get('/questiontype', asyncHandler(getQuestionType));
 router.get('/news', asyncHandler(getNews));
 router.get('/tag', asyncHandler(getTag));
+router.post('/user', asyncHandler(insertUser));
 
 export default router;

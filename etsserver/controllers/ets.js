@@ -9,6 +9,8 @@ import {
   dbGetQuestionType,
   dbGetNews,
   dbGetTag,
+  dbInsertUser,
+  dbGetUser,
 } from '../models/ets.js';
 
 const getCourse = async (req, res) => res.status(200).json(await dbGetCourse());
@@ -41,6 +43,18 @@ const getNews = async (req, res) => res.status(200).json(await dbGetNews());
 
 const getTag = async (req, res) => res.status(200).json(await dbGetTag());
 
+const insertUser = async (req, res) => {
+  const email = req.body.email;
+  const name = req.body.name;
+  const getUser = await dbGetUser(email);
+  console.log(getUser);
+  if (email !== getUser.email) {
+    await dbInsertUser(email, name);
+    return res.status(200).send('User added');
+  }
+  return res.status(200).send('User exestiert bereits');
+};
+
 export {
   getCourse,
   getQuestionChapter1,
@@ -51,4 +65,5 @@ export {
   getQuestionType,
   getNews,
   getTag,
+  insertUser,
 };

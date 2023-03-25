@@ -63,7 +63,21 @@ const dbGetNews = async () => {
 };
 
 const dbGetTag = async () => {
-  const { data, error } = await supabase.from('question').select();
+  const { data, error } = await supabase.from('userinformation').select('*');
+  if (error) return error;
+  return data;
+};
+
+const dbInsertUser = async (email, name) => {
+  const { data, error } = await supabase
+    .from('userinformation')
+    .insert({ email: email, name: name });
+  if (error) return error;
+  return data;
+};
+
+const dbGetUser = async (email) => {
+  const { error, data } = await supabase.from('userinformation').select().eq('email', email);
   if (error) return error;
   return data;
 };
@@ -78,4 +92,6 @@ export {
   dbGetQuestionType,
   dbGetNews,
   dbGetTag,
+  dbInsertUser,
+  dbGetUser,
 };

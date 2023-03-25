@@ -16,3 +16,11 @@ GET http://localhost:3000/escapethestudies/news
 ################################################################
 GET http://localhost:3000/escapethestudies/tag
 ################################################################
+POST http://localhost:3000/escapethestudies/user
+Content-Type: application/json
+
+{
+    "email": "user@example.com",
+    "name": "user example"
+}
+################################################################
