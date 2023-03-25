@@ -56,7 +56,7 @@ const dbGetNews = async () => {
 };
 
 const dbGetTag = async () => {
-  const { data, error } = await supabase.from('answers').select('*');
+  const { data, error } = await supabase.from('tag').select('*');
   if (error) return error;
   return data;
 };
