@@ -9,7 +9,7 @@
       <!--Infos Ende-->
       <!--Image Logo-->
       <div class="flex justify-center items-center q-mt-xl">
-        <img class="ets-w-50 q-mt-lg q-mb-md" src="svgs/logo.svg"/>
+        <img class="ets-w-50 q-mt-lg q-mb-md" src="svgs/logo.svg" />
         <!--Chat Nav-->
         <div class="ets-w-90">
           <EtSChatNav class="q-pa-md q-my-lg"
@@ -56,11 +56,17 @@
 import EtSHeader from '../components/EtSHeader.vue';
 import EtSChatNav from '../components/EtSChatNav.vue';
 import { decodeCredential } from 'vue3-google-login';
+import { ref } from 'vue';
+
+let userEmail = ref();
+let userName = ref();
 
 const callback = (response) => {
   // This callback will be triggered when the user selects or login to
   // his Google account from the popup
   const userData = decodeCredential(response.credential);
-  console.log('Handle the userData', userData.email);
+  userEmail.value = userData.email;
+  userName.value = userData.name;
+  console.log('Handle the userData', userData.email, userData.name);
 };
 </script>
