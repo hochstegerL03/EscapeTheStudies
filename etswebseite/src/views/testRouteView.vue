@@ -19,8 +19,12 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="ets-w-80" v-html="story" v-if="story"></div>
-  <div class="ets-w-80" v-html="lecture" v-if="lecture"></div>
+  <div id="text" class="flex justify-center">
+    <div class="ets-w-80" v-html="story" v-if="story"></div>
+  </div>
+  <div id="text" class="flex justify-center">
+    <div class="ets-w-80" v-html="lecture" v-if="lecture"></div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
