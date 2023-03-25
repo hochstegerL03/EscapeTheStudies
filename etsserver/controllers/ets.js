@@ -1,7 +1,7 @@
 // import validator from 'is-my-json-valid';
 import {
   dbGetCourse,
-  dbGetQuesitionChapter1,
+  dbGetQuesition,
   dbGetAnswer,
   dbGetUsers,
   dbGetChapter,
@@ -11,14 +11,18 @@ import {
   dbGetTag,
   dbInsertUser,
   dbGetUser,
+  dbGetStory,
+  dbGetChapterID,
+  dbGetLection,
 } from '../models/ets.js';
 
 const getCourse = async (req, res) => res.status(200).json(await dbGetCourse());
 
-const getQuestionChapter1 = async (req, res) => {
-  const id = req.params.id;
-  console.log(id);
-  res.status(200).json(await dbGetQuesitionChapter1(id));
+const getQuestion = async (req, res) => {
+  const title = req.query.title;
+  const chapter = await dbGetChapterID(title);
+  console.log(chapter);
+  res.status(200).json(await dbGetQuesition(chapter[0].chapterid));
 };
 
 const getAnswer = async (req, res) => res.status(200).json(await dbGetAnswer());
@@ -53,9 +57,23 @@ const insertUser = async (req, res) => {
   return res.status(200).send('User exestiert bereits');
 };
 
+const getStory = async (req, res) => {
+  const title = req.query.title;
+  const chapter = await dbGetChapterID(title);
+  console.log(chapter);
+  return res.status(200).json(await dbGetStory(chapter[0].chapterid));
+};
+
+const getLection = async (req, res) => {
+  const title = req.query.title;
+  const chapter = await dbGetChapterID(title);
+  console.log(chapter);
+  return res.status(200).json(await dbGetLection(chapter[0].chapterid));
+};
+
 export {
   getCourse,
-  getQuestionChapter1,
+  getQuestion,
   getAnswer,
   getUser,
   getChapter,
@@ -64,4 +82,6 @@ export {
   getNews,
   getTag,
   insertUser,
+  getStory,
+  getLection,
 };

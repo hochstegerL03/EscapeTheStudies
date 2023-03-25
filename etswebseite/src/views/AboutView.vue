@@ -4,10 +4,7 @@
       <!--Header-->
       <div>
         <!--Default Banner. Can be modified -->
-        <q-img
-          class="q-mb-md ets-banner"
-          src="https://qyiwkgwvtdxnsowzibpm.supabase.co/storage/v1/object/public/pictures/images/about_success_banner.jpg?t=2023-03-19T11%3A45%3A25.004Z"
-        ></q-img>
+        <q-img class="q-mb-md ets-banner" src="images/about_success_banner.jpg"></q-img>
         <!--Banner End-->
         <!--OnePage Menu-->
         <OnPageMenu></OnPageMenu>

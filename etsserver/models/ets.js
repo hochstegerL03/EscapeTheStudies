@@ -6,25 +6,18 @@ const dbGetCourse = async () => {
   return data;
 };
 
-const dbGetQuesitionChapter1 = async (chapId) => {
+const dbGetQuesition = async (id) => {
   const { error, data } = await supabase
     .from('question')
     .select('*, questiontype:questiontypeid (questiontype)')
-    .eq('chapterid', chapId)
+    .eq('chapterid', id)
     .order('questionid');
   if (error) return error;
   return data;
 };
 
 const dbGetAnswer = async () => {
-  // const { error, data } = await supabase.from('answers').select().order('answerid');
-  // if (error) return error;
-  // return data;
-  const { data, error } = await supabase
-    .from('answers')
-    .select(
-      'answerid,questionid,answeroptions,answershowed,correctanswer,question:questionid ( question, questiontypeid )',
-    );
+  const { data, error } = await supabase.from('answers').select();
   if (error) return error;
   return data;
 };
@@ -63,7 +56,7 @@ const dbGetNews = async () => {
 };
 
 const dbGetTag = async () => {
-  const { data, error } = await supabase.from('userinformation').select('*');
+  const { data, error } = await supabase.from('answers').select('*');
   if (error) return error;
   return data;
 };
@@ -82,9 +75,27 @@ const dbGetUser = async (email) => {
   return data;
 };
 
+const dbGetChapterID = async (title) => {
+  const { error, data } = await supabase.from('chapter').select('chapterid').eq('title', title);
+  if (error) return error;
+  return data;
+};
+
+const dbGetStory = async (id) => {
+  const { error, data } = await supabase.from('story').select('*').eq('chapterid', id);
+  if (error) return error;
+  return data;
+};
+
+const dbGetLection = async (id) => {
+  const { error, data } = await supabase.from('lections').select('*').eq('chapterid', id);
+  if (error) return error;
+  return data;
+};
+
 export {
   dbGetCourse,
-  dbGetQuesitionChapter1,
+  dbGetQuesition,
   dbGetAnswer,
   dbGetUsers,
   dbGetChapter,
@@ -94,4 +105,7 @@ export {
   dbGetTag,
   dbInsertUser,
   dbGetUser,
+  dbGetStory,
+  dbGetChapterID,
+  dbGetLection,
 };

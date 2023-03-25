@@ -3,10 +3,7 @@
     <!--Header-->
     <div>
       <!--Default Banner. Can be modified -->
-      <q-img
-        class="q-mb-md ets-banner"
-        src="https://qyiwkgwvtdxnsowzibpm.supabase.co/storage/v1/object/public/pictures/images/courses_banner.png?t=2023-03-19T11%3A46%3A00.475Z"
-      ></q-img>
+      <q-img class="q-mb-md ets-banner" src="images/courses_banner.png"></q-img>
       <!--Banner End-->
       <!--Infos-->
       <EtSHeader

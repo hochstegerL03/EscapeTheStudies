@@ -1,51 +1,26 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import { useCourseStore } from '../stores/course.js';
-import data from '../assets/chapters.json';
+import { useTextData } from '../stores/textdata.js';
 // import EtSQuestionMutlipleChoice from '../components/EtSQuestionMutlipleChoice.vue';
 // import EtSQuestionTextInput from '../components/EtSQuestionTextInput.vue';
 // import EtSQuestionBuildAnswer from '../components/EtSQuestionBuildAnswer.vue';
 
-const courseStore = useCourseStore();
-let answer = ref([]);
-let qText = ref([]);
-let qTextOrder = ref([]);
-let qMultiChoice = ref([]);
+const textStore = useTextData();
 let lecture = ref();
 let story = ref();
-let questionType = ref([]);
 
 onMounted(async () => {
-  await courseStore.getAnswers();
-  await courseStore.getQuestionType();
-  answer.value = courseStore.answers;
-  questionType.value = courseStore.questionType;
-  lecture.value = data.chapters[0].content;
-  story.value = data.chapters[0].story;
-  for (let index = 0; index < answer.value.length; index++) {
-    if (questionType.value[0].questiontypeid == answer.value[index].question.questiontypeid) {
-      qText.value.push(answer.value[index]);
-    } else if (
-      questionType.value[1].questiontypeid == answer.value[index].question.questiontypeid
-    ) {
-      qTextOrder.value.push(answer.value[index]);
-    } else if (
-      questionType.value[2].questiontypeid == answer.value[index].question.questiontypeid
-    ) {
-      qMultiChoice.value.push(answer.value[index]);
-    } else {
-      console.log(answer.value[index]);
-    }
-  }
-  console.log(qText);
-  console.log(qTextOrder);
-  console.log(qMultiChoice);
+  await textStore.getStory1();
+  await textStore.getLection1();
+  console.log(textStore.chapter1Lection[0].code);
+  lecture.value = textStore.chapter1Lection[0].code;
+  story.value = textStore.chapter1Story[0].code;
 });
 </script>
 
 <template>
-  <div id="lection" class="flex justify-center" v-html="story"></div>
-  <div id="lection" class="flex justify-center" v-html="lecture"></div>
+  <div class="ets-w-80" v-html="story" v-if="story"></div>
+  <div class="ets-w-80" v-html="lecture" v-if="lecture"></div>
 </template>
 
 <style lang="scss" scoped>

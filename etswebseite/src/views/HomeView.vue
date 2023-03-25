@@ -5,7 +5,7 @@
       <!--Default Banner. Can be modified -->
       <q-img
         class="q-mb-md ets-banner"
-        src="https://qyiwkgwvtdxnsowzibpm.supabase.co/storage/v1/object/public/pictures/images/home_gears_banner.jpg"
+        src="images/home_gears_banner.jpg"
       ></q-img>
       <!--Banner End-->
       <!--Infos-->
@@ -186,7 +186,7 @@
             <!--Image-->
             <figure class="ets-w-100 q-ma-none q-mt-lg row">
               <q-img
-                src="https://qyiwkgwvtdxnsowzibpm.supabase.co/storage/v1/object/public/pictures/images/mathe_meme.png?t=2023-03-19T11%3A46%3A10.405Z "
+                src="images/mathe_meme.png"
               />
               <figcaption class="text-weight-light text-italic ets-w-90 q-mt-xs">
                 - HTL Wien West Deluxe Memes
@@ -353,7 +353,7 @@
         <!--Cookie-->
         <div class="row justify-center q-mb-lg">
           <q-img
-            src="https://qyiwkgwvtdxnsowzibpm.supabase.co/storage/v1/object/public/pictures/images/cookie_coffee.png?t=2023-03-19T11%3A45%3A30.523Z"
+            src="images/cookie_coffee.png"
           />
         </div>
         <!--Cookie End-->

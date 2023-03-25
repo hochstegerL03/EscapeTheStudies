@@ -1,6 +1,6 @@
 GET http://localhost:3000/escapethestudies/courses
 ################################################################
-GET http://localhost:3000/escapethestudies/question/1
+GET http://localhost:3000/escapethestudies/question?title=Chapter 1: Introduction: Environment und Setup
 ################################################################
 GET http://localhost:3000/escapethestudies/answers
 ################################################################
@@ -23,4 +23,8 @@ Content-Type: application/json
     "email": "user@example.com",
     "username": "user example"
 }
+################################################################
+GET http://localhost:3000/escapethestudies/story?title=Chapter 1: Introduction: Environment und Setup
+################################################################
+GET http://localhost:3000/escapethestudies/lection?title=Chapter 1: Introduction: Environment und Setup
 ################################################################
