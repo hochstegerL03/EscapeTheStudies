@@ -9,7 +9,7 @@
       <!--Infos Ende-->
       <!--Image Logo-->
       <div class="flex justify-center items-center q-mt-xl">
-        <q-img class="ets-w-50 q-mt-lg q-mb-md" src="svgs/logo.svg"></q-img>
+        <img class="ets-w-50 q-mt-lg q-mb-md" src="svgs/logo.svg"/>
         <!--Chat Nav-->
         <div class="ets-w-90">
           <EtSChatNav class="q-pa-md q-my-lg"

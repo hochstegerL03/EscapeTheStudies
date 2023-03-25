@@ -102,10 +102,10 @@
             Jedoch heißt das aber auch, viel Syntax auswendig lernen zu müssen. Und dafür sind wir
             schließlich nicht hier.
           </div>
-          <div class="ets-w-100 flex justify-center">
-            <q-img
+          <div class=" flex justify-center">
+            <img
               src="lections/introduction/Introduction_text-editor_1.PNG"
-              class="q-my-lg ets-image"
+              class="ets-w-100 q-my-lg ets-image"
             />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
@@ -150,10 +150,10 @@
             Kommen wir jedoch zum Download, Nach einer kleinen typischen und geliebten Prozedur des
             Leidens sollte Visual Studio Code ähnlich dem gleichen:
           </div>
-          <div class="ets-w-100 flex justify-center">
-            <q-img
+          <div class=" flex justify-center">
+            <img
               src="lections/introduction/Introduction_visual-studio-code_1.PNG"
-              class="q-my-lg ets-image"
+              class="ets-w-100 q-my-lg ets-image"
             />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
@@ -178,10 +178,10 @@
             installiert hat!
           </div>
           <hr />
-          <div class="ets-w-100 flex justify-center">
-            <q-img
+          <div class=" flex justify-center">
+            <img
               src="lections/introduction/Introduction_visual-studio-code-extensions_1.png"
-              class="q-my-lg ets-image"
+              class="ets-w-100 q-my-lg ets-image"
             />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
@@ -277,7 +277,7 @@
             verwendet werden.
           </div>
           <div class="ets-w-100 flex justify-center">
-            <q-img src="lections/html/HTML_visual_structure_1.svg" class="q-my-lg ets-image" />
+            <img src="lections/html/HTML_visual_structure_1.svg" class="q-my-lg ets-image" />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
             Das alles klingt zwar schön und gut, jedoch hilft uns das bei der Entwicklung selbst
@@ -323,7 +323,7 @@
           </div>
           <hr />
           <div class="ets-w-100 flex justify-center">
-            <q-img src="lections/html/HTML_visual_paired-tags_1.svg" class="q-my-lg ets-image" />
+            <img src="lections/html/HTML_visual_paired-tags_1.svg" class="q-my-lg ets-image" />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
             Der wohl wichtigste Tag, der &lt;html>...&lt;/html> steht direkt an unserer zweiten
@@ -346,7 +346,7 @@
           </div>
           <hr />
           <div class="ets-w-100 flex justify-center">
-            <q-img src="lections/html/HTML_visual_scope_2.svg" class="q-my-lg ets-image" />
+            <img src="lections/html/HTML_visual_scope_2.svg" class="q-my-lg ets-image" />
           </div>
           <div class="text text-italic text-h6 text-weight-light q-my-md">
             Scope: Ein Scope ist ein Bereich, in welchem bestimmte Variablen oder Werte ihren
@@ -364,7 +364,7 @@
             gibt ihm die “Rechte” die Puppe zu öffnen und auf eine höhere Ebene voranzuschreiten.
           </div>
           <div class="ets-w-100 flex justify-center">
-            <q-img src="lections/html/HTML_visual_scope_1.svg" class="q-my-lg ets-image" />
+            <img src="lections/html/HTML_visual_scope_1.svg" class="q-my-lg ets-image" />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
             In unserem geliebten &lt;html> Tag gibt es nun wieder zwei wichtige und unwegdenkbare
@@ -655,7 +655,7 @@
             &lt;p id="”Timmy”">&lt;/p>
           </div>
           <div class="ets-w-100 flex justify-center">
-            <q-img src="lections/css/CSS_ids_1.svg" class="q-my-lg ets-image-capped" />
+            <img src="lections/css/CSS_ids_1.svg" class="q-my-lg ets-image-capped" />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
             So das wars aber auch schon mit unserem Ausflug zu IDs!
@@ -679,7 +679,7 @@
             mir viele Worte zu ersparen, hier eine kleine Grafik.
           </div>
           <div class="ets-w-100 flex justify-center">
-            <q-img src="lections/css/CSS_margin_padding_1.svg" class="q-my-lg ets-image" />
+            <img src="lections/css/CSS_margin_padding_1.svg" class="q-my-lg ets-image" />
           </div>
           <div class="text text-h6 text-weight-regular q-my-md">
             Und wie machen wir das jetzt in CSS? Ja einfach so:
@@ -814,7 +814,7 @@
             ^^
           </div>
           <div class="ets-w-100 flex justify-center">
-            <q-img src="lections/css/CSS_display_1.svg" class="q-my-lg ets-image" />
+            <img src="lections/css/CSS_display_1.svg" class="q-my-lg ets-image" />
           </div>
           <div class="text text-italic text-h6 text-weight-light q-my-md">
             .inline-block{ <br />display: inline-block; <br />}
@@ -908,7 +908,7 @@
         </div>
         <div class="text text-h6 text-weight-bold q-my-md">Let:</div>
         <div class="ets-w-100 flex justify-center">
-          <q-img src="lections/javascript/JavaScript_var_let_1.svg" class="q-my-lg ets-image" />
+          <img src="lections/javascript/JavaScript_var_let_1.svg" class="q-my-lg ets-image" />
         </div>
         <div class="text text-h6 text-weight-regular q-my-md">
           Let ist der moderne Bruder oder die moderne Schwester von Var. Keine Sorge, zu dieser Art
@@ -1013,7 +1013,7 @@
         <hr />
         <div class="text text-h6 text-weight-bold q-my-md">Const:</div>
         <div class="ets-w-100 flex justify-center">
-          <q-img src="lections/javascript/JavaScript_var_const_1.svg" class="q-my-lg ets-image" />
+          <img src="lections/javascript/JavaScript_var_const_1.svg" class="q-my-lg ets-image" />
         </div>
         <div class="text text-h6 text-weight-regular q-my-md">
           Const steht für eine Konstante. Wow, wer hätte das nur erraten können. Und wie ist Const
@@ -1031,7 +1031,7 @@
         <hr />
         <div class="text text-h6 text-weight-bold q-my-md">Var:</div>
         <div class="ets-w-100 flex justify-center">
-          <q-img src="lections/javascript/JavaScript_var_var_1.svg" class="q-my-lg ets-image" />
+          <img src="lections/javascript/JavaScript_var_var_1.svg" class="q-my-lg ets-image" />
         </div>
         <div class="text text-h6 text-weight-regular q-my-md">
           Und was kann Var jetzt eigentlich noch anderes? Naja, es ist auf jeden Fall man ziemlich
@@ -1086,7 +1086,7 @@
           //value: 6
         </div>
         <div class="ets-w-100 flex justify-center">
-          <q-img src="lections/javascript/JavaScript_change_var_1.svg" class="q-my-lg ets-image" />
+          <img src="lections/javascript/JavaScript_change_var_1.svg" class="q-my-lg ets-image" />
         </div>
         <div class="text text-h6 text-weight-regular q-my-md">
           Aber wie hat das Letzte jetzt eigentlich funktioniert? Simpel gesagt, mit dem + Zeichen
@@ -1233,7 +1233,7 @@
         </div>
 
         <div class="ets-w-100 flex justify-center">
-          <q-img src="lections/javascript/JavaScript_if_1.svg" class="q-my-lg ets-image" />
+          <img src="lections/javascript/JavaScript_if_1.svg" class="q-my-lg ets-image" />
         </div>
         <div class="text text-h6 text-weight-regular q-my-md">Und nochmal in uncool:</div>
         <div class="text text-italic text-h6 text-weight-light q-my-md">
@@ -1304,8 +1304,8 @@
           wieder.
         </div>
         <div class="ets-w-100 flex justify-center">
-          <q-img src="lections/javascript/JavaScript_while_loop_1.svg" class="q-my-lg ets-image" />
-          <q-img src="lections/javascript/JavaScript_while_loop_2.svg" class="q-my-lg ets-image" />
+          <img src="lections/javascript/JavaScript_while_loop_1.svg" class="q-my-lg ets-image" />
+          <img src="lections/javascript/JavaScript_while_loop_2.svg" class="q-my-lg ets-image" />
         </div>
         <div class="text text-h6 text-weight-regular q-my-md">
           Ein guter Verwendungszweck dafür wäre unter anderem das unendliche Erweitern eines
