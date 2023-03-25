@@ -57,16 +57,21 @@ import EtSHeader from '../components/EtSHeader.vue';
 import EtSChatNav from '../components/EtSChatNav.vue';
 import { decodeCredential } from 'vue3-google-login';
 import { ref } from 'vue';
+import axios from 'axios';
 
 let userEmail = ref();
 let userName = ref();
 
-const callback = (response) => {
+const callback = async (response) => {
   // This callback will be triggered when the user selects or login to
   // his Google account from the popup
   const userData = decodeCredential(response.credential);
   userEmail.value = userData.email;
   userName.value = userData.name;
   console.log('Handle the userData', userData.email, userData.name);
+  await axios.post('http://localhost:3000/escapethestudies/user', {
+    email: userEmail,
+    username: userName,
+  });
 };
 </script>
