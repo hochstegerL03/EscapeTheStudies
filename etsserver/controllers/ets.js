@@ -45,12 +45,10 @@ const getTag = async (req, res) => res.status(200).json(await dbGetTag());
 
 const insertUser = async (req, res) => {
   const email = req.body.email;
-  const name = req.body.name;
+  const username = req.body.username;
   const getUser = await dbGetUser(email);
-  console.log(getUser);
-  if (email !== getUser.email) {
-    await dbInsertUser(email, name);
-    return res.status(200).send('User added');
+  if (email !== getUser[0].email) {
+    return res.status(200).json(await dbInsertUser(email, username));
   }
   return res.status(200).send('User exestiert bereits');
 };

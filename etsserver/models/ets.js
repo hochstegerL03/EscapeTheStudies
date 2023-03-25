@@ -71,7 +71,7 @@ const dbGetTag = async () => {
 const dbInsertUser = async (email, name) => {
   const { data, error } = await supabase
     .from('userinformation')
-    .insert({ email: email, name: name });
+    .insert({ email: email, username: name });
   if (error) return error;
   return data;
 };

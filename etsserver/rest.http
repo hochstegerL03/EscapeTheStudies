@@ -21,6 +21,6 @@ Content-Type: application/json
 
 {
     "email": "user@example.com",
-    "name": "user example"
+    "username": "user example"
 }
 ################################################################
