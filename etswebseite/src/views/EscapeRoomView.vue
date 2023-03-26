@@ -292,8 +292,8 @@ const slides = [
     img: 'images/wand1.png',
   },
   {
-    pl: '35%',
-    pt: '18%',
+    pl: '41%',
+    pt: '70%',
     challenge: task2,
     icon: 'escaperoom/phChallenge.svg',
     scaling: '15vw',
@@ -302,8 +302,8 @@ const slides = [
     img: 'images/wand2.png',
   },
   {
-    pl: '20%',
-    pt: '10%',
+    pl: '70%',
+    pt: '75%',
     challenge: task1,
     icon: 'escaperoom/phChallenge.svg',
     scaling: '10vw',
@@ -312,8 +312,8 @@ const slides = [
     img: 'images/wand3.png',
   },
   {
-    pl: '20%',
-    pt: '10%',
+    pl: '50%',
+    pt: '55%',
     challenge: task1,
     icon: 'escaperoom/phChallenge.svg',
     scaling: '10vw',
@@ -348,5 +348,4 @@ function changeRoomMenu(index) {
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
 }
-
 </script>
