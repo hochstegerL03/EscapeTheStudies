@@ -16,7 +16,7 @@
     <div class="q-mr-md q-mb-md">
       <!--Radio Group (Invisible). Labels act as button/radio-->
       <div class="checkbutton">
-        <label v-for="(answer, index) in question.answers" :key="index">
+        <label v-for="(answer, index) in question[0].answeroptions" :key="index">
           <input
             type="radio"
             :name="`radio${question.id}`"

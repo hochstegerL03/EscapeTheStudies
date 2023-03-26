@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <EtSChatNav class="q-px-md q-py-sm q-mb-lg"
       ><span class="text text-weight-medium text-h6 text-left">{{
         question.question
@@ -13,7 +12,7 @@
     <div class="q-mr-md q-mb-md">
       <!--Radio Group (Invisible). Labels act as button/radio-->
       <div class="flex items-center justify-center q-gutter-md checkbuttonmulti">
-        <label v-for="(answer, index) in question.answers" :key="index">
+        <label v-for="(answer, index) in question[0].answeroptions" :key="index">
           <input
             type="checkbox"
             :name="`radio${question.id}`"

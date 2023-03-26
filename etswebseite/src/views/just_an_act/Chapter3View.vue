@@ -52,7 +52,7 @@
   </div>
   <div class="flex justify-center">
     <div class="ets-w-80">
-      <q-form>
+      <q-form v-if="questions">
         <div v-for="question in questions" :key="question.questionid">
           <!--Multiple Choice Question-->
           <EtSQuestionMutlipleChoice
@@ -130,20 +130,18 @@ let story = ref();
 let questions = ref([]);
 let answer = ref([]);
 let qa = ref({});
-let endQA = ref([]);
-const rightQ = ref([]);
 const falseQ = ref([]);
 
 onMounted(async () => {
-  await textStore.getStory2();
-  await textStore.getLection2();
-  lecture.value = textStore.chapter2Lection[0].code;
-  story.value = textStore.chapter2Story[0].code;
+  await textStore.getStory3();
+  await textStore.getLection3();
+  lecture.value = textStore.chapter3Lection[0].code;
+  story.value = textStore.chapter3Story[0].code;
   const serQ = await axios.get(
-    'http://localhost:3000/escapethestudies/question?title=Chapter 2: Was ist HTML - The Constructor',
+    'http://localhost:3000/escapethestudies/question?title=Chapter 3: Was ist CSS - The Designer',
   );
   questions.value = serQ.data;
-  console.log(questions.value[0].questiontype.questiontype);
+  console.log(questions);
   const serA = await axios.get('http://localhost:3000/escapethestudies/answers');
   for (let index = 0; index < questions.value.length; index++) {
     answer.value.push(serA.data.filter((el) => el.questionid == questions.value[index].questionid));
