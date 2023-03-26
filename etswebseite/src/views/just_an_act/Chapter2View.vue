@@ -54,16 +54,30 @@
 import { scroll } from 'quasar';
 import { ref, onMounted } from 'vue';
 import { useTextData } from '../../stores/textdata.js';
+import axios from 'axios';
 
 const textStore = useTextData();
 let lecture = ref();
 let story = ref();
+let question = ref([]);
+let answer = ref([]);
 
 onMounted(async () => {
   await textStore.getStory2();
   await textStore.getLection2();
   lecture.value = textStore.chapter2Lection[0].code;
   story.value = textStore.chapter2Story[0].code;
+  const serQ = await axios.get(
+    'http://localhost:3000/escapethestudies/question?title=Chapter 2: Was ist HTML - The Constructor',
+  );
+  question.value = serQ.data;
+  console.log(question);
+  const serA = await axios.get('http://localhost:3000/escapethestudies/answers');
+  console.log(serA.data);
+  for (let index = 0; index < question.value.length; index++) {
+    answer.value.push(serA.data.filter((el) => el.questionid == question.value[index].questionid));
+  }
+  console.log(answer);
 });
 
 const questions = ref([
