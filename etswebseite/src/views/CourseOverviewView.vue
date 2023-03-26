@@ -107,6 +107,7 @@
       <!--Buttons End-->
     </div>
     <!--Content End-->
+
   </div>
 </template>
 <style lang="scss" scoped>

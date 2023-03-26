@@ -88,7 +88,7 @@ const dbGetStory = async (id) => {
 };
 
 const dbGetLection = async (id) => {
-  const { error, data } = await supabase.from('lections').select('*').eq('chapterid', id);
+  const { error, data } = await supabase.from('lection').select('*').eq('chapterid', id);
   if (error) return error;
   return data;
 };

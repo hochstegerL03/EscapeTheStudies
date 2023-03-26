@@ -4,7 +4,8 @@ import AboutView from '../views/AboutView.vue';
 import CoursesView from '../views/CoursesView.vue';
 import CourseOverviewView from '../views/CourseOverviewView.vue';
 import LogInView from '../views/LogInView.vue';
-import LectionView from '../views/LectionView.vue';
+import Chapter1View from '../views/just_an_act/Chapter1View.vue';
+import Chapter2View from '../views/just_an_act/Chapter2View.vue';
 import EscapeRoomView from '../views/EscapeRoomView.vue';
 import testRouteView from '../views/testRouteView.vue';
 
@@ -37,9 +38,14 @@ const router = createRouter({
       component: LogInView,
     },
     {
-      path: '/chapter',
-      name: 'chapter',
-      component: LectionView,
+      path: '/chapter1',
+      name: 'chapter 1',
+      component: Chapter1View,
+    },
+    {
+      path: '/chapter2',
+      name: 'chapter 2',
+      component: Chapter2View,
     },
     {
       path: '/escaperoom',
