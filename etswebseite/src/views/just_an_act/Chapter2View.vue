@@ -34,7 +34,7 @@
     <div id="text" class="flex justify-center">
       <div class="ets-w-80" v-html="story" v-if="story"></div>
     </div>
-    <div id="text" class="flex justify-center">
+    <div id="lection" class="flex justify-center">
       <div class="ets-w-80" v-html="lecture" v-if="lecture"></div>
     </div>
   </div>
@@ -60,11 +60,10 @@ let lecture = ref();
 let story = ref();
 
 onMounted(async () => {
-  await textStore.getStory1();
-  await textStore.getLection1();
-  console.log(textStore.chapter1Lection[0].code);
-  lecture.value = textStore.chapter1Lection[0].code;
-  story.value = textStore.chapter1Story[0].code;
+  await textStore.getStory2();
+  await textStore.getLection2();
+  lecture.value = textStore.chapter2Lection[0].code;
+  story.value = textStore.chapter2Story[0].code;
 });
 
 const questions = ref([
