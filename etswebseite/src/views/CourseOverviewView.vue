@@ -6,7 +6,9 @@
         <div class="ets-preview-overlay ets-h-100">
           <div class="flex justify-center items-center ets-h-100">
             <div class="ets-text-shadow">
-              <div class="ets-header text-white text-h4 text-weight-bolder">Just an Act</div>
+              <div class="ets-header text-white text-h4 text-weight-bolder" v-if="course">
+                {{ course[0].title }}
+              </div>
             </div>
             <div class="text-white absolute-bottom-right q-ma-md">
               <i class="fa-regular fa-star"></i>
@@ -51,14 +53,17 @@
       <div class="ets-w-90 q-mt-md">
         <div class="row justify-center items-center q-mb-md">
           <!--Header-->
-          <div class="col-12 text-center ets-header text-h5 text-weight-bolder">Just an Act:</div>
+          <div class="col-12 text-center ets-header text-h5 text-weight-bolder" v-if="course">
+            {{ course[0].title }}:
+          </div>
           <!--Header End-->
           <!--Description-->
           <div class="ets-w-90">
-            <div class="col-12 text text-h6 q-my-md text-weight-regular">
-              Welcome to a World full of Magic, Drama and Webtechnology. In this little Beginner
+            <div class="col-12 text text-h6 q-my-md text-weight-regular" v-if="course">
+              <!-- Welcome to a World full of Magic, Drama and Webtechnology. In this little Beginner
               friendly Course we will teach you how to use basic Bootstrap, HTML, JavaScript and
-              Vue. So be our Guest and <a class="disabled">join</a> this weird acting fanatic world.
+              Vue. So be our Guest and <a class="disabled">join</a> this weird acting fanatic world. -->
+              {{ course[0].detailedinformation }}
             </div>
           </div>
           <!--Description End-->
@@ -107,7 +112,6 @@
       <!--Buttons End-->
     </div>
     <!--Content End-->
-
   </div>
 </template>
 <style lang="scss" scoped>
@@ -154,6 +158,7 @@ let chapter = ref([]);
 const userStore = useUserStore();
 let user = ref();
 let userChapStatus = ref();
+let course = ref();
 //Scroll Tags:
 
 //.scrollbar Object
@@ -200,6 +205,9 @@ onMounted(async () => {
   const userid = user.value[0].userid;
   const { data } = await axios.get(`http://localhost:3000/escapethestudies/userChapter/${userid}`);
   userChapStatus.value = data;
+  await courseStore.getCourse();
+  course.value = courseStore.course;
+  console.log(course.value[0]);
 });
 
 function startScrollbarHorizontal(e) {

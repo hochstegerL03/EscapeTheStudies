@@ -3,10 +3,7 @@
     <!--Header-->
     <div>
       <!--Default Banner. Can be modified -->
-      <q-img
-        class="q-mb-md ets-banner"
-        src="images/home_gears_banner.jpg"
-      ></q-img>
+      <q-img class="q-mb-md ets-banner" src="images/home_gears_banner.jpg"></q-img>
       <!--Banner End-->
       <!--Infos-->
 
@@ -26,12 +23,10 @@
     <div class="flex justify-center ets-w-100 q-mt-lg">
       <div class="ets-w-90">
         <!--Progress-->
-        <div class="text-center text-body1 q-mb-sm text-grey" v-if="newChapter[0]">
-          {{ newChapter[0].text }}
-        </div>
+        <div class="text-center text-body1 q-mb-sm text-grey"></div>
         <div class="text-center text-body2 text-italic q-mb-md text-grey">
           Eine kleine Demo finden Sie
-          <router-link class="q-mt-md text-body2 text-weight-medium" to="/chapter">
+          <router-link class="q-mt-md text-body2 text-weight-medium" to="/chapter1">
             <a>hier!</a>
           </router-link>
         </div>
@@ -50,8 +45,8 @@
                     <!-- <p class="q-pa-md text text-h5 ets-text-shadow text-white">
                       Just an Act: Learn the Magic of Web-Development!
                     </p> -->
-                    <p class="q-pa-md text text-h5" v-if="newChapter[0]">
-                      {{ newChapter[0].text }}
+                    <p class="q-pa-md text text-h5" v-if="newCourse[0]">
+                      {{ newCourse[0].title }}: {{ newCourse[0].description }}
                     </p>
                   </header>
                 </div>
@@ -104,19 +99,16 @@
                         <div class="text-white ets-header text-weight-bold text-h5">Info</div>
                       </div>
                     </div>
-
                     <div class="col-6 self-end">
-                      <div class="text text-center text-h5" v-if="news[0]">
-                        {{ news[0].title }}
-                      </div>
+                      <div class="text text-center text-h5"></div>
                     </div>
                     <div class="col-3"></div>
                   </div>
                 </div>
               </header>
               <main class="q-pb-lg">
-                <div class="text-h6 text-weight-light q-pa-md text-italic" v-if="news[0]">
-                  {{ news[0].description }}
+                <div class="text-h6 text-weight-light q-pa-md text-italic" v-if="newCourse[0]">
+                  {{ newCourse[0].detailedinformation }}
                 </div>
               </main>
             </div>
@@ -185,9 +177,7 @@
             <!--Chapter 1 End-->
             <!--Image-->
             <figure class="ets-w-100 q-ma-none q-mt-lg row">
-              <q-img
-                src="images/mathe_meme.png"
-              />
+              <q-img src="images/mathe_meme.png" />
               <figcaption class="text-weight-light text-italic ets-w-90 q-mt-xs">
                 - HTL Wien West Deluxe Memes
               </figcaption>
@@ -352,9 +342,7 @@
         <!--How will we continue End-->
         <!--Cookie-->
         <div class="row justify-center q-mb-lg">
-          <q-img
-            src="images/cookie_coffee.png"
-          />
+          <q-img src="images/cookie_coffee.png" />
         </div>
         <!--Cookie End-->
       </div>
@@ -429,35 +417,16 @@ import EtSHeader from '../components/EtSHeader.vue';
 import OnPageMenu from '../components/OnPageMenu.vue';
 import { scroll } from 'quasar';
 import { ref, onMounted } from 'vue';
-import { useTextData } from '../stores/textdata.js';
-import axios from 'axios';
+import { useCourseStore } from '../stores/course.js';
 
 const { getScrollTarget, setVerticalScrollPosition } = scroll;
-const textDataStore = useTextData();
-let textData = ref([]);
-let isHeader = ref([]);
-let isNotHeader = ref([]);
-let newChapter = ref([]);
-let news = ref([]);
+const courseStore = useCourseStore();
+let newCourse = ref([]);
 
 onMounted(async () => {
-  let promises = [];
-  await textDataStore.textDataStore(4);
-  textData.value = textDataStore.homeView;
-  for (let index = 0; index < textData.value.length; index++) {
-    if (textData.value[index].isheader == true) {
-      promises.push(isHeader.value.push(textData.value[index]));
-    } else {
-      promises.push(isNotHeader.value.push(textData.value[index]));
-    }
-  }
-  await Promise.all(promises);
-  newChapter.value = isNotHeader.value.filter(
-    (e) => e.text == 'Just an Act: Learn the Magic of Web-Development!',
-  );
-  const { data } = await axios.get('http://localhost:3000/escapethestudies/news');
-  news.value = data;
-  console.log(news);
+  await courseStore.getCourse();
+  newCourse.value = courseStore.course;
+  console.log(newCourse);
 });
 
 function scrolltovertically(obj) {
