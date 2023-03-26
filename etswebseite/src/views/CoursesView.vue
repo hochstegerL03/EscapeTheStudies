@@ -167,7 +167,6 @@ import OnPageMenu from '../components/OnPageMenu.vue';
 import { ref, onMounted } from 'vue';
 import { useUserStore } from '../stores/user.js';
 import { useCourseStore } from '../stores/course.js';
-import axios from 'axios';
 
 const userStore = useUserStore();
 const courseStore = useCourseStore();
