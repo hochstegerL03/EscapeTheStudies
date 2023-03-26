@@ -133,12 +133,12 @@ let qa = ref({});
 let falseQ = ref([]);
 
 onMounted(async () => {
-  await textStore.getStory2();
-  await textStore.getLection2();
-  lecture.value = textStore.chapter2Lection[0].code;
-  story.value = textStore.chapter2Story[0].code;
+  await textStore.getStory3();
+  await textStore.getLection3();
+  lecture.value = textStore.chapter3Lection[0].code;
+  story.value = textStore.chapter3Story[0].code;
   const serQ = await axios.get(
-    'http://localhost:3000/escapethestudies/question?title=Chapter 2: Was ist HTML - The Constructor',
+    'http://localhost:3000/escapethestudies/question?title=Chapter 3: Was ist CSS - The Designer',
   );
   questions.value = serQ.data;
   console.log(questions.value[0].questiontype.questiontype);

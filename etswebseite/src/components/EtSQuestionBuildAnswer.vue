@@ -11,7 +11,7 @@
     >
     <div class="q-mr-md q-mb-md">
       <!--Radio Group (Invisible). Labels act as button/radio-->
-      <div class="flex items-center justify-center q-gutter-md checkbuttonmulti">
+      <div class="flex items-center justify-center q-gutter-md checkbuttonmulti" v-if="question[0]">
         <label v-for="(answer, index) in question[0].answeroptions" :key="index">
           <input
             type="checkbox"

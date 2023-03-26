@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="question">
     <div class="flex">
       <div class="w-90 text text-h6 text-weight-regular q-mb-lg">
         {{ question.description }}
@@ -15,7 +15,7 @@
     >
     <div class="q-mr-md q-mb-md">
       <!--Radio Group (Invisible). Labels act as button/radio-->
-      <div class="checkbutton">
+      <div class="checkbutton" v-if="question[0]">
         <label v-for="(answer, index) in question[0].answeroptions" :key="index">
           <input
             type="radio"
