@@ -129,6 +129,8 @@ let lecture = ref();
 let story = ref();
 let questions = ref([]);
 let answer = ref([]);
+const rightQ = ref([]);
+const falseQ = ref([]);
 
 onMounted(async () => {
   await textStore.getStory2();
@@ -150,26 +152,12 @@ function changeAnswer(answer, id) {
   questions.value[questions.value.findIndex((el) => el.id == id)].showedAnswer = answer;
 }
 
-const question1 = ref();
-const question2 = ref();
-const question3 = ref();
-const question4 = ref();
-const question5 = ref();
-const question6 = ref();
-const question7 = ref();
-const question8 = ref([]);
-const question9 = ref();
-const question10 = ref();
-
-const re = RegExp(
-  /^\s*(let|var|const)*(?<name> change| yo|Life always Changes| climateChange|true).+\;/gm,
-);
-
-const rightQ = ref([]);
-const falseQ = ref([]);
+// const re = RegExp(
+//   /^\s*(let|var|const)*(?<name> change| yo|Life always Changes| climateChange|true).+\;/gm,
+// );
 
 const showmenu = ref(false);
-const hint1 = ref(false);
+// const hint1 = ref(false);
 
 const { getScrollTarget, setVerticalScrollPosition } = scroll;
 
@@ -181,70 +169,5 @@ function scrolltovertically(obj) {
   setVerticalScrollPosition(target, offset, duration);
 }
 
-const trySub = () => {
-  while (falseQ.value.length > 0) {
-    falseQ.value.pop();
-  }
-  while (rightQ.value.length > 0) {
-    rightQ.value.pop();
-  }
-  if (question1.value == 'JavaScript, HTML, CSS.') {
-    rightQ.value.push(question1.value);
-  } else {
-    falseQ.value.push(question1.value);
-  }
-  if (question2.value == 'CSS & HTML sind eigentlich Beschreibungssprachen.') {
-    rightQ.value.push(question2.value);
-  } else {
-    falseQ.value.push(question2.value);
-  }
-  if (re.exec(question3.value) !== null) {
-    rightQ.value.push(question3.value);
-  } else {
-    falseQ.value.push(question3.value);
-  }
-  if (question4.value == 'Dynamisch: Der Datentyp wird mit dem angegebenen Wert definiert.') {
-    rightQ.value.push(question4.value);
-  } else {
-    falseQ.value.push(question4.value);
-  }
-  if (question5.value == 'br') {
-    rightQ.value.push(question5.value);
-  } else {
-    falseQ.value.push(question5.value);
-  }
-  if (
-    question6.value ==
-    'Der Text wird trotz falschem Tag angezeigt, jedoch mit den Font Values vom parent-Object.'
-  ) {
-    rightQ.value.push(question6.value);
-  } else {
-    falseQ.value.push(question6.value);
-  }
-  if (question7.value == '1616') {
-    rightQ.value.push(question7.value);
-  } else {
-    falseQ.value.push(question7.value);
-  }
-  if (question8.value.toString() == 'function,double,(number),{,return,number * number;,}') {
-    rightQ.value.push(question8.value.toString());
-  } else {
-    // let text = question8.value.toString();
-    // console.log(text);
-    falseQ.value.push(question8.value.toString());
-  }
-  if (question9.value == 'color: red;') {
-    rightQ.value.push(question9.value);
-  } else {
-    falseQ.value.push(question9.value);
-  }
-  if (question10.value == 'HTML5') {
-    rightQ.value.push(question10.value);
-  } else {
-    falseQ.value.push(question10.value);
-  }
-  if (rightQ.value.length > 9) {
-    return alert('Congratulation you got 0 Errors! Great Job!');
-  }
-};
+const trySub = () => {};
 </script>
