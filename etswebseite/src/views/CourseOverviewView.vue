@@ -24,25 +24,10 @@
       <!--Scroll Tag Bar-->
       <div class="ets-w-100">
         <div class="ets-scrollbar">
-          <div class="row no-wrap inline items-center q-my-sm">
-            <div class="ets-tag q-mx-sm">
+          <div class="row no-wrap inline items-center q-my-sm" v-if="tags">
+            <div class="ets-tag q-mx-sm" v-for="(t, index) in tags" :key="index">
               <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">
-                HTML
-              </div>
-            </div>
-            <div class="ets-tag q-mx-sm">
-              <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">
-                JavaScript
-              </div>
-            </div>
-            <div class="ets-tag q-mx-sm">
-              <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">
-                Vue
-              </div>
-            </div>
-            <div class="ets-tag q-mx-sm">
-              <div class="flex items-center justify-center ets-h-100 text-h6 text-center text">
-                Bootstrap
+                {{ t }}
               </div>
             </div>
           </div>
@@ -159,6 +144,7 @@ const userStore = useUserStore();
 let user = ref();
 let userChapStatus = ref();
 let course = ref();
+let tags = ref([]);
 //Scroll Tags:
 
 //.scrollbar Object
@@ -200,14 +186,18 @@ onMounted(async () => {
 
   await courseStore.getChapters();
   chapter.value = courseStore.chapters;
-  console.log(chapter);
   user.value = userStore.user;
   const userid = user.value[0].userid;
   const { data } = await axios.get(`http://localhost:3000/escapethestudies/userChapter/${userid}`);
   userChapStatus.value = data;
   await courseStore.getCourse();
   course.value = courseStore.course;
-  console.log(course.value[0]);
+  const sTag = await axios.get('http://localhost:3000/escapethestudies/tag');
+  for (let index = 0; index < sTag.data.length; index++) {
+    if (sTag.data[index].course.title == course.value[0].title) {
+      tags.value.push(sTag.data[index].tag.name);
+    }
+  }
 });
 
 function startScrollbarHorizontal(e) {

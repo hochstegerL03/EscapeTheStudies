@@ -56,7 +56,9 @@ const dbGetNews = async () => {
 };
 
 const dbGetTag = async () => {
-  const { data, error } = await supabase.from('tag').select('*');
+  const { data, error } = await supabase
+    .from('tag_course')
+    .select('*, course:courseid (title), tag:tagid (name)');
   if (error) return error;
   return data;
 };
