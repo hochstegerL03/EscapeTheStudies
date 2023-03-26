@@ -14,6 +14,7 @@ import {
   getStory,
   getLection,
   getUserInfo,
+  getUserDoneChapter,
 } from '../controllers/ets.js';
 
 const router = express.Router();
@@ -31,5 +32,6 @@ router.post('/user', asyncHandler(insertUser));
 router.get('/story', asyncHandler(getStory));
 router.get('/lection', asyncHandler(getLection));
 router.get('/user', asyncHandler(getUserInfo));
+router.get('/userChapter/:id', asyncHandler(getUserDoneChapter));
 
 export default router;

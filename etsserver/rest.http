@@ -20,8 +20,8 @@ POST http://localhost:3000/escapethestudies/user
 Content-Type: application/json
 
 {
-    "email": "user@example.com",
-    "username": "user example"
+    "email": "userin@example.com",
+    "username": "User*in"
 }
 ################################################################
 GET http://localhost:3000/escapethestudies/story?title=Chapter 1: Introduction: Environment und Setup
@@ -32,6 +32,8 @@ GET http://localhost:3000/escapethestudies/user
 Content-Type: application/json
 
 {
-    "email": "user@example.com"
+    "email": "userin@example.com"
 }
+################################################################
+GET http://localhost:3000/escapethestudies/userChapter/6
 ################################################################

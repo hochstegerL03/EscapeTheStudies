@@ -25,10 +25,12 @@
           <!--Header Lection 1-->
           <div class="ets-w-100 q-py-md">
             <div class="row justify-center items-center ets-card-lection ets-h-100">
-              <div class="col-8 bg-accent ets-card-lection-start">
-                <div class="ets-header text-h5 text-weight-bold q-ma-md">Just an Act:</div>
+              <div class="col-8 bg-accent ets-card-lection-start" v-if="course[0]">
+                <div class="ets-header text-h5 text-weight-bold q-ma-md">
+                  {{ course[0].title }}
+                </div>
                 <div class="text text-h6 q-ma-md text-weight-light">
-                  Learn the Magic of Web-Development!
+                  {{ course[0].description }}
                 </div>
               </div>
               <router-link class="col-4 bg-secondary ets-card-lection-end" to="/cooverview">
@@ -37,44 +39,27 @@
           </div>
           <!--Header Lection 1 End-->
           <!--Lection 1 Chapter Cards-->
-          <div class="ets-w-100 q-pt-md">
+          <div class="ets-w-100 q-pt-md" v-for="chap in chapter.slice(0, 3)" :key="chap.chapterid">
             <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
                 <div
+                  v-if="chap.chapterid !== 3"
                   class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
                 >
-                  Chapter 1: Spectator
+                  {{ chap.title }}
+                </div>
+                <div
+                  v-else
+                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll disabled"
+                >
+                  {{ chap.title }}
                 </div>
               </div>
               <div class="col-4 bg-secondary ets-card-lection-end">
-                <div class="flex justify-center items-center ets-font-icon">
-                  <i class="fa-regular fa-square-check"></i>
+                <div class="flex justify-center items-center ets-font-icon" v-if="userChapStatus">
+                  <i v-if="userChapStatus.lenght > 0" class="fa-regular fa-square-check"></i>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="ets-w-100 q-pt-md">
-            <div class="row justify-center items-center ets-card-lection ets-h-100">
-              <div class="col-8 bg-accent ets-card-lection-start">
-                <div
-                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
-                >
-                  Chapter 2: The Act
-                </div>
-              </div>
-              <div class="col-4 bg-secondary ets-card-lection-end"></div>
-            </div>
-          </div>
-          <div class="ets-w-100 q-pt-md disabled">
-            <div class="row justify-center items-center ets-card-lection ets-h-100">
-              <div class="col-8 bg-accent ets-card-lection-start">
-                <div
-                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
-                >
-                  Chapter 3: Another Promise
-                </div>
-              </div>
-              <div class="col-4 bg-secondary ets-card-lection-end"></div>
             </div>
           </div>
           <!--Lection 1 Chapter Cards End-->
@@ -167,21 +152,24 @@ import OnPageMenu from '../components/OnPageMenu.vue';
 import { ref, onMounted } from 'vue';
 import { useUserStore } from '../stores/user.js';
 import { useCourseStore } from '../stores/course.js';
+import axios from 'axios';
 
 const userStore = useUserStore();
 const courseStore = useCourseStore();
 let user = ref();
 let chapter = ref([]);
 let course = ref([]);
+let userChapStatus = ref();
 
 onMounted(async () => {
   user.value = userStore.user;
-  console.log(user.value[0].username);
   await courseStore.getCourse();
   await courseStore.getChapters();
   course.value = courseStore.course;
   chapter.value = courseStore.chapters;
-  console.log(course);
+  const userid = user.value[0].userid;
+  const { data } = await axios.get(`http://localhost:3000/escapethestudies/userChapter/${userid}`);
+  userChapStatus.value = data;
   console.log(chapter);
 });
 </script>

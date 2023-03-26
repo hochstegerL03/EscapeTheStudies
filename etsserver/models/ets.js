@@ -93,6 +93,12 @@ const dbGetLection = async (id) => {
   return data;
 };
 
+const dbGetUserDoneChapter = async (userid) => {
+  const { data, error } = await supabase.from('userdonechapter').select('*').eq('userid', userid);
+  if (error) return error;
+  return data;
+};
+
 export {
   dbGetCourse,
   dbGetQuesition,
@@ -108,4 +114,5 @@ export {
   dbGetStory,
   dbGetChapterID,
   dbGetLection,
+  dbGetUserDoneChapter,
 };
