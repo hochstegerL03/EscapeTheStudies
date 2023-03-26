@@ -130,6 +130,7 @@ let story = ref();
 let questions = ref([]);
 let answer = ref([]);
 let qa = ref({});
+let falseQ = ref([]);
 
 onMounted(async () => {
   await textStore.getStory2();

@@ -35,18 +35,6 @@ export const useTextData = defineStore('textdata', {
       );
       this.chapter2Lection = data;
     },
-    async getStory3() {
-      const { data } = await axios.get(
-        'http://localhost:3000/escapethestudies/story?title=Chapter 3: Was ist CSS - The Designer',
-      );
-      this.chapter3Story = data;
-    },
-    async getLection3() {
-      const { data } = await axios.get(
-        'http://localhost:3000/escapethestudies/lection?title=Chapter 3: Was ist CSS - The Designer',
-      );
-      this.chapter3Lection = data;
-    },
   },
   getters: {},
 });

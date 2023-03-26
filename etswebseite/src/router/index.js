@@ -6,7 +6,6 @@ import CourseOverviewView from '../views/CourseOverviewView.vue';
 import LogInView from '../views/LogInView.vue';
 import Chapter1View from '../views/just_an_act/Chapter1View.vue';
 import Chapter2View from '../views/just_an_act/Chapter2View.vue';
-import Chapter3View from '../views/just_an_act/Chapter3View.vue';
 import EscapeRoomView from '../views/EscapeRoomView.vue';
 import testRouteView from '../views/testRouteView.vue';
 
@@ -47,11 +46,6 @@ const router = createRouter({
       path: '/chapter2',
       name: 'chapter 2',
       component: Chapter2View,
-    },
-    {
-      path: '/chapter3',
-      name: 'chapter 3',
-      component: Chapter3View,
     },
     {
       path: '/escaperoom',
