@@ -67,80 +67,28 @@
         <!--Chapter Cards-->
         <div class="flex justify-center q-mb-xl">
           <!--Chapters-->
-          <div class="ets-w-100 q-pt-md">
+          <div class="ets-w-100 q-pt-md" v-for="chap in chapter" :key="chap.chapterid">
             <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
                 <div
                   class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
                 >
-                  Chapter 1: Spectator
+                  {{ chap.title }}
                 </div>
               </div>
-              <router-link to="/chapter" class="col-4 bg-secondary ets-card-lection-end">
-                <div class="flex justify-center items-center ets-font-icon">
-                  <i class="fa-regular fa-square-check"></i>
+              <router-link
+                v-if="chap.title !== 'Chapter 5: ER'"
+                :to="`/chapter${chap.chapterid}`"
+                class="col-4 bg-secondary ets-card-lection-end"
+              >
+                <div class="flex justify-center items-center ets-font-icon" v-if="userChapStatus">
+                  <i v-if="userChapStatus.lenght > 0" class="fa-regular fa-square-check"></i>
                 </div>
               </router-link>
-            </div>
-          </div>
-          <div class="ets-w-100 q-pt-md">
-            <div class="row justify-center items-center ets-card-lection ets-h-100">
-              <div class="col-8 bg-accent ets-card-lection-start">
-                <div
-                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
-                >
-                  Chapter 2: The Act
+              <router-link v-else to="/escaperoom" class="col-4 bg-secondary ets-card-lection-end">
+                <div class="flex justify-center items-center ets-font-icon" v-if="userChapStatus">
+                  <i v-if="userChapStatus.lenght > 0" class="fa-regular fa-square-check"></i>
                 </div>
-              </div>
-              <div class="col-4 bg-secondary ets-card-lection-end"></div>
-            </div>
-          </div>
-          <div class="ets-w-100 q-pt-md disabled">
-            <div class="row justify-center items-center ets-card-lection ets-h-100">
-              <div class="col-8 bg-accent ets-card-lection-start">
-                <div
-                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
-                >
-                  Chapter 3: Another Promise
-                </div>
-              </div>
-              <div class="col-4 bg-secondary ets-card-lection-end"></div>
-            </div>
-          </div>
-          <div class="ets-w-100 q-pt-md disabled">
-            <div class="row justify-center items-center ets-card-lection ets-h-100">
-              <div class="col-8 bg-accent ets-card-lection-start">
-                <div
-                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
-                >
-                  Chapter 4: Over the Watch
-                </div>
-              </div>
-              <div class="col-4 bg-secondary ets-card-lection-end"></div>
-            </div>
-          </div>
-          <div class="ets-w-100 q-pt-md disabled">
-            <div class="row justify-center items-center ets-card-lection ets-h-100">
-              <div class="col-8 bg-accent ets-card-lection-start">
-                <div
-                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
-                >
-                  Chapter 5: Another Sky
-                </div>
-              </div>
-              <div class="col-4 bg-secondary ets-card-lection-end"></div>
-            </div>
-          </div>
-          <div class="ets-w-100 q-pt-md">
-            <div class="row justify-center items-center ets-card-lection ets-h-100">
-              <div class="col-8 bg-accent ets-card-lection-start">
-                <div
-                  class="ets-header text-h6 text-weight-bold q-my-sm q-mx-md ets-overflow-scroll"
-                >
-                  Chapter 6: Closed Doors
-                </div>
-              </div>
-              <router-link to="/escaperoom" class="col-4 bg-secondary ets-card-lection-end">
               </router-link>
             </div>
           </div>
@@ -196,6 +144,15 @@
 </style>
 <script setup>
 import { ref, onMounted } from 'vue';
+import { useCourseStore } from '../stores/course.js';
+import { useUserStore } from '../stores/user.js';
+import axios from 'axios';
+
+const courseStore = useCourseStore();
+let chapter = ref([]);
+const userStore = useUserStore();
+let user = ref();
+let userChapStatus = ref();
 //Scroll Tags:
 
 //.scrollbar Object
@@ -210,7 +167,7 @@ const referenceX = ref();
 //scroll-Distance
 const relativeScroll = ref();
 
-onMounted(() => {
+onMounted(async () => {
   //get .scrollbar Object
   scrollbarTags.value = document.querySelector('.ets-scrollbar');
 
@@ -234,6 +191,14 @@ onMounted(() => {
   scrollbarTags.value.addEventListener('mousedown', startScrollbarHorizontal);
   scrollbarTags.value.addEventListener('mouseup', stopScrollbarHorizontal);
   scrollbarTags.value.addEventListener('mouseleave', stopScrollbarHorizontal);
+
+  await courseStore.getChapters();
+  chapter.value = courseStore.chapters;
+  console.log(chapter);
+  user.value = userStore.user;
+  const userid = user.value[0].userid;
+  const { data } = await axios.get(`http://localhost:3000/escapethestudies/userChapter/${userid}`);
+  userChapStatus.value = data;
 });
 
 function startScrollbarHorizontal(e) {
