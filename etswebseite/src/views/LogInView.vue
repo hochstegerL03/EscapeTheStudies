@@ -56,9 +56,11 @@
 import EtSHeader from '../components/EtSHeader.vue';
 import EtSChatNav from '../components/EtSChatNav.vue';
 import { decodeCredential } from 'vue3-google-login';
+import { useUserStore } from '../stores/user.js';
 import { ref } from 'vue';
 import axios from 'axios';
 
+const userStore = useUserStore();
 let userEmail = ref();
 let userName = ref();
 
@@ -73,5 +75,6 @@ const callback = async (response) => {
     email: userEmail,
     username: userName,
   });
+  await userStore.getUser(userEmail);
 };
 </script>

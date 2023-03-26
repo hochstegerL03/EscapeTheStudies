@@ -13,6 +13,7 @@ import {
   insertUser,
   getStory,
   getLection,
+  getUserInfo,
 } from '../controllers/ets.js';
 
 const router = express.Router();
@@ -29,5 +30,6 @@ router.get('/tag', asyncHandler(getTag));
 router.post('/user', asyncHandler(insertUser));
 router.get('/story', asyncHandler(getStory));
 router.get('/lection', asyncHandler(getLection));
+router.get('/user', asyncHandler(getUserInfo));
 
 export default router;

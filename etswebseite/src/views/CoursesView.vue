@@ -7,7 +7,8 @@
       <!--Banner End-->
       <!--Infos-->
       <EtSHeader
-        titel="Welcome, User*in"
+        v-if="user"
+        :titel="`Welcome, ${user[0].username}`"
         content="Discover the asthetic hub of EtS and start your studies ASAP."
       ></EtSHeader>
       <!--Infos Ende-->
@@ -163,4 +164,25 @@
 <script setup>
 import EtSHeader from '../components/EtSHeader.vue';
 import OnPageMenu from '../components/OnPageMenu.vue';
+import { ref, onMounted } from 'vue';
+import { useUserStore } from '../stores/user.js';
+import { useCourseStore } from '../stores/course.js';
+import axios from 'axios';
+
+const userStore = useUserStore();
+const courseStore = useCourseStore();
+let user = ref();
+let chapter = ref([]);
+let course = ref([]);
+
+onMounted(async () => {
+  user.value = userStore.user;
+  console.log(user.value[0].username);
+  await courseStore.getCourse();
+  await courseStore.getChapters();
+  course.value = courseStore.course;
+  chapter.value = courseStore.chapters;
+  console.log(course);
+  console.log(chapter);
+});
 </script>

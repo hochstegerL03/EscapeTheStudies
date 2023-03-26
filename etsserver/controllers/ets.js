@@ -51,10 +51,16 @@ const insertUser = async (req, res) => {
   const email = req.body.email;
   const username = req.body.username;
   const getUser = await dbGetUser(email);
-  if (email !== getUser[0].email) {
+  console.log(getUser.email);
+  if (email !== getUser.email) {
     return res.status(200).json(await dbInsertUser(email, username));
   }
   return res.status(200).send('User exestiert bereits');
+};
+
+const getUserInfo = async (req, res) => {
+  const email = req.body.email;
+  return res.status(200).json(await dbGetUser(email));
 };
 
 const getStory = async (req, res) => {
@@ -84,4 +90,5 @@ export {
   insertUser,
   getStory,
   getLection,
+  getUserInfo,
 };
