@@ -321,6 +321,8 @@ const slides = [
     slide: 4,
     img: 'images/wand4.png',
   },
+  // pl: '40%',
+  // pt: '40%',
 ];
 function challenge(obj) {
   showedTask.value = obj;
