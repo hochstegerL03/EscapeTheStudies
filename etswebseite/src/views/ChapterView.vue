@@ -164,6 +164,7 @@ onMounted(async () => {
 
 function changeAnswer(answer, id) {
   console.log(answer);
+  //neuen Wert an Questions showedAnswer = answer
   questions.value[questions.value.findIndex((el) => el.questionid == id)].showedAnswer = answer;
   console.log(questions.value[questions.value.findIndex((el) => el.questionid == id)].showedAnswer);
 }
