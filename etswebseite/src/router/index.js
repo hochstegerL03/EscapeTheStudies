@@ -3,13 +3,11 @@ import HomeView from '../views/HomeView.vue';
 import AboutView from '../views/AboutView.vue';
 import CoursesView from '../views/CoursesView.vue';
 import CourseOverviewView from '../views/CourseOverviewView.vue';
+import ChapterSelectionView from '../views/ChapterSelectionView.vue';
 import LogInView from '../views/LogInView.vue';
-import Chapter1View from '../views/just_an_act/Chapter1View.vue';
-import Chapter2View from '../views/just_an_act/Chapter2View.vue';
-import Chapter3View from '../views/just_an_act/Chapter3View.vue';
-import Chapter4View from '../views/just_an_act/Chapter4View.vue';
 import EscapeRoomView from '../views/EscapeRoomView.vue';
 import testRouteView from '../views/testRouteView.vue';
+import ChapterView from '../views/ChapterView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,31 +31,25 @@ const router = createRouter({
       path: '/cooverview',
       name: 'course',
       component: CourseOverviewView,
+      children: [
+        {
+          path: '',
+          name: 'chapteroverview',
+          component: ChapterSelectionView,
+          props: true,
+        },
+        {
+          path: ':id',
+          name: 'chapter',
+          component: ChapterView,
+          props: true,
+        },
+      ],
     },
     {
       path: '/sign',
       name: 'login',
       component: LogInView,
-    },
-    {
-      path: '/chapter1',
-      name: 'chapter 1',
-      component: Chapter1View,
-    },
-    {
-      path: '/chapter2',
-      name: 'chapter 2',
-      component: Chapter2View,
-    },
-    {
-      path: '/chapter3',
-      name: 'chapter 3',
-      component: Chapter3View,
-    },
-    {
-      path: '/chapter7',
-      name: 'chapter 4',
-      component: Chapter4View,
     },
     {
       path: '/escaperoom',

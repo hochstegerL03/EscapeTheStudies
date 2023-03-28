@@ -16,6 +16,7 @@
       >
         <div class="flex items-center justify-center ets-h-100 ets-w-100 ets-fake-button">l</div>
       </div>
+
       <div
         @click="scrolltovertically('questions')"
         v-if="showmenu"
@@ -23,6 +24,7 @@
       >
         <div class="flex items-start justify-center ets-h-100 ets-w-100 ets-fake-button">q</div>
       </div>
+
       <div
         @click="showmenu = !showmenu"
         class="ets-bubble-menu ets-title text-h3 q-my-md q-mx-lg text-white text-center"
@@ -38,7 +40,7 @@
       <div class="ets-w-80" v-html="lecture" v-if="lecture"></div>
     </div>
   </div>
-  <div id="questions" class="flex justify-center">
+  <div id="questions" class="flex justify-center" v-if="questions[0]">
     <!--Body/Text-->
     <div class="ets-w-80">
       <!--Header-->
@@ -118,11 +120,12 @@
 <script setup>
 import { scroll } from 'quasar';
 import { ref, onMounted } from 'vue';
-import { useTextData } from '../../stores/textdata.js';
+import { useTextData } from '../stores/textdata.js';
 import axios from 'axios';
-import EtSQuestionMutlipleChoice from '../../components/EtSQuestionMutlipleChoice.vue';
-import EtSQuestionTextInput from '../../components/EtSQuestionTextInput.vue';
-import EtSQuestionBuildAnswer from '../../components/EtSQuestionBuildAnswer.vue';
+import EtSQuestionMutlipleChoice from '../components/EtSQuestionMutlipleChoice.vue';
+import EtSQuestionTextInput from '../components/EtSQuestionTextInput.vue';
+import EtSQuestionBuildAnswer from '../components/EtSQuestionBuildAnswer.vue';
+const props = defineProps({ id: String });
 
 const textStore = useTextData();
 let lecture = ref();
@@ -133,24 +136,30 @@ let qa = ref({});
 let falseQ = ref([]);
 
 onMounted(async () => {
-  await textStore.getStory2();
-  await textStore.getLection2();
-  lecture.value = textStore.chapter2Lection[0].code;
-  story.value = textStore.chapter2Story[0].code;
-  const serQ = await axios.get(
-    'http://localhost:3000/escapethestudies/question?title=Chapter 2: Was ist HTML - The Constructor',
-  );
-  questions.value = serQ.data;
-  console.log(questions.value[0].questiontype.questiontype);
-  const serA = await axios.get('http://localhost:3000/escapethestudies/answers');
-  for (let index = 0; index < questions.value.length; index++) {
-    answer.value.push(serA.data.filter((el) => el.questionid == questions.value[index].questionid));
+  try {
+    await textStore.getStory(props.id);
+    await textStore.getLection(props.id);
+    lecture.value = textStore.chapterLection[0].code;
+    story.value = textStore.chapterStory[0].code;
+    const serQ = await axios.get(
+      `http://localhost:3000/escapethestudies/question?title=${props.id}`,
+    );
+    questions.value = serQ.data;
+    console.log(questions.value[0].questiontype.questiontype);
+    const serA = await axios.get('http://localhost:3000/escapethestudies/answers');
+    for (let index = 0; index < questions.value.length; index++) {
+      answer.value.push(
+        serA.data.filter((el) => el.questionid == questions.value[index].questionid),
+      );
+    }
+    for (let index = 0; index < questions.value.length; index++) {
+      Object.assign(questions.value[index], answer.value[index]);
+    }
+    qa.value = questions.value[0][0];
+    console.log(qa.value.answeroptions);
+  } catch (err) {
+    console.log(err);
   }
-  for (let index = 0; index < questions.value.length; index++) {
-    Object.assign(questions.value[index], answer.value[index]);
-  }
-  qa.value = questions.value[0][0];
-  console.log(qa.value.answeroptions);
 });
 
 function changeAnswer(answer, id) {
@@ -162,7 +171,6 @@ function changeAnswer(answer, id) {
 // );
 
 const showmenu = ref(false);
-// const hint1 = ref(false);
 
 const { getScrollTarget, setVerticalScrollPosition } = scroll;
 

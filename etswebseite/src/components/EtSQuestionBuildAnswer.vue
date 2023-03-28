@@ -15,7 +15,7 @@
         <label v-for="(answer, index) in question[0].answeroptions" :key="index">
           <input
             type="checkbox"
-            :name="`radio${question.id}`"
+            :name="`radio${question.questionid}`"
             :value="answer"
             v-model="showedAnswer"
           />
@@ -51,6 +51,6 @@ const props = defineProps({
 });
 const emit = defineEmits(['changeAnswer']);
 watch(showedAnswer, async () => {
-  emit('changeAnswer', showedAnswer, props.question.id);
+  emit('changeAnswer', showedAnswer, props.question.questionid);
 });
 </script>
