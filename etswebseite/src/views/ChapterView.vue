@@ -163,7 +163,9 @@ onMounted(async () => {
 });
 
 function changeAnswer(answer, id) {
+  console.log(answer);
   questions.value[questions.value.findIndex((el) => el.questionid == id)].showedAnswer = answer;
+  console.log(questions.value[questions.value.findIndex((el) => el.questionid == id)].showedAnswer);
 }
 
 // const re = RegExp(
