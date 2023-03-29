@@ -98,7 +98,16 @@
         </div>
       </div>
       <div class="col-6 text-center ets-header text-h6 text-weight-bold">
-        <div class="text-center text-secondary ets-header text-h5 text-weight-bold">Go Next!</div>
+        <div
+          class="text-center text-secondary ets-header text-h5 text-weight-bold"
+          v-if="falseQ.length > 0"
+          @click="$router.push('/cooverview')"
+        >
+          Go Next!
+        </div>
+        <div class="text-center text-secondary ets-header text-h5 text-weight-bold" v-else>
+          Go Next!
+        </div>
         <div class="text-center ets-header text-grey text-caption text-italic text-weight-light">
           Check your Answers to get a Star
         </div>
@@ -134,6 +143,7 @@ let questions = ref([]);
 let answer = ref([]);
 let qa = ref({});
 let falseQ = ref([]);
+let rightQ = ref([]);
 
 onMounted(async () => {
   try {
@@ -156,7 +166,8 @@ onMounted(async () => {
       Object.assign(questions.value[index], answer.value[index]);
     }
     qa.value = questions.value[0][0];
-    console.log(qa.value.answeroptions);
+    // console.log(answer);
+    // console.log(qa.value.answeroptions);
   } catch (err) {
     console.log(err);
   }
@@ -185,5 +196,17 @@ function scrolltovertically(obj) {
   setVerticalScrollPosition(target, offset, duration);
 }
 
-const trySub = () => {};
+const trySub = () => {
+  falseQ.value = [];
+  rightQ.value = [];
+  for (let index = 0; index < questions.value.length; index++) {
+    if (questions.value[index].showedAnswer == answer.value[index][0].correctanswer) {
+      rightQ.value.push(questions.value[index]);
+      console.log('richtig');
+    } else {
+      falseQ.value.push(questions.value[index]);
+      console.log('falsch');
+    }
+  }
+};
 </script>
