@@ -100,7 +100,7 @@
       <div class="col-6 text-center ets-header text-h6 text-weight-bold">
         <div
           class="text-center text-secondary ets-header text-h5 text-weight-bold"
-          v-if="falseQ.length > 0"
+          v-if="doneQ == true"
           @click="$router.push('/cooverview')"
         >
           Go Next!
@@ -144,6 +144,7 @@ let answer = ref([]);
 let qa = ref({});
 let falseQ = ref([]);
 let rightQ = ref([]);
+let doneQ = ref(false);
 
 onMounted(async () => {
   try {
@@ -207,6 +208,9 @@ const trySub = () => {
       falseQ.value.push(questions.value[index]);
       console.log('falsch');
     }
+  }
+  if (falseQ.value.length == 0) {
+    doneQ.value = true;
   }
 };
 </script>
