@@ -25,7 +25,7 @@ app.use(Quasar, {
 app.use(pinia);
 app.use(router);
 app.use(vue3GoogleLogin, {
-  clientId: '381874584720-p14r1psu4un55rs6sslceif7f6pi3idj.apps.googleusercontent.com',
+  clientId: '381874584720-o968j9gboock6dvt4547brb3bd7fobp3.apps.googleusercontent.com ',
 });
 
 app.mount('#app');
