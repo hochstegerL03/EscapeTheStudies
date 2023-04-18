@@ -29,7 +29,7 @@
         @click="showmenu = !showmenu"
         class="ets-bubble-menu ets-title text-h3 q-my-md q-mx-lg text-white text-center"
       >
-        <div class="flex items-center justify-center ets-h-100 ets-w-100">i</div>
+        <div class="flex items-center justify-center ets-h-100 ets-w-100 ets-fake-button">i</div>
       </div>
     </div>
     <!--Menu End-->
