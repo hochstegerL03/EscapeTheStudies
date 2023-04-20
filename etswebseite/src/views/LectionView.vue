@@ -837,7 +837,7 @@ const questions = ref([
     type: 'textInput',
     description: '',
     question:
-      'Deklariere drei Variablen: Die Konstante “change” mit dem Wert “Life always Changes”, die globale Variable “climateChange” mit dem booleschen Wert, “true”, und die lokale Variable “you” ohne Wertangabe:',
+      'Deklariere drei Variablen: Die Konstante “change” mit dem Wert “Life always Changes”, die globale Variable “climateChange” mit dem booleschen Wert “true”, und die lokale Variable “you” ohne Wertangabe:',
     showedAnswer: '',
     correctAnswer: 'const change = “Life always Changes”; var climateChange = true; let you;', //hier gehört ein Regex hin
   },
