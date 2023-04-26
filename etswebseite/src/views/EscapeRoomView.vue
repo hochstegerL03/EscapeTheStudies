@@ -5,8 +5,8 @@
       <div class="ets-w-100">
         <!--Escape Room Visual Top-->
         <div class="q-py-md">
-          <div class="relative-position">
-            <q-img :src="slides[pointer - 1].img" />
+          <div class="relative-position" v-if="slides[0]">
+            <q-img :src="slides[pointer - 1].wall.roomimg" />
             <div class="row ets-w-100 ets-h-100 absolute absolute-top">
               <!--Left Overlay-->
               <div class="col-1">
@@ -23,7 +23,7 @@
               <div class="col-10">
                 <!--Escape Room Content-->
                 <main class="ets-w-100 ets-h-100">
-                  <div class="ets-w-100 ets-h-100">
+                  <div class="ets-w-100 ets-h-100" v-if="slides[0]">
                     <div
                       v-for="(slide, index) in slides.filter((ch) => ch.slide == pointer)"
                       :key="index"
@@ -63,6 +63,7 @@
                         <div class="flex items-center justify-center">
                           <div
                             class="q-gutter-x-lg text-white text-center ets-header text-weight-bold text-body1"
+                            v-if="slides[0]"
                           >
                             <span
                               class="ets-fake-button"
@@ -91,7 +92,7 @@
             <div class="col-12">
               <div class="flex justify-center">
                 <div class="ets-progressbar q-py-xs">
-                  <div class="flex items-center justify-center">
+                  <div class="flex items-center justify-center" v-if="slides[0]">
                     <div class="q-gutter-x-md text-white ets-title text-weight-regular text-h5">
                       <span v-for="(slide, index) in slides" :key="index" :id="index">
                         <span v-if="slide.isDone">c{{ index + 1 }}</span>
@@ -248,19 +249,19 @@ onMounted(async () => {
   escaperoom.value = er.data;
   console.log(escaperoom.value[0]);
   const sl = await axios.get('http://localhost:3000/escapethestudies/slide');
-  slide.value = sl.data;
-  console.log(slide);
-  for (let index = 0; index < slide.value.length; index++) {
+  slides.value = sl.data;
+  console.log(slides);
+  for (let index = 0; index < slides.value.length; index++) {
     selectors.value.push(document.getElementById(index));
   }
-  for (let index = 0; index < slide.value.length; index++) {
+  for (let index = 0; index < slides.value.length; index++) {
     selectors.value[index].classList.remove('ets-menu-highlight');
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
 });
 const selectors = ref([]);
 
-const slide = ref([]);
+const slides = ref([]);
 const escaperoom = ref([]);
 const pointer = ref(1);
 const showedTask = ref(null);
@@ -292,50 +293,50 @@ const task2 = {
   challenge: challenge1,
 };
 
-const slides = [
-  {
-    pl: '58%',
-    pt: '5%',
-    challenge: task1,
-    icon: 'escaperoom/phChallenge.svg',
-    scaling: '10%',
-    isDone: true,
-    slide: 1,
-    img: 'images/wand1.png',
-  },
-  {
-    pl: '41%',
-    pt: '70%',
-    challenge: task2,
-    icon: 'escaperoom/phChallenge.svg',
-    scaling: '15vw',
-    isDone: true,
-    slide: 2,
-    img: 'images/wand2.png',
-  },
-  {
-    pl: '70%',
-    pt: '75%',
-    challenge: task1,
-    icon: 'escaperoom/phChallenge.svg',
-    scaling: '10vw',
-    isDone: false,
-    slide: 3,
-    img: 'images/wand3.png',
-  },
-  {
-    pl: '50%',
-    pt: '55%',
-    challenge: task1,
-    icon: 'escaperoom/phChallenge.svg',
-    scaling: '10vw',
-    isDone: false,
-    slide: 4,
-    img: 'images/wand4.png',
-  },
-  // pl: '40%',
-  // pt: '40%',
-];
+// const slides = [
+//   {
+//     pl: '58%',
+//     pt: '5%',
+//     challenge: task1,
+//     icon: 'escaperoom/phChallenge.svg',
+//     scaling: '10%',
+//     isDone: true,
+//     slide: 1,
+//     img: 'images/wand1.png',
+//   },
+//   {
+//     pl: '41%',
+//     pt: '70%',
+//     challenge: task2,
+//     icon: 'escaperoom/phChallenge.svg',
+//     scaling: '15vw',
+//     isDone: true,
+//     slide: 2,
+//     img: 'images/wand2.png',
+//   },
+//   {
+//     pl: '70%',
+//     pt: '75%',
+//     challenge: task1,
+//     icon: 'escaperoom/phChallenge.svg',
+//     scaling: '10vw',
+//     isDone: false,
+//     slide: 3,
+//     img: 'images/wand3.png',
+//   },
+//   {
+//     pl: '50%',
+//     pt: '55%',
+//     challenge: task1,
+//     icon: 'escaperoom/phChallenge.svg',
+//     scaling: '10vw',
+//     isDone: false,
+//     slide: 4,
+//     img: 'images/wand4.png',
+//   },
+//   // pl: '40%',
+//   // pt: '40%',
+// ];
 function challenge(obj) {
   showedTask.value = obj;
   if (showedTask.value) renderTask.value = true;
@@ -345,20 +346,20 @@ function changeRoom(direction) {
   if (direction == 'left' && pointer.value > 1) {
     pointer.value--;
   } else if (direction == 'left' && pointer.value == 1) {
-    pointer.value = slides.length;
-  } else if (direction == 'right' && pointer.value < slides.length) {
+    pointer.value = slides.value.length;
+  } else if (direction == 'right' && pointer.value < slides.value.length) {
     pointer.value++;
   } else {
     pointer.value = 1;
   }
-  for (let index = 0; index < slides.length; index++) {
+  for (let index = 0; index < slides.value.length; index++) {
     selectors.value[index].classList.remove('ets-menu-highlight');
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
 }
 function changeRoomMenu(index) {
   pointer.value = index + 1;
-  for (let index = 0; index < slides.length; index++) {
+  for (let index = 0; index < slides.value.length; index++) {
     selectors.value[index].classList.remove('ets-menu-highlight');
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
