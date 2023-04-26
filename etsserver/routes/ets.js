@@ -15,6 +15,7 @@ import {
   getLection,
   getUserInfo,
   getUserDoneChapter,
+  getEscapeRoom,
 } from '../controllers/ets.js';
 
 const router = express.Router();
@@ -33,5 +34,6 @@ router.get('/story', asyncHandler(getStory));
 router.get('/lection', asyncHandler(getLection));
 router.get('/user', asyncHandler(getUserInfo));
 router.get('/userChapter/:id', asyncHandler(getUserDoneChapter));
+router.get('/escaperoom', asyncHandler(getEscapeRoom));
 
 export default router;

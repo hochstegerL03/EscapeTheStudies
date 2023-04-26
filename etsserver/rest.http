@@ -37,3 +37,5 @@ Content-Type: application/json
 ################################################################
 GET http://localhost:3000/escapethestudies/userChapter/6
 ################################################################
+GET http://localhost:3000/escapethestudies/escaperoom
+################################################################

@@ -15,6 +15,7 @@ import {
   dbGetChapterID,
   dbGetLection,
   dbGetUserDoneChapter,
+  dbGetEscapeRoom,
 } from '../models/ets.js';
 
 const getCourse = async (req, res) => res.status(200).json(await dbGetCourse());
@@ -83,6 +84,8 @@ const getUserDoneChapter = async (req, res) => {
   return res.status(200).json(await dbGetUserDoneChapter(id));
 };
 
+const getEscapeRoom = async (req, res) => res.status(200).json(await dbGetEscapeRoom());
+
 export {
   getCourse,
   getQuestion,
@@ -98,4 +101,5 @@ export {
   getLection,
   getUserInfo,
   getUserDoneChapter,
+  getEscapeRoom,
 };

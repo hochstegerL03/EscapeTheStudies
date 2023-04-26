@@ -101,6 +101,13 @@ const dbGetUserDoneChapter = async (userid) => {
   return data;
 };
 
+const dbGetEscapeRoom = async () => {
+  const { data, error } = await supabase
+    .from('escaperoom')
+    .select('*, course:courseid (title), story:storyid (code, chapter: chapterid (title))');
+  if (error) return error;
+  return data;
+};
 
 export {
   dbGetCourse,
@@ -118,4 +125,5 @@ export {
   dbGetChapterID,
   dbGetLection,
   dbGetUserDoneChapter,
+  dbGetEscapeRoom,
 };

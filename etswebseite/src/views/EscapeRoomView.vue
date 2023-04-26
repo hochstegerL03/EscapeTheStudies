@@ -115,6 +115,9 @@
         </div>
         <!--Progress Bar End-->
         <!--Text / Challenge Content-->
+        <div class="flex justify-center ets-w-100" v-if="escaperoom[0]">
+          <div class="ets-w-90" v-html="escaperoom[0].story.code"></div>
+        </div>
         <div class="flex justify-center ets-w-100">
           <div class="ets-w-90" v-if="renderTask">
             <!--Caption-->
@@ -238,8 +241,9 @@ import { ref, onMounted } from 'vue';
 import EtSQuestionMutlipleChoice from '../components/EtSQuestionMutlipleChoice.vue';
 import EtSQuestionTextInput from '../components/EtSQuestionTextInput.vue';
 import EtSQuestionBuildAnswer from '../components/EtSQuestionBuildAnswer.vue';
+import axios from 'axios';
 
-onMounted(() => {
+onMounted(async () => {
   for (let index = 0; index < slides.length; index++) {
     selectors.value.push(document.getElementById(index));
   }
@@ -247,9 +251,13 @@ onMounted(() => {
     selectors.value[index].classList.remove('ets-menu-highlight');
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
+  const { data } = await axios.get('http://localhost:3000/escapethestudies/escaperoom');
+  escaperoom.value = data;
+  console.log(escaperoom.value[0]);
 });
 const selectors = ref([]);
 
+const escaperoom = ref([]);
 const pointer = ref(1);
 const showedTask = ref(null);
 const renderTask = ref(false);
@@ -327,6 +335,7 @@ const slides = [
 function challenge(obj) {
   showedTask.value = obj;
   if (showedTask.value) renderTask.value = true;
+  escaperoom.value = false;
 }
 function changeRoom(direction) {
   if (direction == 'left' && pointer.value > 1) {
