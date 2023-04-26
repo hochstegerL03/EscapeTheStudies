@@ -244,19 +244,23 @@ import EtSQuestionBuildAnswer from '../components/EtSQuestionBuildAnswer.vue';
 import axios from 'axios';
 
 onMounted(async () => {
-  for (let index = 0; index < slides.length; index++) {
+  const er = await axios.get('http://localhost:3000/escapethestudies/escaperoom');
+  escaperoom.value = er.data;
+  console.log(escaperoom.value[0]);
+  const sl = await axios.get('http://localhost:3000/escapethestudies/slide');
+  slide.value = sl.data;
+  console.log(slide);
+  for (let index = 0; index < slide.value.length; index++) {
     selectors.value.push(document.getElementById(index));
   }
-  for (let index = 0; index < slides.length; index++) {
+  for (let index = 0; index < slide.value.length; index++) {
     selectors.value[index].classList.remove('ets-menu-highlight');
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
-  const { data } = await axios.get('http://localhost:3000/escapethestudies/escaperoom');
-  escaperoom.value = data;
-  console.log(escaperoom.value[0]);
 });
 const selectors = ref([]);
 
+const slide = ref([]);
 const escaperoom = ref([]);
 const pointer = ref(1);
 const showedTask = ref(null);

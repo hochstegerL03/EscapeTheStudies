@@ -109,6 +109,15 @@ const dbGetEscapeRoom = async () => {
   return data;
 };
 
+const dbGetSlide = async () => {
+  const { data, error } = await supabase
+    .from('slide')
+    .select('*, wall:wallid (roomposition, roomimage)')
+    .order('slideid');
+  if (error) return error;
+  return data;
+};
+
 export {
   dbGetCourse,
   dbGetQuesition,
@@ -126,4 +135,5 @@ export {
   dbGetLection,
   dbGetUserDoneChapter,
   dbGetEscapeRoom,
+  dbGetSlide,
 };
