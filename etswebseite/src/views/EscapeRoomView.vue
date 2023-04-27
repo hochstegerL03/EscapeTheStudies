@@ -305,10 +305,10 @@ const doneQ = ref(false);
 
 function changeAnswer(answer, id) {
   console.log(answer);
+  console.log(id);
   //neuen Wert an Questions showedAnswer = answer
-  console.log(questions.value[questions.value.findIndex((el) => el.questionid == id)].showedAnswer);
+  console.log(questions.value[questions.value.findIndex((el) => el.questionid == id)]);
   questions.value[questions.value.findIndex((el) => el.questionid == id)].showedAnswer = answer;
-  console.log(questions.value[questions.value.findIndex((el) => el.questionid == id)].showedAnswer);
 }
 
 // const task1 = {
@@ -375,6 +375,9 @@ async function challenge(obj) {
   );
   questions.value = serQ.data;
   for (let index = 0; index < questions.value.length; index++) {
+    questions.value[index].showedAnswer = '';
+  }
+  for (let index = 0; index < questions.value.length; index++) {
     Object.assign(questions.value[index], answer.value[index]);
   }
   let qa = questions.value.filter((el) => el.questionid == id);
@@ -409,6 +412,7 @@ function changeRoomMenu(index) {
 
 const trySub = () => {
   for (let index = 0; index < questions.value.length; index++) {
+    console.log(questions.value[index].showedAnswer);
     if (questions.value[index].showedAnswer == answer.value[index][0].correctanswer) {
       rightQ.value.push(questions.value[index]);
       console.log('richtig');

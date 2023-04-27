@@ -13,12 +13,7 @@
       <!--Radio Group (Invisible). Labels act as button/radio-->
       <div class="flex items-center justify-center q-gutter-md checkbuttonmulti" v-if="question[0]">
         <label v-for="(answer, index) in question[0].answeroptions" :key="index">
-          <input
-            type="checkbox"
-            :name="`radio${question.questionid}`"
-            :value="answer"
-            v-model="showedAnswer"
-          />
+          <input type="checkbox" :name="`radio${index}`" :value="answer" v-model="showedAnswer" />
           <div class="text text-body1">{{ answer }}</div>
         </label>
       </div>
@@ -45,7 +40,7 @@
 <script setup>
 import { ref, watch, unref } from 'vue';
 import EtSChatNav from '../components/EtSChatNav.vue';
-const showedAnswer = ref(unref(props.question[0].showedAnswer));
+const showedAnswer = ref(unref(props.question.showedAnswer));
 const props = defineProps({
   question: Object,
 });

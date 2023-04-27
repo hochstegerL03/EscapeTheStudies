@@ -59,12 +59,13 @@ textarea::placeholder {
 <script setup>
 import { ref, watch, unref } from 'vue';
 import EtSChatNav from '../components/EtSChatNav.vue';
-const showedAnswer = ref(unref(props.question[0].showedAnswer));
+const showedAnswer = ref(unref(props.question.showedAnswer));
 const props = defineProps({
   question: Object,
 });
 const emit = defineEmits(['changeAnswer']);
 watch(showedAnswer, async () => {
-  emit('changeAnswer', showedAnswer, props.question.id);
+  emit('changeAnswer', showedAnswer, props.question.questionid);
 });
+console.log(props.question.questionid);
 </script>
