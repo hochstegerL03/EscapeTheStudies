@@ -252,6 +252,9 @@ onMounted(async () => {
   slides.value = sl.data;
   console.log(slides.value[0]);
   console.log(selectors);
+  const ch = await axios.get('http://localhost:3000/escapethestudies/challenge');
+  challenges.value = ch.data;
+  console.log(challenges);
   for (let index = 0; index < slides.value.length; index++) {
     selectors.value.push(document.getElementById(index));
   }
@@ -260,8 +263,9 @@ onMounted(async () => {
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
 });
-const selectors = ref([]);
 
+const challenges = ref([]);
+const selectors = ref([]);
 const slides = ref([]);
 const escaperoom = ref([]);
 const pointer = ref(1);
