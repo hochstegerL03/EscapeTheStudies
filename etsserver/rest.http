@@ -41,3 +41,5 @@ GET http://localhost:3000/escapethestudies/escaperoom
 ################################################################
 GET http://localhost:3000/escapethestudies/slide
 ################################################################
+GET http://localhost:3000/escapethestudies/challenge
+################################################################

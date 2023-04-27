@@ -118,6 +118,12 @@ const dbGetSlide = async () => {
   return data;
 };
 
+const dbGetChallenge = async () => {
+  const { data, error } = await supabase.from('challenge').select('*');
+  if (error) return error;
+  return data;
+};
+
 export {
   dbGetCourse,
   dbGetQuesition,
@@ -136,4 +142,5 @@ export {
   dbGetUserDoneChapter,
   dbGetEscapeRoom,
   dbGetSlide,
+  dbGetChallenge,
 };

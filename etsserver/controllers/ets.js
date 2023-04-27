@@ -17,6 +17,7 @@ import {
   dbGetUserDoneChapter,
   dbGetEscapeRoom,
   dbGetSlide,
+  dbGetChallenge,
 } from '../models/ets.js';
 
 const getCourse = async (req, res) => res.status(200).json(await dbGetCourse());
@@ -89,6 +90,8 @@ const getEscapeRoom = async (req, res) => res.status(200).json(await dbGetEscape
 
 const getSlide = async (req, res) => res.status(200).json(await dbGetSlide());
 
+const getChallenge = async (req, res) => res.status(200).json(await dbGetChallenge());
+
 export {
   getCourse,
   getQuestion,
@@ -106,4 +109,5 @@ export {
   getUserDoneChapter,
   getEscapeRoom,
   getSlide,
+  getChallenge,
 };
