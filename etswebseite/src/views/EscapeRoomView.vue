@@ -25,11 +25,14 @@
                 <main class="ets-w-100 ets-h-100">
                   <div class="ets-w-100 ets-h-100" v-if="slides[0]">
                     <div
-                      v-for="(slide, index) in slides.filter((ch) => ch.slide == pointer)"
+                      v-for="(slide, index) in slides.filter((ch) => ch.slideid == pointer + pages)"
                       :key="index"
                       :style="`position: absolute; left: ${slide.pl}; top: ${slide.pt};`"
                     >
-                      <div @click="challenge(slide.challenge)" :style="`width: ${slide.scaling}; `">
+                      <div
+                        @click="challenge(slide.item.challenge)"
+                        :style="`width: ${slide.scaling}; `"
+                      >
                         <q-btn
                           round
                           class="bg-white"
@@ -67,7 +70,7 @@
                           >
                             <span
                               class="ets-fake-button"
-                              v-for="(page, index) in slides.length"
+                              v-for="(page, index) in pages"
                               :key="index"
                               :id="index"
                               @click="changeRoomMenu(index)"
@@ -148,24 +151,24 @@
             <div>
               <!--Multiple Choice Question-->
               <EtSQuestionMutlipleChoice
-                v-if="showedTask.challenge.type == 'multipleChoice'"
+                v-if="showedTask.question.questiontype.questiontype == 'multipleChoice'"
                 @changeAnswer="changeAnswer"
-                :question="showedTask.challenge"
+                :question="showedTask.question.question"
               ></EtSQuestionMutlipleChoice>
               <!--Multiple Choice Question End-->
               <!--Text Input Question-->
               <EtSQuestionTextInput
-                v-else-if="showedTask.challenge.type == 'textInput'"
+                v-else-if="showedTask.question.questiontype.questiontype == 'textInput'"
                 @changeAnswer="changeAnswer"
-                :question="showedTask.challenge"
+                :question="showedTask.question.question"
               >
               </EtSQuestionTextInput>
               <!--Text Input Question End-->
               <!--Build Answer Question-->
               <EtSQuestionBuildAnswer
-                v-else-if="showedTask.challenge.type === 'buildAnswer'"
+                v-else-if="showedTask.question.questiontype.questiontype === 'buildAnswer'"
                 @changeAnswer="changeAnswer"
-                :question="showedTask.challenge"
+                :question="showedTask.question.question"
               ></EtSQuestionBuildAnswer>
               <!--Build Answer Question End-->
             </div>
@@ -247,33 +250,42 @@ import axios from 'axios';
 onMounted(async () => {
   const er = await axios.get('http://localhost:3000/escapethestudies/escaperoom');
   escaperoom.value = er.data;
-  console.log(escaperoom.value[0]);
   const sl = await axios.get('http://localhost:3000/escapethestudies/slide');
   slides.value = sl.data;
-  console.log(slides.value[0]);
-  console.log(selectors);
-  const ch = await axios.get('http://localhost:3000/escapethestudies/challenge');
-  challenges.value = ch.data;
-  console.log(challenges);
+  console.log(slides.value[0].item.challenge);
   for (let index = 0; index < slides.value.length; index++) {
+    if (newId.value !== slides.value[index].wallid) {
+      newId.value = slides.value[index].wallid;
+      pages.value += 1;
+    }
+  }
+  for (let index = 0; index < pages.value; index++) {
     selectors.value.push(document.getElementById(index));
   }
-  for (let index = 0; index < slides.value.length; index++) {
+  for (let index = 0; index < pages.value; index++) {
     selectors.value[index].classList.remove('ets-menu-highlight');
+    console.log(selectors.value);
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
 });
 
-const challenges = ref([]);
+const newId = ref(0);
+const pages = ref(0);
+// const challenges = ref([]);
 const selectors = ref([]);
 const slides = ref([]);
 const escaperoom = ref([]);
 const pointer = ref(1);
 const showedTask = ref(null);
 const renderTask = ref(false);
+let answer = ref([]);
+
 function changeAnswer(answer, id) {
-  challenge1.value.showedAnswer = answer;
+  console.log(answer);
+  //neuen Wert an Questions showedAnswer = answer
+  slides.value[slides.value.findIndex((el) => el.questionid == id)].showedAnswer = answer;
 }
+
 const challenge1 = ref({
   id: 1,
   type: 'multipleChoice',
@@ -344,6 +356,7 @@ const challenge1 = ref({
 // ];
 function challenge(obj) {
   showedTask.value = obj;
+  console.log(showedTask.value.question.question);
   if (showedTask.value) renderTask.value = true;
   escaperoom.value = false;
 }
@@ -351,20 +364,20 @@ function changeRoom(direction) {
   if (direction == 'left' && pointer.value > 1) {
     pointer.value--;
   } else if (direction == 'left' && pointer.value == 1) {
-    pointer.value = slides.value.length;
-  } else if (direction == 'right' && pointer.value < slides.value.length) {
+    pointer.value = pages.value;
+  } else if (direction == 'right' && pointer.value < pages.value) {
     pointer.value++;
   } else {
     pointer.value = 1;
   }
-  for (let index = 0; index < slides.value.length; index++) {
+  for (let index = 0; index < pages.value; index++) {
     selectors.value[index].classList.remove('ets-menu-highlight');
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
 }
 function changeRoomMenu(index) {
   pointer.value = index + 1;
-  for (let index = 0; index < slides.value.length; index++) {
+  for (let index = 0; index < pages.value; index++) {
     selectors.value[index].classList.remove('ets-menu-highlight');
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');

@@ -112,7 +112,9 @@ const dbGetEscapeRoom = async () => {
 const dbGetSlide = async () => {
   const { data, error } = await supabase
     .from('slide')
-    .select('*, wall:wallid (roomposition, roomimage)')
+    .select(
+      '*, wall:wallid (roomposition, roomimage), item:itemid (itemid, title, itemposition, icon, description, challenge:challenge_itemid_fkey (*, question:questionid (chapterid, question, hint, questiontype:questiontypeid (questiontype))))',
+    )
     .order('slideid');
   if (error) return error;
   return data;
@@ -122,7 +124,7 @@ const dbGetChallenge = async () => {
   const { data, error } = await supabase
     .from('challenge')
     .select(
-      '*, item:itemid (title, itemposition, icon, description), question:questionid (chapterid, question, hint, type:questiontypeid (questiontype))',
+      '*, item:itemid (title, itemposition, icon, description), question:questionid (chapterid, question, hint, questiontype:questiontypeid (questiontype))',
     );
   if (error) return error;
   return data;
