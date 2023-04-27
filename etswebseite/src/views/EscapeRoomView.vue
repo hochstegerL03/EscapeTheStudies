@@ -6,7 +6,7 @@
         <!--Escape Room Visual Top-->
         <div class="q-py-md">
           <div class="relative-position" v-if="slides[0]">
-            <q-img :src="slides[pointer - 1].wall.roomimg" />
+            <q-img :src="slides[pointer - 1].wall.roomimage" />
             <div class="row ets-w-100 ets-h-100 absolute absolute-top">
               <!--Left Overlay-->
               <div class="col-1">
@@ -250,7 +250,8 @@ onMounted(async () => {
   console.log(escaperoom.value[0]);
   const sl = await axios.get('http://localhost:3000/escapethestudies/slide');
   slides.value = sl.data;
-  console.log(slides);
+  console.log(slides.value[0]);
+  console.log(selectors);
   for (let index = 0; index < slides.value.length; index++) {
     selectors.value.push(document.getElementById(index));
   }
@@ -280,18 +281,18 @@ const challenge1 = ref({
   showedAnswer: '',
   correctAnswer: 'JavaScript, HTML, CSS.',
 });
-const task1 = {
-  title: 'Challenge 1',
-  banner: '',
-  info: 'Hier kommt eine kleine Erklärung zu dem, was in Zukunft mal hier zu erledigen ist. Spannenden Insider und auch Theorie erwarten Sie schon bald hier ^^',
-  challenge: challenge1,
-};
-const task2 = {
-  title: 'Challenge 2',
-  banner: '',
-  info: 'Tada! Es hat gewechselt. Cool oder?',
-  challenge: challenge1,
-};
+// const task1 = {
+//   title: 'Challenge 1',
+//   banner: '',
+//   info: 'Hier kommt eine kleine Erklärung zu dem, was in Zukunft mal hier zu erledigen ist. Spannenden Insider und auch Theorie erwarten Sie schon bald hier ^^',
+//   challenge: challenge1,
+// };
+// const task2 = {
+//   title: 'Challenge 2',
+//   banner: '',
+//   info: 'Tada! Es hat gewechselt. Cool oder?',
+//   challenge: challenge1,
+// };
 
 // const slides = [
 //   {
