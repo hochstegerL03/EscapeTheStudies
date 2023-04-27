@@ -59,7 +59,7 @@ textarea::placeholder {
 <script setup>
 import { ref, watch, unref } from 'vue';
 import EtSChatNav from '../components/EtSChatNav.vue';
-const showedAnswer = ref(unref(props.question.showedAnswer));
+const showedAnswer = ref(unref(props.question[0].showedAnswer));
 const props = defineProps({
   question: Object,
 });

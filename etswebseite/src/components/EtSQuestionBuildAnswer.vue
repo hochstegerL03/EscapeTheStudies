@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div v-if="question">
     <EtSChatNav class="q-px-md q-py-sm q-mb-lg"
       ><span class="text text-weight-medium text-h6 text-left">{{
         question.question
       }}</span></EtSChatNav
     >
     <EtSChatNav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-      ><span v-if="showedAnswer.length > 0" class="text text-h5">{{ showedAnswer.join(' ') }}</span
+      ><span v-if="showedAnswer.lenght > 0" class="text text-h5">{{ showedAnswer.join(' ') }}</span
       ><span v-else class="text text-h6">...</span></EtSChatNav
     >
     <div class="q-mr-md q-mb-md">
@@ -45,7 +45,7 @@
 <script setup>
 import { ref, watch, unref } from 'vue';
 import EtSChatNav from '../components/EtSChatNav.vue';
-const showedAnswer = ref(unref(props.question.showedAnswer));
+const showedAnswer = ref(unref(props.question[0].showedAnswer));
 const props = defineProps({
   question: Object,
 });

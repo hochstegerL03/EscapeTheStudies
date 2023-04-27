@@ -137,9 +137,7 @@
               <!--Preview End-->
               <!--Explanation-->
               <div>
-                <div class="text text-h6 text-weight-regular q-my-md">
-                  {{ showedTask.item.challenge.question.question }}
-                </div>
+                <div class="text text-h6 text-weight-regular q-my-md"></div>
               </div>
               <!--Explanation End-->
             </div>
@@ -147,33 +145,32 @@
             <!--Task-->
             <div v-if="renderTask">
               {{ showedTask.item.challenge.question[0] }}
-
               <!-- Multiple Choice Question-->
               <EtSQuestionMutlipleChoice
                 v-if="
-                  showedTask.item.challenge.question.questiontype.questiontype == 'multipleChoice'
+                  showedTask.item.challenge.question.questiontype.questiontype == 'MultipleChoice'
                 "
                 @changeAnswer="changeAnswer"
-                :question="showedTask.item.challenge.question"
+                :question="question"
               ></EtSQuestionMutlipleChoice>
               <!--Multiple Choice Question End-->
               <!--Text Input Question-->
               <EtSQuestionTextInput
                 v-else-if="
-                  showedTask.item.challenge.question.questiontype.questiontype == 'textInput'
+                  showedTask.item.challenge.question.questiontype.questiontype == 'TextInput'
                 "
                 @changeAnswer="changeAnswer"
-                :question="showedTask.item.challenge.question"
+                :question="question"
               >
               </EtSQuestionTextInput>
               <!--Text Input Question End-->
               <!--Build Answer Question-->
               <EtSQuestionBuildAnswer
                 v-else-if="
-                  showedTask.item.challenge.question.questiontype.questiontype === 'buildAnswer'
+                  showedTask.item.challenge.question.questiontype.questiontype === 'Text Ordering'
                 "
                 @changeAnswer="changeAnswer"
-                :question="showedTask.item.challenge.question"
+                :question="question"
               ></EtSQuestionBuildAnswer>
               <!--Build Answer Question End -->
             </div>
@@ -190,7 +187,7 @@
                 <div
                   class="text-center ets-header text-grey text-caption text-italic text-weight-light"
                 >
-                  <span v-if="false">x Error/s found.</span>
+                  <span v-if="falseQ.length > 0">{{ falseQ.length }} Error/s found.</span>
                   <span v-else>0 Errors found.</span>
                   <span class="ets-underline">click here!</span>
                 </div>
@@ -202,6 +199,7 @@
                   Go Next!
                 </div>
                 <div
+                  @click="trySub()"
                   class="text-center ets-header text-grey text-caption text-italic text-weight-light"
                 >
                   Check your Answers to get a Star
@@ -264,10 +262,10 @@ onMounted(async () => {
     for (let index = 0; index < chall.value.length; index++) {
       answer.value.push(serA.data.filter((el) => el.questionid == chall.value[index].questionid));
     }
+    answer.value.showedAnswer = '';
     for (let index = 0; index < slides.value.length; index++) {
       Object.assign(slides.value[index], answer.value[index]);
     }
-    console.log(slides.value[0][0].answeroptions);
     for (let index = 0; index < slides.value.length; index++) {
       if (newId.value !== slides.value[index].wallid) {
         newId.value = slides.value[index].wallid;
@@ -291,6 +289,7 @@ const chall = ref([]);
 const newId = ref(0);
 const pages = ref(0);
 const answer = ref([]);
+const questions = ref([]);
 // const challenges = ref([]);
 const selectors = ref([]);
 const slides = ref([]);
@@ -298,26 +297,20 @@ const escaperoom = ref([]);
 const pointer = ref(1);
 const showedTask = ref(null);
 const renderTask = ref(false);
+const question = ref(null);
+const falseQ = ref([]);
+const rightQ = ref([]);
+const doneQ = ref(false);
 // let answer = ref([]);
 
 function changeAnswer(answer, id) {
   console.log(answer);
   //neuen Wert an Questions showedAnswer = answer
-  slides.value[slides.value.findIndex((el) => el.questionid == id)].showedAnswer = answer;
-  console.log(slides.value[slides.value.findIndex((el) => el.questionid == id)].showedAnswer);
+  console.log(questions.value[questions.value.findIndex((el) => el.questionid == id)].showedAnswer);
+  questions.value[questions.value.findIndex((el) => el.questionid == id)].showedAnswer = answer;
+  console.log(questions.value[questions.value.findIndex((el) => el.questionid == id)].showedAnswer);
 }
 
-const challenge1 = ref({
-  id: 1,
-  type: 'multipleChoice',
-  description:
-    'Lass uns damit mal mit ein paar einfachen und allgemeinen Fragen starten! Achtung, nicht alle Fragen sind in der derzeitigen Lektion erklärt!',
-  question:
-    'Welche drei “Programmiersprachen” werden für eine moderne/zeitgemäße Website benötigt?',
-  answers: ['JavaScript, HTML, CSS.', 'JavaScript, Vue, C#.', 'HTML ,CSS, Python.'],
-  showedAnswer: '',
-  correctAnswer: 'JavaScript, HTML, CSS.',
-});
 // const task1 = {
 //   title: 'Challenge 1',
 //   banner: '',
@@ -375,11 +368,21 @@ const challenge1 = ref({
 //   // pl: '40%',
 //   // pt: '40%',
 // ];
-function challenge(obj) {
+async function challenge(obj) {
+  const id = obj.item.challenge.questionid;
+  const serQ = await axios.get(
+    `http://localhost:3000/escapethestudies/question?title=Chapter 5: ER`,
+  );
+  questions.value = serQ.data;
+  for (let index = 0; index < questions.value.length; index++) {
+    Object.assign(questions.value[index], answer.value[index]);
+  }
+  let qa = questions.value.filter((el) => el.questionid == id);
+  question.value = qa[0];
   showedTask.value = obj;
-  console.log(showedTask.value.item.challenge.question.question);
   if (showedTask.value) renderTask.value = true;
   escaperoom.value = false;
+  console.log(question);
 }
 function changeRoom(direction) {
   if (direction == 'left' && pointer.value > 1) {
@@ -403,4 +406,19 @@ function changeRoomMenu(index) {
   }
   selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
 }
+
+const trySub = () => {
+  for (let index = 0; index < questions.value.length; index++) {
+    if (questions.value[index].showedAnswer == answer.value[index][0].correctanswer) {
+      rightQ.value.push(questions.value[index]);
+      console.log('richtig');
+    } else {
+      falseQ.value.push(questions.value[index]);
+      console.log('falsch');
+    }
+  }
+  if (falseQ.value.length == 0) {
+    doneQ.value = true;
+  }
+};
 </script>
