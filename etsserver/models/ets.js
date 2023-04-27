@@ -121,11 +121,7 @@ const dbGetSlide = async () => {
 };
 
 const dbGetChallenge = async () => {
-  const { data, error } = await supabase
-    .from('challenge')
-    .select(
-      '*, item:itemid (title, itemposition, icon, description), question:questionid (chapterid, question, hint, questiontype:questiontypeid (questiontype))',
-    );
+  const { data, error } = await supabase.from('challenge').select('*');
   if (error) return error;
   return data;
 };

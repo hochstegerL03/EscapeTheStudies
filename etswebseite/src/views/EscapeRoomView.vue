@@ -29,10 +29,7 @@
                       :key="index"
                       :style="`position: absolute; left: ${slide.pl}; top: ${slide.pt};`"
                     >
-                      <div
-                        @click="challenge(slide.item.challenge)"
-                        :style="`width: ${slide.scaling}; `"
-                      >
+                      <div @click="challenge(slide)" :style="`width: ${slide.scaling}; `">
                         <q-btn
                           round
                           class="bg-white"
@@ -126,7 +123,7 @@
           <div class="ets-w-90" v-if="renderTask">
             <!--Caption-->
             <div class="q-mt-lg">
-              <div class="text-h5 text-bold ets-header">{{ showedTask.title }}</div>
+              <div class="text-h5 text-bold ets-header">{{ showedTask.item.description }}</div>
             </div>
             <!--Caption End-->
             <!--Body-->
@@ -141,36 +138,44 @@
               <!--Explanation-->
               <div>
                 <div class="text text-h6 text-weight-regular q-my-md">
-                  {{ showedTask.info }}
+                  {{ showedTask.item.challenge.question.question }}
                 </div>
               </div>
               <!--Explanation End-->
             </div>
             <!--Body End-->
             <!--Task-->
-            <div>
-              <!--Multiple Choice Question-->
+            <div v-if="renderTask">
+              {{ showedTask.item.challenge.question[0] }}
+
+              <!-- Multiple Choice Question-->
               <EtSQuestionMutlipleChoice
-                v-if="showedTask.question.questiontype.questiontype == 'multipleChoice'"
+                v-if="
+                  showedTask.item.challenge.question.questiontype.questiontype == 'multipleChoice'
+                "
                 @changeAnswer="changeAnswer"
-                :question="showedTask.question.question"
+                :question="showedTask.item.challenge.question"
               ></EtSQuestionMutlipleChoice>
               <!--Multiple Choice Question End-->
               <!--Text Input Question-->
               <EtSQuestionTextInput
-                v-else-if="showedTask.question.questiontype.questiontype == 'textInput'"
+                v-else-if="
+                  showedTask.item.challenge.question.questiontype.questiontype == 'textInput'
+                "
                 @changeAnswer="changeAnswer"
-                :question="showedTask.question.question"
+                :question="showedTask.item.challenge.question"
               >
               </EtSQuestionTextInput>
               <!--Text Input Question End-->
               <!--Build Answer Question-->
               <EtSQuestionBuildAnswer
-                v-else-if="showedTask.question.questiontype.questiontype === 'buildAnswer'"
+                v-else-if="
+                  showedTask.item.challenge.question.questiontype.questiontype === 'buildAnswer'
+                "
                 @changeAnswer="changeAnswer"
-                :question="showedTask.question.question"
+                :question="showedTask.item.challenge.question"
               ></EtSQuestionBuildAnswer>
-              <!--Build Answer Question End-->
+              <!--Build Answer Question End -->
             </div>
             <!--Task End-->
             <!--Validation-->
@@ -248,29 +253,44 @@ import EtSQuestionBuildAnswer from '../components/EtSQuestionBuildAnswer.vue';
 import axios from 'axios';
 
 onMounted(async () => {
-  const er = await axios.get('http://localhost:3000/escapethestudies/escaperoom');
-  escaperoom.value = er.data;
-  const sl = await axios.get('http://localhost:3000/escapethestudies/slide');
-  slides.value = sl.data;
-  console.log(slides.value[0].item.challenge);
-  for (let index = 0; index < slides.value.length; index++) {
-    if (newId.value !== slides.value[index].wallid) {
-      newId.value = slides.value[index].wallid;
-      pages.value += 1;
+  try {
+    const er = await axios.get('http://localhost:3000/escapethestudies/escaperoom');
+    escaperoom.value = er.data;
+    const sl = await axios.get('http://localhost:3000/escapethestudies/slide');
+    slides.value = sl.data;
+    const serC = await axios.get('http://localhost:3000/escapethestudies/challenge');
+    chall.value = serC.data;
+    const serA = await axios.get('http://localhost:3000/escapethestudies/answers');
+    for (let index = 0; index < chall.value.length; index++) {
+      answer.value.push(serA.data.filter((el) => el.questionid == chall.value[index].questionid));
     }
+    for (let index = 0; index < slides.value.length; index++) {
+      Object.assign(slides.value[index], answer.value[index]);
+    }
+    console.log(slides.value[0][0].answeroptions);
+    for (let index = 0; index < slides.value.length; index++) {
+      if (newId.value !== slides.value[index].wallid) {
+        newId.value = slides.value[index].wallid;
+        pages.value += 1;
+      }
+    }
+    for (let index = 0; index < pages.value; index++) {
+      selectors.value.push(document.getElementById(index));
+    }
+    for (let index = 0; index < pages.value; index++) {
+      selectors.value[index].classList.remove('ets-menu-highlight');
+      console.log(selectors.value);
+    }
+    selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
+  } catch (err) {
+    console.log(err);
   }
-  for (let index = 0; index < pages.value; index++) {
-    selectors.value.push(document.getElementById(index));
-  }
-  for (let index = 0; index < pages.value; index++) {
-    selectors.value[index].classList.remove('ets-menu-highlight');
-    console.log(selectors.value);
-  }
-  selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
 });
 
+const chall = ref([]);
 const newId = ref(0);
 const pages = ref(0);
+const answer = ref([]);
 // const challenges = ref([]);
 const selectors = ref([]);
 const slides = ref([]);
@@ -278,12 +298,13 @@ const escaperoom = ref([]);
 const pointer = ref(1);
 const showedTask = ref(null);
 const renderTask = ref(false);
-let answer = ref([]);
+// let answer = ref([]);
 
 function changeAnswer(answer, id) {
   console.log(answer);
   //neuen Wert an Questions showedAnswer = answer
   slides.value[slides.value.findIndex((el) => el.questionid == id)].showedAnswer = answer;
+  console.log(slides.value[slides.value.findIndex((el) => el.questionid == id)].showedAnswer);
 }
 
 const challenge1 = ref({
@@ -356,7 +377,7 @@ const challenge1 = ref({
 // ];
 function challenge(obj) {
   showedTask.value = obj;
-  console.log(showedTask.value.question.question);
+  console.log(showedTask.value.item.challenge.question.question);
   if (showedTask.value) renderTask.value = true;
   escaperoom.value = false;
 }
