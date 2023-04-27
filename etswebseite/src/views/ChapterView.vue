@@ -156,7 +156,10 @@ onMounted(async () => {
       `http://localhost:3000/escapethestudies/question?title=${props.id}`,
     );
     questions.value = serQ.data;
-    console.log(questions.value[0].questiontype.questiontype);
+    console.log(questions);
+    if (questions.value.length <= 0) {
+      doneQ.value = true;
+    }
     const serA = await axios.get('http://localhost:3000/escapethestudies/answers');
     for (let index = 0; index < questions.value.length; index++) {
       answer.value.push(
