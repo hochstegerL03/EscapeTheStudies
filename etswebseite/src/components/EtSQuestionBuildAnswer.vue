@@ -5,8 +5,8 @@
         question.question
       }}</span></EtSChatNav
     >
-    <EtSChatNav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg"
-      ><span v-if="showedAnswer.lenght > 0" class="text text-h5">{{ showedAnswer.join(' ') }}</span
+    <EtSChatNav colortype="dark" direction="right" class="q-px-md q-py-sm q-mb-lg">
+      <span v-if="showedAnswer.lenght > 0" class="text text-h5">{{ showedAnswer.join(' ') }}</span
       ><span v-else class="text text-h6">...</span></EtSChatNav
     >
     <div class="q-mr-md q-mb-md">

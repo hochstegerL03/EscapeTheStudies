@@ -375,8 +375,14 @@ async function challenge(obj) {
   );
   questions.value = serQ.data;
   for (let index = 0; index < questions.value.length; index++) {
-    questions.value[index].showedAnswer = '';
+    console.log(questions.value[index].questiontype.questiontype);
+    if (questions.value[index].questiontype.questiontype == 'Text Ordering') {
+      questions.value[index].showedAnswer = [];
+    } else {
+      questions.value[index].showedAnswer = '';
+    }
   }
+
   for (let index = 0; index < questions.value.length; index++) {
     Object.assign(questions.value[index], answer.value[index]);
   }
