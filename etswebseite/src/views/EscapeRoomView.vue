@@ -431,16 +431,26 @@ const trySub = (showedTask) => {
       if (questions.value[index].questiontype.questiontype == 'Text Ordering') {
         uAns = questions.value[index].showedAnswer.join(' ');
         if (uAns.includes(dAns)) {
-          rightQ.value.push(questions.value[index]);
-          $q.notify({
-            message: 'Richtig',
-            color: 'positive',
-            position: 'top',
-          });
-          doneEr();
-          return console.log('richtig');
+          if (isInArray(questions.value[index].questionid, rightQ.value) == false) {
+            rightQ.value.push(questions.value[index].questionid);
+            $q.notify({
+              message: 'Richtig',
+              color: 'positive',
+              position: 'top',
+            });
+            doneEr();
+            return console.log('richtig');
+          } else {
+            $q.notify({
+              message: 'Richtig',
+              color: 'positive',
+              position: 'top',
+            });
+            doneEr();
+            return console.log('richtig');
+          }
         } else {
-          falseQ.value.push(questions.value[index]);
+          falseQ.value.push(questions.value[index].questionid);
           $q.notify({
             message: 'Falsch',
             color: 'negative',
@@ -451,7 +461,16 @@ const trySub = (showedTask) => {
       }
       uAns = questions.value[index].showedAnswer;
       if (uAns == dAns) {
-        rightQ.value.push(questions.value[index]);
+        if (isInArray(questions.value[index].questionid, rightQ.value) == false) {
+          rightQ.value.push(questions.value[index].questionid);
+          $q.notify({
+            message: 'Richtig',
+            color: 'positive',
+            position: 'top',
+          });
+          doneEr();
+          return console.log('richtig');
+        }
         $q.notify({
           message: 'Richtig',
           color: 'positive',
@@ -460,7 +479,7 @@ const trySub = (showedTask) => {
         doneEr();
         return console.log('richtig');
       } else {
-        falseQ.value.push(questions.value[index]);
+        falseQ.value.push(questions.value[index].questionid);
         $q.notify({
           message: 'Falsch',
           color: 'negative',
@@ -477,5 +496,9 @@ function doneEr() {
   if (rightQ.value.length >= 4) {
     doneQ.value = true;
   }
+}
+
+function isInArray(value, array) {
+  return array.indexOf(value) !== -1;
 }
 </script>
