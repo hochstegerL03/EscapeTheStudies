@@ -283,11 +283,11 @@ onMounted(async () => {
     }
     for (let index = 0; index < pages.value; index++) {
       selectors.value[index].classList.remove('ets-menu-highlight');
-      console.log(selectors.value);
+      // console.log(selectors.value);
     }
     selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
   } catch (err) {
-    console.log(err);
+    // console.log(err);
   }
 });
 
@@ -311,10 +311,10 @@ const doneQ = ref(false);
 const $q = useQuasar();
 
 function changeAnswer(answer, id) {
-  console.log(answer);
-  console.log(id);
+  // console.log(answer);
+  // console.log(id);
   //neuen Wert an Questions showedAnswer = answer
-  console.log(questions.value[questions.value.findIndex((el) => el.questionid == id)]);
+  // console.log(questions.value[questions.value.findIndex((el) => el.questionid == id)]);
   questions.value[questions.value.findIndex((el) => el.questionid == id)].showedAnswer = answer;
 }
 
@@ -382,7 +382,7 @@ async function challenge(obj) {
   );
   questions.value = serQ.data;
   for (let index = 0; index < questions.value.length; index++) {
-    console.log(questions.value[index].questiontype.questiontype);
+    // console.log(questions.value[index].questiontype.questiontype);
     if (questions.value[index].questiontype.questiontype == 'Text Ordering') {
       questions.value[index].showedAnswer = [];
     } else {
@@ -398,7 +398,7 @@ async function challenge(obj) {
   showedTask.value = obj;
   if (showedTask.value) renderTask.value = true;
   escaperoom.value = false;
-  console.log(question);
+
 }
 function changeRoom(direction) {
   if (direction == 'left' && pointer.value > 1) {
@@ -439,7 +439,7 @@ const trySub = (showedTask) => {
               position: 'top',
             });
             doneEr();
-            return console.log('richtig');
+
           } else {
             $q.notify({
               message: 'Richtig',
@@ -447,7 +447,7 @@ const trySub = (showedTask) => {
               position: 'top',
             });
             doneEr();
-            return console.log('richtig');
+
           }
         } else {
           falseQ.value.push(questions.value[index].questionid);
@@ -456,7 +456,7 @@ const trySub = (showedTask) => {
             color: 'negative',
             position: 'top',
           });
-          return console.log('falsch');
+
         }
       }
       uAns = questions.value[index].showedAnswer;
@@ -469,7 +469,6 @@ const trySub = (showedTask) => {
             position: 'top',
           });
           doneEr();
-          return console.log('richtig');
         }
         $q.notify({
           message: 'Richtig',
@@ -477,7 +476,6 @@ const trySub = (showedTask) => {
           position: 'top',
         });
         doneEr();
-        return console.log('richtig');
       } else {
         falseQ.value.push(questions.value[index].questionid);
         $q.notify({
@@ -485,14 +483,12 @@ const trySub = (showedTask) => {
           color: 'negative',
           position: 'top',
         });
-        return console.log('falsch');
       }
     }
   }
 };
 
 function doneEr() {
-  console.log(rightQ.value.length);
   if (rightQ.value.length >= 4) {
     doneQ.value = true;
   }
