@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 532 264">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 48px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        font-family: ReemKufi-Bold, 'Reem Kufi';
+        font-weight: 700;
+      }
+
+      .cls-2, .cls-3 {
+        font-size: 24.66px;
+      }
+
+      .cls-4 {
+        fill: #edf6f9;
+      }
+
+      .cls-5 {
+        fill: #83c5be;
+      }
+
+      .cls-6, .cls-3 {
+        fill: #006d77;
+      }
+
+      .cls-7 {
+        letter-spacing: -.01em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect class="cls-4" width="212" height="50"/>
+      <rect class="cls-5" x="0" y="65" width="532" height="50"/>
+      <rect class="cls-6" x="0" y="150" width="532" height="113"/>
+      <text class="cls-3" transform="translate(36.81 32.67)"><tspan x="0" y="0">inline-block</tspan></text>
+      <text class="cls-2" transform="translate(72.56 99.71)"><tspan x="0" y="0">block</tspan></text>
+      <rect class="cls-4" x="178" y="150" width="90" height="82"/>
+      <rect class="cls-4" x="303" y="199" width="87" height="65"/>
+      <rect class="cls-4" x="432" y="174" width="65.57" height="65"/>
+      <text class="cls-1" transform="translate(60.64 221.43)"><tspan x="0" y="0">fl</tspan><tspan class="cls-7" x="34.51" y="0">e</tspan><tspan x="60.34" y="0">x</tspan></text>
+    </g>
+  </g>
+</svg>
