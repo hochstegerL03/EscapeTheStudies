@@ -426,7 +426,6 @@ let newCourse = ref([]);
 onMounted(async () => {
   await courseStore.getCourse();
   newCourse.value = courseStore.course;
-  console.log(newCourse);
 });
 
 function scrolltovertically(obj) {

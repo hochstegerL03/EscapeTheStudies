@@ -207,7 +207,7 @@
                 <div
                   class="text-center ets-header text-grey text-caption text-italic text-weight-light"
                 >
-                  Escape the Escpae Room
+                  Escape the Escape Room
                 </div>
               </div>
             </div>
@@ -287,7 +287,7 @@ onMounted(async () => {
     }
     selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
   } catch (err) {
-    // console.log(err);
+    console.log(err);
   }
 });
 
@@ -398,7 +398,6 @@ async function challenge(obj) {
   showedTask.value = obj;
   if (showedTask.value) renderTask.value = true;
   escaperoom.value = false;
-
 }
 function changeRoom(direction) {
   if (direction == 'left' && pointer.value > 1) {
@@ -433,52 +432,49 @@ const trySub = (showedTask) => {
         if (uAns.includes(dAns)) {
           if (isInArray(questions.value[index].questionid, rightQ.value) == false) {
             rightQ.value.push(questions.value[index].questionid);
-            $q.notify({
+            doneEr();
+            return $q.notify({
               message: 'Richtig',
               color: 'positive',
               position: 'top',
             });
-            doneEr();
-
           } else {
-            $q.notify({
+            doneEr();
+            return $q.notify({
               message: 'Richtig',
               color: 'positive',
               position: 'top',
             });
-            doneEr();
-
           }
         } else {
           falseQ.value.push(questions.value[index].questionid);
-          $q.notify({
+          return $q.notify({
             message: 'Falsch',
             color: 'negative',
             position: 'top',
           });
-
         }
       }
       uAns = questions.value[index].showedAnswer;
       if (uAns == dAns) {
         if (isInArray(questions.value[index].questionid, rightQ.value) == false) {
           rightQ.value.push(questions.value[index].questionid);
-          $q.notify({
+          doneEr();
+          return $q.notify({
             message: 'Richtig',
             color: 'positive',
             position: 'top',
           });
-          doneEr();
         }
-        $q.notify({
+        doneEr();
+        return $q.notify({
           message: 'Richtig',
           color: 'positive',
           position: 'top',
         });
-        doneEr();
       } else {
         falseQ.value.push(questions.value[index].questionid);
-        $q.notify({
+        return $q.notify({
           message: 'Falsch',
           color: 'negative',
           position: 'top',
