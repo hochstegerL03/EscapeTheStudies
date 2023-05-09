@@ -156,7 +156,7 @@ onMounted(async () => {
       `http://localhost:3000/escapethestudies/question?title=${props.id}`,
     );
     questions.value = serQ.data;
-    console.log(questions);
+
     if (questions.value.length <= 0) {
       doneQ.value = true;
     }
@@ -178,10 +178,10 @@ onMounted(async () => {
 });
 
 function changeAnswer(answer, id) {
-  console.log(answer);
+  // console.log(answer);
   //neuen Wert an Questions showedAnswer = answer
   questions.value[questions.value.findIndex((el) => el.questionid == id)].showedAnswer = answer;
-  console.log(questions.value[questions.value.findIndex((el) => el.questionid == id)].showedAnswer);
+  // console.log(questions.value[questions.value.findIndex((el) => el.questionid == id)].showedAnswer);
 }
 
 // const re = RegExp(
@@ -206,10 +206,10 @@ const trySub = () => {
   for (let index = 0; index < questions.value.length; index++) {
     if (questions.value[index].showedAnswer == answer.value[index][0].correctanswer) {
       rightQ.value.push(questions.value[index]);
-      console.log('richtig');
+
     } else {
       falseQ.value.push(questions.value[index]);
-      console.log('falsch');
+
     }
   }
   if (falseQ.value.length == 0) {
