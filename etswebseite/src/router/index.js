@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue';
 import AboutView from '../views/AboutView.vue';
 import CoursesView from '../views/CoursesView.vue';
 import CourseOverviewView from '../views/CourseOverviewView.vue';
-import ChapterSelectionView from '../views/ChapterSelectionView.vue';
+import SelectedChapterView from '../views/SelectedChapterView.vue';
 import LogInView from '../views/LogInView.vue';
 import EscapeRoomView from '../views/EscapeRoomView.vue';
 import testRouteView from '../views/testRouteView.vue';
@@ -35,7 +35,7 @@ const router = createRouter({
         {
           path: '',
           name: 'chapteroverview',
-          component: ChapterSelectionView,
+          component: SelectedChapterView,
           props: true,
         },
         {
