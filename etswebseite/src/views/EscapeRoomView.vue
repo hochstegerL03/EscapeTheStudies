@@ -188,21 +188,26 @@
                 <div
                   class="text-center ets-header text-grey text-caption text-italic text-weight-light"
                 >
-                  <span v-if="falseQ.length > 0">{{ falseQ.length }} Error/s found.</span>
-                  <span v-else>0 Errors found.</span>
-                  <span class="ets-underline">click here!</span>
+                  <span>Check if your answer is correct!</span>
+                  <!-- <span v-if="falseQ.length > 0">{{ falseQ.length }} Error/s found.</span>
+                  <span v-else>0 Errors found.</span> -->
+                  <!-- <span class="ets-underline">click here!</span> -->
                 </div>
               </div>
-              <div class="col-6 text-center ets-header text-h6 text-weight-bold">
+              <div
+                class="col-6 text-center ets-header text-h6 text-weight-bold"
+                v-if="doneQ"
+                @click="$router.push('/cooverview')"
+              >
                 <div
                   class="text-center ets-fake-button text-secondary ets-header text-h5 text-weight-bold"
                 >
-                  Go Next!
+                  Escape!
                 </div>
                 <div
                   class="text-center ets-header text-grey text-caption text-italic text-weight-light"
                 >
-                  Check your Answers to get a Star
+                  Escape the Escpae Room
                 </div>
               </div>
             </div>
@@ -249,6 +254,7 @@ import EtSQuestionMutlipleChoice from '../components/EtSQuestionMutlipleChoice.v
 import EtSQuestionTextInput from '../components/EtSQuestionTextInput.vue';
 import EtSQuestionBuildAnswer from '../components/EtSQuestionBuildAnswer.vue';
 import axios from 'axios';
+import { useQuasar } from 'quasar';
 
 onMounted(async () => {
   try {
@@ -302,6 +308,7 @@ const falseQ = ref([]);
 const rightQ = ref([]);
 const doneQ = ref(false);
 // let answer = ref([]);
+const $q = useQuasar();
 
 function changeAnswer(answer, id) {
   console.log(answer);
@@ -419,26 +426,56 @@ function changeRoomMenu(index) {
 const trySub = (showedTask) => {
   let uAns;
   for (let index = 0; index < questions.value.length; index++) {
+    let dAns = answer.value[index][0].correctanswer;
     if (questions.value[index].questionid == showedTask[0].questionid) {
-      let dAns = answer.value[index][0].correctanswer;
       if (questions.value[index].questiontype.questiontype == 'Text Ordering') {
         uAns = questions.value[index].showedAnswer.join(' ');
         if (uAns.includes(dAns)) {
-          rightQ.value.push(questions.value[0]);
-          console.log('richtig');
+          rightQ.value.push(questions.value[index]);
+          $q.notify({
+            message: 'Richtig',
+            color: 'positive',
+            position: 'top',
+          });
+          doneEr();
+          return console.log('richtig');
         } else {
-          falseQ.value.push(questions.value[0]);
-          console.log('falsch');
+          falseQ.value.push(questions.value[index]);
+          $q.notify({
+            message: 'Falsch',
+            color: 'negative',
+            position: 'top',
+          });
+          return console.log('falsch');
         }
       }
+      uAns = questions.value[index].showedAnswer;
       if (uAns == dAns) {
-        rightQ.value.push(questions.value[0]);
-        console.log('richtig');
+        rightQ.value.push(questions.value[index]);
+        $q.notify({
+          message: 'Richtig',
+          color: 'positive',
+          position: 'top',
+        });
+        doneEr();
+        return console.log('richtig');
       } else {
-        falseQ.value.push(questions.value[0]);
-        console.log('falsch');
+        falseQ.value.push(questions.value[index]);
+        $q.notify({
+          message: 'Falsch',
+          color: 'negative',
+          position: 'top',
+        });
+        return console.log('falsch');
       }
     }
   }
 };
+
+function doneEr() {
+  console.log(rightQ.value.length);
+  if (rightQ.value.length >= 4) {
+    doneQ.value = true;
+  }
+}
 </script>

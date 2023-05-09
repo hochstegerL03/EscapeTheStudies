@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import { Quasar } from 'quasar';
+import { Quasar, Notify } from 'quasar';
 import { createPinia } from 'pinia';
 import vue3GoogleLogin from 'vue3-google-login';
 
@@ -20,7 +20,14 @@ const app = createApp(App);
 const pinia = createPinia();
 
 app.use(Quasar, {
-  plugins: {}, // import Quasar plugins and add here
+  plugins: {
+    Notify,
+  },
+  config: {
+    notify: {
+      /* look at QuasarConfOptions from the API card */
+    },
+  },
 });
 app.use(pinia);
 app.use(router);
