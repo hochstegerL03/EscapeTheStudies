@@ -113,6 +113,7 @@
         </div>
       </div>
     </div>
+    <div style="height: 5vh; width: 100%"></div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -206,10 +207,8 @@ const trySub = () => {
   for (let index = 0; index < questions.value.length; index++) {
     if (questions.value[index].showedAnswer == answer.value[index][0].correctanswer) {
       rightQ.value.push(questions.value[index]);
-
     } else {
       falseQ.value.push(questions.value[index]);
-
     }
   }
   if (falseQ.value.length == 0) {
