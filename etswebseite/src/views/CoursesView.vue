@@ -170,6 +170,5 @@ onMounted(async () => {
   const userid = user.value[0].userid;
   const { data } = await axios.get(`http://localhost:3000/escapethestudies/userChapter/${userid}`);
   userChapStatus.value = data;
-  console.log(chapter);
 });
 </script>

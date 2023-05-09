@@ -287,7 +287,7 @@ onMounted(async () => {
     }
     selectors.value[pointer.value - 1].classList.add('ets-menu-highlight');
   } catch (err) {
-    // console.log(err);
+    console.log(err);
   }
 });
 
@@ -398,7 +398,6 @@ async function challenge(obj) {
   showedTask.value = obj;
   if (showedTask.value) renderTask.value = true;
   escaperoom.value = false;
-
 }
 function changeRoom(direction) {
   if (direction == 'left' && pointer.value > 1) {
@@ -439,7 +438,6 @@ const trySub = (showedTask) => {
               position: 'top',
             });
             doneEr();
-
           } else {
             $q.notify({
               message: 'Richtig',
@@ -447,7 +445,6 @@ const trySub = (showedTask) => {
               position: 'top',
             });
             doneEr();
-
           }
         } else {
           falseQ.value.push(questions.value[index].questionid);
@@ -456,7 +453,6 @@ const trySub = (showedTask) => {
             color: 'negative',
             position: 'top',
           });
-
         }
       }
       uAns = questions.value[index].showedAnswer;
