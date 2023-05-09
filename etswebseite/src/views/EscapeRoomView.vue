@@ -180,6 +180,7 @@
             <div class="ets-w-100 row justify-center items-start q-my-xl">
               <div class="col-6">
                 <div
+                  @click="trySub()"
                   class="text-center ets-fake-button text-secondary ets-header text-h5 text-weight-bold"
                 >
                   Check
@@ -199,7 +200,6 @@
                   Go Next!
                 </div>
                 <div
-                  @click="trySub()"
                   class="text-center ets-header text-grey text-caption text-italic text-weight-light"
                 >
                   Check your Answers to get a Star
@@ -417,16 +417,18 @@ function changeRoomMenu(index) {
 }
 
 const trySub = () => {
-  for (let index = 0; index < questions.value.length; index++) {
-    console.log(questions.value[index].showedAnswer);
-    if (questions.value[index].showedAnswer == answer.value[index][0].correctanswer) {
-      rightQ.value.push(questions.value[index]);
-      console.log('richtig');
-    } else {
-      falseQ.value.push(questions.value[index]);
-      console.log('falsch');
-    }
+  const uAns = questions.value[2].showedAnswer.join(' ');
+  const dAns = answer.value[2][0].correctanswer;
+  console.log(uAns.toString());
+  console.log(uAns.toString().includes(dAns));
+  if (uAns.includes(dAns)) {
+    rightQ.value.push(questions.value[0]);
+    console.log('richtig');
+  } else {
+    falseQ.value.push(questions.value[0]);
+    console.log('falsch');
   }
+
   if (falseQ.value.length == 0) {
     doneQ.value = true;
   }
