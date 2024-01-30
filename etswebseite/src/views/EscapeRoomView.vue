@@ -1,13 +1,13 @@
 <template>
-  <div class="ets-w-100">
+  <div class="ets-w-100-uncapped">
     <!--Content-->
-    <div class="flex justify-center ets-w-100 q-my-lg">
-      <div class="ets-w-100">
+    <div class="flex justify-center ets-w-100-uncapped q-my-lg">
+      <div class="ets-w-100-uncapped">
         <!--Escape Room Visual Top-->
         <div class="q-py-md">
           <div class="relative-position" v-if="slides[0]">
             <q-img :src="slides[pointer - 1].wall.roomimage" />
-            <div class="row ets-w-100 ets-h-100 absolute absolute-top">
+            <div class="row ets-w-100-uncapped ets-h-100 absolute absolute-top">
               <!--Left Overlay-->
               <div class="col-1">
                 <div class="flex ets-h-100 justify-center items-center">
@@ -22,8 +22,8 @@
               <!--Main Overlay-->
               <div class="col-10">
                 <!--Escape Room Content-->
-                <main class="ets-w-100 ets-h-100">
-                  <div class="ets-w-100 ets-h-100" v-if="slides[0]">
+                <main class="ets-w-100-uncapped ets-h-100">
+                  <div class="ets-w-100-uncapped ets-h-100" v-if="slides[0]">
                     <div
                       v-for="(slide, index) in slides.filter((ch) => ch.slideid == pointer + pages)"
                       :key="index"
@@ -116,10 +116,10 @@
         </div>
         <!--Progress Bar End-->
         <!--Text / Challenge Content-->
-        <div class="flex justify-center ets-w-100" v-if="escaperoom[0]">
+        <div class="flex justify-center ets-w-100-uncapped" v-if="escaperoom[0]">
           <div class="ets-w-90" v-html="escaperoom[0].story.code"></div>
         </div>
-        <div class="flex justify-center ets-w-100">
+        <div class="flex justify-center ets-w-100-uncapped">
           <div class="ets-w-90" v-if="renderTask">
             <!--Caption-->
             <div class="q-mt-lg">
@@ -177,7 +177,7 @@
             <!--Task End-->
             <!--Validation-->
             <!--Checkbar-->
-            <div class="ets-w-100 row justify-center items-start q-my-xl">
+            <div class="ets-w-100-uncapped row justify-center items-start q-my-xl">
               <div class="col-6">
                 <div
                   @click="trySub(showedTask)"

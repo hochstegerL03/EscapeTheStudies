@@ -27,7 +27,7 @@
         </div>
         <!--Chat Nav-->
         <!--Chat Input-->
-        <div class="row justify-start items-center q-ma-md q-gutter-sm ets-w-100">
+        <div class="row justify-start items-center q-ma-md q-gutter-sm ets-w-100-uncapped">
           <div class="col-9 ets-chat-decoration">
             <div class="flex items-center justify-center ets-h-100">
               <div class="q-mx-md text-center ets-text-mono">Let the Programming begin...</div>

@@ -18,12 +18,12 @@
     </div>
     <!--Header End-->
     <!--Content-->
-    <div class="flex justify-center ets-w-100 q-mt-lg">
+    <div class="flex justify-center ets-w-100-uncapped q-mt-lg">
       <div class="ets-w-90">
         <!--Lection 1-->
         <div class="flex justify-center q-mb-xl">
           <!--Header Lection 1-->
-          <div class="ets-w-100 q-py-md">
+          <div class="ets-w-100-uncapped q-py-md">
             <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start" v-if="course[0]">
                 <div class="ets-header text-h5 text-weight-bold q-ma-md">
@@ -39,7 +39,7 @@
           </div>
           <!--Header Lection 1 End-->
           <!--Lection 1 Chapter Cards-->
-          <div class="ets-w-100 q-pt-md" v-for="chap in chapter.slice(0, 3)" :key="chap.chapterid">
+          <div class="ets-w-100-uncapped q-pt-md" v-for="chap in chapter.slice(0, 3)" :key="chap.chapterid">
             <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
                 <div
@@ -74,7 +74,7 @@
         <!--Lection 2-->
         <div class="flex justify-center q-mb-xl disabled">
           <!--Header Lection 2-->
-          <div class="ets-w-100 q-py-md">
+          <div class="ets-w-100-uncapped q-py-md">
             <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
                 <div class="ets-header text-h5 text-weight-bold text-italic q-ma-md">
@@ -89,7 +89,7 @@
           </div>
           <!--Header Lection 2 End-->
           <!--Lection 2 Chapter Cards-->
-          <div class="ets-w-100 q-pt-md">
+          <div class="ets-w-100-uncapped q-pt-md">
             <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
                 <div
@@ -105,7 +105,7 @@
               </div>
             </div>
           </div>
-          <div class="ets-w-100 q-pt-md">
+          <div class="ets-w-100-uncapped q-pt-md">
             <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
                 <div
@@ -117,7 +117,7 @@
               <div class="col-4 bg-secondary ets-card-lection-end"></div>
             </div>
           </div>
-          <div class="ets-w-100 q-pt-md disabled">
+          <div class="ets-w-100-uncapped q-pt-md disabled">
             <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
                 <div

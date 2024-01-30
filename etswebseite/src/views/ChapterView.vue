@@ -7,14 +7,14 @@
         v-if="showmenu"
         class="ets-bubble-menu ets-title text-h3 q-my-md q-mx-lg text-white text-center"
       >
-        <div class="flex items-center justify-center ets-h-100 ets-w-100 ets-fake-button">t</div>
+        <div class="flex items-center justify-center ets-h-100 ets-w-100-uncapped ets-fake-button">t</div>
       </div>
       <div
         @click="scrolltovertically('lection')"
         v-if="showmenu"
         class="ets-bubble-menu ets-title text-h3 q-my-md q-mx-lg text-white text-center"
       >
-        <div class="flex items-center justify-center ets-h-100 ets-w-100 ets-fake-button">l</div>
+        <div class="flex items-center justify-center ets-h-100 ets-w-100-uncapped ets-fake-button">l</div>
       </div>
 
       <div
@@ -22,14 +22,14 @@
         v-if="showmenu"
         class="ets-bubble-menu ets-title text-h3 q-my-md q-mx-lg text-white text-center"
       >
-        <div class="flex items-start justify-center ets-h-100 ets-w-100 ets-fake-button">q</div>
+        <div class="flex items-start justify-center ets-h-100 ets-w-100-uncapped ets-fake-button">q</div>
       </div>
 
       <div
         @click="showmenu = !showmenu"
         class="ets-bubble-menu ets-title text-h3 q-my-md q-mx-lg text-white text-center"
       >
-        <div class="flex items-center justify-center ets-h-100 ets-w-100 ets-fake-button">i</div>
+        <div class="flex items-center justify-center ets-h-100 ets-w-100-uncapped ets-fake-button">i</div>
       </div>
     </div>
     <!--Menu End-->
@@ -83,7 +83,7 @@
     </div>
     <!--Questions End-->
     <!--Checkbar-->
-    <div class="ets-w-100 row justify-center items-start q-my-xl">
+    <div class="ets-w-100-uncapped row justify-center items-start q-my-xl">
       <div class="col-6">
         <div
           class="text-center ets-fake-button text-secondary ets-header text-h5 text-weight-bold"

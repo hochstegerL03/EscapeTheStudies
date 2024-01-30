@@ -20,7 +20,7 @@
     </div>
     <!--Header End-->
     <!--Content-->
-    <div class="flex justify-center ets-w-100 q-mt-lg">
+    <div class="flex justify-center ets-w-100-uncapped q-mt-lg">
       <div class="ets-w-90">
         <!--Progress-->
         <div class="text-center text-body1 q-mb-sm text-grey"></div>
@@ -35,11 +35,11 @@
         <div class="flex justify-center items-center q-mb-xl">
           <!--Placeholder Lection Banner-->
 
-          <div id="news" class="ets-w-100 q-my-sm">
+          <div id="news" class="ets-w-100-uncapped q-my-sm">
             <div class="ets-news">
               <!-- <q-img class="ets-news-rounded" src="images/wand1.png" /> -->
               <div class="placeholder-news ets-news-rounded"></div>
-              <div class="absolute absolute-top ets-w-100 ets-h-100">
+              <div class="absolute absolute-top ets-w-100-uncapped ets-h-100">
                 <div class="flex items-start justify-center">
                   <header class="ets-py-2">
                     <!-- <p class="q-pa-md text text-h5 ets-text-shadow text-white">
@@ -148,7 +148,7 @@
           </div>
           <!--Bubble Caption End-->
           <!--Caption-->
-          <figure class="ets-w-100 q-ma-none row text">
+          <figure class="ets-w-100-uncapped q-ma-none row text">
             <div class="text-weight-bold text-h5">
               Escape the Studies is an <a href="https://opensource.org/osd">Open-Source</a> Platform
               for learning in style.
@@ -176,7 +176,7 @@
             </div>
             <!--Chapter 1 End-->
             <!--Image-->
-            <figure class="ets-w-100 q-ma-none q-mt-lg row">
+            <figure class="ets-w-100-uncapped q-ma-none q-mt-lg row">
               <q-img src="images/mathe_meme.png" />
               <figcaption class="text-weight-light text-italic ets-w-90 q-mt-xs">
                 - HTL Wien West Deluxe Memes
@@ -276,7 +276,7 @@
                   done it: <a class="ets-disabled">Sign up here!</a>
                 </div>
                 <!--Figcaption Author-sama-->
-                <figure class="ets-w-100 q-ma-none row text">
+                <figure class="ets-w-100-uncapped q-ma-none row text">
                   <figcaption class="text-weight-light text-italic ets-w-90">
                     - Thanks ~your Author-sama
                   </figcaption>
@@ -303,7 +303,7 @@
           </div>
           <!--Bubble Caption End-->
           <!--Caption-->
-          <figure class="ets-w-100 q-ma-none row text">
+          <figure class="ets-w-100-uncapped q-ma-none row text">
             <div class="text-weight-bold text-h5">Escape the Studies has a future… I guess.</div>
             <figcaption class="text-weight-light text-italic ets-w-90 q-mt-xs">- idk</figcaption>
           </figure>
@@ -326,7 +326,7 @@
               <div class="text-center text-h6 text-mono text-weight-light q-my-lg">
                 Imagine an inserted Checklist
               </div>
-              <figure class="ets-w-100 q-ma-none">
+              <figure class="ets-w-100-uncapped q-ma-none">
                 <div class="text-h6 text-weight-regular q-mt-md">
                   Puhh, we are finally done here. Let's grab a Cookie or two and make a
                   well-deserved break.

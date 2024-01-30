@@ -170,7 +170,6 @@ function toggleRightDrawer() {
   pointer-events: none;
 }
 
-
 .ets-text-mono {
   font-family: 'Roboto Mono', monospace;
 }
@@ -194,8 +193,14 @@ a:active {
   color: $primary;
 }
 
+.ets-w-100-uncapped {
+  width: 100% !important;
+}
+
 .ets-w-100 {
   width: 100% !important;
+  max-width: 800px;
+  margin: 2vw 0vw 2vw 0vw !important;
 }
 .ets-w-90 {
   width: 90%;

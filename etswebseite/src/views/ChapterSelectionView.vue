@@ -15,14 +15,14 @@
             </div>
           </div>
         </div>
-        <img class="ets-banner ets-w-100" src="images/just_an_act_placeholder.jpg" />
+        <img class="ets-banner ets-w-100-uncapped" src="images/just_an_act_placeholder.jpg" />
       </div>
     </div>
     <!--Header End-->
     <!--Content-->
     <div class="flex justify-center items-center">
       <!--Scroll Tag Bar-->
-      <div class="ets-w-100">
+      <div class="ets-w-100-uncapped">
         <div class="ets-scrollbar">
           <div class="row no-wrap inline items-center q-my-sm" v-if="tags">
             <div class="ets-tag q-mx-sm" v-for="(t, index) in tags" :key="index">
@@ -57,7 +57,7 @@
         <!--Chapter Cards-->
         <div class="flex justify-center q-mb-xl">
           <!--Chapters-->
-          <div class="ets-w-100 q-pt-md" v-for="chap in chapter" :key="chap.chapterid">
+          <div class="ets-w-100-uncapped q-pt-md" v-for="chap in chapter" :key="chap.chapterid">
             <div class="row justify-center items-center ets-card-lection ets-h-100">
               <div class="col-8 bg-accent ets-card-lection-start">
                 <div
@@ -88,7 +88,7 @@
       </div>
       <!--Body End-->
       <!--Buttons-->
-      <div class="ets-button-menu ets-w-100 row justify-center items-center q-mt-xl">
+      <div class="ets-button-menu ets-w-100-uncapped row justify-center items-center q-mt-xl">
         <router-link to="/courses" class="col-6 text-white">
           <div class="text-center ets-header text-h6 text-weight-bold">Give Up</div>
           <div class="text-center ets-header text-body2 text-italic">or go Home</div>
